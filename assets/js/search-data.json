@@ -62,6 +62,22 @@
   
 
   
+      ,"page3": {
+          "title": "Notebook",
+          "content": "",
+          "url": "https://tianbinliu.github.io/Fastpage/notes/",
+          "relUrl": "/notes/",
+          "date": ""
+      }
+      
+  
+
+  
+  
+
+  
+
+  
   
 
   
@@ -70,18 +86,13 @@
   
 
   
-
-  
   
 
   
   
 
   
-  
-
-  
-      ,"page10": {
+      ,"page11": {
           "title": "",
           "content": "Sitemap: {{ “sitemap.xml” | absolute_url }} | .",
           "url": "https://tianbinliu.github.io/Fastpage/robots.txt",
