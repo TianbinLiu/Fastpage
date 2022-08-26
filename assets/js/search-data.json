@@ -4,8 +4,8 @@
         "post0": {
             "title": "A Jupyter Notebook using Bash to show that I have all the key tools installed.",
             "content": "python --version . Python 3.9.12 . java --version . openjdk 11.0.16 2022-07-19 OpenJDK Runtime Environment (build 11.0.16+8-post-Ubuntu-0ubuntu118.04) OpenJDK 64-Bit Server VM (build 11.0.16+8-post-Ubuntu-0ubuntu118.04, mixed mode, sharing) . javac --version . javac 11.0.16 . conda --version . conda 4.14.0 . npm -version . 3.10.10 . python2 --version . Python 2.7.17 . python3 --version . Python 3.9.12 . verify with Anaconda . conda info . active environment : base active env location : /home/tianbinliu/anaconda3 shell level : 1 user config file : /home/tianbinliu/.condarc populated config files : conda version : 4.14.0 conda-build version : 3.21.8 python version : 3.9.12.final.0 virtual packages : __cuda=11.5=0 __linux=5.10.16.3=0 __glibc=2.27=0 __unix=0=0 __archspec=1=x86_64 base environment : /home/tianbinliu/anaconda3 (writable) conda av data dir : /home/tianbinliu/anaconda3/etc/conda conda av metadata url : None channel URLs : https://repo.anaconda.com/pkgs/main/linux-64 https://repo.anaconda.com/pkgs/main/noarch https://repo.anaconda.com/pkgs/r/linux-64 https://repo.anaconda.com/pkgs/r/noarch package cache : /home/tianbinliu/anaconda3/pkgs /home/tianbinliu/.conda/pkgs envs directories : /home/tianbinliu/anaconda3/envs /home/tianbinliu/.conda/envs platform : linux-64 user-agent : conda/4.14.0 requests/2.27.1 CPython/3.9.12 Linux/5.10.16.3-microsoft-standard-WSL2 ubuntu/18.04.2 glibc/2.27 UID:GID : 1000:1000 netrc file : None offline mode : False .",
-            "url": "https://tianbinliu.github.io/Fastpage/2022/08/26/verify-tools.html",
-            "relUrl": "/2022/08/26/verify-tools.html",
+            "url": "https://tianbinliu.github.io/Fastpage/jupyter/2022/08/26/verify-tools.html",
+            "relUrl": "/jupyter/2022/08/26/verify-tools.html",
             "date": " • Aug 26, 2022"
         }
         
