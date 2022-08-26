@@ -24,7 +24,6 @@ a:hover {
 }
 
 .site-nav {
-    background-color: $dark-grey;
     border-color: $overlay-light;
 }
 
@@ -35,7 +34,6 @@ a:hover {
 pre, code {
     // BVas a lighter colour to better highlight short code words
     border-color: $overlay-light;
-    background-color: $overlay;
 }
 
 .page-description {
@@ -51,23 +49,17 @@ pre, code {
 }
 
 .btn {
-    background-color: $overlay !important;
     color: $high-emph !important;
     border-color: $overlay-light !important;
 }
 
-.btn:hover {
-    background-color: $dark-grey !important;
-}
 
 table th{
-    background-color: $overlay;
     border-color: $overlay-light;
     color: $high-emph;
 }
 
 table td{
-    background-color: $dark-grey;
     border-color: $overlay-light;
     color: $med-emph;
 }
@@ -83,7 +75,6 @@ canvas {
 
 .post-list > li > div {
     box-shadow: none !important;
-    background-color: $overlay;
     border: none !important;
 }
 
