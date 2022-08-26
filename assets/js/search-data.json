@@ -4,8 +4,8 @@
         "post0": {
             "title": "Title",
             "content": "python --version . Python 3.9.12 . java --version . openjdk 11.0.16 2022-07-19 OpenJDK Runtime Environment (build 11.0.16+8-post-Ubuntu-0ubuntu118.04) OpenJDK 64-Bit Server VM (build 11.0.16+8-post-Ubuntu-0ubuntu118.04, mixed mode, sharing) . javac --version . javac 11.0.16 . conda --version . conda 4.14.0 . npm -version . 3.10.10 . python2 --version . Python 2.7.17 . python3 --version . Python 3.9.12 .",
-            "url": "https://tianbinliu.github.io/Fastpage/2022/08/26/verifytools.html",
-            "relUrl": "/2022/08/26/verifytools.html",
+            "url": "https://tianbinliu.github.io/Fastpage/2022/08/26/verify-tools.html",
+            "relUrl": "/2022/08/26/verify-tools.html",
             "date": " • Aug 26, 2022"
         }
         
