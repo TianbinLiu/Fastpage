@@ -1,7 +1,7 @@
 ---
 layout: page
 permalink: /notes/
-title: CB notebook
+title: College Board
 search_exclude: true
 ---
 
