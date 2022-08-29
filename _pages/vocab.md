@@ -1,9 +1,10 @@
 ---
-layout: videobackground
 permalink: /vocab/
 title: CSA Vocabulary
 search_exclude: true
 ---
+
+{% include head-custom2.html %}
 
 
 <div id="video_wrapper">
