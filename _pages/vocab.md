@@ -13,6 +13,7 @@ search_exclude: true
   </video>
 </div>
 
+<div id ="wrapper">
 <table>
    <tr>
     <th>Vocab</th>
@@ -63,4 +64,4 @@ search_exclude: true
     <td></td>
    </tr>
 
-
+  </wrapper>
