@@ -212,9 +212,9 @@ window.onload = wrap_img;
 <span class="kt">int</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">200</span><span class="p">;</span>
 <span class="kt">int</span> <span class="n">c</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
 
-<span class="n">c</span> <span class="o">=</span> <span class="p">(</span><span class="n">a</span> <span class="o">+</span> <span class="n">b</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="n">a</span> <span class="o">-</span> <span class="n">b</span><span class="p">);</span>
+<span class="n">c</span> <span class="o">=</span> <span class="p">(</span><span class="n">a</span> <span class="o">+</span> <span class="n">b</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="n">a</span> <span class="o">-</span> <span class="n">b</span><span class="p">);</span> <span class="c1">// c is equal to (a + b) * (a - b)</span>
 
-<span class="n">c</span> <span class="o">+=</span> <span class="p">(</span><span class="mi">100</span> <span class="o">*</span> <span class="n">a</span><span class="p">)</span><span class="o">/</span><span class="n">b</span> <span class="o">*</span> <span class="n">a</span><span class="p">;</span>
+<span class="n">c</span> <span class="o">+=</span> <span class="p">(</span><span class="mi">100</span> <span class="o">*</span> <span class="n">a</span><span class="p">)</span><span class="o">/</span><span class="n">b</span> <span class="o">*</span> <span class="n">a</span><span class="p">;</span> <span class="c1">// c is equal to c + (a + b) * (a - b)</span>
 
 <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"c: "</span> <span class="o">+</span> <span class="n">c</span><span class="p">);</span>
 </pre></div>
