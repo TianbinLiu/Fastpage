@@ -1,4 +1,5 @@
 ---
+layout: default
 permalink: /vocab/
 title: CSA Vocabulary
 search_exclude: true
