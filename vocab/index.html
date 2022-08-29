@@ -1,3 +1,25 @@
+<style>
+#video_wrapper {
+    margin:0px;
+    padding:0px;
+}
+#video_wrapper video {
+    position: fixed;
+    top: 50%; left: 50%;
+    z-index: -99; important!
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    transform: translate(-50%, -50%);
+}
+    
+table { background: rgba(0,0,0,0.2); }
+tr { background: rgba(0,0,0,0.2); }
+td { background: rgba(0,0,0,0.2); }
+
+</style>
+
 <div id="video_wrapper">
   <video autoplay="" loop="">
     <source src="https://drive.google.com/uc?export=view&amp;id=1sd8r1eaSjNPmfyyXhC8PDEOjDMo_23cL" type="video/mp4" />
