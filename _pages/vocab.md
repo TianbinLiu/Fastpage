@@ -10,7 +10,7 @@ search_exclude: true
 
 
   
-  <table>
+  <table id="wrapper">
    <tr>
     <th>Vocab</th>
     <th>Definition</th>
