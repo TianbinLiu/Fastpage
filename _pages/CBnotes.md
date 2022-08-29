@@ -1,7 +1,8 @@
 ---
 layout: page
-title: Notebook
 permalink: /notes/
+title: CB notebook
+search_exclude: true
 ---
 
 
