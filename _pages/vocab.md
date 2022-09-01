@@ -53,11 +53,51 @@ search_exclude: true
    </tr>
    
    <tr>
+    <td>(super) keyword/td>
+    <td>a keyword used to refer to the superclass</td>
+   </tr>
+
+   
+   <tr>
+    <td>constructor signature</td>
+    <td>the first line of the constructor which includes the (public) keyword, the constructor name, and the values to specify when an object is created</td>
+   </tr>
+  
+     
+   <tr>
+    <td>inheritance</td>
+    <td>an object-oriented programming principle where a subclass inherits the attributes and behaviors of a superclass</td>
+   </tr>
+  
+     
+   <tr>
+    <td>subclass</td>
+    <td>a class that extends a superclass and inherits its attributes and behaviors</td>
+   </tr>
+  
+     
+   <tr>
+    <td>superclass</td>
+    <td>a class that can be extended to create subclasses</td>
+   </tr>
+  
+     
+   <tr>
+    <td>method signature</td>
+    <td>consists of a name and parameter list</td>
+   </tr>
+  
+     
+   <tr>
     <td></td>
     <td></td>
    </tr>
-
-
+  
+     
+   <tr>
+    <td></td>
+    <td></td>
+   </tr>
 
 
 
