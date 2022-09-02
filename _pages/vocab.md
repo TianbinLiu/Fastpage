@@ -89,11 +89,87 @@ search_exclude: true
   
      
    <tr>
+    <td>code review</td>
+    <td>the process of examining code and providing feedback to improve the quality and functionality of the program</td>
+   </tr>
+  
+     
+   <tr>
+    <td>comment</td>
+    <td>a text note that is ignored by the compiler to explain or annotate the code</td>
+   </tr>
+  
+   <tr>
+    <td>documentation</td>
+    <td>written descriptions of the purpose and functionality of code</td>
+   </tr>
+  
+   <tr>
+    <td>programming style</td>
+    <td>a set of guidelines for formatting program code</td>
+   </tr>
+  
+   <tr>
+    <td>(while) loop</td>
+    <td>a control structure which executes a block of code repeatedly as long as a condition is true</td>
+   </tr>
+  
+   <tr>
+    <td>algorithm</td>
+    <td>a set of instructions to solve a problem or accomplish a task</td>
+   </tr>
+  
+   <tr>
+    <td>control structure</td>
+    <td>a conditional or iteration statement which affects the flow of a program</td>
+   </tr>
+  
+   <tr>
+    <td>efficient</td>
+    <td>getting the best outcome with the least amount of waste</td>
+   </tr>
+  
+   <tr>
+    <td>infinite loop</td>
+    <td>a loop where the Boolean expression always evaluates to true</td>
+   </tr>
+  
+   <tr>
+    <td>iteration statement (loop)</td>
+    <td>a control structure that repeatedly executes a block of code</td>
+   </tr>
+  
+   <tr>
+    <td>pseudocode </td>
+    <td>a plain language description of the steps in an algorithm</td>
+   </tr>
+  
+  
+   <tr>
     <td></td>
     <td></td>
    </tr>
   
-     
+   <tr>
+    <td></td>
+    <td></td>
+   </tr>
+  
+   <tr>
+    <td></td>
+    <td></td>
+   </tr>
+  
+   <tr>
+    <td></td>
+    <td></td>
+   </tr>
+  
+   <tr>
+    <td></td>
+    <td></td>
+   </tr>
+  
    <tr>
     <td></td>
     <td></td>
