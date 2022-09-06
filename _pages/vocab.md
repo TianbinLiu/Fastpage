@@ -161,6 +161,41 @@ search_exclude: true
    </tr>
   
    <tr>
+    <td>concatenation</td>
+    <td>joining two strings together</td>
+   </tr>
+  
+   <tr>
+    <td>Method Decomposition</td>
+    <td>the process of breaking a problem down into smaller parts to write methods for each part</td>
+   </tr>
+  
+   <tr>
+    <td>edge case</td>
+    <td>a bug that occurs at the highest or lowest end of a range of possible values or in extreme situations</td>
+   </tr>
+  
+   <tr>
+    <td>redundant code</td>
+    <td>code that is unnecessary</td>
+   </tr>
+  
+   <tr>
+    <td>inheritance hierarchy</td>
+    <td>where a class serves as a superclass for more than one subclass</td>
+   </tr>
+  
+   <tr>
+    <td></td>
+    <td></td>
+   </tr>
+  
+   <tr>
+    <td></td>
+    <td></td>
+   </tr>
+  
+   <tr>
     <td></td>
     <td></td>
    </tr>
