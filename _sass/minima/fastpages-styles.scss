@@ -196,40 +196,6 @@ h6:hover .anchor-link {
   font-weight:bold;
 }
 
-table {
-  white-space: normal;
-  max-width: 100%;
-  font-size: 100%;
-  border:none;
-  background: rgba(0,0,0,0.2);
-  th{
-    text-align: center! important;
-  }
-  tr { 
-    background: rgba(0,0,0,0.2); 
-  } 
-  td { 
-    background: rgba(0,0,0,0.2); 
-  }  
-        
-}
-
-
-#video_wrapper {
-    margin:0px;
-    padding:0px;
-}
-#video_wrapper video {
-    position: fixed;
-    top: 50%; left: 50%;
-    z-index: -99; important!
-    min-width: 100%;
-    min-height: 100%;
-    width: auto;
-    height: auto;
-    transform: translate(-50%, -50%);
-}
-
 
 // customize scrollbars
 ::-webkit-scrollbar {
