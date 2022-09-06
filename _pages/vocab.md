@@ -146,18 +146,18 @@ search_exclude: true
   
   
    <tr>
-    <td></td>
-    <td></td>
+    <td>NOT ( ! ) operator</td>
+    <td>a logical operator that returns true when the operand is false and returns false when the operand is true</td>
    </tr>
   
    <tr>
-    <td></td>
-    <td></td>
+    <td>if-else statement (two-way selection statement)</td>
+    <td>specifies a block of code to execute when the condition is true and a block of code to execute when the condition is false</td>
    </tr>
   
    <tr>
-    <td></td>
-    <td></td>
+    <td>logical operator</td>
+    <td>an operator that returns a Boolean value</td>
    </tr>
   
    <tr>
