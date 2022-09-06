@@ -186,8 +186,8 @@ search_exclude: true
    </tr>
   
    <tr>
-    <td></td>
-    <td></td>
+    <td>open source code</td>
+    <td>code that is freely available for anyone to use, study, change, and distribute</td>
    </tr>
   
    <tr>
