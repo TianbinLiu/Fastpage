@@ -268,11 +268,14 @@ window.onload = wrap_img;
         <span class="n">frame</span><span class="p">.</span><span class="na">setDefaultCloseOperation</span><span class="p">(</span><span class="n">JFrame</span><span class="p">.</span><span class="na">EXIT_ON_CLOSE</span><span class="p">);</span>
         
         <span class="c1">// set the size of window based on objects</span>
-        <span class="n">frame</span><span class="p">.</span><span class="na">setSize</span><span class="p">(</span><span class="mi">300</span><span class="p">,</span><span class="mi">200</span><span class="p">);</span>
+        <span class="n">frame</span><span class="p">.</span><span class="na">setSize</span><span class="p">(</span><span class="mi">600</span><span class="p">,</span><span class="mi">400</span><span class="p">);</span>
 
         <span class="c1">// makes the frame object visible according to properties previously set</span>
         <span class="n">frame</span><span class="p">.</span><span class="na">setVisible</span><span class="p">(</span><span class="kc">true</span><span class="p">);</span>  <span class="c1">// flow of control shifts to frame object</span>
     <span class="p">}</span>
+
+    
+
 
     <span class="c1">// event from user selecting a menu option</span>
     <span class="kd">public</span> <span class="kt">void</span> <span class="nf">actionPerformed</span><span class="p">(</span><span class="n">ActionEvent</span> <span class="n">e</span><span class="p">)</span> <span class="p">{</span>
@@ -283,18 +286,38 @@ window.onload = wrap_img;
  	    <span class="kd">final</span> <span class="n">String</span> <span class="n">start_msg</span> <span class="o">=</span> <span class="s">"&lt;html&gt;"</span><span class="p">;</span>  <span class="c1">// html building</span>
        	<span class="kd">final</span> <span class="n">String</span> <span class="n">end_msg</span> <span class="o">=</span> <span class="s">"&lt;/html&gt;"</span><span class="p">;</span>
        	<span class="kd">final</span> <span class="n">String</span> <span class="n">hash</span> <span class="o">=</span> <span class="s">"#"</span><span class="p">;</span>
+        
+        <span class="kt">int</span> <span class="n">highestGrade</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+        <span class="kt">int</span> <span class="n">lowestGrade</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+        <span class="kt">int</span> <span class="n">grade1</span> <span class="o">=</span> <span class="mi">50</span><span class="p">;</span>
+        <span class="kt">int</span> <span class="n">grade2</span> <span class="o">=</span> <span class="mi">100</span><span class="p">;</span>
 
         <span class="c1">// run code based on the menuItem that was selected</span>
         <span class="k">if</span> <span class="p">(</span> <span class="n">selection</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="n">MENUS</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span><span class="p">)</span> <span class="p">)</span> <span class="p">{</span>  <span class="c1">// Hello Action</span>
             <span class="n">msg</span> <span class="o">=</span> <span class="s">"Mini Online Games center"</span><span class="p">;</span>
             <span class="n">message</span><span class="p">.</span><span class="na">setText</span><span class="p">(</span><span class="n">msg</span><span class="p">);</span>
         <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span> <span class="n">selection</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="n">MENUS</span><span class="o">[</span><span class="mi">1</span><span class="o">]</span><span class="p">)</span> <span class="p">)</span> <span class="p">{</span> <span class="c1">// Color Action</span>
-            <span class="n">msg</span> <span class="o">=</span> <span class="n">start_msg</span> <span class="o">+</span> <span class="s">"&lt;p&gt;"</span> <span class="o">+</span> <span class="n">selection</span> <span class="o">+</span> <span class="s">"&lt;/p&gt;"</span><span class="p">;</span>
-            <span class="k">for</span> <span class="p">(</span><span class="n">String</span> <span class="n">color</span> <span class="p">:</span> <span class="n">COLORS</span><span class="p">)</span> <span class="p">{</span>
-                <span class="n">msg</span> <span class="o">+=</span> <span class="s">"&lt;font color="</span> <span class="o">+</span> <span class="n">color</span> <span class="o">+</span> <span class="s">"&gt;"</span> <span class="o">+</span> <span class="n">color</span> <span class="o">+</span> <span class="s">" &lt;/font&gt;"</span><span class="p">;</span>
-            <span class="p">}</span>
-            <span class="n">msg</span> <span class="o">+=</span> <span class="n">end_msg</span><span class="p">;</span>
-            <span class="n">message</span><span class="p">.</span><span class="na">setText</span><span class="p">(</span><span class="n">msg</span><span class="p">);</span>
+            <span class="n">highestGrade</span> <span class="o">=</span> <span class="n">Math</span><span class="p">.</span><span class="na">max</span><span class="p">(</span><span class="n">grade1</span><span class="p">,</span> <span class="n">grade2</span><span class="p">);</span>
+            <span class="n">lowestGrade</span> <span class="o">=</span> <span class="n">Math</span><span class="p">.</span><span class="na">min</span><span class="p">(</span><span class="n">grade1</span><span class="p">,</span> <span class="n">grade2</span><span class="p">);</span>
+            <span class="n">message</span><span class="p">.</span><span class="na">setText</span><span class="p">(</span>
+
+                <span class="s">"&lt;html&gt;Let start with a warm up math game about how to calculate your average Grade&lt;br&gt;"</span>
+                <span class="o">+</span> <span class="s">"&lt;br&gt;"</span> <span class="o">+</span> 
+                <span class="s">"First we have two grades: "</span> <span class="o">+</span> <span class="n">grade1</span> <span class="o">+</span> <span class="s">" and "</span> <span class="o">+</span> <span class="n">grade2</span> <span class="o">+</span> <span class="s">"&lt;br&gt;"</span>
+                <span class="o">+</span> <span class="s">"&lt;br&gt;"</span> <span class="o">+</span>
+                <span class="s">"Then find the highest Grade, using highestGrade = Math.max(grade1, grade2);"</span> <span class="o">+</span> <span class="s">"&lt;br&gt;"</span>
+                <span class="o">+</span> <span class="s">"&lt;br&gt;"</span> <span class="o">+</span>
+                <span class="s">"Now we find the highest Grade: "</span> <span class="o">+</span> <span class="n">highestGrade</span> <span class="o">+</span> <span class="s">"&lt;br&gt;"</span>
+                <span class="o">+</span> <span class="s">"&lt;br&gt;"</span> <span class="o">+</span>
+                <span class="s">"Then find the lowest Grade, using lowestGrade = Math.min(grade1, grade2);"</span> <span class="o">+</span> <span class="s">"&lt;br&gt;"</span>
+                <span class="o">+</span> <span class="s">"&lt;br&gt;"</span> <span class="o">+</span>
+                <span class="s">"Now we find the lowest Grade: "</span> <span class="o">+</span> <span class="n">lowestGrade</span> <span class="o">+</span> <span class="s">"&lt;br&gt;"</span>
+                <span class="o">+</span> <span class="s">"&lt;br&gt;"</span> <span class="o">+</span>
+                <span class="s">"Last, average the two value, we get our average grade: "</span> <span class="o">+</span> <span class="p">(</span><span class="n">highestGrade</span> <span class="o">-</span> <span class="n">lowestGrade</span><span class="p">)</span> <span class="o">+</span> 
+                <span class="s">"&lt;/html&gt;"</span>
+                <span class="p">);</span>
+
+            
         <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span> <span class="n">selection</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="n">MENUS</span><span class="o">[</span><span class="mi">2</span><span class="o">]</span><span class="p">)</span> <span class="p">)</span> <span class="p">{</span>
             <span class="n">msg</span> <span class="o">=</span> <span class="s">"My interest: play video games and my pair's interest: dog training"</span><span class="p">;</span>
             <span class="n">message</span><span class="p">.</span><span class="na">setText</span><span class="p">(</span><span class="n">msg</span><span class="p">);</span>
