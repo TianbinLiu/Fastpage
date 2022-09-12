@@ -18,19 +18,19 @@ title: about
     }
     h1
     {
-    margin-top:100px;
+    margin-top:50px;
     color:white;
     font-size:40px;
     }
     h2
     {
-    margin-top:200px;
+    margin-top:25px;
     color:white;
     font-size:25px;
     }
     p
     {
-    margin-top:100px;
+    margin-top:10px;
     color:white;
     font-size:15px;
     background: rgba(0,0,0,0.2);
