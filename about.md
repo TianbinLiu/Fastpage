@@ -20,15 +20,19 @@ title: about
     {
     margin-top:250px;
     color:white;
-    font-size:45px;
-    background-color: rgba(112, 112, 112, 0.74);
+    font-size:40px;
     }
     h2
     {
     margin-top:250px;
     color:white;
     font-size:25px;
-    background-color: rgba(112, 112, 112, 0.74);
+    }
+    p
+    {
+    margin-top:250px;
+    color:white;
+    font-size:15px;
     }
 </style>
 
@@ -93,5 +97,8 @@ title: about
                 <td>Something I will put right here in the future</td>
                 <td>Something I will put right here in the future</td>
              </tr>
+        <p>
+            Something notes about gratitude to someone on campus and someone at home
+        </p>
     </div>
 </div>
