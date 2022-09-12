@@ -69,22 +69,29 @@ title: about
             <tr>
                 <th>Goals</th>
                 <th>Efforts</th>
-                <th><a href="https://tianbinliu.github.io/Fastpage/vocab/">Vocab</a></th>
+                <th>Vocab</a></th>
+                <th>gratitude list</th>
             </tr>
    
             <tr>
                 <td>Something I will put right here in the future</td>
                 <td>Something I will put right here in the future</td>
+                <td>Something I will put right here in the future</td>
+                <td>Something I will put right here in the future</td>
             </tr>
   
              <tr>
                 <td>Something I will put right here in the future</td>
                 <td>Something I will put right here in the future</td>
+                <td>Something I will put right here in the future</td>
+                <td>Something I will put right here in the future</td>
              </tr>
   
              <tr>
                 <td>Something I will put right here in the future</td>
                 <td>Something I will put right here in the future</td>
+                <td>Something I will put right here in the future</td>
+                <td>Something I will put right here in the future</td>
              </tr>
-     </div>
+    </div>
 </div>
