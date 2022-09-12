@@ -27,25 +27,27 @@ title: about
         <h2>something for the week that shows your goals, efforts, and vocab</h2>
         <table>
             <tr>
-                <th>Week</th>
-                <th><a href="https://github.com/TianbinLiu/Fastpage/issues">Review Ticket</a></th>
-
+                <th>Goals</th>
+                <th>Efforts</th>
+                <th>Vocab</th>
             </tr>
    
             <tr>
-              <td>0</td>
-                <td><a href="https://github.com/TianbinLiu/Fastpage/issues/2">Tool Setup</a></td>
-              </tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
   
-               <tr>
-               <td>1</td>
-               <td><a href="https://github.com/TianbinLiu/Fastpage/issues/3">Innovation - Primitives</a></td>
-              </tr>
-  
-              <tr>
-               <td>2</td>
-              <td><a href="https://github.com/TianbinLiu/Fastpage/issues/4">Innovation - Using Objects</a></td>
+             <tr>
+                <td></td>
+                <td></td>
+                <td></td>
              </tr>
   
+             <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+             </tr>
     </div>
 </div>
