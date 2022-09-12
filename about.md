@@ -19,7 +19,7 @@ title: about
 
 <div id="video_wrapper">
     <video autoplay loop>
-        <source src="https://drive.google.com/uc?export=view&id=1VtQKnX2G4SAtIn-J8Y7w5Jb1MN09LAkv" type="video/mp4">
+        <source src="https://drive.google.com/uc?export=view&id=1IOK35bZ6iM5q4rYxhLmlFwYa3lHjINXR" type="video/mp4">
     </video>
     <div id="wrapper">
         <h1>A blog about me</h1>
@@ -31,11 +31,13 @@ title: about
             </tr>
             
             <tr>
-                <td></td>
-                <td></td>
+                <td>Video game, Soccer, Read fiction, Sleep</td>
+                <td>Know a little bit of Java, Know how to build a website with Flask, know how to use Github, Know how to use Python</td>
             </tr>
         </table>
+        
         <h2>something for the week that shows your goals, efforts, and vocab</h2>
+        
         <table>
             <tr>
                 <th>Goals</th>
@@ -60,5 +62,5 @@ title: about
                 <td></td>
                 <td></td>
              </tr>
-    </div>
+     </div>
 </div>
