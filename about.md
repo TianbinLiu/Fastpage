@@ -24,6 +24,17 @@ title: about
     <div id="wrapper">
         <h1>A blog about me</h1>
         <h2>My interest and skills</h2>
+        <table>
+            <tr>
+                <th>Interest</th>
+                <th>Skills</th>
+            </tr>
+            
+            <tr>
+                <td></td>
+                <td></td>
+            </tr>
+        </table>
         <h2>something for the week that shows your goals, efforts, and vocab</h2>
         <table>
             <tr>
