@@ -70,7 +70,7 @@ title: about
                 <th>Goals</th>
                 <th>Efforts</th>
                 <th>Vocab</a></th>
-                <th>gratitude list</th>
+                <th>Gratitude list</th>
             </tr>
    
             <tr>
