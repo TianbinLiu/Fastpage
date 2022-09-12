@@ -16,6 +16,20 @@ title: about
     z-index:2;
     color: white;
     }
+    h1
+    {
+    margin-top:250px;
+    color:white;
+    font-size:45px;
+    background-color: rgba(112, 112, 112, 0.74);
+    }
+    h2
+    {
+    margin-top:250px;
+    color:white;
+    font-size:25px;
+    background-color: rgba(112, 112, 112, 0.74);
+    }
 </style>
 
 <div id="video_wrapper">
