@@ -103,5 +103,6 @@ title: about
         <p>
             Something notes about gratitude to someone on campus and someone at home
         </p>
+            
     </div>
 </div>
