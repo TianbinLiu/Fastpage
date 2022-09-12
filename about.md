@@ -43,6 +43,7 @@ title: about
     <div id="wrapper">
         <h1>A blog about me</h1>
         <h2>My interest and skills</h2>
+        
         <table>
             <tr>
                 <th>Interest</th>
