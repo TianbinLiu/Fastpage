@@ -14,6 +14,7 @@ title: about
     padding:0px;
     width:995px;
     z-index:2;
+    color: white;
     }
 </style>
 
