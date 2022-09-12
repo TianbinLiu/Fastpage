@@ -42,6 +42,7 @@ title: about
         <source src="https://drive.google.com/uc?export=view&id=1IOK35bZ6iM5q4rYxhLmlFwYa3lHjINXR" type="video/mp4">
     </video>
     <div id="wrapper">
+        {% include nav_frontend.html %}
         <h1>A blog about me</h1>
         <h2>My interest and skills</h2>
         
