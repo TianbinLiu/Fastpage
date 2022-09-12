@@ -75,7 +75,7 @@ title: about
             <tr>
                 <th>Goals</th>
                 <th>Efforts</th>
-                <th>Vocab</a></th>
+                <th>Vocab</th>
                 <th>Gratitude list</th>
             </tr>
    
