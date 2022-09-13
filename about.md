@@ -75,33 +75,39 @@ title: about
         <table>
             <tr>
                 <th>Goals</th>
-                <th>Efforts</th>
                 <th>Vocab</th>
                 <th>Gratitude list</th>
             </tr>
    
             <tr>
                 <td>Something I will put right here in the future</td>
-                <td>Something I will put right here in the future</td>
-                <td>Something I will put right here in the future</td>
-                <td>Something I will put right here in the future</td>
+                <td>mental health</td>
+                <td>my parents</td>
             </tr>
   
              <tr>
                 <td>Something I will put right here in the future</td>
-                <td>Something I will put right here in the future</td>
-                <td>Something I will put right here in the future</td>
-                <td>Something I will put right here in the future</td>
+                <td>psychology</td>
+                <td>teachers</td>
              </tr>
   
              <tr>
                 <td>Something I will put right here in the future</td>
                 <td>Something I will put right here in the future</td>
-                <td>Something I will put right here in the future</td>
-                <td>Something I will put right here in the future</td>
+                <td>friends</td>
              </tr>
         <p>
-            Something notes about gratitude to someone on campus and someone at home
+            Some notes about gratitude to someone on campus and someone at home
+        </p>
+            
+        <p>
+            Someone on campus:
+            
+        </p>
+            
+        <p>
+            Someone at home:
+            
         </p>
             
     </div>
