@@ -67,7 +67,7 @@ window.onload = wrap_img;
           </span>
         </label>
 
-        <div class="trigger"><a class="page-link" href="/Fastpage/about/">About Me</a><a class="page-link" href="/Fastpage/about.html">about</a><a class="page-link" href="/Fastpage/notes/">College Board</a><a class="page-link" href="/Fastpage/search/">Search</a><a class="page-link" href="/Fastpage/categories/">Tags</a><a class="page-link" href="/Fastpage/vocab/">CSA Vocabulary</a></div>
+        <div class="trigger"><a class="page-link" href="/Fastpage/about.html">about</a><a class="page-link" href="/Fastpage/about/">About Me</a><a class="page-link" href="/Fastpage/notes/">College Board</a><a class="page-link" href="/Fastpage/search/">Search</a><a class="page-link" href="/Fastpage/categories/">Tags</a><a class="page-link" href="/Fastpage/vocab/">CSA Vocabulary</a></div>
       </nav></div>
 </header>
 <main class="page-content" aria-label="Content">
@@ -81,7 +81,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      3 min read
+      10 min read
     
 </span></p>
 
@@ -367,6 +367,655 @@ window.onload = wrap_img;
 <div class="output_subarea output_text output_error">
 <pre>
 <span class="ansi-red-intense-fg ansi-bold">The Kernel crashed while executing code in the the current cell or a previous cell. Please review the code in the cell(s) to identify a possible cause of the failure. Click &lt;a href='https://aka.ms/vscodeJupyterKernelCrash'&gt;here&lt;/a&gt; for more info. View Jupyter &lt;a href='command:jupyter.viewOutput'&gt;log&lt;/a&gt; for further details.</span></pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="kd">class</span> <span class="nc">MonkeyLoop</span> <span class="p">{</span>
+        <span class="c1">//The area between class definition and the 1st method is where we keep data for object in Java</span>
+        <span class="n">String</span> <span class="o">[][]</span> <span class="n">monkeys</span><span class="p">;</span>    <span class="c1">//2D Array: AP CSA Unit 8: 2D array of strings</span>
+        <span class="n">String</span> <span class="o">[][]</span> <span class="n">cthulhus</span><span class="p">;</span>                        <span class="c1">//2D array is like a grid [x][y]</span>
+                                <span class="c1">// or like a spreadsheet [row][column]</span>
+    
+        <span class="cm">/**</span>
+<span class="cm">         * Constructor initializes a 2D array of Monkeys</span>
+<span class="cm">         */</span>
+        <span class="kd">public</span> <span class="nf">MonkeyLoop</span><span class="p">()</span> <span class="p">{</span>
+            <span class="c1">//Storing Data in 2D arrays</span>
+            <span class="n">monkeys</span> <span class="o">=</span> <span class="k">new</span> <span class="n">String</span><span class="o">[][]</span><span class="p">{</span>   <span class="c1">//2D array above is just a name, "new" makes a container ("object")</span>
+                    <span class="c1">//Monkey 0</span>
+                    <span class="p">{</span>
+                            <span class="s">"ʕง ͠° ͟ل͜ ͡°)ʔ "</span><span class="p">,</span>      <span class="c1">//[0][0] eyes</span>
+                            <span class="s">"  \\_⏄_/  "</span><span class="p">,</span>      <span class="c1">//[0][1] chin</span>
+                            <span class="s">"  --0--   "</span><span class="p">,</span>       <span class="c1">//[0][2] body</span>
+                            <span class="s">"  ⎛   ⎞   "</span>        <span class="c1">//[0][3] legs</span>
+                    <span class="p">},</span>
+                    <span class="c1">//Monkey 1</span>
+                    <span class="p">{</span>
+                            <span class="s">" ʕ༼ ◕_◕ ༽ʔ"</span><span class="p">,</span>       <span class="c1">//[1][0]</span>
+                            <span class="s">"  \\_⎏_/  "</span><span class="p">,</span>
+                            <span class="s">"  ++1++  "</span><span class="p">,</span>
+                            <span class="s">"   ⌋ ⌊   "</span>
+                    <span class="p">},</span>
+                    <span class="c1">//Monkey 2</span>
+                    <span class="p">{</span>
+                            <span class="s">" ʕ(▀ ⍡ ▀)ʔ"</span><span class="p">,</span>       <span class="c1">//[2][0]</span>
+                            <span class="s">"  \\_⎐_/ "</span><span class="p">,</span>
+                            <span class="s">"  &lt;-2-&gt;  "</span><span class="p">,</span>
+                            <span class="s">"  〈  〉 "</span>
+                    <span class="p">},</span>
+                    <span class="c1">//Monkey 3</span>
+                    <span class="p">{</span>
+                            <span class="s">"ʕ ͡° ͜ʖ ° ͡ʔ"</span><span class="p">,</span>        <span class="c1">//[3][0]</span>
+                            <span class="s">"  \\_⍾_/  "</span><span class="p">,</span>
+                            <span class="s">"  ==3==  "</span><span class="p">,</span>
+                            <span class="s">"  _/ \\_  "</span>
+                    <span class="p">},</span>
+                    <span class="c1">//Monkey 4</span>
+                    <span class="p">{</span>
+                            <span class="s">"  (◕‿◕✿) "</span><span class="p">,</span>          <span class="c1">//[4][0]</span>
+                            <span class="s">"  \\_⍾_/ "</span><span class="p">,</span>          <span class="c1">//[4][1]</span>
+                            <span class="s">"  ==4==  "</span><span class="p">,</span>          <span class="c1">//[4][2]</span>
+                            <span class="s">"  _/ \\_ "</span>           <span class="c1">//[4][3]</span>
+                    <span class="p">},</span>
+    
+            <span class="p">};</span>
+
+            <span class="n">cthulhus</span> <span class="o">=</span> <span class="k">new</span> <span class="n">String</span><span class="o">[][]</span><span class="p">{</span>   
+                <span class="p">{</span>
+                        <span class="s">"⠀⠀⠀⠀⠀⠀⠀⠀⠀⡠⡀⠀⠀⠀⠀⠀⠀⢎⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀ʕง ͠° ͟ل͜ ͡°)ʔ "</span><span class="p">,</span>      
+                        <span class="s">"⠀⠀⠀⠀⠀⠀⠀⠀⠀⠂⢱⠀⠀⢀⣤⡀⠀⠀⢣⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀  \\_⏄_/  "</span><span class="p">,</span>      
+                        <span class="s">"⠀⠀⠀⠀⠀⠀⠀⠀⠀⣰⠻⠉⣧⣿⣿⣿⠀⠀⢸⠇⠀⠐⠉⡆⠀⠀⠀⠀⠀⠀  --0--   "</span><span class="p">,</span>       
+                        <span class="s">"⠀⠀⠀⠀⢀⠔⠒⢦⠀⢻⡄⠀⢿⣻⣿⡿⢀⣴⣋⣄⣄⣌⣠⠃⠀⠀⠀⠀⠀⠀  ⎛   ⎞   "</span><span class="p">,</span>
+                        <span class="s">"⠀⠀⠀⠀⠈⠀⢀⡞⠀⠈⠛⣷⣾⣿⣿⣿⣿⣿⣯⣥⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀         "</span><span class="p">,</span>
+                        <span class="s">"⠀⠀⠀⠀⠀⠀⠈⠷⣦⣴⡾⢿⣿⡿⢿⣿⣋⣽⠶⢦⠙⢷⡀⠀⠀⠀⠀⠀⠀⠀         "</span><span class="p">,</span>
+                        <span class="s">"⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣾⡏⢀⡆⠈⠉⠁⡄⠈⡇⠘⢇⠀⢈⡆⠀⠀⠀⠀         "</span><span class="p">,</span>
+                        <span class="s">"⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⡯⠀⠸⠁⠀⠀⠸⣧⡀⡇⠀⠈⠉⠉⠀⠀⠀⠀⠀         "</span><span class="p">,</span>
+                        <span class="s">"⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠸⣇⡴⠁⠀⠀⠀⠀⠙⠛⠁⠀⠀⠀⠀⠀⠀⠀⠀          "</span>
+                <span class="p">},</span>
+
+                <span class="p">{</span>
+                        <span class="s">"                      ʕ༼ ◕_◕ ༽ʔ                           "</span><span class="p">,</span>       
+                        <span class="s">"                       \\_⎏_/                              "</span><span class="p">,</span>
+                        <span class="s">"                        ++1++                              "</span><span class="p">,</span>
+                        <span class="s">"                         ⌋ ⌊                                "</span><span class="p">,</span>
+                        <span class="s">"⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡤⠊⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀"</span><span class="p">,</span>
+                        <span class="s">"⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⡎⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀"</span><span class="p">,</span>
+                        <span class="s">"⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣾⡟⠀⠙⣆⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀"</span><span class="p">,</span>
+                        <span class="s">"⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣟⡇⠀⠀⠈⣇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀"</span><span class="p">,</span>
+                        <span class="s">"⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⡧⣅⠀⠀⠐⣽⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀"</span><span class="p">,</span>
+                        <span class="s">"⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣗⠢⠀⠀⠀⠹⣿⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀"</span><span class="p">,</span>
+                        <span class="s">"⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⠑⠂⠀⠀⠸⢿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀"</span><span class="p">,</span>
+                        <span class="s">"⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⡴⠶⠶⠲⢶⣦⣄⠀⠀⠀⠀⢻⣤⠃⠄⠀⠴⢺⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀"</span><span class="p">,</span>
+                        <span class="s">"⠀⠀⠀⠀⠀⠀⠀⠀⠀⡟⠀⠀⠀⠀⠀⠙⢿⠷⣄⠀⠀⢸⡦⠚⣁⡀⢈⣹⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀"</span><span class="p">,</span>
+                        <span class="s">"⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠻⣿⣇⠀⠀⣷⡖⢐⢩⡡⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀"</span><span class="p">,</span>
+                        <span class="s">"⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠨⡟⣿⡆⠀⢸⡧⠄⡄⢰⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢨⠆⠀⠀⠀⠀⠀⠀"</span><span class="p">,</span>
+                        <span class="s">"⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡷⣳⡅⠀⠀⣷⠠⠩⠁⠁⠀⠀⠀⠀⠀⠀⠀⠀⣀⣀⣀⡤⠤⠒⠁⠀⠀⠀⠀⠀⠀⠀"</span><span class="p">,</span>
+                        <span class="s">"⠀⠀⠀⠀⠀⠀⠀⠀⡄⠀⠀⠀⠀⠀⠀⠀⠀⢨⡟⣦⡆⠀⠀⣾⣧⠄⠂⣁⡀⠀⠀⠀⣠⡶⠞⠛⠉⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀"</span><span class="p">,</span>
+                        <span class="s">"⠀⠀⠀⠀⠀⠀⠀⠀⠣⢀⠀⠀⠀⠀⠀⠀⣠⣮⢲⣿⠇⠀⠰⣼⣿⠀⡀⣀⠀⡀⠀⣼⣷⠇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀"</span><span class="p">,</span>
+                        <span class="s">"⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠙⠒⢶⣆⢾⢿⣭⡿⠃⠀⠠⠤⠊⢽⡗⡴⢀⠁⠃⠀⣿⡼⢀⠀⠀⠀⠀⢀⣀⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀"</span><span class="p">,</span>
+                        <span class="s">"⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⢴⣛⣿⣿⡿⢿⣳⡄⠠⠤⠬⠈⣿⣷⠄⠄⡈⠘⠣⠹⣿⣷⣄⢠⣴⣚⠟⠛⠉⠙⠳⣆⠀⠀⠀⠀⠀⠀"</span><span class="p">,</span>
+                        <span class="s">"⠀⠀⠀⠀⠀⣄⠀⠀⠀⠀⣆⠋⠯⡷⣾⠟⠀⠀⡃⣯⠀⠠⠐⢋⡟⢿⡁⢁⠀⢂⢔⣆⠈⢻⣿⠖⢨⣀⠀⠀⠀⠀⠀⢸⠀⠀⠀⠀⠀⠀"</span><span class="p">,</span>
+                        <span class="s">"⠀⠀⠀⠀⠀⠈⣧⠀⢠⡋⣉⠤⠬⣽⡏⠀⠀⣢⣭⣀⡉⠄⠳⢺⡇⢸⠫⠑⠀⠄⣀⣈⣄⠾⣟⠿⡖⢘⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀"</span><span class="p">,</span>
+                        <span class="s">"⠀⠀⠀⠀⠀⠀⢸⢀⡖⠛⠂⣰⣦⣿⢀⡀⣿⣿⠛⠁⠀⠈⢒⣿⠁⢸⠗⠒⠂⢄⠁⠀⢻⣏⣮⠀⠙⣦⡄⠀⠉⠀⠀⢠⠎⠀⠀⠀⠀⠀"</span><span class="p">,</span>
+                        <span class="s">"⠀⠀⠀⠀⠀⠀⡟⢸⡷⢾⠑⢥⣨⣿⢃⣬⠞⡿⠀⠄⠁⢀⢠⡟⠀⢸⡤⠈⠠⠀⠑⡀⠹⣷⣿⡄⠀⣷⡤⠀⠈⠘⡀⡞⠀⠀⠀⠀⠀⠀"</span><span class="p">,</span>
+                        <span class="s">"⠀⠀⠀⠀⠀⢠⠃⣿⣬⢴⠻⣁⣛⣿⡼⠁⢰⢤⣤⠘⠀⠁⢋⡇⠀⣾⡁⠀⢀⠀⡦⢤⢴⣿⣽⣷⢀⣿⠤⠀⠈⠉⠃⣧⠀⠀⠀⠀⠀⠀"</span><span class="p">,</span>
+                        <span class="s">"⠀⠀⠀⠀⠀⡚⠀⣿⣀⣀⡕⢧⣨⣭⣇⠀⣄⠀⡀⠔⠌⠋⠙⡇⢰⣿⠙⠋⠃⠈⡀⠀⢀⠉⣿⣻⣿⡧⠀⠀⠈⠈⠁⢸⡀⠀⠀⠀⠀⠀"</span><span class="p">,</span>
+                        <span class="s">"⠀⠀⠀⡀⠀⠇⠀⢸⣈⠐⢀⡔⠥⣤⣽⣶⠃⠩⠁⠀⠐⠀⢲⣧⣾⠗⠄⠂⠀⠀⠈⠙⠸⠀⣿⣽⡯⠀⠀⠀⠀⠉⠃⠀⢇⠀⠀⠀⠀⠀"</span><span class="p">,</span>
+                        <span class="s">"⠀⠀⠀⠂⠀⠰⡄⠀⣿⡿⠈⠈⣰⠂⠤⢼⠆⠒⠒⡀⠄⢀⣨⣿⣁⢀⣀⠀⠈⠢⠤⢀⡆⢠⣿⠯⢀⡀⠀⠀⠄⠘⠀⠀⢸⠀⠀⠀⠀⠀"</span><span class="p">,</span>
+                        <span class="s">"⠀⠀⠀⠀⠀⠀⠈⠂⢼⣿⡟⡞⠉⠍⠐⠸⡄⠀⠀⠄⠈⣩⡟⠉⠡⠈⠀⢀⡀⠀⢀⣠⢃⠾⠍⠀⠀⠀⠀⠈⠁⠃⠀⠀⡈⠀⢐⠀⠀⠀"</span>
+                <span class="p">},</span>
+                <span class="c1">//Cthulhu 2</span>
+                <span class="p">{</span>
+                        <span class="s">"                  ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⣤⣶⣷⣾⣿⣾⣶⣤⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀"</span><span class="p">,</span>
+                        <span class="s">"                 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣠⣤⣤⣄⣄⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⡄⠀⠀⠀⠀⠀⠀⠀⠀"</span><span class="p">,</span>
+                        <span class="s">"                 ⠀⠀⠀⠀⠀⠀⢀⣠⣾⣿⣿⣿⣿⣿⣿⣿⣿⣷⣶⡀⠀⠀⠀⠀⠀⠀⠀⠀⣰⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⠀⠀⠀⠀⠀⠀⢀⣴"</span><span class="p">,</span>
+                        <span class="s">"                 ⠀⠀⠀⠀⠀⣰⣾⣿⣿⣿⣿⣿⣿⡟⠛⠿⣿⣿⣿⣿⣇⠀⠀⠀⠀⠀⠀⢰⣿⣿⣿⣿⠟⠁⠀⢀⣿⣿⣿⣿⣿⠋⠀⠀⢀⣠⣰⣾⣾⣿"</span><span class="p">,</span>
+                        <span class="s">"                ⠀⠀⠀⠀⣼⣿⣿⠏⡿⠋⠀⠀⠉⢿⡆⠀⠈⠻⣿⣯⣿⡇⠀⠀⠀⠀⠀⣾⣿⣿⣿⣏⠀⠀⣠⣾⣿⣿⣿⣿⠋⢀⣴⣬⣿⣿⡿⡛⢿⣷"</span><span class="p">,</span>
+                        <span class="s">"               ⠀⠀⠀⠀⣿⣿⠃⠀⠁⠀⠀⠀⠀⣸⣿⠀⠀⠀⣿⣿⣿⣦⠀⠀⠀⠀⠀⢸⣿⣿⣿⣿⢀⣾⣿⣿⣿⣾⠟⣣⣴⠋⢻⣿⣏⣉⣿⣿⣿⣿"</span><span class="p">,</span>
+                        <span class="s">"                ⠀⠀⠀⠈⣿⣿⡀⠀⠀⠀⠀⢀⣰⡿⠃⠀⠀⠀⣿⣥⣟⡝⠀⠀⠀⠀⠀⠈⢻⣿⣿⣿⣿⣿⣿⣼⣿⣿⣾⡟⢻⣿⡿⡟⠿⣿⣿⣿⣿⣿"</span><span class="p">,</span>
+                        <span class="s">"                ⠀⠀⠀⠀⠘⠿⣿⣶⣶⣶⣶⠿⠛⠁⠀⠀⠀⣴⡿⣷⣿⣥⣴⣶⣶⣶⣤⣤⣀⣿⣿⣿⣿⣫⣿⣿⣿⡿⢛⣿⣿⠛⠟⠈⢠⣿⣿⣿⣿⣿"</span><span class="p">,</span>
+                        <span class="s">" ʕ(▀ ⍡ ▀)ʔ     ⠀⠀⣀⡤⠤⣄⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⢷⣿⣿⣿⣿⣿⣿⠿⣿⣿⣿⣿⣿⣿⣩⣿⡿⢿⣉⣽⣿⢟⠟⠉⠀⢠⣿⣿⣿⣿⣿⣿"</span><span class="p">,</span>       <span class="c1">//[2][0]</span>
+                        <span class="s">"  \\_⎐_/       ⠀⣼⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣴⣿⣟⣿⣿⣿⣿⢿⠾⠿⠿⢿⢿⣦⣿⣿⣿⡿⠻⣯⣼⣿⣿⡛⠁⠀⢀⣴⣿⣿⣿⣿⣿⣿⣿ "</span><span class="p">,</span>
+                        <span class="s">"  &lt;-2-&gt;      ⣸⡟⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣴⣿⣿⣿⣟⣿⣿⣿⣅⡀⠀⣀⣀⣤⣴⡿⣿⠛⣻⣷⡾⠿⣯⡸⢿⣿⣦⣴⣿⣿⣿⣿⣿⣿⣿⣿⣿  "</span><span class="p">,</span>
+                        <span class="s">"  〈  〉    ⢿⣿⡀⠀⠀⠀⠀⠀⠀⠀⠀⣠⣾⣿⣿⣿⢼⣿⣯⣿⣛⣿⣿⠿⣿⣛⣿⣷⣼⣿⣿⠟⣻⡳⢖⠛⢿⣿⣟⠛⣿⣿⣿⣿⣿⣿⣿⣿⠿⣿   "</span><span class="p">,</span>
+                        <span class="s">"             ⠘⣿⣿⣦⣤⣤⣀⣠⣤⣴⣿⡿⣿⡿⠟⠁⠀⠙⠿⢿⢿⣿⣿⣿⣿⣿⠿⣿⡯⠅⠉⠀⠙⢿⣿⣿⣿⡛⠿⣿⣿⣷⣦⣿⣿⣷⣿⣿⣿⣿"</span><span class="p">,</span>
+                        <span class="s">"             ⠀⠘⠻⢿⣿⣿⣿⣿⣿⡿⠿⠟⠉⠀⠀⠀⠀⠀⠀⠀⠁⠈⠁⠈⠉⣽⣿⠋⠀⠀⠀⠀⣀⡤⠶⠻⠿⠛⠻⠛⠿⠛⠿⠛⠛⠛⠋⠉⠉⠁"</span><span class="p">,</span>
+                        <span class="s">"               ⠀⠀⠀⠀⠀⠉⠁⠁⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⢿⣿⣄⣀⣀⣤⠾⠋⠀⠀⠀⠐⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀"</span><span class="p">,</span>
+                        <span class="s">"                            ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠛⠋⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀"</span>
+                <span class="p">},</span>
+                <span class="c1">//Cthulhu 3</span>
+                <span class="p">{</span>
+                        <span class="s">"    ⠀⠀⠀⠀⠀⠀⠀⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀       "</span><span class="p">,</span>
+                        <span class="s">"    ⠀⠀⠀⠀⠀⠀⣼⡏⠀⠀⠀ʕ ͡° ͜ʖ ° ͡ʔ⠀⠀⠀⠀⠀⠀⠀      "</span><span class="p">,</span>
+                        <span class="s">"    ⠀⠀⠀⠀⠀⠀⢿⣧⠀⠀⠀⠀\\_⍾_/              "</span><span class="p">,</span>
+                        <span class="s">"    ⠀⠀⠀⠀⠀⠀⠈⢻⣷⡀⠀⠀⠀==3==⠀⠀⠀⠈⠢⣄⡀⠀⠀⠀⠀⠀"</span><span class="p">,</span>
+                        <span class="s">"    ⠀⠀⠀⠀⠀⠀⠀⠀⠹⣿⡄  _/ \\_     ⠉⠙⠻⣷⠀⠀"</span><span class="p">,</span>
+                        <span class="s">"    ⠀⠀⠀⠀⠀⠀⠀⠀⠀⢹⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣄⣮⠟⠀⠀"</span><span class="p">,</span>
+                        <span class="s">"    ⠀⢀⣠⣲⣶⠶⣄⠀⠀⣸⠯⠂⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢯⠟⠇⠀⠀⠀"</span><span class="p">,</span>
+                        <span class="s">"    ⠀⡞⣾⡟⢻⣍⣼⠇⣰⣿⡿⠀⠀⠀⠀⠀⠀⠀⣶⠦⣀⠀⠀⠀⠀⠩⢪⢄⠀⠀"</span><span class="p">,</span>
+                        <span class="s">"    ⢸⢮⡭⡇⠀⠙⢉⣼⡿⣾⠁⠀⠀⠀⠀⠀⠀⠀⠁⠵⣦⡉⠈⠀⠀⢀⢪⡫⡄⠀"</span><span class="p">,</span>
+                        <span class="s">"    ⠘⣸⣮⣷⡀⠀⣸⣿⣿⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠐⣭⣆⠀⠀⡐⠗⡭⠢⠀"</span><span class="p">,</span>
+                        <span class="s">"    ⠀⠘⡽⡫⣿⡄⢿⣿⣷⣱⠀⠀⠀⠀⠀⠀⠀⠀⣠⢖⢝⣳⠞⣠⣼⣏⢏⣧⠛⠀"</span><span class="p">,</span>
+                        <span class="s">"    ⠀⠀⠰⣉⣟⣿⡘⣿⣿⣿⢵⡀⠀⠀⠀⠀⠀⠀⣟⡏⠀⠀⣾⣿⣿⡇⣠⡑⠀⠀"</span><span class="p">,</span>
+                        <span class="s">"    ⠀⠀⠀⠈⠉⠉⠁⠘⠉⠛⠈⠁⠀⠀⠀⠀⠀⠀⠈⠋⠀⠀⠉⠉⠉⠁⠉⠀⠀⠀"</span>
+                <span class="p">},</span>
+                <span class="c1">//Cthulhu 4</span>
+                <span class="p">{</span>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                        
+                
+                        <span class="s">"                                (◕‿◕✿)                                "</span><span class="p">,</span>          <span class="c1">//[4][0]</span>
+                        <span class="s">"                                \\_⍾_/                         "</span><span class="p">,</span>          <span class="c1">//[4][1]</span>
+                        <span class="s">"                                ==4==                          "</span><span class="p">,</span>          <span class="c1">//[4][2]</span>
+                        <span class="s">"                                _/ \\_                         "</span><span class="p">,</span>       
+                        <span class="s">"                                                                        "</span><span class="p">,</span>
+                        <span class="s">"        ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣴⣆⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀"</span><span class="p">,</span>
+                        <span class="s">"        ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢺⣿⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀"</span><span class="p">,</span>
+                        <span class="s">"        ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣾⣿⣷⣦⣀⠀⠀⠀⠀⠀⠀⣹⣿⡇⠀⠀⠀⠀⠀⠀⣴⣤⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀"</span><span class="p">,</span>
+                        <span class="s">"        ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠸⣇⠀⠈⢿⣿⡆⠀⠀⠀⠀⠀⣼⣿⡇⠀⠀⠀⠀⠀⢸⣿⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀"</span><span class="p">,</span>
+                        <span class="s">"        ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠸⣿⣿⠀⠀⠀⠀⠀⣿⣿⡇⠀⠀⠀⠀⠀⢸⣿⡏⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀"</span><span class="p">,</span>
+                        <span class="s">"        ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣿⣿⡇⠀⠀⠀⢠⣿⣿⡇⠀⠀⠀⠀⠀⣾⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀"</span><span class="p">,</span>
+                        <span class="s">"        ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣸⣿⣿⠃⠀⠀⠀⢸⣿⣿⡇⠀⠀⠀⠀⠀⣿⣿⣷⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀"</span><span class="p">,</span>
+                        <span class="s">"        ⠀⠠⣶⣾⣷⣦⣤⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⣿⣿⠀⠀⠀⠀⣿⣿⣿⡇⠀⠀⠀⠀⠀⠘⣿⣿⣷⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀"</span><span class="p">,</span>
+                        <span class="s">"        ⠀⠘⣿⡀⠈⠻⣿⣿⣆⡀⠀⠀⠀⠀⠀⠀⢿⣿⣿⣄⠀⠀⠀⣿⣿⣿⡇⠀⠀⠀⠀⠀⠀⣿⣿⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀"</span><span class="p">,</span>
+                        <span class="s">"        ⠀⠀⠈⠁⠀⠀⠈⢿⣿⣷⡀⠀⠀⠀⠀⠀⢸⣿⣿⣷⠀⠀⠀⣿⣿⣿⡇⠀⠀⠀⠀⠀⢸⣿⣿⡿⠀⠀⠀⠀⠀⠀⠀⣀⣀⣀⢀⠀⠀⠀"</span><span class="p">,</span>
+                        <span class="s">"        ⠀⠀⠀⠀⠀⠀⠀⠈⣿⣿⣷⡄⠀⠀⠀⠀⠈⣿⣿⣿⡦⠀⠀⣿⣿⣿⡇⠀⠀⠀⠀⠀⣽⣿⣿⠇⠀⠀⠀⠀⢠⣾⣿⡿⠿⠿⠿⣿⣦⡀"</span><span class="p">,</span>
+                        <span class="s">"        ⠀⠀⠀⠀⠀⠀⠀⠀⠹⣿⣿⣧⡀⠀⠀⠀⠀⢸⣿⣿⣿⠀⠀⣿⣿⣿⡇⠀⠀⠀⠀⢰⣿⣿⣿⠀⠀⠀⠀⣰⣿⣿⠏⠀⠀⠀⠸⠾⠿⠃"</span><span class="p">,</span>
+                        <span class="s">"        ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠹⣿⣿⣿⣆⡀⠀⠀⠘⣿⣿⣿⡇⠀⣿⣿⣿⡇⠀⠀⠀⢀⣾⣿⣿⡏⠀⠀⠀⠀⣻⣿⣿⠀⠀⠀⠀⠀⠀⠀⠀"</span><span class="p">,</span>
+                        <span class="s">"        ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠙⣿⣿⣿⣷⡄⠀⠀⣿⣿⣿⡟⢰⣿⣿⣿⡇⠀⠀⠀⣼⣿⣿⣿⠀⠀⠀⠀⠀⣻⣿⣿⠀⠀⠀⠀⠀⠀⠀⠀"</span><span class="p">,</span>
+                        <span class="s">"        ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⢿⣿⣿⣿⣆⠀⢹⣿⣿⣇⢸⣿⣿⣿⡇⠀⢀⣼⣿⣿⣿⠃⠀⠀⠀⠀⢀⣿⣿⣿⠀⠀⠀⠀⠀⠀⠀⠀"</span><span class="p">,</span>
+                        <span class="s">"        ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠻⣿⣿⣿⣧⢸⣿⣿⣿⣸⣿⣿⣿⠀⢠⣾⣿⣿⣿⠃⠀⠀⠀⠀⢀⣼⣿⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀"</span><span class="p">,</span>
+                        <span class="s">"        ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠹⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠃⠀⢀⣠⣴⣾⣿⣿⣿⠟⠁⠀⠀⠀⠀⠀⠀⠀⠀"</span><span class="p">,</span>
+                        <span class="s">"        ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠙⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣵⣾⣿⣿⣿⣿⣿⡿⠛⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀"</span><span class="p">,</span>
+                        <span class="s">"        ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠟⠋⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀"</span><span class="p">,</span>
+                        <span class="s">"        ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡟⠋⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀"</span><span class="p">,</span>
+                        <span class="s">"        ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡟⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀"</span><span class="p">,</span>
+                        <span class="s">"        ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀"</span><span class="p">,</span>
+                        <span class="s">"        ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠏⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀"</span><span class="p">,</span>
+                        <span class="s">"        ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠏⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀"</span><span class="p">,</span>
+                        <span class="s">"        ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⣿⣿⣿⣿⣿⣿⣿⣏⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀"</span>
+                <span class="p">},</span>
+
+            <span class="p">};</span>
+        <span class="p">}</span>
+    
+        <span class="cm">/**</span>
+<span class="cm">         * Loop and print monkeys in array</span>
+<span class="cm">         * ... repeat until you reach zero  ...</span>
+<span class="cm">         */</span>
+        <span class="kd">public</span> <span class="kt">void</span> <span class="nf">printPoem</span><span class="p">()</span> <span class="p">{</span>
+            <span class="c1">//begin the poem</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">();</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Monkey Jumpers Poem in Java Loopy"</span><span class="p">);</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"One day, there are total of five little monkeys want to jump on the bed to sleep"</span><span class="p">);</span> 
+            <span class="c1">// monkeys (non-primitive) defined in constructor knows its length</span>
+            <span class="kt">int</span> <span class="n">monkeyCount</span> <span class="o">=</span> <span class="n">monkeys</span><span class="p">.</span><span class="na">length</span><span class="p">;</span>
+            <span class="kt">int</span> <span class="n">Crow</span> <span class="o">=</span> <span class="mi">4</span><span class="p">;</span>
+            <span class="kt">int</span> <span class="n">row1</span> <span class="o">=</span> <span class="mi">4</span><span class="p">;</span>
+            <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="n">monkeyCount</span><span class="p">;</span> <span class="n">i</span> <span class="o">&gt;=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">i</span><span class="o">--</span><span class="p">)</span>  <span class="c1">//loops through 2D array length backwards</span>
+            <span class="p">{</span>
+                <span class="c1">//how many separate parts are there in a monkey monkey?</span>
+                <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">row</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">row</span> <span class="o">&lt;</span> <span class="n">monkeyCount</span><span class="p">;</span> <span class="n">row</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>  <span class="c1">//cycles through "cells" of 2d array</span>
+    
+                    <span class="cm">/*cycles through columns to print</span>
+<span class="cm">                    each monkey part by part, will eventually print entire column*/</span>
+                    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">col</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">col</span> <span class="o">&lt;</span> <span class="n">monkeys</span><span class="o">[</span><span class="n">row</span><span class="o">]</span><span class="p">.</span><span class="na">length</span><span class="p">;</span> <span class="n">col</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+    
+                        <span class="c1">// prints specific part of the monkey from the column</span>
+                        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="n">monkeys</span><span class="o">[</span><span class="n">row</span><span class="o">][</span><span class="n">col</span><span class="o">]</span> <span class="o">+</span> <span class="s">" "</span><span class="p">);</span>
+    
+                        <span class="c1">//this is new line between separate parts</span>
+                        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">();</span>
+                    <span class="p">}</span>
+                    <span class="c1">//this new line gives separation between stanza of poem</span>
+                    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">();</span>
+                <span class="p">}</span>
+                <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">();</span>
+                <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"--------------------------------------"</span><span class="p">);</span>
+                <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">();</span>
+                <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"One little monkeys jumping on the bed"</span><span class="p">);</span>
+                <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">col1</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">col1</span> <span class="o">&lt;</span> <span class="n">monkeys</span><span class="o">[</span><span class="n">row1</span><span class="o">]</span><span class="p">.</span><span class="na">length</span><span class="p">;</span> <span class="n">col1</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+                        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="n">monkeys</span><span class="o">[</span><span class="n">row1</span><span class="o">][</span><span class="n">col1</span><span class="o">]</span> <span class="o">+</span> <span class="s">" "</span><span class="p">);</span>
+    
+                        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">();</span>
+                    <span class="p">}</span>
+                <span class="n">row1</span> <span class="o">-=</span> <span class="mi">1</span><span class="p">;</span>
+                <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">();</span>
+                <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"--------------------------------------"</span><span class="p">);</span>
+                <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">();</span>
+                <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"--------------------------------------"</span><span class="p">);</span>
+                <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">();</span>
+                <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"jumping to the the arms of Cthulhu"</span><span class="p">);</span>
+                <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">();</span>
+
+                <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">Ccol</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">Ccol</span> <span class="o">&lt;</span> <span class="n">cthulhus</span><span class="o">[</span><span class="n">Crow</span><span class="o">]</span><span class="p">.</span><span class="na">length</span><span class="p">;</span> <span class="n">Ccol</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+    
+                        <span class="c1">// prints specific part of the monkey from the column</span>
+                        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="n">cthulhus</span><span class="o">[</span><span class="n">Crow</span><span class="o">][</span><span class="n">Ccol</span><span class="o">]</span> <span class="o">+</span> <span class="s">" "</span><span class="p">);</span>
+    
+                        <span class="c1">//this is new line between separate parts</span>
+                        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">();</span>
+                    <span class="p">}</span>
+                <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">();</span>
+                <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"--------------------------------------"</span><span class="p">);</span>
+                <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">();</span>
+                
+                <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Now, there are "</span> <span class="o">+</span> <span class="p">(</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="s">" little monkeys left"</span><span class="p">);</span>
+                <span class="c1">//countdown for poem, decrementing monkeyCount variable by 1</span>
+                <span class="n">monkeyCount</span> <span class="o">-=</span> <span class="mi">1</span><span class="p">;</span>
+                <span class="n">Crow</span> <span class="o">-=</span> <span class="mi">1</span><span class="p">;</span>
+
+            <span class="p">}</span>
+    
+            <span class="c1">//out of all the loops, prints finishing messages</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"No more monkeys jumping on the bed"</span><span class="p">);</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"0000000000000000000000000000000000"</span><span class="p">);</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"             THE END              "</span><span class="p">);</span>
+
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿"</span><span class="p">);</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿"</span><span class="p">);</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿"</span><span class="p">);</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿"</span><span class="p">);</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿"</span><span class="p">);</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿"</span><span class="p">);</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⢻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿"</span><span class="p">);</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠟⢛⣛⣼⣿⣿⣿⣿⣿⣿⠟⠛⠛⠋⠛⠛⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿"</span><span class="p">);</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠟⣡⣈⡈⢻⣿⣿⣿⣿⡇⢰⣿⣿⣿⣿⣿⣿⣿⠋⠈⠀⣂⣐⡒⠀⠀⠀⠙⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿"</span><span class="p">);</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣎⣚⣸⡃⢹⣿⣿⣿⣿⣷⣀⣍⡀⠑⠍⠻⣿⡏⠠⡀⢉⣉⠙⢻⣷⡄⠐⠀⠀⣻⣿⣿⣿⣿⣿⣿⣿⣿⣿"</span><span class="p">);</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡁⠘⣿⣿⣿⣿⣿⣿⣿⣿⣦⡄⠀⠀⢀⠠⠹⣿⣿⣇⢈⣿⡇⠀⠀⠀⣸⣿⣿⣿⣿⣿⣿⣿⣿⣿"</span><span class="p">);</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣧⠀⠈⠌⠉⠉⠛⠻⣿⣿⣿⣿⡀⠁⠀⠂⠉⠈⠉⠁⣰⠟⠁⠀⠀⢠⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿"</span><span class="p">);</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣖⠀⠀⠀⠙⡻⣿⣿⡇⠀⠀⢔⣿⣷⡾⠋⠀⠀⠀⠀⣤⡟⠉⣠⡤⠙⣿⣿⣿⣿⣿⣿"</span><span class="p">);</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"⣿⣿⣿⣿⣿⣿⣿⣿⠿⠿⠙⠋⠙⠛⠛⠟⢻⣿⣿⣷⣄⠀⠀⠀⢜⣿⠃⠀⡀⠀⠿⠍⠀⠀⠀⣠⣶⣿⣿⣷⠜⢇⡀⣀⣿⣿⣿⣿⣿⣿"</span><span class="p">);</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"⣿⣿⣿⣿⣿⣿⠿⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠸⠟⣿⣆⡀⠀⠀⠈⠀⠀⠀⠀⠀⠀⠀⢉⣾⣿⣿⣿⣿⣿⡌⠀⠙⣿⣿⣿⣿⣿⣿⣿"</span><span class="p">);</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"⣿⣿⣿⣿⡿⠉⠀⠀⠀⣤⣶⣤⣌⠀⠀⠀⠀⠪⠀⠀⠛⢻⠀⠀⠉⠀⠀⠀⠀⠀⡆⠀⠀⠈⠛⠿⣿⣿⣿⡿⠃⠀⢼⣿⣿⣿⣿⣿⣿⣿"</span><span class="p">);</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"⣿⣿⣿⣿⣇⠀⠀⠄⡤⠁⣽⣿⣿⣿⣄⠀⠘⣢⡀⠀⠀⠈⠡⠀⠀⢐⠈⠡⠀⠀⠁⠀⠤⠀⠠⠀⠀⢿⠉⠑⠀⠀⣸⣿⣿⣿⣿⣿⣿⣿"</span><span class="p">);</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"⣿⣿⣿⣿⣧⠄⠀⠀⠠⣴⣿⣿⣿⣿⣿⠆⠀⢨⣿⡄⠀⠀⠀⠀⠀⡀⠠⠀⡀⠀⠀⠀⠀⢀⡀⡀⠀⠀⠀⠀⢈⣺⣿⣿⣿⣿⣿⣿⣿⣿"</span><span class="p">);</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"⣿⣿⣿⣿⣿⣶⡀⠀⠀⠙⠿⠿⣿⡿⠋⠀⠀⣲⠿⠋⠀⠀⠉⠀⠠⠀⠊⠀⠀⠀⠀⠀⣠⢸⡁⠑⣀⠀⠀⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿"</span><span class="p">);</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"⣿⣿⣿⣿⣿⣿⣿⣤⡄⠀⠀⠀⠀⠀⠀⡀⣾⣿⠀⠀⢠⡀⠁⠀⠀⠀⠀⠀⣀⣤⣶⡿⣟⡅⣢⠀⠀⠀⣠⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿"</span><span class="p">);</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣶⣶⣴⠒⠒⠿⣿⡇⠀⢀⣗⣶⣶⢦⠖⢴⣖⡛⠉⣰⣷⠿⢫⣾⣞⣿⣿⣾⣿⣿⣯⡅⣼⣿⣿⣿⣿⣿⣿⣿"</span><span class="p">);</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠉⠀⠀⣐⠀⠸⠹⠀⢸⣹⣿⢣⡏⣾⣿⣿⣡⣼⢟⡡⣴⣿⣿⣿⣮⡻⣿⣿⣿⡿⡟⣿⣿⣿⣿⣿⣿⣿⣿"</span><span class="p">);</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠇⠸⡄⠉⠀⡸⡐⠀⡿⠿⠾⢸⣇⠢⠶⠛⢋⣡⣯⢾⣿⣿⣿⣿⣿⣿⢘⢿⣿⣷⣶⣿⣿⣿⣿⣿⣿⣿⣿"</span><span class="p">);</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡥⣄⠈⠙⠋⠀⢠⠌⠀⠀⠀⠀⠀⠀⢀⡴⣱⣿⣿⣏⠿⠟⢛⣛⣛⣋⣿⣷⣮⣝⢿⣿⣿⣿⣿⣿⣿⣿⣿"</span><span class="p">);</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"⣿⣿⣿⣿⣿⣿⣿⣿⣿⣁⣶⣿⣿⣷⣼⣞⢤⡞⠀⠀⠀⠀⠀⢀⣴⡿⢱⣿⡿⣿⣿⣶⣍⡻⣿⣿⣿⣿⣿⣿⣿⣷⣌⣿⣿⣿⣿⣿⣿⣿"</span><span class="p">);</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"⣿⣿⣿⣿⣿⣿⣿⢟⡝⣾⣿⣿⣿⣿⢋⣾⠺⠁⠀⠀⠀⣀⣴⣿⢟⣱⣿⣿⣿⣷⣯⣽⢟⣴⣿⣿⡿⢋⣽⠟⣫⣽⣿⣼⣿⣿⣿⣿⣿⣿"</span><span class="p">);</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"⣿⣿⣿⣿⣿⡿⣷⠟⣼⣿⣿⣼⣿⢃⣿⡇⠀⠀⠀⣠⣾⣿⣿⢯⣿⣿⣿⣿⣿⣿⣿⢳⣿⣿⣿⠇⣰⣿⣣⣾⣿⣿⣿⡗⣿⣿⣿⣿⣿⣿"</span><span class="p">);</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"⣿⣿⣿⣿⣿⢇⡟⣴⣿⣿⣿⣿⢣⣿⣿⠉⠀⣠⣾⣿⣿⡿⣣⣿⣿⡿⣿⣿⣿⡿⣱⣿⣿⣿⡟⣼⣿⢿⣿⡿⣿⣿⣿⣧⢿⣿⣿⣿⣿⣿"</span><span class="p">);</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"⣿⣿⣿⡿⣯⢞⣼⣿⣟⣵⣿⣯⣿⣿⠿⣠⣾⣿⣿⣿⡟⣱⣿⣿⣿⣿⣶⣽⢿⣾⣿⣿⣿⡿⢹⣿⣳⡿⣫⣾⣿⣿⣿⡿⣾⣿⣿⣿⣿⣿"</span><span class="p">);</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"⣿⣿⣿⢳⣿⢸⣿⣿⣿⣿⣿⠾⠿⢏⣿⣿⣿⣿⡿⠟⣼⣿⣿⣿⣿⣿⡿⣵⣿⣿⣿⣿⣿⣇⣿⣵⣟⣾⣿⣿⣿⣿⣿⡟⣿⣿⣿⣿⣿⣿"</span><span class="p">);</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"⣿⣿⡿⣼⡿⣸⣿⡿⠿⠛⠉⢀⣴⣿⣿⡿⢛⣼⠆⣾⣿⡿⣿⣿⣿⢟⣾⣿⣿⣿⣿⣿⣿⡇⣾⣿⣿⣿⣿⣿⣿⣿⣿⡇⣿⣿⣿⣿⣿⣿"</span><span class="p">);</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"⣿⢯⣶⡟⣨⣥⣖⠁⠀⠀⢠⣿⡿⢟⣷⣾⣿⢏⣼⣿⣿⣿⣦⣟⣽⣿⡟⣿⣿⣿⣿⣿⣿⡇⢹⣿⡿⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿"</span><span class="p">);</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"⣵⡿⢋⣴⣿⡿⠀⠀⠀⣀⣿⣭⣾⣿⣿⣿⢏⣾⣿⣿⣿⣿⢋⣽⣿⣿⣧⢹⣿⣿⢿⣡⡾⡃⣾⣿⡔⣋⣙⣟⣙⣿⣿⡇⣿⣿⣿⣿⣿⣿"</span><span class="p">);</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"⣿⣷⣿⣿⡿⠃⠀⠀⠀⣟⣫⢿⣿⣿⣿⡟⣼⣿⣿⣎⡽⣵⣿⣿⣿⣿⣿⡷⣯⣾⢿⣿⣿⡧⢹⡿⣫⣥⣯⣭⣿⣿⣿⡇⣿⣿⣿⣿⣿⣿"</span><span class="p">);</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"⣿⣿⣿⡿⠁⠀⢤⣶⡆⣿⣿⣿⣿⣿⡿⣸⣿⣿⣿⢯⣾⣿⣿⣿⣿⣿⡿⣛⣫⣼⣿⣿⣿⠇⣼⣿⣶⣾⣿⣿⣿⣿⣿⡏⣿⣿⣿⣿⣿⣿"</span><span class="p">);</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"⣿⣿⣿⡇⣨⣷⣿⣿⣿⠸⣿⣿⣿⣿⢣⣿⣶⣧⢷⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣯⠛⢋⣡⣴⣽⣿⣯⣭⣭⣭⣭⣿⣿⡇⣿⣿⣿⣿⣿⣿"</span><span class="p">);</span>
+        <span class="p">}</span>
+    
+        <span class="cm">/**</span>
+<span class="cm">        * A Java Driver/Test method that is the entry point for execution</span>
+<span class="cm">        */</span>
+        <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span>  <span class="p">{</span>
+            <span class="k">new</span> <span class="n">MonkeyLoop</span><span class="p">().</span><span class="na">printPoem</span><span class="p">();</span>   <span class="c1">//a new monkey list and output in one step</span>
+        <span class="p">}</span>
+    
+    <span class="p">}</span>
+    <span class="n">MonkeyLoop</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>
+Monkey Jumpers Poem in Java Loopy
+One day, there are total of five little monkeys want to jump on the bed to sleep
+ʕง ͠° ͟ل͜ ͡°)ʔ  
+  \_⏄_/   
+  --0--    
+  ⎛   ⎞    
+
+ ʕ༼ ◕_◕ ༽ʔ 
+  \_⎏_/   
+  ++1++   
+   ⌋ ⌊    
+
+ ʕ(▀ ⍡ ▀)ʔ 
+  \_⎐_/  
+  &lt;-2-&gt;   
+  〈  〉  
+
+ʕ ͡° ͜ʖ ° ͡ʔ 
+  \_⍾_/   
+  ==3==   
+  _/ \_   
+
+  (◕‿◕✿)  
+  \_⍾_/  
+  ==4==   
+  _/ \_  
+
+
+--------------------------------------
+
+One little monkeys jumping on the bed
+  (◕‿◕✿)  
+  \_⍾_/  
+  ==4==   
+  _/ \_  
+
+--------------------------------------
+
+--------------------------------------
+
+jumping to the the arms of Cthulhu
+
+                                (◕‿◕✿)                                 
+                                \_⍾_/                          
+                                ==4==                           
+                                _/ \_                          
+                                                                         
+        ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣴⣆⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀ 
+        ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢺⣿⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀ 
+        ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣾⣿⣷⣦⣀⠀⠀⠀⠀⠀⠀⣹⣿⡇⠀⠀⠀⠀⠀⠀⣴⣤⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀ 
+        ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠸⣇⠀⠈⢿⣿⡆⠀⠀⠀⠀⠀⣼⣿⡇⠀⠀⠀⠀⠀⢸⣿⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀ 
+        ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠸⣿⣿⠀⠀⠀⠀⠀⣿⣿⡇⠀⠀⠀⠀⠀⢸⣿⡏⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀ 
+        ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣿⣿⡇⠀⠀⠀⢠⣿⣿⡇⠀⠀⠀⠀⠀⣾⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀ 
+        ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣸⣿⣿⠃⠀⠀⠀⢸⣿⣿⡇⠀⠀⠀⠀⠀⣿⣿⣷⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀ 
+        ⠀⠠⣶⣾⣷⣦⣤⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⣿⣿⠀⠀⠀⠀⣿⣿⣿⡇⠀⠀⠀⠀⠀⠘⣿⣿⣷⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀ 
+        ⠀⠘⣿⡀⠈⠻⣿⣿⣆⡀⠀⠀⠀⠀⠀⠀⢿⣿⣿⣄⠀⠀⠀⣿⣿⣿⡇⠀⠀⠀⠀⠀⠀⣿⣿⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀ 
+        ⠀⠀⠈⠁⠀⠀⠈⢿⣿⣷⡀⠀⠀⠀⠀⠀⢸⣿⣿⣷⠀⠀⠀⣿⣿⣿⡇⠀⠀⠀⠀⠀⢸⣿⣿⡿⠀⠀⠀⠀⠀⠀⠀⣀⣀⣀⢀⠀⠀⠀ 
+        ⠀⠀⠀⠀⠀⠀⠀⠈⣿⣿⣷⡄⠀⠀⠀⠀⠈⣿⣿⣿⡦⠀⠀⣿⣿⣿⡇⠀⠀⠀⠀⠀⣽⣿⣿⠇⠀⠀⠀⠀⢠⣾⣿⡿⠿⠿⠿⣿⣦⡀ 
+        ⠀⠀⠀⠀⠀⠀⠀⠀⠹⣿⣿⣧⡀⠀⠀⠀⠀⢸⣿⣿⣿⠀⠀⣿⣿⣿⡇⠀⠀⠀⠀⢰⣿⣿⣿⠀⠀⠀⠀⣰⣿⣿⠏⠀⠀⠀⠸⠾⠿⠃ 
+        ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠹⣿⣿⣿⣆⡀⠀⠀⠘⣿⣿⣿⡇⠀⣿⣿⣿⡇⠀⠀⠀⢀⣾⣿⣿⡏⠀⠀⠀⠀⣻⣿⣿⠀⠀⠀⠀⠀⠀⠀⠀ 
+        ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠙⣿⣿⣿⣷⡄⠀⠀⣿⣿⣿⡟⢰⣿⣿⣿⡇⠀⠀⠀⣼⣿⣿⣿⠀⠀⠀⠀⠀⣻⣿⣿⠀⠀⠀⠀⠀⠀⠀⠀ 
+        ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⢿⣿⣿⣿⣆⠀⢹⣿⣿⣇⢸⣿⣿⣿⡇⠀⢀⣼⣿⣿⣿⠃⠀⠀⠀⠀⢀⣿⣿⣿⠀⠀⠀⠀⠀⠀⠀⠀ 
+        ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠻⣿⣿⣿⣧⢸⣿⣿⣿⣸⣿⣿⣿⠀⢠⣾⣿⣿⣿⠃⠀⠀⠀⠀⢀⣼⣿⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀ 
+        ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠹⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠃⠀⢀⣠⣴⣾⣿⣿⣿⠟⠁⠀⠀⠀⠀⠀⠀⠀⠀ 
+        ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠙⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣵⣾⣿⣿⣿⣿⣿⡿⠛⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀ 
+        ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠟⠋⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀ 
+        ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡟⠋⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀ 
+        ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡟⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀ 
+        ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀ 
+        ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠏⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀ 
+        ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠏⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀ 
+        ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⣿⣿⣿⣿⣿⣿⣿⣏⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀ 
+
+--------------------------------------
+
+Now, there are 4 little monkeys left
+ʕง ͠° ͟ل͜ ͡°)ʔ  
+  \_⏄_/   
+  --0--    
+  ⎛   ⎞    
+
+ ʕ༼ ◕_◕ ༽ʔ 
+  \_⎏_/   
+  ++1++   
+   ⌋ ⌊    
+
+ ʕ(▀ ⍡ ▀)ʔ 
+  \_⎐_/  
+  &lt;-2-&gt;   
+  〈  〉  
+
+ʕ ͡° ͜ʖ ° ͡ʔ 
+  \_⍾_/   
+  ==3==   
+  _/ \_   
+
+
+--------------------------------------
+
+One little monkeys jumping on the bed
+ʕ ͡° ͜ʖ ° ͡ʔ 
+  \_⍾_/   
+  ==3==   
+  _/ \_   
+
+--------------------------------------
+
+--------------------------------------
+
+jumping to the the arms of Cthulhu
+
+    ⠀⠀⠀⠀⠀⠀⠀⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀        
+    ⠀⠀⠀⠀⠀⠀⣼⡏⠀⠀⠀ʕ ͡° ͜ʖ ° ͡ʔ⠀⠀⠀⠀⠀⠀⠀       
+    ⠀⠀⠀⠀⠀⠀⢿⣧⠀⠀⠀⠀\_⍾_/               
+    ⠀⠀⠀⠀⠀⠀⠈⢻⣷⡀⠀⠀⠀==3==⠀⠀⠀⠈⠢⣄⡀⠀⠀⠀⠀⠀ 
+    ⠀⠀⠀⠀⠀⠀⠀⠀⠹⣿⡄  _/ \_     ⠉⠙⠻⣷⠀⠀ 
+    ⠀⠀⠀⠀⠀⠀⠀⠀⠀⢹⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣄⣮⠟⠀⠀ 
+    ⠀⢀⣠⣲⣶⠶⣄⠀⠀⣸⠯⠂⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢯⠟⠇⠀⠀⠀ 
+    ⠀⡞⣾⡟⢻⣍⣼⠇⣰⣿⡿⠀⠀⠀⠀⠀⠀⠀⣶⠦⣀⠀⠀⠀⠀⠩⢪⢄⠀⠀ 
+    ⢸⢮⡭⡇⠀⠙⢉⣼⡿⣾⠁⠀⠀⠀⠀⠀⠀⠀⠁⠵⣦⡉⠈⠀⠀⢀⢪⡫⡄⠀ 
+    ⠘⣸⣮⣷⡀⠀⣸⣿⣿⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠐⣭⣆⠀⠀⡐⠗⡭⠢⠀ 
+    ⠀⠘⡽⡫⣿⡄⢿⣿⣷⣱⠀⠀⠀⠀⠀⠀⠀⠀⣠⢖⢝⣳⠞⣠⣼⣏⢏⣧⠛⠀ 
+    ⠀⠀⠰⣉⣟⣿⡘⣿⣿⣿⢵⡀⠀⠀⠀⠀⠀⠀⣟⡏⠀⠀⣾⣿⣿⡇⣠⡑⠀⠀ 
+    ⠀⠀⠀⠈⠉⠉⠁⠘⠉⠛⠈⠁⠀⠀⠀⠀⠀⠀⠈⠋⠀⠀⠉⠉⠉⠁⠉⠀⠀⠀ 
+
+--------------------------------------
+
+Now, there are 3 little monkeys left
+ʕง ͠° ͟ل͜ ͡°)ʔ  
+  \_⏄_/   
+  --0--    
+  ⎛   ⎞    
+
+ ʕ༼ ◕_◕ ༽ʔ 
+  \_⎏_/   
+  ++1++   
+   ⌋ ⌊    
+
+ ʕ(▀ ⍡ ▀)ʔ 
+  \_⎐_/  
+  &lt;-2-&gt;   
+  〈  〉  
+
+
+--------------------------------------
+
+One little monkeys jumping on the bed
+ ʕ(▀ ⍡ ▀)ʔ 
+  \_⎐_/  
+  &lt;-2-&gt;   
+  〈  〉  
+
+--------------------------------------
+
+--------------------------------------
+
+jumping to the the arms of Cthulhu
+
+                  ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⣤⣶⣷⣾⣿⣾⣶⣤⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀ 
+                 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣠⣤⣤⣄⣄⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⡄⠀⠀⠀⠀⠀⠀⠀⠀ 
+                 ⠀⠀⠀⠀⠀⠀⢀⣠⣾⣿⣿⣿⣿⣿⣿⣿⣿⣷⣶⡀⠀⠀⠀⠀⠀⠀⠀⠀⣰⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⠀⠀⠀⠀⠀⠀⢀⣴ 
+                 ⠀⠀⠀⠀⠀⣰⣾⣿⣿⣿⣿⣿⣿⡟⠛⠿⣿⣿⣿⣿⣇⠀⠀⠀⠀⠀⠀⢰⣿⣿⣿⣿⠟⠁⠀⢀⣿⣿⣿⣿⣿⠋⠀⠀⢀⣠⣰⣾⣾⣿ 
+                ⠀⠀⠀⠀⣼⣿⣿⠏⡿⠋⠀⠀⠉⢿⡆⠀⠈⠻⣿⣯⣿⡇⠀⠀⠀⠀⠀⣾⣿⣿⣿⣏⠀⠀⣠⣾⣿⣿⣿⣿⠋⢀⣴⣬⣿⣿⡿⡛⢿⣷ 
+               ⠀⠀⠀⠀⣿⣿⠃⠀⠁⠀⠀⠀⠀⣸⣿⠀⠀⠀⣿⣿⣿⣦⠀⠀⠀⠀⠀⢸⣿⣿⣿⣿⢀⣾⣿⣿⣿⣾⠟⣣⣴⠋⢻⣿⣏⣉⣿⣿⣿⣿ 
+                ⠀⠀⠀⠈⣿⣿⡀⠀⠀⠀⠀⢀⣰⡿⠃⠀⠀⠀⣿⣥⣟⡝⠀⠀⠀⠀⠀⠈⢻⣿⣿⣿⣿⣿⣿⣼⣿⣿⣾⡟⢻⣿⡿⡟⠿⣿⣿⣿⣿⣿ 
+                ⠀⠀⠀⠀⠘⠿⣿⣶⣶⣶⣶⠿⠛⠁⠀⠀⠀⣴⡿⣷⣿⣥⣴⣶⣶⣶⣤⣤⣀⣿⣿⣿⣿⣫⣿⣿⣿⡿⢛⣿⣿⠛⠟⠈⢠⣿⣿⣿⣿⣿ 
+ ʕ(▀ ⍡ ▀)ʔ     ⠀⠀⣀⡤⠤⣄⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⢷⣿⣿⣿⣿⣿⣿⠿⣿⣿⣿⣿⣿⣿⣩⣿⡿⢿⣉⣽⣿⢟⠟⠉⠀⢠⣿⣿⣿⣿⣿⣿ 
+  \_⎐_/       ⠀⣼⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣴⣿⣟⣿⣿⣿⣿⢿⠾⠿⠿⢿⢿⣦⣿⣿⣿⡿⠻⣯⣼⣿⣿⡛⠁⠀⢀⣴⣿⣿⣿⣿⣿⣿⣿  
+  &lt;-2-&gt;      ⣸⡟⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣴⣿⣿⣿⣟⣿⣿⣿⣅⡀⠀⣀⣀⣤⣴⡿⣿⠛⣻⣷⡾⠿⣯⡸⢿⣿⣦⣴⣿⣿⣿⣿⣿⣿⣿⣿⣿   
+  〈  〉    ⢿⣿⡀⠀⠀⠀⠀⠀⠀⠀⠀⣠⣾⣿⣿⣿⢼⣿⣯⣿⣛⣿⣿⠿⣿⣛⣿⣷⣼⣿⣿⠟⣻⡳⢖⠛⢿⣿⣟⠛⣿⣿⣿⣿⣿⣿⣿⣿⠿⣿    
+             ⠘⣿⣿⣦⣤⣤⣀⣠⣤⣴⣿⡿⣿⡿⠟⠁⠀⠙⠿⢿⢿⣿⣿⣿⣿⣿⠿⣿⡯⠅⠉⠀⠙⢿⣿⣿⣿⡛⠿⣿⣿⣷⣦⣿⣿⣷⣿⣿⣿⣿ 
+             ⠀⠘⠻⢿⣿⣿⣿⣿⣿⡿⠿⠟⠉⠀⠀⠀⠀⠀⠀⠀⠁⠈⠁⠈⠉⣽⣿⠋⠀⠀⠀⠀⣀⡤⠶⠻⠿⠛⠻⠛⠿⠛⠿⠛⠛⠛⠋⠉⠉⠁ 
+               ⠀⠀⠀⠀⠀⠉⠁⠁⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⢿⣿⣄⣀⣀⣤⠾⠋⠀⠀⠀⠐⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀ 
+                            ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠛⠋⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀ 
+
+--------------------------------------
+
+Now, there are 2 little monkeys left
+ʕง ͠° ͟ل͜ ͡°)ʔ  
+  \_⏄_/   
+  --0--    
+  ⎛   ⎞    
+
+ ʕ༼ ◕_◕ ༽ʔ 
+  \_⎏_/   
+  ++1++   
+   ⌋ ⌊    
+
+
+--------------------------------------
+
+One little monkeys jumping on the bed
+ ʕ༼ ◕_◕ ༽ʔ 
+  \_⎏_/   
+  ++1++   
+   ⌋ ⌊    
+
+--------------------------------------
+
+--------------------------------------
+
+jumping to the the arms of Cthulhu
+
+                      ʕ༼ ◕_◕ ༽ʔ                            
+                       \_⎏_/                               
+                        ++1++                               
+                         ⌋ ⌊                                 
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡤⠊⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀ 
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⡎⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀ 
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣾⡟⠀⠙⣆⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀ 
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣟⡇⠀⠀⠈⣇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀ 
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⡧⣅⠀⠀⠐⣽⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀ 
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣗⠢⠀⠀⠀⠹⣿⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀ 
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⠑⠂⠀⠀⠸⢿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀ 
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⡴⠶⠶⠲⢶⣦⣄⠀⠀⠀⠀⢻⣤⠃⠄⠀⠴⢺⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀ 
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⡟⠀⠀⠀⠀⠀⠙⢿⠷⣄⠀⠀⢸⡦⠚⣁⡀⢈⣹⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀ 
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠻⣿⣇⠀⠀⣷⡖⢐⢩⡡⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀ 
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠨⡟⣿⡆⠀⢸⡧⠄⡄⢰⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢨⠆⠀⠀⠀⠀⠀⠀ 
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡷⣳⡅⠀⠀⣷⠠⠩⠁⠁⠀⠀⠀⠀⠀⠀⠀⠀⣀⣀⣀⡤⠤⠒⠁⠀⠀⠀⠀⠀⠀⠀ 
+⠀⠀⠀⠀⠀⠀⠀⠀⡄⠀⠀⠀⠀⠀⠀⠀⠀⢨⡟⣦⡆⠀⠀⣾⣧⠄⠂⣁⡀⠀⠀⠀⣠⡶⠞⠛⠉⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀ 
+⠀⠀⠀⠀⠀⠀⠀⠀⠣⢀⠀⠀⠀⠀⠀⠀⣠⣮⢲⣿⠇⠀⠰⣼⣿⠀⡀⣀⠀⡀⠀⣼⣷⠇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀ 
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠙⠒⢶⣆⢾⢿⣭⡿⠃⠀⠠⠤⠊⢽⡗⡴⢀⠁⠃⠀⣿⡼⢀⠀⠀⠀⠀⢀⣀⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀ 
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⢴⣛⣿⣿⡿⢿⣳⡄⠠⠤⠬⠈⣿⣷⠄⠄⡈⠘⠣⠹⣿⣷⣄⢠⣴⣚⠟⠛⠉⠙⠳⣆⠀⠀⠀⠀⠀⠀ 
+⠀⠀⠀⠀⠀⣄⠀⠀⠀⠀⣆⠋⠯⡷⣾⠟⠀⠀⡃⣯⠀⠠⠐⢋⡟⢿⡁⢁⠀⢂⢔⣆⠈⢻⣿⠖⢨⣀⠀⠀⠀⠀⠀⢸⠀⠀⠀⠀⠀⠀ 
+⠀⠀⠀⠀⠀⠈⣧⠀⢠⡋⣉⠤⠬⣽⡏⠀⠀⣢⣭⣀⡉⠄⠳⢺⡇⢸⠫⠑⠀⠄⣀⣈⣄⠾⣟⠿⡖⢘⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀ 
+⠀⠀⠀⠀⠀⠀⢸⢀⡖⠛⠂⣰⣦⣿⢀⡀⣿⣿⠛⠁⠀⠈⢒⣿⠁⢸⠗⠒⠂⢄⠁⠀⢻⣏⣮⠀⠙⣦⡄⠀⠉⠀⠀⢠⠎⠀⠀⠀⠀⠀ 
+⠀⠀⠀⠀⠀⠀⡟⢸⡷⢾⠑⢥⣨⣿⢃⣬⠞⡿⠀⠄⠁⢀⢠⡟⠀⢸⡤⠈⠠⠀⠑⡀⠹⣷⣿⡄⠀⣷⡤⠀⠈⠘⡀⡞⠀⠀⠀⠀⠀⠀ 
+⠀⠀⠀⠀⠀⢠⠃⣿⣬⢴⠻⣁⣛⣿⡼⠁⢰⢤⣤⠘⠀⠁⢋⡇⠀⣾⡁⠀⢀⠀⡦⢤⢴⣿⣽⣷⢀⣿⠤⠀⠈⠉⠃⣧⠀⠀⠀⠀⠀⠀ 
+⠀⠀⠀⠀⠀⡚⠀⣿⣀⣀⡕⢧⣨⣭⣇⠀⣄⠀⡀⠔⠌⠋⠙⡇⢰⣿⠙⠋⠃⠈⡀⠀⢀⠉⣿⣻⣿⡧⠀⠀⠈⠈⠁⢸⡀⠀⠀⠀⠀⠀ 
+⠀⠀⠀⡀⠀⠇⠀⢸⣈⠐⢀⡔⠥⣤⣽⣶⠃⠩⠁⠀⠐⠀⢲⣧⣾⠗⠄⠂⠀⠀⠈⠙⠸⠀⣿⣽⡯⠀⠀⠀⠀⠉⠃⠀⢇⠀⠀⠀⠀⠀ 
+⠀⠀⠀⠂⠀⠰⡄⠀⣿⡿⠈⠈⣰⠂⠤⢼⠆⠒⠒⡀⠄⢀⣨⣿⣁⢀⣀⠀⠈⠢⠤⢀⡆⢠⣿⠯⢀⡀⠀⠀⠄⠘⠀⠀⢸⠀⠀⠀⠀⠀ 
+⠀⠀⠀⠀⠀⠀⠈⠂⢼⣿⡟⡞⠉⠍⠐⠸⡄⠀⠀⠄⠈⣩⡟⠉⠡⠈⠀⢀⡀⠀⢀⣠⢃⠾⠍⠀⠀⠀⠀⠈⠁⠃⠀⠀⡈⠀⢐⠀⠀⠀ 
+
+--------------------------------------
+
+Now, there are 1 little monkeys left
+ʕง ͠° ͟ل͜ ͡°)ʔ  
+  \_⏄_/   
+  --0--    
+  ⎛   ⎞    
+
+
+--------------------------------------
+
+One little monkeys jumping on the bed
+ʕง ͠° ͟ل͜ ͡°)ʔ  
+  \_⏄_/   
+  --0--    
+  ⎛   ⎞    
+
+--------------------------------------
+
+--------------------------------------
+
+jumping to the the arms of Cthulhu
+
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⡠⡀⠀⠀⠀⠀⠀⠀⢎⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀ʕง ͠° ͟ل͜ ͡°)ʔ  
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠂⢱⠀⠀⢀⣤⡀⠀⠀⢣⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀  \_⏄_/   
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⣰⠻⠉⣧⣿⣿⣿⠀⠀⢸⠇⠀⠐⠉⡆⠀⠀⠀⠀⠀⠀  --0--    
+⠀⠀⠀⠀⢀⠔⠒⢦⠀⢻⡄⠀⢿⣻⣿⡿⢀⣴⣋⣄⣄⣌⣠⠃⠀⠀⠀⠀⠀⠀  ⎛   ⎞    
+⠀⠀⠀⠀⠈⠀⢀⡞⠀⠈⠛⣷⣾⣿⣿⣿⣿⣿⣯⣥⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀          
+⠀⠀⠀⠀⠀⠀⠈⠷⣦⣴⡾⢿⣿⡿⢿⣿⣋⣽⠶⢦⠙⢷⡀⠀⠀⠀⠀⠀⠀⠀          
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣾⡏⢀⡆⠈⠉⠁⡄⠈⡇⠘⢇⠀⢈⡆⠀⠀⠀⠀          
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⡯⠀⠸⠁⠀⠀⠸⣧⡀⡇⠀⠈⠉⠉⠀⠀⠀⠀⠀          
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠸⣇⡴⠁⠀⠀⠀⠀⠙⠛⠁⠀⠀⠀⠀⠀⠀⠀⠀           
+
+--------------------------------------
+
+Now, there are 0 little monkeys left
+No more monkeys jumping on the bed
+0000000000000000000000000000000000
+             THE END              
+⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⢻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠟⢛⣛⣼⣿⣿⣿⣿⣿⣿⠟⠛⠛⠋⠛⠛⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠟⣡⣈⡈⢻⣿⣿⣿⣿⡇⢰⣿⣿⣿⣿⣿⣿⣿⠋⠈⠀⣂⣐⡒⠀⠀⠀⠙⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣎⣚⣸⡃⢹⣿⣿⣿⣿⣷⣀⣍⡀⠑⠍⠻⣿⡏⠠⡀⢉⣉⠙⢻⣷⡄⠐⠀⠀⣻⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡁⠘⣿⣿⣿⣿⣿⣿⣿⣿⣦⡄⠀⠀⢀⠠⠹⣿⣿⣇⢈⣿⡇⠀⠀⠀⣸⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣧⠀⠈⠌⠉⠉⠛⠻⣿⣿⣿⣿⡀⠁⠀⠂⠉⠈⠉⠁⣰⠟⠁⠀⠀⢠⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣖⠀⠀⠀⠙⡻⣿⣿⡇⠀⠀⢔⣿⣷⡾⠋⠀⠀⠀⠀⣤⡟⠉⣠⡤⠙⣿⣿⣿⣿⣿⣿
+⣿⣿⣿⣿⣿⣿⣿⣿⠿⠿⠙⠋⠙⠛⠛⠟⢻⣿⣿⣷⣄⠀⠀⠀⢜⣿⠃⠀⡀⠀⠿⠍⠀⠀⠀⣠⣶⣿⣿⣷⠜⢇⡀⣀⣿⣿⣿⣿⣿⣿
+⣿⣿⣿⣿⣿⣿⠿⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠸⠟⣿⣆⡀⠀⠀⠈⠀⠀⠀⠀⠀⠀⠀⢉⣾⣿⣿⣿⣿⣿⡌⠀⠙⣿⣿⣿⣿⣿⣿⣿
+⣿⣿⣿⣿⡿⠉⠀⠀⠀⣤⣶⣤⣌⠀⠀⠀⠀⠪⠀⠀⠛⢻⠀⠀⠉⠀⠀⠀⠀⠀⡆⠀⠀⠈⠛⠿⣿⣿⣿⡿⠃⠀⢼⣿⣿⣿⣿⣿⣿⣿
+⣿⣿⣿⣿⣇⠀⠀⠄⡤⠁⣽⣿⣿⣿⣄⠀⠘⣢⡀⠀⠀⠈⠡⠀⠀⢐⠈⠡⠀⠀⠁⠀⠤⠀⠠⠀⠀⢿⠉⠑⠀⠀⣸⣿⣿⣿⣿⣿⣿⣿
+⣿⣿⣿⣿⣧⠄⠀⠀⠠⣴⣿⣿⣿⣿⣿⠆⠀⢨⣿⡄⠀⠀⠀⠀⠀⡀⠠⠀⡀⠀⠀⠀⠀⢀⡀⡀⠀⠀⠀⠀⢈⣺⣿⣿⣿⣿⣿⣿⣿⣿
+⣿⣿⣿⣿⣿⣶⡀⠀⠀⠙⠿⠿⣿⡿⠋⠀⠀⣲⠿⠋⠀⠀⠉⠀⠠⠀⠊⠀⠀⠀⠀⠀⣠⢸⡁⠑⣀⠀⠀⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⣿⣿⣿⣿⣿⣿⣿⣤⡄⠀⠀⠀⠀⠀⠀⡀⣾⣿⠀⠀⢠⡀⠁⠀⠀⠀⠀⠀⣀⣤⣶⡿⣟⡅⣢⠀⠀⠀⣠⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣶⣶⣴⠒⠒⠿⣿⡇⠀⢀⣗⣶⣶⢦⠖⢴⣖⡛⠉⣰⣷⠿⢫⣾⣞⣿⣿⣾⣿⣿⣯⡅⣼⣿⣿⣿⣿⣿⣿⣿
+⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠉⠀⠀⣐⠀⠸⠹⠀⢸⣹⣿⢣⡏⣾⣿⣿⣡⣼⢟⡡⣴⣿⣿⣿⣮⡻⣿⣿⣿⡿⡟⣿⣿⣿⣿⣿⣿⣿⣿
+⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠇⠸⡄⠉⠀⡸⡐⠀⡿⠿⠾⢸⣇⠢⠶⠛⢋⣡⣯⢾⣿⣿⣿⣿⣿⣿⢘⢿⣿⣷⣶⣿⣿⣿⣿⣿⣿⣿⣿
+⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡥⣄⠈⠙⠋⠀⢠⠌⠀⠀⠀⠀⠀⠀⢀⡴⣱⣿⣿⣏⠿⠟⢛⣛⣛⣋⣿⣷⣮⣝⢿⣿⣿⣿⣿⣿⣿⣿⣿
+⣿⣿⣿⣿⣿⣿⣿⣿⣿⣁⣶⣿⣿⣷⣼⣞⢤⡞⠀⠀⠀⠀⠀⢀⣴⡿⢱⣿⡿⣿⣿⣶⣍⡻⣿⣿⣿⣿⣿⣿⣿⣷⣌⣿⣿⣿⣿⣿⣿⣿
+⣿⣿⣿⣿⣿⣿⣿⢟⡝⣾⣿⣿⣿⣿⢋⣾⠺⠁⠀⠀⠀⣀⣴⣿⢟⣱⣿⣿⣿⣷⣯⣽⢟⣴⣿⣿⡿⢋⣽⠟⣫⣽⣿⣼⣿⣿⣿⣿⣿⣿
+⣿⣿⣿⣿⣿⡿⣷⠟⣼⣿⣿⣼⣿⢃⣿⡇⠀⠀⠀⣠⣾⣿⣿⢯⣿⣿⣿⣿⣿⣿⣿⢳⣿⣿⣿⠇⣰⣿⣣⣾⣿⣿⣿⡗⣿⣿⣿⣿⣿⣿
+⣿⣿⣿⣿⣿⢇⡟⣴⣿⣿⣿⣿⢣⣿⣿⠉⠀⣠⣾⣿⣿⡿⣣⣿⣿⡿⣿⣿⣿⡿⣱⣿⣿⣿⡟⣼⣿⢿⣿⡿⣿⣿⣿⣧⢿⣿⣿⣿⣿⣿
+⣿⣿⣿⡿⣯⢞⣼⣿⣟⣵⣿⣯⣿⣿⠿⣠⣾⣿⣿⣿⡟⣱⣿⣿⣿⣿⣶⣽⢿⣾⣿⣿⣿⡿⢹⣿⣳⡿⣫⣾⣿⣿⣿⡿⣾⣿⣿⣿⣿⣿
+⣿⣿⣿⢳⣿⢸⣿⣿⣿⣿⣿⠾⠿⢏⣿⣿⣿⣿⡿⠟⣼⣿⣿⣿⣿⣿⡿⣵⣿⣿⣿⣿⣿⣇⣿⣵⣟⣾⣿⣿⣿⣿⣿⡟⣿⣿⣿⣿⣿⣿
+⣿⣿⡿⣼⡿⣸⣿⡿⠿⠛⠉⢀⣴⣿⣿⡿⢛⣼⠆⣾⣿⡿⣿⣿⣿⢟⣾⣿⣿⣿⣿⣿⣿⡇⣾⣿⣿⣿⣿⣿⣿⣿⣿⡇⣿⣿⣿⣿⣿⣿
+⣿⢯⣶⡟⣨⣥⣖⠁⠀⠀⢠⣿⡿⢟⣷⣾⣿⢏⣼⣿⣿⣿⣦⣟⣽⣿⡟⣿⣿⣿⣿⣿⣿⡇⢹⣿⡿⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⣵⡿⢋⣴⣿⡿⠀⠀⠀⣀⣿⣭⣾⣿⣿⣿⢏⣾⣿⣿⣿⣿⢋⣽⣿⣿⣧⢹⣿⣿⢿⣡⡾⡃⣾⣿⡔⣋⣙⣟⣙⣿⣿⡇⣿⣿⣿⣿⣿⣿
+⣿⣷⣿⣿⡿⠃⠀⠀⠀⣟⣫⢿⣿⣿⣿⡟⣼⣿⣿⣎⡽⣵⣿⣿⣿⣿⣿⡷⣯⣾⢿⣿⣿⡧⢹⡿⣫⣥⣯⣭⣿⣿⣿⡇⣿⣿⣿⣿⣿⣿
+⣿⣿⣿⡿⠁⠀⢤⣶⡆⣿⣿⣿⣿⣿⡿⣸⣿⣿⣿⢯⣾⣿⣿⣿⣿⣿⡿⣛⣫⣼⣿⣿⣿⠇⣼⣿⣶⣾⣿⣿⣿⣿⣿⡏⣿⣿⣿⣿⣿⣿
+⣿⣿⣿⡇⣨⣷⣿⣿⣿⠸⣿⣿⣿⣿⢣⣿⣶⣧⢷⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣯⠛⢋⣡⣴⣽⣿⣯⣭⣭⣭⣭⣿⣿⡇⣿⣿⣿⣿⣿⣿
+</pre>
 </div>
 </div>
 
