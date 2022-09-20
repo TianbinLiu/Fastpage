@@ -2,10 +2,10 @@
   
     
         "post0": {
-            "title": "Title",
+            "title": "FRQ Methods and control structures",
             "content": ". public class FRQ1 { public static int numberOfLeapYears(int year1, int year2) { //create a static method boolean isLeapYear = false; //create a boolean called isLeapYear for(int i = year1 ; i &lt;= year2 &amp;&amp; i &gt; 0; i++) { if (i % 4 ==0){ //determine if i(year) is or not a leap year if (i % 100 == 0){ if (i % 400 == 0){ isLeapYear = true; } else { isLeapYear = false; } } else isLeapYear = true; } else isLeapYear = false; if (isLeapYear){ //method that if the boolean is true(if i is a leap year), print the year System.out.println(i + &quot; is a leap year.&quot;); } } return year1; //return code (no actual use, just to make sure the class goes well) } } FRQ1.numberOfLeapYears(1900, 2000); . 1904 is a leap year. 1908 is a leap year. 1912 is a leap year. 1916 is a leap year. 1920 is a leap year. 1924 is a leap year. 1928 is a leap year. 1932 is a leap year. 1936 is a leap year. 1940 is a leap year. 1944 is a leap year. 1948 is a leap year. 1952 is a leap year. 1956 is a leap year. 1960 is a leap year. 1964 is a leap year. 1968 is a leap year. 1972 is a leap year. 1976 is a leap year. 1980 is a leap year. 1984 is a leap year. 1988 is a leap year. 1992 is a leap year. 1996 is a leap year. 2000 is a leap year. . 1900 .",
-            "url": "https://tianbinliu.github.io/Fastpage/2022/09/19/frq1.html",
-            "relUrl": "/2022/09/19/frq1.html",
+            "url": "https://tianbinliu.github.io/Fastpage/jupyter/2022/09/19/frq1.html",
+            "relUrl": "/jupyter/2022/09/19/frq1.html",
             "date": " • Sep 19, 2022"
         }
         
