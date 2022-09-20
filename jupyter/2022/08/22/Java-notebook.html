@@ -81,7 +81,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      10 min read
+      11 min read
     
 </span></p>
 
@@ -587,6 +587,9 @@ window.onload = wrap_img;
             <span class="kt">int</span> <span class="n">monkeyCount</span> <span class="o">=</span> <span class="n">monkeys</span><span class="p">.</span><span class="na">length</span><span class="p">;</span>
             <span class="kt">int</span> <span class="n">Crow</span> <span class="o">=</span> <span class="mi">4</span><span class="p">;</span>
             <span class="kt">int</span> <span class="n">row1</span> <span class="o">=</span> <span class="mi">4</span><span class="p">;</span>
+            <span class="kt">int</span> <span class="n">Crow1</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+            <span class="kt">int</span> <span class="n">Crow2</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+            <span class="kt">int</span> <span class="n">Ccol2</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
             <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="n">monkeyCount</span><span class="p">;</span> <span class="n">i</span> <span class="o">&gt;=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">i</span><span class="o">--</span><span class="p">)</span>  <span class="c1">//loops through 2D array length backwards</span>
             <span class="p">{</span>
                 <span class="c1">//how many separate parts are there in a monkey monkey?</span>
@@ -683,6 +686,34 @@ window.onload = wrap_img;
             <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"⣿⣷⣿⣿⡿⠃⠀⠀⠀⣟⣫⢿⣿⣿⣿⡟⣼⣿⣿⣎⡽⣵⣿⣿⣿⣿⣿⡷⣯⣾⢿⣿⣿⡧⢹⡿⣫⣥⣯⣭⣿⣿⣿⡇⣿⣿⣿⣿⣿⣿"</span><span class="p">);</span>
             <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"⣿⣿⣿⡿⠁⠀⢤⣶⡆⣿⣿⣿⣿⣿⡿⣸⣿⣿⣿⢯⣾⣿⣿⣿⣿⣿⡿⣛⣫⣼⣿⣿⣿⠇⣼⣿⣶⣾⣿⣿⣿⣿⣿⡏⣿⣿⣿⣿⣿⣿"</span><span class="p">);</span>
             <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"⣿⣿⣿⡇⣨⣷⣿⣿⣿⠸⣿⣿⣿⣿⢣⣿⣶⣧⢷⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣯⠛⢋⣡⣴⣽⣿⣯⣭⣭⣭⣭⣿⣿⡇⣿⣿⣿⣿⣿⣿"</span><span class="p">);</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"--------------------------------------"</span><span class="p">);</span>
+            <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">Ccol1</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span> <span class="n">Ccol1</span> <span class="o">!=</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span> <span class="n">Ccol1</span><span class="o">--</span><span class="p">)</span> <span class="p">{</span>
+    
+                <span class="c1">// prints specific part of the monkey from the column</span>
+                <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="n">monkeys</span><span class="o">[</span><span class="n">Crow1</span><span class="o">][</span><span class="n">Ccol1</span><span class="o">]</span> <span class="o">+</span> <span class="s">" "</span><span class="p">);</span>
+
+                <span class="c1">//this is new line between separate parts</span>
+                <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">();</span>
+            <span class="p">}</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"--------------------------------------"</span><span class="p">);</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">();</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"--------------------------------------"</span><span class="p">);</span>
+
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="n">monkeys</span><span class="o">[</span><span class="n">Crow2</span><span class="o">][</span><span class="n">Ccol2</span><span class="o">]</span> <span class="o">+</span> <span class="s">" "</span> <span class="o">+</span> <span class="n">monkeys</span><span class="o">[</span><span class="n">Crow2</span><span class="o">][</span><span class="n">Ccol2</span><span class="o">]</span> <span class="o">+</span><span class="s">" "</span><span class="o">+</span> <span class="n">monkeys</span><span class="o">[</span><span class="n">Crow2</span><span class="o">][</span><span class="n">Ccol2</span><span class="o">]</span> <span class="o">+</span><span class="s">" "</span><span class="o">+</span> <span class="n">monkeys</span><span class="o">[</span><span class="n">Crow2</span><span class="o">][</span><span class="n">Ccol2</span><span class="o">]</span> <span class="o">+</span><span class="s">" "</span><span class="o">+</span> <span class="n">monkeys</span><span class="o">[</span><span class="n">Crow2</span><span class="o">][</span><span class="n">Ccol2</span><span class="o">]</span> <span class="o">+</span><span class="s">" "</span><span class="o">+</span> <span class="n">monkeys</span><span class="o">[</span><span class="n">Crow2</span><span class="o">][</span><span class="n">Ccol2</span><span class="o">]</span> <span class="o">+</span><span class="s">" "</span><span class="o">+</span> <span class="n">monkeys</span><span class="o">[</span><span class="n">Crow2</span><span class="o">][</span><span class="n">Ccol2</span><span class="o">]</span> <span class="o">+</span><span class="s">" "</span><span class="p">);</span>
+
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"--------------------------------------"</span><span class="p">);</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"--------------------------------------"</span><span class="p">);</span>
+            <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">num</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">num</span> <span class="o">!=</span> <span class="mi">4</span><span class="p">;</span> <span class="n">num</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+    
+                <span class="c1">// prints specific part of the monkey from the column</span>
+                <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="n">monkeys</span><span class="o">[</span><span class="n">Crow2</span><span class="o">][</span><span class="n">Ccol2</span><span class="o">]</span> <span class="o">+</span> <span class="s">" "</span><span class="p">);</span>
+        
+                <span class="c1">//this is new line between separate parts</span>
+                <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">();</span>
+            <span class="p">}</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"--------------------------------------"</span><span class="p">);</span>
+
+
         <span class="p">}</span>
     
         <span class="cm">/**</span>
@@ -1015,6 +1046,21 @@ No more monkeys jumping on the bed
 ⣿⣷⣿⣿⡿⠃⠀⠀⠀⣟⣫⢿⣿⣿⣿⡟⣼⣿⣿⣎⡽⣵⣿⣿⣿⣿⣿⡷⣯⣾⢿⣿⣿⡧⢹⡿⣫⣥⣯⣭⣿⣿⣿⡇⣿⣿⣿⣿⣿⣿
 ⣿⣿⣿⡿⠁⠀⢤⣶⡆⣿⣿⣿⣿⣿⡿⣸⣿⣿⣿⢯⣾⣿⣿⣿⣿⣿⡿⣛⣫⣼⣿⣿⣿⠇⣼⣿⣶⣾⣿⣿⣿⣿⣿⡏⣿⣿⣿⣿⣿⣿
 ⣿⣿⣿⡇⣨⣷⣿⣿⣿⠸⣿⣿⣿⣿⢣⣿⣶⣧⢷⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣯⠛⢋⣡⣴⣽⣿⣯⣭⣭⣭⣭⣿⣿⡇⣿⣿⣿⣿⣿⣿
+--------------------------------------
+   ⌋ ⌊    
+  ++1++   
+  \_⎏_/   
+ ʕ༼ ◕_◕ ༽ʔ 
+--------------------------------------
+
+--------------------------------------
+ ʕ༼ ◕_◕ ༽ʔ  ʕ༼ ◕_◕ ༽ʔ  ʕ༼ ◕_◕ ༽ʔ  ʕ༼ ◕_◕ ༽ʔ  ʕ༼ ◕_◕ ༽ʔ  ʕ༼ ◕_◕ ༽ʔ  ʕ༼ ◕_◕ ༽ʔ --------------------------------------
+--------------------------------------
+ ʕ༼ ◕_◕ ༽ʔ 
+ ʕ༼ ◕_◕ ༽ʔ 
+ ʕ༼ ◕_◕ ༽ʔ 
+ ʕ༼ ◕_◕ ༽ʔ 
+--------------------------------------
 </pre>
 </div>
 </div>
