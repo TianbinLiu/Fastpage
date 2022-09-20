@@ -12,3 +12,11 @@ _notebooks/.ipynb_checkpoints
 .netlify
 .tweet-cache
 __pycache__
+_posts/2022-09-11-lession-ifs.md
+_posts/2022-09-06-Codeweb.md
+.gitignore
+_posts/2022-08-28-Primitives.md
+_posts/2022-08-26-verify-tools.md
+_posts/2022-08-22-python-notebook.md
+.gitignore
+_posts/2022-08-22-Java-notebook.md
