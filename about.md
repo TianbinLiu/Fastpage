@@ -36,7 +36,7 @@ title: about
     background: rgba(0,0,0,0.2);
     }
 </style>
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
+
 <div id="video_wrapper">
     <video autoplay loop>
         <source src="https://drive.google.com/uc?export=view&id=1IOK35bZ6iM5q4rYxhLmlFwYa3lHjINXR" type="video/mp4">
@@ -112,7 +112,7 @@ title: about
         
     </div>
 </div>
-<script>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js">
 
 function logItType(output) {
     console.log(typeof output, ";", output);
