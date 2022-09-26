@@ -149,7 +149,8 @@ th, td {
         
     &lt;/div&gt;
 &lt;/div&gt;
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js">
+
 function logItType(output) {
     console.log(typeof output, ";", output);
 }
@@ -192,10 +193,10 @@ function Classroom(teacher, students){ // 1 teacher, many student
     this.classroom = [teacher];
     // add each Student to Classroom
     this.students = students;
-    this.students.forEach(student =&gt; { student.setRole("Student"); this.classroom.push(student); });
+    this.students.forEach(student => { student.setRole("Student"); this.classroom.push(student); });
     // build json/string format of Classroom
     this.json = [];
-    this.classroom.forEach(person =&gt; this.json.push(person.toJSON()));
+    this.classroom.forEach(person => this.json.push(person.toJSON()));
 }
 
 // make a CompSci classroom from formerly defined teacher and students
@@ -234,7 +235,7 @@ Classroom.prototype._toHtml = function() {
   
      // Build and HTML fragment of div, table, table body
     return (
-      "<div style="&quot; + style + &quot;">" +
+      "<div style='" + style + "'>" +
         "<table>" +
           body +
         "</table>" +
@@ -264,6 +265,5 @@ setTimeout(function() {
 
 
 
-
-&lt;/script&gt;
-</tr></tr></table></div></div>
+</script>
+</table></div></div>
