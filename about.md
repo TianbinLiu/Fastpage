@@ -112,7 +112,7 @@ title: about
         
     </div>
 </div>
-<script>
+
 function logItType(output) {
     console.log(typeof output, ";", output);
 }
