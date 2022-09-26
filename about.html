@@ -150,8 +150,26 @@ th, td {
     &lt;/div&gt;
 &lt;/div&gt;
 <script>
-    function logItType(output) {
+function logItType(output) {
     console.log(typeof output, ";", output);
+}
+
+function Person(name, ghID, classOf) {
+  this.name = name;
+  this.ghID = ghID;
+  this.classOf = classOf;
+  this.role = "";
+}
+
+Person.prototype.setRole = function(role) {
+  this.role = role;
+}
+
+// define a JSON conversion "method" associated with Person
+Person.prototype.toJSON = function() {
+  const obj = {name: this.name, ghID: this.ghID, classOf: this.classOf, role: this.role};
+  const json = JSON.stringify(obj);  // json/string is useful when passing data on internet
+  return json;
 }
 var students = [ 
     new Person("Anthony", "tonyhieu", 2022),
@@ -236,6 +254,8 @@ setTimeout(function() {
     $$.clear(0);    // clear output cell
     action.$$.sendResult("Goodbye!");
 }, 200000);  // 2 second timer
+
+
 
 
 </script>
