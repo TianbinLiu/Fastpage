@@ -134,6 +134,11 @@ Person.prototype.toJSON = function() {
   const json = JSON.stringify(obj);  // json/string is useful when passing data on internet
   return json;
 }
+
+var teacher = new Person("Mr M", "jm1021", 1977);  // object type is easy to work with in JavaScript
+teacher.setRole("Teacher");   // set the role
+
+
 var students = [ 
     new Person("Anthony", "tonyhieu", 2022),
     new Person("Bria", "B-G101", 2023),
@@ -217,6 +222,8 @@ setTimeout(function() {
     $$.clear(0);    // clear output cell
     action.$$.sendResult("Goodbye!");
 }, 200000);  // 2 second timer
+
+
 
 
 
