@@ -36,7 +36,9 @@ title: about
     background: rgba(0,0,0,0.2);
     }
 </style>
-
+<head>
+  <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+</head>
 <div id="video_wrapper">
     <video autoplay loop>
         <source src="https://drive.google.com/uc?export=view&id=1IOK35bZ6iM5q4rYxhLmlFwYa3lHjINXR" type="video/mp4">
