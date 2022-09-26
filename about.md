@@ -36,7 +36,7 @@ title: about
     background: rgba(0,0,0,0.2);
     }
 </style>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
 <div id="video_wrapper">
     <video autoplay loop>
         <source src="https://drive.google.com/uc?export=view&id=1IOK35bZ6iM5q4rYxhLmlFwYa3lHjINXR" type="video/mp4">
@@ -109,17 +109,6 @@ title: about
             Someone at home:
             
         </p>
-            
         
-        <div class="output"></div>
-        <script language="javascript">
-            var realConsoleLog = console.log;
-            console.log = function () {
-            var message = [].join.call(arguments, " ");
-            $(".output").text(message);
-            realConsoleLog.apply(console, arguments);
-            };
-            console.log("hello", "my", "name", "is", "shantharuban");
-       </script>
     </div>
 </div>
