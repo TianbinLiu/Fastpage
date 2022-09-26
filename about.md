@@ -112,7 +112,7 @@ title: about
         
     </div>
 </div>
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js">
+<script>
 
 function logItType(output) {
     console.log(typeof output, ";", output);
