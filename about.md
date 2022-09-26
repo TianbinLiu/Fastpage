@@ -112,7 +112,8 @@ title: about
         
     </div>
 </div>
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js">
+
 function logItType(output) {
     console.log(typeof output, ";", output);
 }
@@ -222,7 +223,6 @@ setTimeout(function() {
     $$.clear(0);    // clear output cell
     action.$$.sendResult("Goodbye!");
 }, 200000);  // 2 second timer
-
 
 
 
