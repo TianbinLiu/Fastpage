@@ -81,7 +81,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      25 min read
+      22 min read
     
 </span></p>
 
@@ -130,6 +130,8 @@ window.onload = wrap_img;
 <ul>
 <li class="toc-entry toc-h3"><a href="#Iteration-with-2D-Array">Iteration with 2D Array </a></li>
 <li class="toc-entry toc-h3"><a href="#Class-running-Fibonacci">Class running Fibonacci </a></li>
+<li class="toc-entry toc-h3"><a href="#Original-Class-(The-class-that-I-will-use-to-extends-for,-keep-not-change)">Original Class (The class that I will use to extends for, keep not change) </a></li>
+<li class="toc-entry toc-h3"><a href="#For-loop-Example">For loop Example </a></li>
 </ul>
 </li>
 </ul><!--
@@ -1078,6 +1080,15 @@ No more monkeys jumping on the bed
 </div>
 </div>
 </div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Original-Class-(The-class-that-I-will-use-to-extends-for,-keep-not-change)">
+<a class="anchor" href="#Original-Class-(The-class-that-I-will-use-to-extends-for,-keep-not-change)" aria-hidden="true"><span class="octicon octicon-link"></span></a>Original Class (The class that I will use to extends for, keep not change)<a class="anchor-link" href="#Original-Class-(The-class-that-I-will-use-to-extends-for,-keep-not-change)"> </a>
+</h3>
+</div>
+</div>
+</div>
     
     
 <div class="cell border-box-sizing code_cell rendered">
@@ -1160,23 +1171,9 @@ No more monkeys jumping on the bed
         <span class="k">return</span> <span class="n">hash</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">i</span><span class="p">);</span>
     <span class="p">}</span>
 
-
-    
-    
-    <span class="kd">static</span> <span class="kt">long</span> <span class="nf">recu</span><span class="p">(</span><span class="kt">long</span> <span class="n">n</span><span class="p">)</span> <span class="p">{</span>
-      <span class="k">if</span> <span class="p">(</span><span class="n">n</span> <span class="o">&gt;=</span> <span class="mi">2</span><span class="p">)</span>
-        <span class="k">return</span> <span class="n">recu</span><span class="p">(</span><span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="n">recu</span><span class="p">(</span><span class="n">n</span> <span class="o">-</span> <span class="mi">2</span><span class="p">);</span>
-      <span class="k">else</span>
-        <span class="k">return</span> <span class="n">n</span><span class="p">;</span>
-   <span class="p">}</span>
     <span class="cm">/*</span>
 <span class="cm">     Console/Terminal supported print method</span>
 <span class="cm">     */</span>
-    <span class="kt">int</span> <span class="n">whilei</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-    <span class="kt">int</span> <span class="n">whilei2</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-    <span class="kt">int</span> <span class="n">forn1</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-    <span class="kt">int</span> <span class="n">forn2</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-    <span class="kt">int</span> <span class="n">forn3</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
     <span class="kd">public</span> <span class="kt">void</span> <span class="nf">print</span><span class="p">()</span> <span class="p">{</span>
         <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Init method = "</span> <span class="o">+</span> <span class="k">this</span><span class="p">.</span><span class="na">name</span><span class="p">);</span>
         <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"fibonacci Number "</span> <span class="o">+</span> <span class="k">this</span><span class="p">.</span><span class="na">size</span> <span class="o">+</span> <span class="s">" = "</span> <span class="o">+</span> <span class="k">this</span><span class="p">.</span><span class="na">getNth</span><span class="p">());</span>
@@ -1185,42 +1182,7 @@ No more monkeys jumping on the bed
         <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span> <span class="p">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="k">this</span><span class="p">.</span><span class="na">size</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span> <span class="p">)</span> <span class="p">{</span>
             <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"fibonacci Sequence "</span> <span class="o">+</span> <span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="s">" = "</span> <span class="o">+</span> <span class="k">this</span><span class="p">.</span><span class="na">getNthSeq</span><span class="p">(</span><span class="n">i</span><span class="p">));</span>
         <span class="p">}</span>
-        <span class="k">while</span> <span class="p">(</span><span class="n">whilei</span> <span class="o">&lt;</span> <span class="k">this</span><span class="p">.</span><span class="na">size</span><span class="p">){</span>
-            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"fibonacci Sequence "</span> <span class="o">+</span> <span class="p">(</span><span class="n">whilei</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="s">" = "</span> <span class="o">+</span> <span class="k">this</span><span class="p">.</span><span class="na">getNthSeq</span><span class="p">(</span><span class="n">whilei</span><span class="p">));</span>
-            <span class="n">whilei</span> <span class="o">+=</span> <span class="mi">1</span><span class="p">;</span>
-        <span class="p">}</span>
-        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">n</span><span class="o">=</span><span class="mi">0</span> <span class="p">;</span> <span class="n">n</span><span class="o">&lt;=</span><span class="k">this</span><span class="p">.</span><span class="na">size</span><span class="p">;</span> <span class="n">n</span><span class="o">++</span> <span class="p">)</span> <span class="p">{</span>
-            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">n</span> <span class="o">+</span> <span class="s">"th fibonacci number is: "</span> <span class="o">+</span> <span class="n">recu</span><span class="p">(</span><span class="n">n</span><span class="p">));</span>
-            <span class="k">if</span> <span class="p">(</span><span class="n">n</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">){</span>
-                <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"You shouldn't input a negative number!!"</span><span class="p">);</span>
-            <span class="p">}</span>
-        <span class="p">}</span>
-        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">n</span><span class="o">=</span><span class="mi">0</span> <span class="p">;</span> <span class="n">n</span><span class="o">&lt;=</span><span class="k">this</span><span class="p">.</span><span class="na">size</span><span class="p">;</span> <span class="n">n</span><span class="o">++</span> <span class="p">){</span>
-            <span class="n">forn3</span> <span class="o">=</span> <span class="p">(</span><span class="n">forn1</span> <span class="o">+</span> <span class="n">forn2</span><span class="p">);</span>
-            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">n</span> <span class="o">+</span> <span class="s">"th fibonacci number is: "</span> <span class="o">+</span> <span class="n">forn3</span><span class="p">);</span>
-            <span class="n">forn1</span> <span class="o">=</span> <span class="n">forn2</span><span class="p">;</span>
-            <span class="n">forn2</span> <span class="o">=</span> <span class="n">forn3</span><span class="p">;</span>
-            <span class="k">if</span> <span class="p">(</span><span class="n">n</span> <span class="o">&lt;</span> <span class="mi">2</span><span class="p">){</span>
-                <span class="n">forn2</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
-                <span class="n">forn1</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-            <span class="p">}</span>
-        <span class="p">}</span>
-        <span class="kt">int</span> <span class="n">forn1</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-        <span class="kt">int</span> <span class="n">forn2</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-        <span class="k">while</span> <span class="p">(</span><span class="n">whilei2</span><span class="o">&lt;=</span><span class="k">this</span><span class="p">.</span><span class="na">size</span><span class="p">){</span>
-            <span class="n">forn3</span> <span class="o">=</span> <span class="p">(</span><span class="n">forn1</span> <span class="o">+</span> <span class="n">forn2</span><span class="p">);</span>
-            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">whilei2</span> <span class="o">+</span> <span class="s">"th fibonacci number is: "</span> <span class="o">+</span> <span class="n">forn3</span><span class="p">);</span>
-            <span class="n">forn1</span> <span class="o">=</span> <span class="n">forn2</span><span class="p">;</span>
-            <span class="n">forn2</span> <span class="o">=</span> <span class="n">forn3</span><span class="p">;</span>
-            <span class="k">if</span> <span class="p">(</span><span class="n">whilei2</span> <span class="o">&lt;</span> <span class="mi">2</span><span class="p">){</span>
-                <span class="n">forn2</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
-                <span class="n">forn1</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-            <span class="p">}</span>
-            <span class="n">whilei2</span> <span class="o">+=</span> <span class="mi">1</span><span class="p">;</span>
-        <span class="p">}</span>
-
     <span class="p">}</span>
-
 
     <span class="cm">/*</span>
 <span class="cm">    Tester class method.  If this becomes abstract you will not be able to test it directly ...</span>
@@ -1268,89 +1230,6 @@ fibonacci Sequence 17 = [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377,
 fibonacci Sequence 18 = [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610, 987, 1597]
 fibonacci Sequence 19 = [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610, 987, 1597, 2584]
 fibonacci Sequence 20 = [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610, 987, 1597, 2584, 4181]
-fibonacci Sequence 1 = [0]
-fibonacci Sequence 2 = [0, 1]
-fibonacci Sequence 3 = [0, 1, 1]
-fibonacci Sequence 4 = [0, 1, 1, 2]
-fibonacci Sequence 5 = [0, 1, 1, 2, 3]
-fibonacci Sequence 6 = [0, 1, 1, 2, 3, 5]
-fibonacci Sequence 7 = [0, 1, 1, 2, 3, 5, 8]
-fibonacci Sequence 8 = [0, 1, 1, 2, 3, 5, 8, 13]
-fibonacci Sequence 9 = [0, 1, 1, 2, 3, 5, 8, 13, 21]
-fibonacci Sequence 10 = [0, 1, 1, 2, 3, 5, 8, 13, 21, 34]
-fibonacci Sequence 11 = [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55]
-fibonacci Sequence 12 = [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89]
-fibonacci Sequence 13 = [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144]
-fibonacci Sequence 14 = [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233]
-fibonacci Sequence 15 = [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377]
-fibonacci Sequence 16 = [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610]
-fibonacci Sequence 17 = [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610, 987]
-fibonacci Sequence 18 = [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610, 987, 1597]
-fibonacci Sequence 19 = [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610, 987, 1597, 2584]
-fibonacci Sequence 20 = [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610, 987, 1597, 2584, 4181]
-0th fibonacci number is: 0
-1th fibonacci number is: 1
-2th fibonacci number is: 1
-3th fibonacci number is: 2
-4th fibonacci number is: 3
-5th fibonacci number is: 5
-6th fibonacci number is: 8
-7th fibonacci number is: 13
-8th fibonacci number is: 21
-9th fibonacci number is: 34
-10th fibonacci number is: 55
-11th fibonacci number is: 89
-12th fibonacci number is: 144
-13th fibonacci number is: 233
-14th fibonacci number is: 377
-15th fibonacci number is: 610
-16th fibonacci number is: 987
-17th fibonacci number is: 1597
-18th fibonacci number is: 2584
-19th fibonacci number is: 4181
-20th fibonacci number is: 6765
-0th fibonacci number is: 0
-1th fibonacci number is: 1
-2th fibonacci number is: 1
-3th fibonacci number is: 2
-4th fibonacci number is: 3
-5th fibonacci number is: 5
-6th fibonacci number is: 8
-7th fibonacci number is: 13
-8th fibonacci number is: 21
-9th fibonacci number is: 34
-10th fibonacci number is: 55
-11th fibonacci number is: 89
-12th fibonacci number is: 144
-13th fibonacci number is: 233
-14th fibonacci number is: 377
-15th fibonacci number is: 610
-16th fibonacci number is: 987
-17th fibonacci number is: 1597
-18th fibonacci number is: 2584
-19th fibonacci number is: 4181
-20th fibonacci number is: 6765
-0th fibonacci number is: 0
-1th fibonacci number is: 1
-2th fibonacci number is: 1
-3th fibonacci number is: 2
-4th fibonacci number is: 3
-5th fibonacci number is: 5
-6th fibonacci number is: 8
-7th fibonacci number is: 13
-8th fibonacci number is: 21
-9th fibonacci number is: 34
-10th fibonacci number is: 55
-11th fibonacci number is: 89
-12th fibonacci number is: 144
-13th fibonacci number is: 233
-14th fibonacci number is: 377
-15th fibonacci number is: 610
-16th fibonacci number is: 987
-17th fibonacci number is: 1597
-18th fibonacci number is: 2584
-19th fibonacci number is: 4181
-20th fibonacci number is: 6765
 </pre>
 </div>
 </div>
@@ -1364,9 +1243,19 @@ fibonacci Sequence 20 = [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377,
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>The goal is to use Inheritance and Polymorphism to produce multiple algorithms, but minimize code changed in original Class. Produce more familiar methods: For Loop, While Loop, Recursion.</p>
-<p>So I read the whole origin code and found out if I don't need to change the main class that define the Fibonacci, then what I need to change is just the print out class and add more class into it.</p>
-<p>The code below is all I add to the origin.</p>
+<h3 id="For-loop-Example">
+<a class="anchor" href="#For-loop-Example" aria-hidden="true"><span class="octicon octicon-link"></span></a>For loop Example<a class="anchor-link" href="#For-loop-Example"> </a>
+</h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>In the code below, I create a new class called ForFibo that extends the original Fibo class.
+I use super() to change this.size from 20 to 10.</p>
+<p>Then I change this.name to "For loop example" so when I print out the method name it will print out this string.</p>
+<p>I create a new class init2(), inside the class is the for loop that use to print out the fibonacci number from 0 to 10.</p>
 
 </div>
 </div>
@@ -1378,66 +1267,65 @@ fibonacci Sequence 20 = [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377,
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-java"><pre><span></span><span class="kd">static</span> <span class="kt">long</span> <span class="nf">recu</span><span class="p">(</span><span class="kt">long</span> <span class="n">n</span><span class="p">)</span> <span class="p">{</span>
-  <span class="k">if</span> <span class="p">(</span><span class="n">n</span> <span class="o">&gt;=</span> <span class="mi">2</span><span class="p">)</span>
-    <span class="k">return</span> <span class="n">recu</span><span class="p">(</span><span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="n">recu</span><span class="p">(</span><span class="n">n</span> <span class="o">-</span> <span class="mi">2</span><span class="p">);</span>
-  <span class="k">else</span>
-    <span class="k">return</span> <span class="n">n</span><span class="p">;</span>
-<span class="p">}</span>
-<span class="cm">/*</span>
-<span class="cm"> Console/Terminal supported print method</span>
-<span class="cm"> */</span>
-<span class="kt">int</span> <span class="n">whilei</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-<span class="kt">int</span> <span class="n">whilei2</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-<span class="kt">int</span> <span class="n">forn1</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-<span class="kt">int</span> <span class="n">forn2</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-<span class="kt">int</span> <span class="n">forn3</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-<span class="kd">public</span> <span class="kt">void</span> <span class="nf">print</span><span class="p">()</span> <span class="p">{</span>
-    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Init method = "</span> <span class="o">+</span> <span class="k">this</span><span class="p">.</span><span class="na">name</span><span class="p">);</span>
-    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"fibonacci Number "</span> <span class="o">+</span> <span class="k">this</span><span class="p">.</span><span class="na">size</span> <span class="o">+</span> <span class="s">" = "</span> <span class="o">+</span> <span class="k">this</span><span class="p">.</span><span class="na">getNth</span><span class="p">());</span>
-    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"fibonacci List = "</span> <span class="o">+</span> <span class="k">this</span><span class="p">.</span><span class="na">list</span><span class="p">);</span>
-    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"fibonacci Hashmap = "</span> <span class="o">+</span> <span class="k">this</span><span class="p">.</span><span class="na">hash</span><span class="p">);</span>
-    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span> <span class="p">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="k">this</span><span class="p">.</span><span class="na">size</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span> <span class="p">)</span> <span class="p">{</span>
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"fibonacci Sequence "</span> <span class="o">+</span> <span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="s">" = "</span> <span class="o">+</span> <span class="k">this</span><span class="p">.</span><span class="na">getNthSeq</span><span class="p">(</span><span class="n">i</span><span class="p">));</span>
+<div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">ForFibo</span> <span class="kd">extends</span> <span class="n">Fibo</span><span class="p">{</span>
+
+    <span class="kd">public</span> <span class="nf">ForFibo</span><span class="p">(){</span>
+        <span class="kd">super</span><span class="p">(</span><span class="mi">10</span><span class="p">);</span>
     <span class="p">}</span>
-    <span class="k">while</span> <span class="p">(</span><span class="n">whilei</span> <span class="o">&lt;</span> <span class="k">this</span><span class="p">.</span><span class="na">size</span><span class="p">){</span>
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"fibonacci Sequence "</span> <span class="o">+</span> <span class="p">(</span><span class="n">whilei</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="s">" = "</span> <span class="o">+</span> <span class="k">this</span><span class="p">.</span><span class="na">getNthSeq</span><span class="p">(</span><span class="n">whilei</span><span class="p">));</span>
-        <span class="n">whilei</span> <span class="o">+=</span> <span class="mi">1</span><span class="p">;</span>
-    <span class="p">}</span>
-    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">n</span><span class="o">=</span><span class="mi">0</span> <span class="p">;</span> <span class="n">n</span><span class="o">&lt;=</span><span class="k">this</span><span class="p">.</span><span class="na">size</span><span class="p">;</span> <span class="n">n</span><span class="o">++</span> <span class="p">)</span> <span class="p">{</span>
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">n</span> <span class="o">+</span> <span class="s">"th fibonacci number is: "</span> <span class="o">+</span> <span class="n">recu</span><span class="p">(</span><span class="n">n</span><span class="p">));</span>
-        <span class="k">if</span> <span class="p">(</span><span class="n">n</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">){</span>
-            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"You shouldn't input a negative number!!"</span><span class="p">);</span>
-        <span class="p">}</span>
-    <span class="p">}</span>
-    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">n</span><span class="o">=</span><span class="mi">0</span> <span class="p">;</span> <span class="n">n</span><span class="o">&lt;=</span><span class="k">this</span><span class="p">.</span><span class="na">size</span><span class="p">;</span> <span class="n">n</span><span class="o">++</span> <span class="p">){</span>
-        <span class="n">forn3</span> <span class="o">=</span> <span class="p">(</span><span class="n">forn1</span> <span class="o">+</span> <span class="n">forn2</span><span class="p">);</span>
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">n</span> <span class="o">+</span> <span class="s">"th fibonacci number is: "</span> <span class="o">+</span> <span class="n">forn3</span><span class="p">);</span>
-        <span class="n">forn1</span> <span class="o">=</span> <span class="n">forn2</span><span class="p">;</span>
-        <span class="n">forn2</span> <span class="o">=</span> <span class="n">forn3</span><span class="p">;</span>
-        <span class="k">if</span> <span class="p">(</span><span class="n">n</span> <span class="o">&lt;</span> <span class="mi">2</span><span class="p">){</span>
-            <span class="n">forn2</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
-            <span class="n">forn1</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-        <span class="p">}</span>
-    <span class="p">}</span>
+
     <span class="kt">int</span> <span class="n">forn1</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
     <span class="kt">int</span> <span class="n">forn2</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-    <span class="k">while</span> <span class="p">(</span><span class="n">whilei2</span><span class="o">&lt;=</span><span class="k">this</span><span class="p">.</span><span class="na">size</span><span class="p">){</span>
-        <span class="n">forn3</span> <span class="o">=</span> <span class="p">(</span><span class="n">forn1</span> <span class="o">+</span> <span class="n">forn2</span><span class="p">);</span>
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">whilei2</span> <span class="o">+</span> <span class="s">"th fibonacci number is: "</span> <span class="o">+</span> <span class="n">forn3</span><span class="p">);</span>
-        <span class="n">forn1</span> <span class="o">=</span> <span class="n">forn2</span><span class="p">;</span>
-        <span class="n">forn2</span> <span class="o">=</span> <span class="n">forn3</span><span class="p">;</span>
-        <span class="k">if</span> <span class="p">(</span><span class="n">whilei2</span> <span class="o">&lt;</span> <span class="mi">2</span><span class="p">){</span>
-            <span class="n">forn2</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
-            <span class="n">forn1</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="kt">int</span> <span class="n">forn3</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="kd">protected</span> <span class="kt">void</span> <span class="nf">init2</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">name</span> <span class="o">=</span> <span class="s">"For loop example"</span><span class="p">;</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Init method = "</span> <span class="o">+</span> <span class="k">this</span><span class="p">.</span><span class="na">name</span><span class="p">);</span>
+        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">n</span><span class="o">=</span><span class="mi">0</span> <span class="p">;</span> <span class="n">n</span><span class="o">&lt;=</span><span class="k">this</span><span class="p">.</span><span class="na">size</span><span class="p">;</span> <span class="n">n</span><span class="o">++</span> <span class="p">){</span>
+            <span class="n">forn3</span> <span class="o">=</span> <span class="p">(</span><span class="n">forn1</span> <span class="o">+</span> <span class="n">forn2</span><span class="p">);</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">n</span> <span class="o">+</span> <span class="s">"th fibonacci number is: "</span> <span class="o">+</span> <span class="n">forn3</span><span class="p">);</span>
+            <span class="n">forn1</span> <span class="o">=</span> <span class="n">forn2</span><span class="p">;</span>
+            <span class="n">forn2</span> <span class="o">=</span> <span class="n">forn3</span><span class="p">;</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">n</span> <span class="o">&lt;</span> <span class="mi">2</span><span class="p">){</span>
+                <span class="n">forn2</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+                <span class="n">forn1</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+            <span class="p">}</span>
         <span class="p">}</span>
-        <span class="n">whilei2</span> <span class="o">+=</span> <span class="mi">1</span><span class="p">;</span>
     <span class="p">}</span>
 
+    <span class="kd">static</span> <span class="kd">public</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">ForFibo</span> <span class="n">fib</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ForFibo</span><span class="p">();</span>
+        <span class="n">fib</span><span class="p">.</span><span class="na">init2</span><span class="p">();</span>
+    <span class="p">}</span>
 <span class="p">}</span>
+
+<span class="n">ForFibo</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Init method = For loop example
+0th fibonacci number is: 0
+1th fibonacci number is: 1
+2th fibonacci number is: 1
+3th fibonacci number is: 2
+4th fibonacci number is: 3
+5th fibonacci number is: 5
+6th fibonacci number is: 8
+7th fibonacci number is: 13
+8th fibonacci number is: 21
+9th fibonacci number is: 34
+10th fibonacci number is: 55
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -1447,8 +1335,7 @@ fibonacci Sequence 20 = [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377,
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>For Loop</p>
-<p>In the origin code, there is already a for loop that produce the Fibonacci sequence, and I think it's almost a perfect example of using a for loop so I choose to keep the origin code.</p>
+<p>Then for the while loop, there is similar between the for loop and while loop. Both need to contain condition and both run until the condition is not true. So basically I just need to keep the main part of code and change few thing to make it work.</p>
 
 </div>
 </div>
@@ -1460,46 +1347,68 @@ fibonacci Sequence 20 = [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377,
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-java"><pre><span></span><span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span> <span class="p">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="k">this</span><span class="p">.</span><span class="na">size</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span> <span class="p">)</span> <span class="p">{</span>   <span class="c1">//origin</span>
-    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"fibonacci Sequence "</span> <span class="o">+</span> <span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="s">" = "</span> <span class="o">+</span> <span class="k">this</span><span class="p">.</span><span class="na">getNthSeq</span><span class="p">(</span><span class="n">i</span><span class="p">));</span>
-<span class="p">}</span>
-</pre></div>
+<div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">WhileFibo</span> <span class="kd">extends</span> <span class="n">Fibo</span><span class="p">{</span>
 
-    </div>
-</div>
-</div>
-
-</div>
+    <span class="kd">public</span> <span class="nf">WhileFibo</span><span class="p">(){</span>
+        <span class="kd">super</span><span class="p">(</span><span class="mi">10</span><span class="p">);</span>
+    <span class="p">}</span>
     
+    <span class="kt">int</span> <span class="n">whilei</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="kt">int</span> <span class="n">whilei2</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="kt">int</span> <span class="n">forn1</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="kt">int</span> <span class="n">forn2</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="kt">int</span> <span class="n">forn3</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="kd">protected</span> <span class="kt">void</span> <span class="nf">init3</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">name</span> <span class="o">=</span> <span class="s">"While loop example"</span><span class="p">;</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Init method = "</span> <span class="o">+</span> <span class="k">this</span><span class="p">.</span><span class="na">name</span><span class="p">);</span>
+        <span class="k">while</span> <span class="p">(</span><span class="n">whilei2</span><span class="o">&lt;=</span><span class="k">this</span><span class="p">.</span><span class="na">size</span><span class="p">){</span>
+            <span class="n">forn3</span> <span class="o">=</span> <span class="p">(</span><span class="n">forn1</span> <span class="o">+</span> <span class="n">forn2</span><span class="p">);</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">whilei2</span> <span class="o">+</span> <span class="s">"th fibonacci number is: "</span> <span class="o">+</span> <span class="n">forn3</span><span class="p">);</span>
+            <span class="n">forn1</span> <span class="o">=</span> <span class="n">forn2</span><span class="p">;</span>
+            <span class="n">forn2</span> <span class="o">=</span> <span class="n">forn3</span><span class="p">;</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">whilei2</span> <span class="o">&lt;</span> <span class="mi">2</span><span class="p">){</span>
+                <span class="n">forn2</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+                <span class="n">forn1</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+            <span class="p">}</span>
+            <span class="n">whilei2</span> <span class="o">+=</span> <span class="mi">1</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
 
-<div class="cell border-box-sizing text_cell rendered">
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Then the for loop below is the code I created without any origin code</p>
-
-</div>
-</div>
-</div>
-    
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-java"><pre><span></span><span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">n</span><span class="o">=</span><span class="mi">0</span> <span class="p">;</span> <span class="n">n</span><span class="o">&lt;=</span><span class="k">this</span><span class="p">.</span><span class="na">size</span><span class="p">;</span> <span class="n">n</span><span class="o">++</span> <span class="p">){</span>
-    <span class="n">forn3</span> <span class="o">=</span> <span class="p">(</span><span class="n">forn1</span> <span class="o">+</span> <span class="n">forn2</span><span class="p">);</span>
-    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">n</span> <span class="o">+</span> <span class="s">"th fibonacci number is: "</span> <span class="o">+</span> <span class="n">forn3</span><span class="p">);</span>
-    <span class="n">forn1</span> <span class="o">=</span> <span class="n">forn2</span><span class="p">;</span>
-    <span class="n">forn2</span> <span class="o">=</span> <span class="n">forn3</span><span class="p">;</span>
-    <span class="k">if</span> <span class="p">(</span><span class="n">n</span> <span class="o">&lt;</span> <span class="mi">2</span><span class="p">){</span>
-        <span class="n">forn2</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
-        <span class="n">forn1</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="kd">static</span> <span class="kd">public</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">WhileFibo</span> <span class="n">fib</span> <span class="o">=</span> <span class="k">new</span> <span class="n">WhileFibo</span><span class="p">();</span>
+        <span class="n">fib</span><span class="p">.</span><span class="na">init3</span><span class="p">();</span>
     <span class="p">}</span>
 <span class="p">}</span>
+
+<span class="n">WhileFibo</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Init method = While loop example
+0th fibonacci number is: 0
+1th fibonacci number is: 1
+2th fibonacci number is: 1
+3th fibonacci number is: 2
+4th fibonacci number is: 3
+5th fibonacci number is: 5
+6th fibonacci number is: 8
+7th fibonacci number is: 13
+8th fibonacci number is: 21
+9th fibonacci number is: 34
+10th fibonacci number is: 55
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -1509,49 +1418,7 @@ fibonacci Sequence 20 = [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377,
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Then for the while loop, there is similar between the for loop and while loop. Both need to contain condition and both run until the condition is not true. So I create two different while loop below based on different for loop.</p>
-
-</div>
-</div>
-</div>
-    
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-java"><pre><span></span><span class="k">while</span> <span class="p">(</span><span class="n">whilei</span> <span class="o">&lt;</span> <span class="k">this</span><span class="p">.</span><span class="na">size</span><span class="p">){</span>
-    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"fibonacci Sequence "</span> <span class="o">+</span> <span class="p">(</span><span class="n">whilei</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="s">" = "</span> <span class="o">+</span> <span class="k">this</span><span class="p">.</span><span class="na">getNthSeq</span><span class="p">(</span><span class="n">whilei</span><span class="p">));</span>
-    <span class="n">whilei</span> <span class="o">+=</span> <span class="mi">1</span><span class="p">;</span>
-<span class="p">}</span>
-
-<span class="kt">int</span> <span class="n">forn1</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-<span class="kt">int</span> <span class="n">forn2</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-<span class="k">while</span> <span class="p">(</span><span class="n">whilei2</span><span class="o">&lt;=</span><span class="k">this</span><span class="p">.</span><span class="na">size</span><span class="p">){</span>
-    <span class="n">forn3</span> <span class="o">=</span> <span class="p">(</span><span class="n">forn1</span> <span class="o">+</span> <span class="n">forn2</span><span class="p">);</span>
-    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">whilei2</span> <span class="o">+</span> <span class="s">"th fibonacci number is: "</span> <span class="o">+</span> <span class="n">forn3</span><span class="p">);</span>
-    <span class="n">forn1</span> <span class="o">=</span> <span class="n">forn2</span><span class="p">;</span>
-    <span class="n">forn2</span> <span class="o">=</span> <span class="n">forn3</span><span class="p">;</span>
-    <span class="k">if</span> <span class="p">(</span><span class="n">whilei2</span> <span class="o">&lt;</span> <span class="mi">2</span><span class="p">){</span>
-        <span class="n">forn2</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
-        <span class="n">forn1</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-    <span class="p">}</span>
-    <span class="n">whilei2</span> <span class="o">+=</span> <span class="mi">1</span><span class="p">;</span>
-<span class="p">}</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-    
-
-<div class="cell border-box-sizing text_cell rendered">
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>And also for the while loop, because it can only contain the condition inside the parenthesis(it can't create a value) So I create set a new value above the print out class.</p>
+<p>And also for the while loop, because it can only contain the condition inside the parenthesis(it can't create a value) So I create set a new value above the while loop.</p>
 
 </div>
 </div>
@@ -1564,9 +1431,10 @@ fibonacci Sequence 20 = [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377,
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-java"><pre><span></span><span class="kt">int</span> <span class="n">whilei</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-
+<span class="kt">int</span> <span class="n">whilei2</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
 <span class="kt">int</span> <span class="n">forn1</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
 <span class="kt">int</span> <span class="n">forn2</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+<span class="kt">int</span> <span class="n">forn3</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
 </pre></div>
 
     </div>
@@ -1594,23 +1462,78 @@ fibonacci Sequence 20 = [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377,
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-java"><pre><span></span><span class="kd">static</span> <span class="kt">long</span> <span class="nf">recu</span><span class="p">(</span><span class="kt">long</span> <span class="n">n</span><span class="p">)</span> <span class="p">{</span>
-  <span class="k">if</span> <span class="p">(</span><span class="n">n</span> <span class="o">&gt;=</span> <span class="mi">2</span><span class="p">)</span>
-    <span class="k">return</span> <span class="n">recu</span><span class="p">(</span><span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="n">recu</span><span class="p">(</span><span class="n">n</span> <span class="o">-</span> <span class="mi">2</span><span class="p">);</span>
-  <span class="k">else</span>
-    <span class="k">return</span> <span class="n">n</span><span class="p">;</span>
-<span class="p">}</span>
-<span class="kd">public</span> <span class="kt">void</span> <span class="nf">print</span><span class="p">()</span> <span class="p">{</span>
-  <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">n</span><span class="o">=</span><span class="mi">0</span> <span class="p">;</span> <span class="n">n</span><span class="o">&lt;=</span><span class="k">this</span><span class="p">.</span><span class="na">size</span><span class="p">;</span> <span class="n">n</span><span class="o">++</span> <span class="p">)</span> <span class="p">{</span>
-    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">n</span> <span class="o">+</span> <span class="s">"th fibonacci number is: "</span> <span class="o">+</span> <span class="n">recu</span><span class="p">(</span><span class="n">n</span><span class="p">));</span>
-    <span class="k">if</span> <span class="p">(</span><span class="n">n</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">){</span>
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"You shouldn't input a negative number!!"</span><span class="p">);</span>
+<div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">ReFibo</span> <span class="kd">extends</span> <span class="n">Fibo</span><span class="p">{</span>
+
+  <span class="kd">public</span> <span class="nf">ReFibo</span><span class="p">(){</span>
+      <span class="kd">super</span><span class="p">(</span><span class="mi">20</span><span class="p">);</span>
+  <span class="p">}</span>
+
+  <span class="kd">static</span> <span class="kt">long</span> <span class="nf">recu</span><span class="p">(</span><span class="kt">long</span> <span class="n">n</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">n</span> <span class="o">&gt;=</span> <span class="mi">2</span><span class="p">)</span>
+      <span class="k">return</span> <span class="n">recu</span><span class="p">(</span><span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="n">recu</span><span class="p">(</span><span class="n">n</span> <span class="o">-</span> <span class="mi">2</span><span class="p">);</span>
+    <span class="k">else</span>
+      <span class="k">return</span> <span class="n">n</span><span class="p">;</span>
+ <span class="p">}</span>
+
+  <span class="kt">int</span> <span class="n">forn1</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+  <span class="kt">int</span> <span class="n">forn2</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+  <span class="kt">int</span> <span class="n">forn3</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+  <span class="kd">protected</span> <span class="kt">void</span> <span class="nf">init4</span><span class="p">()</span> <span class="p">{</span>
+      <span class="k">this</span><span class="p">.</span><span class="na">name</span> <span class="o">=</span> <span class="s">"Recursion example"</span><span class="p">;</span>
+      <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Init method = "</span> <span class="o">+</span> <span class="k">this</span><span class="p">.</span><span class="na">name</span><span class="p">);</span>
+      <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">n</span><span class="o">=</span><span class="mi">0</span> <span class="p">;</span> <span class="n">n</span><span class="o">&lt;=</span><span class="k">this</span><span class="p">.</span><span class="na">size</span><span class="p">;</span> <span class="n">n</span><span class="o">++</span> <span class="p">)</span> <span class="p">{</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">n</span> <span class="o">+</span> <span class="s">"th fibonacci number is: "</span> <span class="o">+</span> <span class="n">recu</span><span class="p">(</span><span class="n">n</span><span class="p">));</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">n</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">){</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"You shouldn't input a negative number!!"</span><span class="p">);</span>
+        <span class="p">}</span>
     <span class="p">}</span>
+  <span class="p">}</span>
+
+  <span class="kd">static</span> <span class="kd">public</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
+      <span class="n">ReFibo</span> <span class="n">fib</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ReFibo</span><span class="p">();</span>
+      <span class="n">fib</span><span class="p">.</span><span class="na">init4</span><span class="p">();</span>
+  <span class="p">}</span>
 <span class="p">}</span>
-<span class="p">}</span>
+
+<span class="n">ReFibo</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Init method = Recursion example
+0th fibonacci number is: 0
+1th fibonacci number is: 1
+2th fibonacci number is: 1
+3th fibonacci number is: 2
+4th fibonacci number is: 3
+5th fibonacci number is: 5
+6th fibonacci number is: 8
+7th fibonacci number is: 13
+8th fibonacci number is: 21
+9th fibonacci number is: 34
+10th fibonacci number is: 55
+11th fibonacci number is: 89
+12th fibonacci number is: 144
+13th fibonacci number is: 233
+14th fibonacci number is: 377
+15th fibonacci number is: 610
+16th fibonacci number is: 987
+17th fibonacci number is: 1597
+18th fibonacci number is: 2584
+19th fibonacci number is: 4181
+20th fibonacci number is: 6765
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
