@@ -39,7 +39,7 @@ title: about
 <body onload="timer(); checking()" > 
 <div id="video_wrapper">
     <video autoplay loop id="myVideo">
-        <source src="https://drive.google.com/uc?export=view&id=1IOK35bZ6iM5q4rYxhLmlFwYa3lHjINXR" type="video/mp4" class="video">
+        <source src="" type="video/mp4" class="video">
     </video>
     <div id="wrapper">
         {% include nav_frontend.html %}
@@ -148,6 +148,6 @@ function checking(){
         document.querySelector("#myVideo").setAttribute("src","videos/4.mp4");
     }
   else if((l>=21)&&(l<=23)){
-    document.querySelector("#myVideo").setAttribute("src","videos/5.mp4");
+    document.querySelector("#myVideo").setAttribute("src","https://drive.google.com/uc?export=view&id=1IOK35bZ6iM5q4rYxhLmlFwYa3lHjINXR");
 }
 </script>
