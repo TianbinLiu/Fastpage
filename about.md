@@ -136,8 +136,8 @@ function timer(){
     document.querySelector("#hour").innerHTML = time_hour;
     document.querySelector("#min").innerHTML = time_min;
     document.querySelector("#sec").innerHTML = time_sec;
-    var t = setTimeout(function(){ timer() }, 500);
     }
+    window.setInterval(function() { timer() },1000);
 function checking(){
     if ((l>=0)&&(l<=5)){
         document.querySelector("#myVideo").setAttribute("src","https://drive.google.com/uc?export=view&id=17ygkkkTDZb219cgsmglfod33qP8PGW58");
