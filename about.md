@@ -48,11 +48,19 @@ title: about
     </video>
     <div id="wrapper">
         {% include nav_frontend.html %}
-       <ul class="entry">
-           <li id="hour"></li>
-           <li id="min"></li>
-           <li id="sec"></li>
-       </ul>
+         <table>
+            <tr>
+                <th>Hour</th>
+                <th>Minute</th>
+                <th>Second</th>
+            </tr>
+            
+            <tr>
+                <td id="hour"></td>
+                <td id="min"></td>
+                <td id="sec"></td>
+            </tr>
+        </table>
         <h1>A blog about me</h1>
         <h2>My interest and skills</h2>
         
@@ -126,14 +134,14 @@ title: about
 window.onload=function(){
     var l;
 function timer(){
-    var d = new Date();
-    var time_hour = d.getHours();
-    var time_min = d.getMinutes();
-    var time_sec = d.getSeconds();
+    let d = new Date();
+    let time_hour = d.getHours();
+    let time_min = d.getMinutes();
+    let time_sec = d.getSeconds();
     l = time_hour;
-    document.querySelector("#hour").innerHTML = time_hour + ":";
-    document.querySelector("#min").innerHTML = time_min + ":";
-    document.querySelector("#sec").innerHTML = time_sec ;
+    document.querySelector("#hour").innerHTML = time_hour;
+    document.querySelector("#min").innerHTML = time_min;
+    document.querySelector("#sec").innerHTML = time_sec;
     var t = setTimeout(function(){ timer() }, 500);
     }
 function checking(){
