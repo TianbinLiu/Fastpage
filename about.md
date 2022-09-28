@@ -3,8 +3,6 @@ title: about
 ---
 
 
-
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -43,7 +41,7 @@ title: about
     {% include head-custom2.html %}
 </head>
 
-<body onload="timer(); checking()" > 
+<body> 
 <div id="video_wrapper">
     <video autoplay loop id="myVideo">
         <source src="" type="video/mp4" class="video">
@@ -126,7 +124,7 @@ title: about
 </div>
 <script>
     var l;
-function timer(){
+window.onload=function(){
     var d = new Date();
     var time_hour = d.getHours();
     var time_min = d.getMinutes();
@@ -137,7 +135,7 @@ function timer(){
     document.querySelector("#sec").innerHTML = time_sec ;
     var t = setTimeout(function(){ timer() }, 500);
     }
-function checking(){
+window.onload=function(){
     if ((l>=0)&&(l<=5)){
         document.querySelector("#myVideo").setAttribute("src","https://drive.google.com/uc?export=view&id=17ygkkkTDZb219cgsmglfod33qP8PGW58");
     }
