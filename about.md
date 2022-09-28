@@ -50,14 +50,8 @@ title: about
         {% include nav_frontend.html %}
          <table>
             <tr>
-                <th>Hour</th>
-                <th>Minute</th>
-                <th>Second</th>
-            </tr>
-            
-            <tr>
-                <td id="hour"></td>
-                <td id="min"></td>
+                <td id="hour"> :</td>
+                <td id="min"> :</td>
                 <td id="sec"></td>
             </tr>
         </table>
