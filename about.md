@@ -125,6 +125,7 @@ title: about
 <script>
     var l;
 window.onload=function(){
+    function timer(){
     var d = new Date();
     var time_hour = d.getHours();
     var time_min = d.getMinutes();
@@ -135,7 +136,10 @@ window.onload=function(){
     document.querySelector("#sec").innerHTML = time_sec ;
     var t = setTimeout(function(){ timer() }, 500);
     }
+    }
 window.onload=function(){
+    
+    function checking(){
     if ((l>=0)&&(l<=5)){
         document.querySelector("#myVideo").setAttribute("src","https://drive.google.com/uc?export=view&id=17ygkkkTDZb219cgsmglfod33qP8PGW58");
     }
@@ -153,6 +157,7 @@ window.onload=function(){
     }
   else if((l>=21)&&(l<=23)){
     document.querySelector("#myVideo").setAttribute("src","https://drive.google.com/uc?export=view&id=1IOK35bZ6iM5q4rYxhLmlFwYa3lHjINXR");
+}
 }
 </script>
 </body>
