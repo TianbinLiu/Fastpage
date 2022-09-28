@@ -3,8 +3,12 @@ title: about
 ---
 
 
-{% include head-custom2.html %}
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
     #wrapper
     {
@@ -36,6 +40,9 @@ title: about
     background: rgba(0,0,0,0.2);
     }
 </style>
+    {% include head-custom2.html %}
+</head>
+
 <body onload="timer(); checking()" > 
 <div id="video_wrapper">
     <video autoplay loop id="myVideo">
@@ -117,7 +124,6 @@ title: about
         
     </div>
 </div>
-</body>
 <script>
     var l;
 function timer(){
@@ -151,3 +157,5 @@ function checking(){
     document.querySelector("#myVideo").setAttribute("src","https://drive.google.com/uc?export=view&id=1IOK35bZ6iM5q4rYxhLmlFwYa3lHjINXR");
 }
 </script>
+</body>
+    </html>
