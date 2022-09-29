@@ -44,7 +44,7 @@ title: about
 <body onload="timer(); checking()"> 
 <div id="video_wrapper">
     <video autoplay loop id="myVideo">
-        <source src="" type="video/mp4" class="video">
+        <source type="video/mp4" class="video">
     </video>
     <div id="wrapper">
         {% include nav_frontend.html %}
