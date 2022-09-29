@@ -122,7 +122,7 @@ title: about
         
     </div>
 </div>
-<script>
+<script type="text/javascript">
         var l;
 function getDateTime(){
         var now     = new Date(); 
@@ -157,6 +157,8 @@ function getDateTime(){
         document.getElementById("digital-clock").innerHTML = currentTime;
     }, 1000);
     
+window.onload = function(){
+
 function checking(){
     if ((l>=0)&&(l<=5)){
         document.querySelector("#myVideo").setAttribute("src","https://drive.google.com/uc?export=view&id=17ygkkkTDZb219cgsmglfod33qP8PGW58");
@@ -176,7 +178,8 @@ function checking(){
   else if((l>=21)&&(l<=23)){
     document.querySelector("#myVideo").setAttribute("src","https://drive.google.com/uc?export=view&id=1IOK35bZ6iM5q4rYxhLmlFwYa3lHjINXR");
 }
-
+   checking()           
+}
 </script>
 </body>
     </html>
