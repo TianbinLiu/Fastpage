@@ -41,7 +41,7 @@ title: about
     {% include head-custom2.html %}
 </head>
 
-<body onload="timer(); checking()"> 
+<body onload="checking()"> 
 <div id="video_wrapper">
     <video autoplay loop id="myVideo">
         <source type="video/mp4" class="video">
@@ -124,7 +124,7 @@ title: about
 </div>
 <script>
         var l;
-function timer(){
+function getDateTime(){
         var now     = new Date(); 
         var year    = now.getFullYear();
         var month   = now.getMonth()+1; 
