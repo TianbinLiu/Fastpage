@@ -88,9 +88,7 @@ th, td {
 
          <table>
             <tr>
-                <td><p id="hour"></p> :</td>
-                <td><p id="min"></p> :</td>
-                <td><p id="sec"></p></td>
+                <td><div id="digital-clock"></div></td>
             </tr>
         </table>
         <h1>A blog about me</h1>
@@ -163,19 +161,40 @@ th, td {
     &lt;/div&gt;
 &lt;/div&gt;
 <script>
-window.onload=function(){
-    var l;
+        var l;
 function timer(){
-    let d = new Date();
-    let time_hour = d.getHours();
-    let time_min = d.getMinutes();
-    let time_sec = d.getSeconds();
-    l = time_hour;
-    document.querySelector("#hour").innerHTML = time_hour;
-    document.querySelector("#min").innerHTML = time_min;
-    document.querySelector("#sec").innerHTML = time_sec;
+        var now     = new Date(); 
+        var year    = now.getFullYear();
+        var month   = now.getMonth()+1; 
+        var day     = now.getDate();
+        var hour    = now.getHours();
+        var minute  = now.getMinutes();
+        var second  = now.getSeconds(); 
+        l = hour;
+        if(month.toString().length == 1) {
+             month = '0'+month;
+        }
+        if(day.toString().length == 1) {
+             day = '0'+day;
+        }   
+        if(hour.toString().length == 1) {
+             hour = '0'+hour;
+        }
+        if(minute.toString().length == 1) {
+             minute = '0'+minute;
+        }
+        if(second.toString().length == 1) {
+             second = '0'+second;
+        }   
+        var dateTime = year+'/'+month+'/'+day+' '+hour+':'+minute+':'+second;   
+         return dateTime;
     }
-    window.setInterval(function() { timer() },1000);
+    
+    setInterval(function(){
+        currentTime = getDateTime();
+        document.getElementById("digital-clock").innerHTML = currentTime;
+    }, 1000);
+    
 function checking(){
     if ((l>=0)&&(l<=5)){
         document.querySelector("#myVideo").setAttribute("src","https://drive.google.com/uc?export=view&id=17ygkkkTDZb219cgsmglfod33qP8PGW58");
@@ -195,7 +214,7 @@ function checking(){
   else if((l>=21)&&(l<=23)){
     document.querySelector("#myVideo").setAttribute("src","https://drive.google.com/uc?export=view&id=1IOK35bZ6iM5q4rYxhLmlFwYa3lHjINXR");
 }
-}  
+
 </script>
 &lt;/body&gt;
     &lt;/html&gt;
