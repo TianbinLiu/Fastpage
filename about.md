@@ -41,7 +41,7 @@ title: about
     {% include head-custom2.html %}
 </head>
 
-<body onload="checking()"> 
+<body> 
 <div id="video_wrapper">
     <video autoplay loop id="myVideo">
         <source type="video/mp4" class="video">
