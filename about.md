@@ -50,9 +50,9 @@ title: about
         {% include nav_frontend.html %}
          <table>
             <tr>
-                <td id="hour"> :</td>
-                <td id="min"> :</td>
-                <td id="sec"></td>
+                <td><p id="hour"></p> :</td>
+                <td><p id="min"></p> :</td>
+                <td><p id="sec"></p></td>
             </tr>
         </table>
         <h1>A blog about me</h1>
