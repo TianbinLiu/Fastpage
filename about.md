@@ -122,7 +122,7 @@ title: about
         
     </div>
 </div>
-<script type="text/javascript">
+<script type="text/javascript" defer>
         var l;
 function getDateTime(){
         var now     = new Date(); 
