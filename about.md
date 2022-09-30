@@ -175,11 +175,11 @@ function checking(){
     else if((l>=18)&&(l<=20)){
         document.querySelector("#myVideo").setAttribute("src","https://drive.google.com/uc?export=view&id=10qZhLCMqm_RDj89Jjp8edLKLurSjQmh-");
     }
-  else if((l>=21)&&(l<=23)){
-    document.querySelector("#myVideo").setAttribute("src","https://drive.google.com/uc?export=view&id=1IOK35bZ6iM5q4rYxhLmlFwYa3lHjINXR");
-    }
-   checking();           
+    else if((l>=21)&&(l<=23)){
+        document.querySelector("#myVideo").setAttribute("src","https://drive.google.com/uc?export=view&id=1IOK35bZ6iM5q4rYxhLmlFwYa3lHjINXR");
+    }        
 }
+  checking();   
 }                      
 </script>
     
