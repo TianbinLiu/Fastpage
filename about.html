@@ -73,7 +73,7 @@ th, td {
 
 </head>
 
-<body> 
+<body onload="checking()"> 
 <div id="video_wrapper">
     <video autoplay="" loop="" id="myVideo">
         <source type="video/mp4" class="video" />
@@ -195,7 +195,7 @@ function getDateTime(){
         document.getElementById("digital-clock").innerHTML = currentTime;
     }, 1000);
     
-window.onload = function(){
+window.onload = function checking(){
     if ((l>=0)&&(l<=5)){
         document.querySelector("#myVideo").setAttribute("src","https://drive.google.com/uc?export=view&id=17ygkkkTDZb219cgsmglfod33qP8PGW58");
     }
