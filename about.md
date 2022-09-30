@@ -44,7 +44,7 @@ title: about
 <body onload="checking()"> 
 <div id="video_wrapper">
     <video autoplay loop id="background">
-        <source type="video/mp4" class="video">
+        <source type="video/mp4">
     </video>
     <div id="wrapper">
         {% include nav_frontend.html %}
