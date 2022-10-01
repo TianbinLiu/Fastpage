@@ -42,7 +42,6 @@ title: about
 </head>
 
 <body onload="checking()"> 
-<div id="video_wrapper">
     <div class="container">
     <video autoplay loop id="background" class="videoPlayer">
         <source src="https://drive.google.com/uc?export=view&id=17ygkkkTDZb219cgsmglfod33qP8PGW58" type="video/mp4">
@@ -123,7 +122,6 @@ title: about
         </p>
         
     </div>
-</div>
 <script type="text/javascript">
         var l;
 function getDateTime(){
