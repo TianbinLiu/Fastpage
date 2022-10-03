@@ -81,7 +81,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      28 min read
+      29 min read
     
 </span></p>
 
@@ -1725,7 +1725,7 @@ I use super() to change this.size from 20 to 10.</p>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Q: Benefit(s) of backend implementation?</p>
-<p>A:</p>
+<p>A: I can't run this code in jupyter notebook so I don't exactly what the benefits. But I read the comment. It seems like the backend implementation will reload the API everyday(to get the newest information) and help to save our time and also help us to organize.</p>
 
 </div>
 </div>
@@ -2033,7 +2033,17 @@ I use super() to change this.size from 20 to 10.</p>
 <div class="output_subarea output_text output_error">
 <pre>
 <span class="ansi-red-intense-fg ansi-bold">---------------------------------------------------------------------------</span>
-<span class="ansi-red-intense-fg ansi-bold">java.lang.NoClassDefFoundError: Could not initialize class sun.awt.X11.XToolkit</span>
+<span class="ansi-red-intense-fg ansi-bold">java.awt.AWTError: Can't connect to X11 window server using '172.27.80.1:0' as the value of the DISPLAY variable.</span>
+<span class="ansi-red-intense-fg ansi-bold">	at java.desktop/sun.awt.X11GraphicsEnvironment.initDisplay(Native Method)</span>
+<span class="ansi-red-intense-fg ansi-bold">	at java.desktop/sun.awt.X11GraphicsEnvironment$1.run(X11GraphicsEnvironment.java:102)</span>
+<span class="ansi-red-intense-fg ansi-bold">	at java.base/java.security.AccessController.doPrivileged(Native Method)</span>
+<span class="ansi-red-intense-fg ansi-bold">	at java.desktop/sun.awt.X11GraphicsEnvironment.&lt;clinit&gt;(X11GraphicsEnvironment.java:61)</span>
+<span class="ansi-red-intense-fg ansi-bold">	at java.base/java.lang.Class.forName0(Native Method)</span>
+<span class="ansi-red-intense-fg ansi-bold">	at java.base/java.lang.Class.forName(Class.java:315)</span>
+<span class="ansi-red-intense-fg ansi-bold">	at java.desktop/java.awt.GraphicsEnvironment$LocalGE.createGE(GraphicsEnvironment.java:101)</span>
+<span class="ansi-red-intense-fg ansi-bold">	at java.desktop/java.awt.GraphicsEnvironment$LocalGE.&lt;clinit&gt;(GraphicsEnvironment.java:83)</span>
+<span class="ansi-red-intense-fg ansi-bold">	at java.desktop/java.awt.GraphicsEnvironment.getLocalGraphicsEnvironment(GraphicsEnvironment.java:129)</span>
+<span class="ansi-red-intense-fg ansi-bold">	at java.desktop/sun.awt.X11.XToolkit.&lt;clinit&gt;(XToolkit.java:232)</span>
 <span class="ansi-red-intense-fg ansi-bold">	at java.base/java.lang.Class.forName0(Native Method)</span>
 <span class="ansi-red-intense-fg ansi-bold">	at java.base/java.lang.Class.forName(Class.java:315)</span>
 <span class="ansi-red-intense-fg ansi-bold">	at java.desktop/java.awt.Toolkit$2.run(Toolkit.java:588)</span>
@@ -2043,7 +2053,7 @@ I use super() to change this.size from 20 to 10.</p>
 <span class="ansi-red-intense-fg ansi-bold">	at java.desktop/java.awt.Image.getScaledInstance(Image.java:178)</span>
 <span class="ansi-red-intense-fg ansi-bold">	at Pics.resize(#32:1)</span>
 <span class="ansi-red-intense-fg ansi-bold">	at Pics.main(#32:1)</span>
-<span class="ansi-red-intense-fg ansi-bold">	at .(#56:1)</span></pre>
+<span class="ansi-red-intense-fg ansi-bold">	at .(#33:1)</span></pre>
 </div>
 </div>
 
