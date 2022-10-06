@@ -81,7 +81,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      29 min read
+      31 min read
     
 </span></p>
 
@@ -136,6 +136,7 @@ window.onload = wrap_img;
 <li class="toc-entry toc-h3"><a href="#Java-RapidAPI">Java RapidAPI </a></li>
 <li class="toc-entry toc-h3"><a href="#Arrays-and-Images">Arrays and Images </a></li>
 <li class="toc-entry toc-h3"><a href="#Hacks">Hacks </a></li>
+<li class="toc-entry toc-h3"><a href="#List-and-ArrayLists-(Pair)">List and ArrayLists (Pair) </a></li>
 </ul>
 </li>
 </ul><!--
@@ -2033,17 +2034,7 @@ I use super() to change this.size from 20 to 10.</p>
 <div class="output_subarea output_text output_error">
 <pre>
 <span class="ansi-red-intense-fg ansi-bold">---------------------------------------------------------------------------</span>
-<span class="ansi-red-intense-fg ansi-bold">java.awt.AWTError: Can't connect to X11 window server using '172.27.80.1:0' as the value of the DISPLAY variable.</span>
-<span class="ansi-red-intense-fg ansi-bold">	at java.desktop/sun.awt.X11GraphicsEnvironment.initDisplay(Native Method)</span>
-<span class="ansi-red-intense-fg ansi-bold">	at java.desktop/sun.awt.X11GraphicsEnvironment$1.run(X11GraphicsEnvironment.java:102)</span>
-<span class="ansi-red-intense-fg ansi-bold">	at java.base/java.security.AccessController.doPrivileged(Native Method)</span>
-<span class="ansi-red-intense-fg ansi-bold">	at java.desktop/sun.awt.X11GraphicsEnvironment.&lt;clinit&gt;(X11GraphicsEnvironment.java:61)</span>
-<span class="ansi-red-intense-fg ansi-bold">	at java.base/java.lang.Class.forName0(Native Method)</span>
-<span class="ansi-red-intense-fg ansi-bold">	at java.base/java.lang.Class.forName(Class.java:315)</span>
-<span class="ansi-red-intense-fg ansi-bold">	at java.desktop/java.awt.GraphicsEnvironment$LocalGE.createGE(GraphicsEnvironment.java:101)</span>
-<span class="ansi-red-intense-fg ansi-bold">	at java.desktop/java.awt.GraphicsEnvironment$LocalGE.&lt;clinit&gt;(GraphicsEnvironment.java:83)</span>
-<span class="ansi-red-intense-fg ansi-bold">	at java.desktop/java.awt.GraphicsEnvironment.getLocalGraphicsEnvironment(GraphicsEnvironment.java:129)</span>
-<span class="ansi-red-intense-fg ansi-bold">	at java.desktop/sun.awt.X11.XToolkit.&lt;clinit&gt;(XToolkit.java:232)</span>
+<span class="ansi-red-intense-fg ansi-bold">java.lang.NoClassDefFoundError: Could not initialize class sun.awt.X11.XToolkit</span>
 <span class="ansi-red-intense-fg ansi-bold">	at java.base/java.lang.Class.forName0(Native Method)</span>
 <span class="ansi-red-intense-fg ansi-bold">	at java.base/java.lang.Class.forName(Class.java:315)</span>
 <span class="ansi-red-intense-fg ansi-bold">	at java.desktop/java.awt.Toolkit$2.run(Toolkit.java:588)</span>
@@ -2053,7 +2044,7 @@ I use super() to change this.size from 20 to 10.</p>
 <span class="ansi-red-intense-fg ansi-bold">	at java.desktop/java.awt.Image.getScaledInstance(Image.java:178)</span>
 <span class="ansi-red-intense-fg ansi-bold">	at Pics.resize(#32:1)</span>
 <span class="ansi-red-intense-fg ansi-bold">	at Pics.main(#32:1)</span>
-<span class="ansi-red-intense-fg ansi-bold">	at .(#33:1)</span></pre>
+<span class="ansi-red-intense-fg ansi-bold">	at .(#34:1)</span></pre>
 </div>
 </div>
 
@@ -2089,6 +2080,104 @@ I use super() to change this.size from 20 to 10.</p>
 </pre></div>
 
     </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="List-and-ArrayLists-(Pair)">
+<a class="anchor" href="#List-and-ArrayLists-(Pair)" aria-hidden="true"><span class="octicon octicon-link"></span></a>List and ArrayLists (Pair)<a class="anchor-link" href="#List-and-ArrayLists-(Pair)"> </a>
+</h3>
+<p>Show usage of Lists interfaces in a Jupyter Notebook example. Try using List interface and making a ArrayList object. Consider using an example that will be part of interest or final projects. This will probably become your favorite Data Structure in Java.</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="c1">// Java Program to Demonstrate</span>
+<span class="c1">// Working of an ArrayList class</span>
+ 
+<span class="c1">// Importing all classes from java.util package</span>
+<span class="kn">import</span> <span class="nn">java.util.*</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">java.lang.Math</span><span class="p">;</span>  
+
+<span class="c1">// Main class</span>
+<span class="kd">class</span> <span class="nc">NBAPlayers</span> <span class="p">{</span>
+ 
+    <span class="c1">// Main driver method</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="c1">// Creating an ArrayList of String type</span>
+        <span class="c1">// Type safe ArrayList</span>
+        <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">namePlayer</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="p">();</span>
+        
+        <span class="c1">// Adding elements to above object created</span>
+        <span class="c1">// Custom input elements</span>
+        <span class="n">namePlayer</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">"Boban Marjanovic"</span><span class="p">);</span>
+        <span class="n">namePlayer</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">"Sim Bhullar"</span><span class="p">);</span>
+        <span class="n">namePlayer</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">"Tacko Fall"</span><span class="p">);</span>
+        <span class="n">namePlayer</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">"Pavel Podkolzin"</span><span class="p">);</span>
+        <span class="n">namePlayer</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">"Chuck Nevitt"</span><span class="p">);</span>
+        <span class="n">namePlayer</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">"Yao Ming"</span><span class="p">);</span>
+        <span class="n">namePlayer</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">"Shawn Bradley"</span><span class="p">);</span>
+        <span class="n">namePlayer</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">"Manute Bol"</span><span class="p">);</span>
+        <span class="n">namePlayer</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">"Gheorghe Muresan"</span><span class="p">);</span>
+        
+
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Top 9 tallest NBA players:"</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">namePlayer</span><span class="p">);</span>
+        <span class="n">Random</span> <span class="n">random</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Random</span><span class="p">();</span>
+
+        <span class="kt">int</span> <span class="n">min</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+        <span class="kt">int</span> <span class="n">max</span><span class="o">=</span> <span class="n">namePlayer</span><span class="p">.</span><span class="na">size</span><span class="p">();</span>
+        <span class="kt">int</span> <span class="n">ranNum1</span> <span class="o">=</span> <span class="n">random</span><span class="p">.</span><span class="na">nextInt</span><span class="p">(</span><span class="n">max</span><span class="p">);</span>
+        <span class="kt">int</span> <span class="n">ranNum2</span> <span class="o">=</span> <span class="n">random</span><span class="p">.</span><span class="na">nextInt</span><span class="p">(</span><span class="n">max</span><span class="p">);</span>
+        <span class="c1">// Print and display the elements of ArrayList</span>
+
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"1 vs 1 game !"</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">namePlayer</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">ranNum1</span><span class="p">)</span> <span class="o">+</span> <span class="s">" vs "</span> <span class="o">+</span> <span class="n">namePlayer</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">ranNum2</span><span class="p">));</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">namePlayer</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">ranNum1</span><span class="p">)</span> <span class="o">+</span> <span class="s">" lose the game"</span><span class="p">);</span>
+        <span class="n">namePlayer</span><span class="p">.</span><span class="na">remove</span><span class="p">(</span><span class="n">ranNum1</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Now, there are only "</span> <span class="o">+</span> <span class="n">namePlayer</span><span class="p">.</span><span class="na">size</span><span class="p">()</span> <span class="o">+</span> <span class="s">" players"</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">namePlayer</span><span class="p">);</span>
+
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="n">NBAPlayers</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Top 9 tallest NBA players:
+[Boban Marjanovic, Sim Bhullar, Tacko Fall, Pavel Podkolzin, Chuck Nevitt, Yao Ming, Shawn Bradley, Manute Bol, Gheorghe Muresan]
+1 vs 1 game !
+Chuck Nevitt vs Boban Marjanovic
+Chuck Nevitt lose the game
+Now, there are only 8 players
+[Boban Marjanovic, Sim Bhullar, Tacko Fall, Pavel Podkolzin, Yao Ming, Shawn Bradley, Manute Bol, Gheorghe Muresan]
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
