@@ -2120,7 +2120,10 @@ I use super() to change this.size from 20 to 10.</p>
         <span class="c1">// Creating an ArrayList of String type</span>
         <span class="c1">// Type safe ArrayList</span>
         <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">namePlayer</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="p">();</span>
+        <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span> <span class="n">CEPlayer</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span><span class="p">();</span>
         
+        <span class="n">Random</span> <span class="n">random</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Random</span><span class="p">();</span>
+
         <span class="c1">// Adding elements to above object created</span>
         <span class="c1">// Custom input elements</span>
         <span class="n">namePlayer</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">"Boban Marjanovic"</span><span class="p">);</span>
@@ -2132,22 +2135,41 @@ I use super() to change this.size from 20 to 10.</p>
         <span class="n">namePlayer</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">"Shawn Bradley"</span><span class="p">);</span>
         <span class="n">namePlayer</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">"Manute Bol"</span><span class="p">);</span>
         <span class="n">namePlayer</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">"Gheorghe Muresan"</span><span class="p">);</span>
-        
+
 
         <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Top 9 tallest NBA players:"</span><span class="p">);</span>
         <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">namePlayer</span><span class="p">);</span>
-        <span class="n">Random</span> <span class="n">random</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Random</span><span class="p">();</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">();</span>
 
         <span class="kt">int</span> <span class="n">min</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
         <span class="kt">int</span> <span class="n">max</span><span class="o">=</span> <span class="n">namePlayer</span><span class="p">.</span><span class="na">size</span><span class="p">();</span>
         <span class="kt">int</span> <span class="n">ranNum1</span> <span class="o">=</span> <span class="n">random</span><span class="p">.</span><span class="na">nextInt</span><span class="p">(</span><span class="n">max</span><span class="p">);</span>
         <span class="kt">int</span> <span class="n">ranNum2</span> <span class="o">=</span> <span class="n">random</span><span class="p">.</span><span class="na">nextInt</span><span class="p">(</span><span class="n">max</span><span class="p">);</span>
+        <span class="kt">int</span> <span class="n">ranCE1</span> <span class="o">=</span> <span class="n">random</span><span class="p">.</span><span class="na">nextInt</span><span class="p">(</span><span class="mi">100</span><span class="p">);</span>
+        <span class="kt">int</span> <span class="n">ranCE2</span> <span class="o">=</span> <span class="n">random</span><span class="p">.</span><span class="na">nextInt</span><span class="p">(</span><span class="mi">100</span><span class="p">);</span>
         <span class="c1">// Print and display the elements of ArrayList</span>
+        <span class="n">CEPlayer</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="n">ranCE1</span><span class="p">);</span>
+        <span class="n">CEPlayer</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="n">ranCE2</span><span class="p">);</span>
 
         <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"1 vs 1 game !"</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">();</span>
         <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">namePlayer</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">ranNum1</span><span class="p">)</span> <span class="o">+</span> <span class="s">" vs "</span> <span class="o">+</span> <span class="n">namePlayer</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">ranNum2</span><span class="p">));</span>
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">namePlayer</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">ranNum1</span><span class="p">)</span> <span class="o">+</span> <span class="s">" lose the game"</span><span class="p">);</span>
-        <span class="n">namePlayer</span><span class="p">.</span><span class="na">remove</span><span class="p">(</span><span class="n">ranNum1</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">();</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Their Combat Effectiveness:"</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">CEPlayer</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">();</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">ranCE1</span> <span class="o">&gt;</span> <span class="n">ranCE2</span> <span class="p">){</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">namePlayer</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">ranNum2</span><span class="p">)</span> <span class="o">+</span> <span class="s">" lose the game"</span><span class="p">);</span>
+            <span class="n">namePlayer</span><span class="p">.</span><span class="na">remove</span><span class="p">(</span><span class="n">ranNum2</span><span class="p">);</span>
+        <span class="p">}</span>
+        <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">ranCE2</span> <span class="o">&gt;</span> <span class="n">ranCE1</span><span class="p">){</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">namePlayer</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">ranNum1</span><span class="p">)</span> <span class="o">+</span> <span class="s">" lose the game"</span><span class="p">);</span>
+            <span class="n">namePlayer</span><span class="p">.</span><span class="na">remove</span><span class="p">(</span><span class="n">ranNum1</span><span class="p">);</span>
+        <span class="p">}</span>
+        <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">ranCE2</span> <span class="o">==</span> <span class="n">ranCE1</span><span class="p">){</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Tie!"</span><span class="p">);</span>
+        <span class="p">}</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">();</span>
         <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Now, there are only "</span> <span class="o">+</span> <span class="n">namePlayer</span><span class="p">.</span><span class="na">size</span><span class="p">()</span> <span class="o">+</span> <span class="s">" players"</span><span class="p">);</span>
         <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">namePlayer</span><span class="p">);</span>
 
@@ -2169,9 +2191,16 @@ I use super() to change this.size from 20 to 10.</p>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Top 9 tallest NBA players:
 [Boban Marjanovic, Sim Bhullar, Tacko Fall, Pavel Podkolzin, Chuck Nevitt, Yao Ming, Shawn Bradley, Manute Bol, Gheorghe Muresan]
+
 1 vs 1 game !
-Chuck Nevitt vs Boban Marjanovic
+
+Manute Bol vs Chuck Nevitt
+
+Their Combat Effectiveness:
+[79, 49]
+
 Chuck Nevitt lose the game
+
 Now, there are only 8 players
 [Boban Marjanovic, Sim Bhullar, Tacko Fall, Pavel Podkolzin, Yao Ming, Shawn Bradley, Manute Bol, Gheorghe Muresan]
 </pre>
