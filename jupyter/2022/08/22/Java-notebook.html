@@ -2115,17 +2115,14 @@ I use super() to change this.size from 20 to 10.</p>
 <span class="kd">class</span> <span class="nc">NBAPlayers</span> <span class="p">{</span>
  
     <span class="c1">// Main driver method</span>
-    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">()</span>
     <span class="p">{</span>
-        <span class="c1">// Creating an ArrayList of String type</span>
-        <span class="c1">// Type safe ArrayList</span>
         <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">namePlayer</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="p">();</span>
         <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span> <span class="n">CEPlayer</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span><span class="p">();</span>
         
         <span class="n">Random</span> <span class="n">random</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Random</span><span class="p">();</span>
 
-        <span class="c1">// Adding elements to above object created</span>
-        <span class="c1">// Custom input elements</span>
+
         <span class="n">namePlayer</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">"Boban Marjanovic"</span><span class="p">);</span>
         <span class="n">namePlayer</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">"Sim Bhullar"</span><span class="p">);</span>
         <span class="n">namePlayer</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">"Tacko Fall"</span><span class="p">);</span>
@@ -2147,7 +2144,7 @@ I use super() to change this.size from 20 to 10.</p>
         <span class="kt">int</span> <span class="n">ranNum2</span> <span class="o">=</span> <span class="n">random</span><span class="p">.</span><span class="na">nextInt</span><span class="p">(</span><span class="n">max</span><span class="p">);</span>
         <span class="kt">int</span> <span class="n">ranCE1</span> <span class="o">=</span> <span class="n">random</span><span class="p">.</span><span class="na">nextInt</span><span class="p">(</span><span class="mi">100</span><span class="p">);</span>
         <span class="kt">int</span> <span class="n">ranCE2</span> <span class="o">=</span> <span class="n">random</span><span class="p">.</span><span class="na">nextInt</span><span class="p">(</span><span class="mi">100</span><span class="p">);</span>
-        <span class="c1">// Print and display the elements of ArrayList</span>
+
         <span class="n">CEPlayer</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="n">ranCE1</span><span class="p">);</span>
         <span class="n">CEPlayer</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="n">ranCE2</span><span class="p">);</span>
 
@@ -2176,7 +2173,7 @@ I use super() to change this.size from 20 to 10.</p>
     <span class="p">}</span>
 <span class="p">}</span>
 
-<span class="n">NBAPlayers</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
+<span class="n">NBAPlayers</span><span class="p">.</span><span class="na">main</span><span class="p">();</span>
 </pre></div>
 
     </div>
@@ -2194,15 +2191,15 @@ I use super() to change this.size from 20 to 10.</p>
 
 1 vs 1 game !
 
-Manute Bol vs Chuck Nevitt
+Tacko Fall vs Manute Bol
 
 Their Combat Effectiveness:
-[79, 49]
+[47, 97]
 
-Chuck Nevitt lose the game
+Tacko Fall lose the game
 
 Now, there are only 8 players
-[Boban Marjanovic, Sim Bhullar, Tacko Fall, Pavel Podkolzin, Yao Ming, Shawn Bradley, Manute Bol, Gheorghe Muresan]
+[Boban Marjanovic, Sim Bhullar, Pavel Podkolzin, Chuck Nevitt, Yao Ming, Shawn Bradley, Manute Bol, Gheorghe Muresan]
 </pre>
 </div>
 </div>
