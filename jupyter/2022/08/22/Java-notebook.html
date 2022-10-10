@@ -81,7 +81,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      31 min read
+      32 min read
     
 </span></p>
 
@@ -137,6 +137,7 @@ window.onload = wrap_img;
 <li class="toc-entry toc-h3"><a href="#Arrays-and-Images">Arrays and Images </a></li>
 <li class="toc-entry toc-h3"><a href="#Hacks">Hacks </a></li>
 <li class="toc-entry toc-h3"><a href="#List-and-ArrayLists-(Pair)">List and ArrayLists (Pair) </a></li>
+<li class="toc-entry toc-h3"><a href="#POJO-and-@Entity-Definition">POJO and @Entity Definition </a></li>
 </ul>
 </li>
 </ul><!--
@@ -2191,19 +2192,131 @@ I use super() to change this.size from 20 to 10.</p>
 
 1 vs 1 game !
 
-Tacko Fall vs Manute Bol
+Boban Marjanovic vs Manute Bol
 
 Their Combat Effectiveness:
-[47, 97]
+[18, 22]
 
-Tacko Fall lose the game
+Boban Marjanovic lose the game
 
 Now, there are only 8 players
-[Boban Marjanovic, Sim Bhullar, Pavel Podkolzin, Chuck Nevitt, Yao Ming, Shawn Bradley, Manute Bol, Gheorghe Muresan]
+[Sim Bhullar, Tacko Fall, Pavel Podkolzin, Chuck Nevitt, Yao Ming, Shawn Bradley, Manute Bol, Gheorghe Muresan]
 </pre>
 </div>
 </div>
 
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="POJO-and-@Entity-Definition">
+<a class="anchor" href="#POJO-and-@Entity-Definition" aria-hidden="true"><span class="octicon octicon-link"></span></a>POJO and @Entity Definition<a class="anchor-link" href="#POJO-and-@Entity-Definition"> </a>
+</h3>
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="kn">import</span> <span class="nn">lombok.AllArgsConstructor</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">lombok.Data</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">lombok.NoArgsConstructor</span><span class="p">;</span>
+
+<span class="kn">import</span> <span class="nn">javax.persistence.*</span><span class="p">;</span>
+
+<span class="nd">@Data</span>  <span class="c1">// Annotations to simplify writing code (ie constructors, setters)</span>
+<span class="nd">@NoArgsConstructor</span>
+<span class="nd">@AllArgsConstructor</span>
+<span class="nd">@Entity</span> <span class="c1">// Annotation to simplify creating an entity, which is a lightweight persistence domain object. Typically, an entity represents a table in a relational database, and each entity instance corresponds to a row in that table.</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Jokes</span> <span class="p">{</span>
+    <span class="nd">@Id</span>
+    <span class="nd">@GeneratedValue</span><span class="p">(</span><span class="n">strategy</span> <span class="o">=</span> <span class="n">GenerationType</span><span class="p">.</span><span class="na">AUTO</span><span class="p">)</span>
+    <span class="kd">private</span> <span class="n">Long</span> <span class="n">id</span><span class="p">;</span>  <span class="c1">// Unique identifier</span>
+
+    <span class="nd">@Column</span><span class="p">(</span><span class="n">unique</span><span class="o">=</span><span class="kc">true</span><span class="p">)</span>
+    <span class="kd">private</span> <span class="n">String</span> <span class="n">joke</span><span class="p">;</span>  <span class="c1">// The Joke</span>
+
+    <span class="kd">private</span> <span class="kt">int</span> <span class="n">haha</span><span class="p">;</span>  <span class="c1">// Store joke likes</span>
+    <span class="kd">private</span> <span class="kt">int</span> <span class="n">boohoo</span><span class="p">;</span>  <span class="c1">// Store joke jeers</span>
+<span class="p">}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="kn">import</span> <span class="nn">lombok.AllArgsConstructor</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">lombok.Data</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">lombok.NoArgsConstructor</span><span class="p">;</span>
+
+<span class="kn">import</span> <span class="nn">javax.persistence.*</span><span class="p">;</span>
+
+<span class="nd">@Data</span>  <span class="c1">// Annotations to simplify writing code (ie constructors, setters)</span>
+<span class="nd">@NoArgsConstructor</span>
+<span class="nd">@AllArgsConstructor</span>
+<span class="nd">@Entity</span> <span class="c1">// Annotation to simplify creating an entity, which is a lightweight persistence domain object. Typically, an entity represents a table in a relational database, and each entity instance corresponds to a row in that table.</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Jokes</span> <span class="p">{</span>
+
+    <span class="kd">private</span> <span class="n">Long</span> <span class="n">id</span><span class="p">;</span>  <span class="c1">// Unique identifier</span>
+    <span class="kd">private</span> <span class="n">String</span> <span class="n">joke</span><span class="p">;</span>  <span class="c1">// The Joke</span>
+    <span class="kd">private</span> <span class="kt">int</span> <span class="n">haha</span><span class="p">;</span>  <span class="c1">// Store joke likes</span>
+    <span class="kd">private</span> <span class="kt">int</span> <span class="n">boohoo</span><span class="p">;</span>  <span class="c1">// Store joke jeers</span>
+
+    <span class="kd">public</span> <span class="n">Long</span> <span class="nf">getId</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="n">id</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setId</span><span class="p">(</span><span class="n">Long</span> <span class="n">id</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">id</span> <span class="o">=</span> <span class="n">id</span><span class="p">;</span>
+    <span class="p">}</span>
+
+
+    <span class="kd">public</span> <span class="n">String</span> <span class="nf">getjoke</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="n">joke</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setjoke</span><span class="p">(</span><span class="n">String</span> <span class="n">joke</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">joke</span> <span class="o">=</span> <span class="n">joke</span><span class="p">;</span>
+    <span class="p">}</span>
+
+
+    <span class="kd">public</span> <span class="kt">int</span> <span class="nf">gethaha</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="n">haha</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">sethaha</span><span class="p">(</span><span class="kt">int</span> <span class="n">haha</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">haha</span> <span class="o">=</span> <span class="n">haha</span><span class="p">;</span>
+    <span class="p">}</span>
+
+
+    <span class="kd">public</span> <span class="kt">int</span> <span class="nf">getboohoo</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="n">boohoo</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setboohoo</span><span class="p">(</span><span class="kt">int</span> <span class="n">boohoo</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">boohoo</span> <span class="o">=</span> <span class="n">boohoo</span><span class="p">;</span>
+    <span class="p">}</span>
+
+
+<span class="p">}</span>
+</pre></div>
+
+    </div>
 </div>
 </div>
 
