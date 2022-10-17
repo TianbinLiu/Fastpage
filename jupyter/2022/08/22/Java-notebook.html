@@ -81,7 +81,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      32 min read
+      33 min read
     
 </span></p>
 
@@ -138,6 +138,7 @@ window.onload = wrap_img;
 <li class="toc-entry toc-h3"><a href="#Hacks">Hacks </a></li>
 <li class="toc-entry toc-h3"><a href="#List-and-ArrayLists-(Pair)">List and ArrayLists (Pair) </a></li>
 <li class="toc-entry toc-h3"><a href="#POJO-and-@Entity-Definition">POJO and @Entity Definition </a></li>
+<li class="toc-entry toc-h3"><a href="#Homework:-2006-Collegeboard-FRQ-parts-2a-and-3a.-Part-1-is-optional.">Homework: 2006 Collegeboard FRQ parts 2a and 3a. Part 1 is optional. </a></li>
 </ul>
 </li>
 </ul><!--
@@ -2313,6 +2314,127 @@ Now, there are only 8 players
     <span class="p">}</span>
 
 
+<span class="p">}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Homework:-2006-Collegeboard-FRQ-parts-2a-and-3a.-Part-1-is-optional.">
+<a class="anchor" href="#Homework:-2006-Collegeboard-FRQ-parts-2a-and-3a.-Part-1-is-optional." aria-hidden="true"><span class="octicon octicon-link"></span></a>Homework: 2006 Collegeboard FRQ parts 2a and 3a. Part 1 is optional.<a class="anchor-link" href="#Homework:-2006-Collegeboard-FRQ-parts-2a-and-3a.-Part-1-is-optional."> </a>
+</h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><figure>
+  
+    <img class="docimage" src="/Fastpage/images/copied_from_nb/images/FRQ2a.png" alt="Alternative text">
+    
+    
+</figure>
+</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>part 2a</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kt">double</span> <span class="nf">purchasePrice</span><span class="p">(){</span>
+    <span class="kt">double</span> <span class="n">taxableitem</span> <span class="o">=</span> <span class="n">getListPrice</span> <span class="o">+</span> <span class="p">(</span><span class="n">getListPrice</span> <span class="o">*</span> <span class="n">rate</span><span class="p">);</span> 
+    <span class="c1">// the purchase price of a taxableitem is its list price plus the tax on the item.</span>
+    <span class="c1">// but because in the origin class (getListPrice()) is empty so I guess it will provide the value.</span>
+    <span class="k">return</span> <span class="n">taxableitem</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><figure>
+  
+    <img class="docimage" src="/Fastpage/images/copied_from_nb/images/FRQ3a.png" alt="Alternative text">
+    
+    
+</figure>
+</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><figure>
+  
+    <img class="docimage" src="/Fastpage/images/copied_from_nb/images/FRQ3a2.png" alt="Alternative text">
+    
+    
+</figure>
+</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>part 3a</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="n">Customer</span> <span class="n">c1</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Customer</span><span class="p">(</span><span class="s">"Smith"</span><span class="p">,</span> <span class="mi">1001</span><span class="p">);</span>
+<span class="n">Customer</span> <span class="n">c2</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Customer</span><span class="p">(</span><span class="s">"Anderson"</span><span class="p">,</span> <span class="mi">1002</span><span class="p">);</span>
+<span class="n">Customer</span> <span class="n">c3</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Customer</span><span class="p">(</span><span class="s">"Smith"</span><span class="p">,</span> <span class="mi">1003</span><span class="p">);</span> 
+<span class="kd">public</span> <span class="kt">int</span> <span class="nf">compareCustomer</span> <span class="p">(</span><span class="n">Customer</span> <span class="n">other</span><span class="p">){</span>
+    <span class="k">if</span> <span class="p">(</span> <span class="o">&gt;</span> <span class="p">){</span>   <span class="c1">// I don't know how to add the condition that shows the chosen object is greater than the input</span>
+        <span class="n">String</span> <span class="n">integer</span> <span class="o">=</span> <span class="s">"a positive integer"</span><span class="p">;</span>
+        <span class="k">return</span> <span class="n">integer</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="k">else</span> <span class="k">if</span> <span class="p">(</span> <span class="o">&lt;</span> <span class="p">){</span>   <span class="c1">//same</span>
+        <span class="n">String</span> <span class="n">integer</span> <span class="o">=</span> <span class="s">"a negative integer"</span><span class="p">;</span>
+        <span class="k">return</span> <span class="n">integer</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="k">else</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="mi">0</span>
+    <span class="p">}</span>
 <span class="p">}</span>
 </pre></div>
 
