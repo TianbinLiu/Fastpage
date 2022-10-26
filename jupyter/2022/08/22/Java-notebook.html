@@ -81,7 +81,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      36 min read
+      37 min read
     
 </span></p>
 
@@ -140,6 +140,7 @@ window.onload = wrap_img;
 <li class="toc-entry toc-h3"><a href="#POJO-and-@Entity-Definition">POJO and @Entity Definition </a></li>
 <li class="toc-entry toc-h3"><a href="#Homework:-2006-Collegeboard-FRQ-parts-2a-and-3a.-Part-1-is-optional.">Homework: 2006 Collegeboard FRQ parts 2a and 3a. Part 1 is optional. </a></li>
 <li class="toc-entry toc-h3"><a href="#2019-FRQ1-HW">2019 FRQ1 HW </a></li>
+<li class="toc-entry toc-h3"><a href="#Period-1-Iteration-HW">Period 1 Iteration HW </a></li>
 </ul>
 </li>
 </ul><!--
@@ -2759,6 +2760,84 @@ A story of a Monkey and Cthulhus
 </pre></div>
 
     </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Period-1-Iteration-HW">
+<a class="anchor" href="#Period-1-Iteration-HW" aria-hidden="true"><span class="octicon octicon-link"></span></a>Period 1 Iteration HW<a class="anchor-link" href="#Period-1-Iteration-HW"> </a>
+</h3>
+<p>Write a program where a random number is generated. Then the user tries to guess the number. If they guess too high display something to let them know, and same for if they guess a number that is too low. The loop must iterate until the number is guessed correctly.</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="kn">import</span> <span class="nn">java.util.*</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">java.lang.Math</span><span class="p">;</span>  
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">IterationHW</span> <span class="p">{</span>
+
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">int</span> <span class="nf">guess</span><span class="p">(</span><span class="kt">int</span> <span class="n">num</span><span class="p">)</span> <span class="p">{</span>  <span class="c1">//create a static method</span>
+  
+      <span class="n">Random</span> <span class="n">random</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Random</span><span class="p">();</span>
+      <span class="kt">int</span> <span class="n">ranNum</span> <span class="o">=</span> <span class="n">random</span><span class="p">.</span><span class="na">nextInt</span><span class="p">(</span><span class="mi">10</span><span class="p">);</span>
+
+      <span class="k">if</span> <span class="p">(</span><span class="n">num</span> <span class="o">&gt;</span> <span class="n">ranNum</span> <span class="p">){</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Your Guess: "</span> <span class="o">+</span> <span class="n">num</span> <span class="o">+</span> <span class="s">" ,is greater than number"</span><span class="p">);</span>
+        <span class="p">}</span>
+        <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">num</span> <span class="o">&lt;</span> <span class="n">ranNum</span><span class="p">){</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Your Guess: "</span> <span class="o">+</span> <span class="n">num</span> <span class="o">+</span> <span class="s">" ,is less than number"</span><span class="p">);</span>
+        <span class="p">}</span>
+        <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">num</span> <span class="o">==</span> <span class="n">ranNum</span><span class="p">){</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"You find the number"</span><span class="p">);</span>
+        <span class="p">}</span>
+        <span class="k">return</span> <span class="n">ranNum</span><span class="p">;</span>
+    <span class="p">}</span>
+
+<span class="p">}</span>
+    
+
+
+  <span class="n">IterationHW</span><span class="p">.</span><span class="na">guess</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Your Guess: 1 ,is greater than number
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>0</pre>
+</div>
+
+</div>
+
 </div>
 </div>
 
