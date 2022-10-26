@@ -67,7 +67,7 @@ window.onload = wrap_img;
           </span>
         </label>
 
-        <div class="trigger"><a class="page-link" href="/Fastpage/about/">About Me</a><a class="page-link" href="/Fastpage/about.html">about</a><a class="page-link" href="/Fastpage/notes/">College Board</a><a class="page-link" href="/Fastpage/search/">Search</a><a class="page-link" href="/Fastpage/categories/">Tags</a><a class="page-link" href="/Fastpage/vocab/">CSA Vocabulary</a></div>
+        <div class="trigger"><a class="page-link" href="/Fastpage/about.html">about</a><a class="page-link" href="/Fastpage/about/">About Me</a><a class="page-link" href="/Fastpage/notes/">College Board</a><a class="page-link" href="/Fastpage/search/">Search</a><a class="page-link" href="/Fastpage/categories/">Tags</a><a class="page-link" href="/Fastpage/vocab/">CSA Vocabulary</a></div>
       </nav></div>
 </header>
 <main class="page-content" aria-label="Content">
@@ -142,7 +142,7 @@ window.onload = wrap_img;
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-bash"><pre><span></span>python --version
+<div class=" highlight hl-java"><pre><span></span><span class="n">python</span> <span class="o">--</span><span class="n">version</span>
 </pre></div>
 
     </div>
@@ -173,7 +173,7 @@ window.onload = wrap_img;
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-bash"><pre><span></span>java --version
+<div class=" highlight hl-java"><pre><span></span><span class="n">java</span> <span class="o">--</span><span class="n">version</span>
 </pre></div>
 
     </div>
@@ -206,7 +206,7 @@ OpenJDK 64-Bit Server VM (build 11.0.16+8-post-Ubuntu-0ubuntu118.04, mixed mode,
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-bash"><pre><span></span>javac --version
+<div class=" highlight hl-java"><pre><span></span><span class="n">javac</span> <span class="o">--</span><span class="n">version</span>
 </pre></div>
 
     </div>
@@ -237,7 +237,7 @@ OpenJDK 64-Bit Server VM (build 11.0.16+8-post-Ubuntu-0ubuntu118.04, mixed mode,
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-bash"><pre><span></span>conda --version
+<div class=" highlight hl-java"><pre><span></span><span class="n">conda</span> <span class="o">--</span><span class="n">version</span>
 </pre></div>
 
     </div>
@@ -268,7 +268,7 @@ OpenJDK 64-Bit Server VM (build 11.0.16+8-post-Ubuntu-0ubuntu118.04, mixed mode,
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-bash"><pre><span></span>npm -version
+<div class=" highlight hl-java"><pre><span></span><span class="n">npm</span> <span class="o">-</span><span class="n">version</span>
 </pre></div>
 
     </div>
@@ -299,7 +299,7 @@ OpenJDK 64-Bit Server VM (build 11.0.16+8-post-Ubuntu-0ubuntu118.04, mixed mode,
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-bash"><pre><span></span>python2 --version
+<div class=" highlight hl-java"><pre><span></span><span class="n">python2</span> <span class="o">--</span><span class="n">version</span>
 </pre></div>
 
     </div>
@@ -330,7 +330,7 @@ OpenJDK 64-Bit Server VM (build 11.0.16+8-post-Ubuntu-0ubuntu118.04, mixed mode,
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-bash"><pre><span></span>python3 --version
+<div class=" highlight hl-java"><pre><span></span><span class="n">python3</span> <span class="o">--</span><span class="n">version</span>
 </pre></div>
 
     </div>
@@ -361,8 +361,8 @@ OpenJDK 64-Bit Server VM (build 11.0.16+8-post-Ubuntu-0ubuntu118.04, mixed mode,
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-bash"><pre><span></span>jupyter --version
-jupyter kernelspec list
+<div class=" highlight hl-java"><pre><span></span><span class="n">jupyter</span> <span class="o">--</span><span class="n">version</span>
+<span class="n">jupyter</span> <span class="n">kernelspec</span> <span class="n">list</span>
 </pre></div>
 
     </div>
@@ -411,16 +411,16 @@ Available kernels:
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-bash"><pre><span></span><span class="nv">test</span><span class="o">=</span><span class="s2">"python3"</span> <span class="c1"># keyword</span>
-<span class="nv">check</span><span class="o">=</span><span class="sb">`</span>jupyter kernelspec list <span class="p">|</span> grep <span class="nv">$test</span><span class="sb">`</span> <span class="c1"># run command</span>
-<span class="nv">n</span><span class="o">=</span><span class="si">${#</span><span class="nv">check</span><span class="si">}</span> <span class="c1"># determine length</span>
+<div class=" highlight hl-java"><pre><span></span><span class="n">test</span><span class="o">=</span><span class="s">"python3"</span> <span class="err">#</span> <span class="n">keyword</span>
+<span class="n">check</span><span class="o">=</span><span class="err">`</span><span class="n">jupyter</span> <span class="n">kernelspec</span> <span class="n">list</span> <span class="o">|</span> <span class="n">grep</span> <span class="n">$test</span><span class="err">`</span> <span class="err">#</span> <span class="n">run</span> <span class="n">command</span>
+<span class="n">n</span><span class="o">=</span><span class="n">$</span><span class="p">{</span><span class="err">#</span><span class="n">check</span><span class="p">}</span> <span class="err">#</span> <span class="n">determine</span> <span class="n">length</span>
 
-<span class="k">if</span> <span class="o">[[</span> <span class="si">${</span><span class="nv">n</span><span class="si">}</span> &gt; <span class="m">0</span> <span class="o">]]</span><span class="p">;</span>  <span class="c1"># testt length</span>
-<span class="k">then</span> <span class="c1"># greater than zero</span>
-    <span class="nb">echo</span> <span class="s2">"</span><span class="nv">$check</span><span class="s2">"</span>
-<span class="k">else</span> <span class="c1"># less than zero</span>
-    <span class="nb">echo</span> <span class="s2">"</span><span class="nv">$test</span><span class="s2"> not found"</span>
-<span class="k">fi</span>
+<span class="k">if</span> <span class="o">[[</span> <span class="n">$</span><span class="p">{</span><span class="n">n</span><span class="p">}</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="o">]]</span><span class="p">;</span>  <span class="err">#</span> <span class="n">testt</span> <span class="n">length</span>
+<span class="n">then</span> <span class="err">#</span> <span class="n">greater</span> <span class="n">than</span> <span class="n">zero</span>
+    <span class="n">echo</span> <span class="s">"$check"</span>
+<span class="k">else</span> <span class="err">#</span> <span class="n">less</span> <span class="n">than</span> <span class="n">zero</span>
+    <span class="n">echo</span> <span class="s">"$test not found"</span>
+<span class="n">fi</span>
 </pre></div>
 
     </div>
@@ -451,18 +451,18 @@ Available kernels:
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-bash"><pre><span></span><span class="nb">echo</span> Conda Check
-<span class="c1"># test for a kernel installation</span>
-<span class="nv">test</span><span class="o">=</span><span class="s2">"jupyter"</span> <span class="c1"># keyword</span>
-<span class="nv">check</span><span class="o">=</span><span class="sb">`</span>conda list <span class="p">|</span> grep <span class="nv">$test</span><span class="sb">`</span> <span class="c1"># run command</span>
-<span class="nv">n</span><span class="o">=</span><span class="si">${#</span><span class="nv">check</span><span class="si">}</span> <span class="c1"># determine length</span>
+<div class=" highlight hl-java"><pre><span></span><span class="n">echo</span> <span class="n">Conda</span> <span class="n">Check</span>
+<span class="err">#</span> <span class="n">test</span> <span class="k">for</span> <span class="n">a</span> <span class="n">kernel</span> <span class="n">installation</span>
+<span class="n">test</span><span class="o">=</span><span class="s">"jupyter"</span> <span class="err">#</span> <span class="n">keyword</span>
+<span class="n">check</span><span class="o">=</span><span class="err">`</span><span class="n">conda</span> <span class="n">list</span> <span class="o">|</span> <span class="n">grep</span> <span class="n">$test</span><span class="err">`</span> <span class="err">#</span> <span class="n">run</span> <span class="n">command</span>
+<span class="n">n</span><span class="o">=</span><span class="n">$</span><span class="p">{</span><span class="err">#</span><span class="n">check</span><span class="p">}</span> <span class="err">#</span> <span class="n">determine</span> <span class="n">length</span>
 
-<span class="k">if</span> <span class="o">[[</span> <span class="si">${</span><span class="nv">n</span><span class="si">}</span> &gt; <span class="m">0</span> <span class="o">]]</span><span class="p">;</span>  <span class="c1"># testt length</span>
-<span class="k">then</span> <span class="c1"># greater than zero</span>
-    <span class="nb">echo</span> <span class="s2">"</span><span class="nv">$check</span><span class="s2">"</span>
-<span class="k">else</span> <span class="c1"># less than zero</span>
-    <span class="nb">echo</span> <span class="s2">"</span><span class="nv">$test</span><span class="s2"> not found"</span>
-<span class="k">fi</span>
+<span class="k">if</span> <span class="o">[[</span> <span class="n">$</span><span class="p">{</span><span class="n">n</span><span class="p">}</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="o">]]</span><span class="p">;</span>  <span class="err">#</span> <span class="n">testt</span> <span class="n">length</span>
+<span class="n">then</span> <span class="err">#</span> <span class="n">greater</span> <span class="n">than</span> <span class="n">zero</span>
+    <span class="n">echo</span> <span class="s">"$check"</span>
+<span class="k">else</span> <span class="err">#</span> <span class="n">less</span> <span class="n">than</span> <span class="n">zero</span>
+    <span class="n">echo</span> <span class="s">"$test not found"</span>
+<span class="n">fi</span>
 </pre></div>
 
     </div>
@@ -502,7 +502,7 @@ jupyterlab_widgets        1.0.0              pyhd3eb1b0_1
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-bash"><pre><span></span>conda list
+<div class=" highlight hl-java"><pre><span></span><span class="n">conda</span> <span class="n">list</span>
 </pre></div>
 
     </div>
@@ -969,7 +969,7 @@ zstd                      1.4.9                haebb681_0
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-bash"><pre><span></span>conda info
+<div class=" highlight hl-java"><pre><span></span><span class="n">conda</span> <span class="n">info</span>
 </pre></div>
 
     </div>
