@@ -68,7 +68,7 @@ function displayNextImage() {
           }
 
           var images = [], x = -1;
-          images[0] = "images/NAM.png";
+          images[0] = "images/NAM.jpg";
           images[1] = "images/NAM2.jpg";
           images[2] = "images/NAM3.jpg";
           images[3] = "images/NAM4.jpg";
