@@ -52,14 +52,12 @@ title: img
          <table>
             <tr>
                 <td><div id="digital-clock"></div></td>
-            </tr>
-            <tr>
                 <td><a href="https://github.com/aaditgupta21/football-pages/graphs/contributors">See commits for the project</a></td>
             </tr>
         </table>
   <table style="width: 25%; margin-top: 3%; position: absolute;">
       <tr>
-        <th><img id="img" style="width: 800px; height: auto; border-radius: 5px;
+        <th><img id="img" style="width: auto; height: 800px; border-radius: 5px;
     box-shadow: 7px 7px 7px #666666;" src="images/NAM.jpg" alt="NAM"></th>
       </tr>
       <tr>
