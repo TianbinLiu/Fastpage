@@ -53,6 +53,9 @@ title: img
             <tr>
                 <td><div id="digital-clock"></div></td>
             </tr>
+            <tr>
+                <td><a href="https://github.com/aaditgupta21/football-pages/graphs/contributors">See commits for the project</a></td>
+            </tr>
         </table>
   <table style="width: 25%; margin-top: 3%; position: absolute;">
       <tr>
