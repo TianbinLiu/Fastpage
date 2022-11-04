@@ -68,13 +68,8 @@ function displayNextImage() {
           }
 
           var images = [], x = -1;
-          images[0] = "images/football.png";
-          images[1] = "images/football2.jpg";
-          images[2] = "images/football3.jpg";
-          images[3] = "images/football4.jpg";
-          images[4] = "images/football5.jpg";
-          images[5] = "images/football6.jpg";
-          images[6] = "images/football7.jpg";
-          images[7] = "images/football8.jpg";
-          images[8] = "images/football9.jpg";
-          images[9] = "images/football10.jpg";
+          images[0] = "images/NAM.png";
+          images[1] = "images/NAM2.jpg";
+          images[2] = "images/NAM3.jpg";
+          images[3] = "images/NAM4.jpg";
+          images[4] = "images/NAM5.jpg";
