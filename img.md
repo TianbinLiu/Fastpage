@@ -41,7 +41,7 @@ title: img
     {% include head-custom2.html %}
 </head>
 
-<body onload="checking()"> 
+<body onload="checking(); startTimer();"> 
     <div class="container">
     <video autoplay loop id="background" class="videoPlayer">
         <source src="https://drive.google.com/uc?export=view&id=17ygkkkTDZb219cgsmglfod33qP8PGW58" type="video/mp4">
