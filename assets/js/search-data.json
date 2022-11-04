@@ -117,6 +117,17 @@
   
 
   
+      ,"page4": {
+          "title": "img",
+          "content": ". home | about me | . | . .",
+          "url": "https://tianbinliu.github.io/Fastpage/img.html",
+          "relUrl": "/img.html",
+          "date": ""
+      }
+      
+  
+
+  
 
   
   
@@ -140,7 +151,7 @@
   
 
   
-      ,"page13": {
+      ,"page14": {
           "title": "",
           "content": "Sitemap: {{ “sitemap.xml” | absolute_url }} | .",
           "url": "https://tianbinliu.github.io/Fastpage/robots.txt",
