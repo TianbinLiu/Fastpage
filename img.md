@@ -60,7 +60,7 @@ title: img
   <table style="width: 25%; margin-top: 3%; position: absolute;">
       <tr>
         <th><img id="img" style="width: 800px; height: auto; border-radius: 5px;
-    box-shadow: 7px 7px 7px #666666;" src="images/NAM.png" alt="NAM"></th>
+    box-shadow: 7px 7px 7px #666666;" src="images/NAM.jpg" alt="NAM"></th>
       </tr>
       <tr>
         <th><button type="button" onclick="displayPreviousImage()">Previous</button>
