@@ -53,7 +53,6 @@ function checking(){
         video.setAttribute("src","https://drive.google.com/uc?export=view&id=1TCkL9j_l8PgB9dO8CKGB1iHeMaVAGeV1");
     }    
         
-    setInterval(displayNextImage, 3000);
 }        
 function displayNextImage() {
               x = (x === images.length - 1) ? 0 : x + 1;
@@ -66,7 +65,7 @@ function displayNextImage() {
           }
 
           function startTimer() {
-              
+              setInterval(displayNextImage, 3000);
           }
 
           var images = [], x = -1;
