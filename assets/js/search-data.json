@@ -106,17 +106,6 @@
   
 
   
-      ,"page3": {
-          "title": "img",
-          "content": ". home | about me | Neight at Museum images | . | See commits for the project | . . Previous Next . .",
-          "url": "https://tianbinliu.github.io/Fastpage/img.html",
-          "relUrl": "/img.html",
-          "date": ""
-      }
-      
-  
-
-  
 
   
   
@@ -140,7 +129,7 @@
   
 
   
-      ,"page13": {
+      ,"page12": {
           "title": "",
           "content": "Sitemap: {{ “sitemap.xml” | absolute_url }} | .",
           "url": "https://tianbinliu.github.io/Fastpage/robots.txt",
