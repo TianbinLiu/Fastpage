@@ -1,7 +1,7 @@
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
     #wrapper
     {
@@ -33,65 +33,17 @@
     background: rgba(0,0,0,0.2);
     }
 </style>
-    <style>
-.container{
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  overflow: hidden;
-}
-    
-.videoPlayer {
-    min-width: 100%;
-    min-height: 100%;
-    object-fit: cover;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}    
-    
-table { 
-    background: rgba(0,0,0,0.2); 
-    width: auto;
-    color: white;
-}
-tr { background: rgba(0,0,0,0.2); }
-td { background: rgba(0,0,0,0.2); }
-th {
-    text-align: center;
-}
-table, th, td {
-    border: 1px solid #000;
-    border-collapse: collapse;
-}
-
-th, td {
-    padding: 10px;
-}
-    
-    
-</style>
-
+    {% include head-custom2.html %}
 </head>
 
 <body onload="checking()"> 
     <div class="container">
-    <video autoplay="" loop="" id="background" class="videoPlayer">
-        <source src="https://drive.google.com/uc?export=view&amp;id=17ygkkkTDZb219cgsmglfod33qP8PGW58" type="video/mp4" />
+    <video autoplay loop id="background" class="videoPlayer">
+        <source src="https://drive.google.com/uc?export=view&id=17ygkkkTDZb219cgsmglfod33qP8PGW58" type="video/mp4">
     </video>
     </div>
     <div id="wrapper">
-        <table>
-    <tr>
-        <td><a href="/Fastpage/">home</a></td>
-        <td><a href="about">about me</a></td>
-        <td><a href="img">Neight at Museum images</a></td>
-    </tr>
-</table>
-
+        {% include nav_frontend.html %}
          <table>
             <tr>
                 <td><div id="digital-clock"></div></td>
@@ -164,9 +116,8 @@ th, td {
             
         </p>
         
-    &lt;/div&gt;
-<script src="/Fastpage/assets/js/videojava.js" type="text/javascript"></script>
+    </div>
+<script src="{{ '/assets/js/videojava.js' | relative_url }}" type="text/javascript"></script>
     
-&lt;/body&gt;
-    &lt;/html&gt;
-</table></div></body></html>
+</body>
+    </html>
