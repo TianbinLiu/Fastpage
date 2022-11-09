@@ -1,5 +1,5 @@
 ---
-layout: default
+title: img
 ---
 
 <html lang="en">
