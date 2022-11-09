@@ -6,14 +6,9 @@ $dark-grey : #121212;
 $overlay: mix($dark-grey, white, 95%);
 $overlay-light: mix($dark-grey, white, 86%);
 
-html, input, textarea, select{   
+html, body, input, textarea, select, button {   
   color: $high-emph !important;
   background-color: $dark-grey !important;
-}
-
-body{
-  color: $high-emph !important;
-  background-color: rgba(0,0,0, 0.85) !important;
 }
 
 a {
@@ -49,49 +44,11 @@ pre, code {
 
 .post-meta {
     color: $low-emph;
-}
-
-.post-content p, .post-content li {
-    color: $med-emph;
-}
-
-.btn {
-    background-color: $overlay !important;
-    color: $high-emph !important;
-    border-color: $overlay-light !important;
-}
-
-.btn:hover {
-    background-color: $dark-grey !important;
+	@@ -61,7 +19,7 @@ pre, code {
 }
 
 table th{
-    background-color: $dark-grey;
+    background-color: $overlay;
     border-color: $overlay-light;
     color: $high-emph;
-}
-
-table td{
-    background-color: $dark-grey;
-    border-color: $overlay-light;
-    color: $med-emph;
-}
-
-.flash {
-    color: $dark-grey !important;
-    filter: brightness(80%);
-}
-
-canvas {
-    filter: invert(100%);
-}
-
-.post-list > li > div {
-    box-shadow: none !important;
-    background-color: $overlay;
-    border: none !important;
-}
-
-li .post-meta-description {
-    color: $med-emph !important;
 }
