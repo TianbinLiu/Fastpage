@@ -1,5 +1,5 @@
 ---
-layout: default
+title: about
 ---
 
 <html lang="en">
