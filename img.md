@@ -42,7 +42,7 @@ title: img
 
 <body onload="checking(); startTimer();"> 
 <div id="video_wrapper">
-  <video autoplay loop>
+  <video autoplay loop id="background">
     <source src="https://drive.google.com/uc?export=view&id=17ygkkkTDZb219cgsmglfod33qP8PGW58" type="video/mp4">
   </video>
 </div>
