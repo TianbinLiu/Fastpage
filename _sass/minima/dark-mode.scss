@@ -1,4 +1,51 @@
+$high-emph: rgba(white, 0.87);
+$med-emph: rgba(white, 0.69); //Noicee
+$low-emph: rgba(white, 0.38);
+$dark-grey : #121212; 
+// $dark-grey : #1F1B24;
+$overlay: mix($dark-grey, white, 95%);
+$overlay-light: mix($dark-grey, white, 86%);
 
+html, input, textarea, select{   
+  color: $high-emph !important;
+  background-color: $dark-grey !important;
+}
+
+body{
+  color: $high-emph !important;
+  background-color: rgba(0,0,0, 0.85) !important;
+}
+
+a {
+    color: rgb(75, 186, 255) !important;
+}
+
+a:hover {
+    color:$high-emph !important;
+}
+
+.site-title, .site-title:visited, .site-nav, .page-link {
+    color: $high-emph !important;
+}
+
+.site-nav {
+    background-color: $dark-grey;
+    border-color: $overlay-light;
+}
+
+* {
+    scrollbar-color: $dark-grey $overlay-light;
+}
+
+pre, code {
+    // BVas a lighter colour to better highlight short code words
+    border-color: $overlay-light;
+    background-color: $overlay;
+}
+
+.page-description {
+    color: $med-emph;
+}
 
 .post-meta {
     color: $low-emph;
