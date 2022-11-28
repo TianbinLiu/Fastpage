@@ -1,5 +1,5 @@
 ---
-title: About
+title: about
 ---
 
 <html lang="en">
