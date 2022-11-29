@@ -1,5 +1,5 @@
 ---
-title: img
+title: Image
 ---
 
 <html lang="en">
