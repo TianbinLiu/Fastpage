@@ -214,7 +214,7 @@ search_exclude: true
   
    <tr>
     <td>Casting, specifically for Truncating or Rounding</td>
-    <td></td>
+    <td><a href="https://www.ualberta.ca/computing-science/media-library/teaching-resources/java/truncation-rounding.html">Definition</a></td>
    </tr>
   
    <tr>
