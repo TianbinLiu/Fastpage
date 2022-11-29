@@ -204,7 +204,12 @@ search_exclude: true
   
    <tr>
     <td>Casting, specifically for Division</td>
-    <td></td>
+    <td>1 / 3 - return 0 - (if you are doing division with integers that you want an integer result and it will truncate and throw away the part after the decimal point.)<br>
+     1.0 / 3 - return 0.33333333333333 - (if you use a mixture of integers (int) and decimal (double) numbers Java will assume that you want a double result.)<br>
+      <br>
+     Values of type double can be rounded to the nearest integer by adding or subtracting .5 and casting with (int) using formulas like the following.<br>
+     int nearestInt = (int)(number + 0.5);<br>
+     int nearestNegInt = (int)(negNumber – 0.5);</td>
    </tr>
   
    <tr>
