@@ -39,6 +39,7 @@ baseurl: "/Fastpage" # the subpath of your site, e.g. "/blog".
 # Github and twitter are optional:
 minima:
   social_links:
+    - { platform: rss, user_url: "https://mysite.com/feed.xml" }
     twitter: fastdotai
     github: fastai
 
