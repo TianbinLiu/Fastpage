@@ -130,7 +130,7 @@
   
       ,"page5": {
           "title": "",
-          "content": "This is my first Fastpage . home | about me | Neight at Museum images | 2014MCQ Corrections | . Week Review Ticket . 0 | Tool Setup | . 1 | Innovation - Primitives | . 2 | Innovation - Using Objects | . 3 | Backend Development | . 4 | Free Response Question No. 1 | . 5 | Class running Fibonacci | . 6 | Project Approval | . 7 | Last CB Topic - ArrayList | . 8 | | . 9 | | . 10 | | . 11 | | . Final Week | | .",
+          "content": "This is my first Fastpage . home | about me | Neight at Museum images | 2014MCQ Corrections | . Week Review Ticket . 0 | Tool Setup | . 1 | Innovation - Primitives | . 2 | Innovation - Using Objects | . 3 | Backend Development | . 4 | Free Response Question No. 1 | . 5 | Class running Fibonacci | . 6 | Project Approval | . 7 | Last CB Topic - ArrayList | . 8 | | . 9 | | . 10 | | . 11 | | . Final Week | | . Tri2 - 13 | FRQ1 - Methods and Control Structures | . Tri2 - 14 | FRQ2 - Classes | .",
           "url": "https://tianbinliu.github.io/Fastpage/",
           "relUrl": "/",
           "date": ""
@@ -160,7 +160,10 @@
   
 
   
-      ,"page14": {
+  
+
+  
+      ,"page15": {
           "title": "",
           "content": "Sitemap: {{ “sitemap.xml” | absolute_url }} | .",
           "url": "https://tianbinliu.github.io/Fastpage/robots.txt",
