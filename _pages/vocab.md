@@ -219,7 +219,11 @@ search_exclude: true
   
    <tr>
     <td>Wrapper Classes, why wrap int, double. Show examples</td>
-    <td></td>
+    <td>Wrapper classes provide a way to use primitive data types (int, boolean, etc..) as objects.<br>
+      Sometimes you must use wrapper classes, for example when working with Collection objects, such as ArrayList, where primitive types cannot be used (the list can only store objects)<br>
+     Ex:<br>
+     ArrayList<Integer> myNumbers = new ArrayList<Integer>(); // Valid<br>
+      <a href="https://www.w3schools.com/java/java_wrapper_classes.asp">Link</a></td>
    </tr>
   
    <tr>
