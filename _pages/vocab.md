@@ -214,7 +214,19 @@ search_exclude: true
   
    <tr>
     <td>Casting, specifically for Truncating or Rounding</td>
-    <td><a href="https://www.ualberta.ca/computing-science/media-library/teaching-resources/java/truncation-rounding.html">Definition</a></td>
+    <td><a href="https://www.ualberta.ca/computing-science/media-library/teaching-resources/java/truncation-rounding.html">Definition</a><br>
+     Rounding a number in the range [2.5, 3.5) returns the number 3<br>
+Truncating a number in the range [3.0, 4.0) returns the number 3<br>
+      <br>
+     Truncating 3.3 returns 3<br>
+Truncating 3.8 returns 3<br>
+     java code truncating ex:<br>
+     truncated = Math.round(nontruncated - 0.5f); <br>
+       <br>
+     Rounding 3.465 to two decimal places returns 3.47 <br>
+Rounding 3.464 to two decimal places returns 3.46 <br>
+     java code rounding ex:  <br>
+     roundedToTwoDecimals = Math.round(unrounded*100)/100f;</td>
    </tr>
   
    <tr>
