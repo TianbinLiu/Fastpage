@@ -8,16 +8,15 @@ search_exclude: true
 {% include head-custom2.html %}
 
   <table>
+  
    <tr>
     <th>Vocab</th>
     <th>Definition</th>
-
    </tr>
    
    <tr>
     <td>software engineer</td>
     <td>a person who designs, develops, and tests software for home, school, and business use</td>
-
    </tr>
   
    <tr>
@@ -28,13 +27,11 @@ search_exclude: true
    <tr>
     <td>integrated development environment (IDE)</td>
     <td>a software application for writing, compiling, testing, and debugging program code</td>
-
    </tr>
   
    <tr>
     <td>software</td>
     <td>a collection of instructions that is run by a computer</td>
-
    </tr>
   
    <tr>
@@ -191,24 +188,250 @@ search_exclude: true
    </tr>
   
    <tr>
-    <td></td>
-    <td></td>
+    <td>-----------------------------------------------------------</td>
+    <td>------------------------------------------------------------------------------------</td>
    </tr>
   
    <tr>
-    <td></td>
-    <td></td>
+    <td>Plans Week 14</td>
+    <td>Assign Vocabulary</td>
    </tr>
   
    <tr>
-    <td></td>
-    <td></td>
+    <td>-----------------------------------------------------------</td>
+    <td>------------------------------------------------------------------------------------</td>
    </tr>
   
    <tr>
-    <td></td>
+    <td>Casting, specifically for Division</td>
+    <td>1 / 3 - return 0 - (if you are doing division with integers that you want an integer result and it will truncate and throw away the part after the decimal point.)<br>
+     1.0 / 3 - return 0.33333333333333 - (if you use a mixture of integers (int) and decimal (double) numbers Java will assume that you want a double result.)<br>
+      <br>
+     Values of type double can be rounded to the nearest integer by adding or subtracting .5 and casting with (int) using formulas like the following.<br>
+     int nearestInt = (int)(number + 0.5);<br>
+     int nearestNegInt = (int)(negNumber – 0.5);</td>
+   </tr>
+  
+   <tr>
+    <td>Casting, specifically for Truncating or Rounding</td>
+    <td><a href="https://www.ualberta.ca/computing-science/media-library/teaching-resources/java/truncation-rounding.html">Definition</a><br>
+     Rounding a number in the range [2.5, 3.5) returns the number 3<br>
+Truncating a number in the range [3.0, 4.0) returns the number 3<br>
+      <br>
+     Truncating 3.3 returns 3<br>
+Truncating 3.8 returns 3<br>
+     java code truncating ex:<br>
+     truncated = Math.round(nontruncated - 0.5f); <br>
+       <br>
+     Rounding 3.465 to two decimal places returns 3.47 <br>
+Rounding 3.464 to two decimal places returns 3.46 <br>
+     java code rounding ex:  <br>
+     roundedToTwoDecimals = Math.round(unrounded*100)/100f;</td>
+   </tr>
+  
+   <tr>
+    <td>Wrapper Classes, why wrap int, double. Show examples</td>
+    <td>Wrapper classes provide a way to use primitive data types (int, boolean, etc..) as objects.<br>
+      Sometimes you must use wrapper classes, for example when working with Collection objects, such as ArrayList, where primitive types cannot be used (the list can only store objects)<br>
+     Ex:<br>
+     ArrayList<Integer> myNumbers = new ArrayList<Integer>(); // Valid<br>
+      <a href="https://www.w3schools.com/java/java_wrapper_classes.asp">Link</a></td>
+   </tr>
+  
+   <tr>
+    <td>Concatenation, explain or illustrate rules on mixed type Concatenation</td>
+    <td>Concatenation -  the operation of joining two strings together.<br>
+     You can join strings using either the addition (+) operator or the String’s concat() method.<br>
+     Ex:<br>
+     System.out.println("pan" + "handle");<br>
+      <br>
+     Mixed type Concatenation<br>
+      Ex:<br>
+      int age = 12;<br>
+      System.out.println("My age is " + age);
+      <a href="https://www.thoughtco.com/concatenation-2034055">Link</a>
+     </td>
+   </tr>
+  
+   <tr>
+    <td>Math class, specifically Random usage</td>
     <td></td>
    </tr>
 
+  
+   <tr>
+    <td>Compound Boolean Expression</td>
+    <td></td>
+   </tr>
+  
+   <tr>
+    <td>Truth Tables</td>
+    <td></td>
+   </tr>
+  
+   <tr>
+    <td>De Morgan’s Law</td>
+    <td></td>
+   </tr>
+  
+   <tr>
+    <td>Comparing Numbers</td>
+    <td></td>
+   </tr>
+  
+   <tr>
+    <td>Comparing Strings</td>
+    <td></td>
+   </tr>
+  
+   <tr>
+    <td>Comparing Objects</td>
+    <td></td>
+   </tr>
+  
+   <tr>
+    <td>for loop, enhanced for loop</td>
+    <td></td>
+   </tr>
 
+  
+   <tr>
+    <td>while loop versus do while loop</td>
+    <td></td>
+   </tr>
+  
+   <tr>
+    <td>nested loops</td>
+    <td></td>
+   </tr>
+  
+   <tr>
+    <td>Creating a Class, describe Naming Conventions</td>
+    <td></td>
+   </tr>
+  
+   <tr>
+    <td>Constructor, describe why there is no return</td>
+    <td></td>
+   </tr>
+  
+   <tr>
+    <td>Accessor methods, relationship to getter</td>
+    <td></td>
+   </tr>
+  
+   <tr>
+    <td>Mutator methods, relationship to setter, describe void return type</td>
+    <td></td>
+   </tr>
+  
+   <tr>
+    <td>Static variables, Class variables, show use case in code</td>
+    <td></td>
+   </tr>
+  
+   <tr>
+    <td>Show use case of access modifiers: Public, Private, Protected</td>
+    <td></td>
+   </tr>
+  
+   <tr>
+    <td>Static methods, Class methods</td>
+    <td></td>
+   </tr>
+  
+   <tr>
+    <td>this Keyword</td>
+    <td></td>
+   </tr>
+  
+   <tr>
+    <td>main method, tester methods</td>
+    <td></td>
+   </tr>
+  
+   <tr>
+    <td>Inheritance, extends</td>
+    <td></td>
+   </tr>
+  
+   <tr>
+    <td>Subclass constructor, super Keyword</td>
+    <td></td>
+   </tr>
+  
+   <tr>
+    <td>Overloading a method, same name different parameters</td>
+    <td></td>
+   </tr>
+  
+   <tr>
+    <td>Overriding a method, same signature of a method</td>
+    <td></td>
+   </tr>
+  
+   <tr>
+    <td>Abstract Class, Abstract Method</td>
+    <td></td>
+   </tr>
+  
+   <tr>
+    <td>Standard methods: toString(), equals(), hashCode()</td>
+    <td></td>
+   </tr>
+  
+   <tr>
+    <td>Late binding of object, referencing superclass object, ie Animal a = new Chicken(); Animal b = new Goat();</td>
+    <td></td>
+   </tr>
+  
+   <tr>
+    <td>Polymorphism: any of overloading, overriding, late binding</td>
+    <td></td>
+   </tr>
+  
+   <tr>
+    <td>Big O notation for Hash map, Binary Search, Single loop, Nested Loop</td>
+    <td></td>
+   </tr>
+  
+   <tr>
+    <td></td>
+    <td></td>
+   </tr>
+  
+   <tr>
+    <td></td>
+    <td></td>
+   </tr>
+  
+   <tr>
+    <td></td>
+    <td></td>
+   </tr>
+  
+   <tr>
+    <td></td>
+    <td></td>
+   </tr>
+  
+   <tr>
+    <td></td>
+    <td></td>
+   </tr>
+  
+   <tr>
+    <td></td>
+    <td></td>
+   </tr>
+  
+   <tr>
+    <td></td>
+    <td></td>
+   </tr>
+  
+   <tr>
+    <td></td>
+    <td></td>
+   </tr>
 

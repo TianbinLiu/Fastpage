@@ -35,21 +35,42 @@ function getDateTime(){
 function checking(){
     var video = document.getElementById("background");
     if ((l>=0)&&(l<=5)){
-        video.setAttribute("src","https://drive.google.com/uc?export=view&id=17ygkkkTDZb219cgsmglfod33qP8PGW58");
+        video.setAttribute("src","https://drive.google.com/uc?export=view&id=17hdDN7OMAjIOdvmcExqszG_cEx192fHU");
     }
     else if((l>=6)&&(l<=9)){
-        video.setAttribute("src","https://drive.google.com/uc?export=view&id=1GV5A1SChf-hhkKheakg01GBd-CjpzlHx");
+        video.setAttribute("src","https://drive.google.com/uc?export=view&id=1wvPtaJIBhsVcGFhxMqMgv0q2VQAPQV5E");
     }
     else if((l>=9)&&(l<=12)){
-        video.setAttribute("src","https://drive.google.com/uc?export=view&id=1BFKYi3db4VSzsVtV6-imY8mhcOxHe-g_");
+        video.setAttribute("src","https://drive.google.com/uc?export=view&id=1ErQhgcgSJRRRzB4O7UEOfJAvixrqfHcN");
     }
     else if((l>=13)&&(l<=17)){
-        video.setAttribute("src","https://drive.google.com/uc?export=view&id=1w4kUtoqYsylUpLU_g3oI7OtYhhPcQIiM");
+        video.setAttribute("src","https://drive.google.com/uc?export=view&id=19veO0JJ-8YPf7148y2ZnCRKUBY97ap5S");
     }
     else if((l>=18)&&(l<=20)){
         video.setAttribute("src","https://drive.google.com/uc?export=view&id=10qZhLCMqm_RDj89Jjp8edLKLurSjQmh-");
     }
     else if((l>=21)&&(l<=23)){
-        video.setAttribute("src","https://drive.google.com/uc?export=view&id=1IOK35bZ6iM5q4rYxhLmlFwYa3lHjINXR");
-    }        
+        video.setAttribute("src","https://drive.google.com/uc?export=view&id=1TCkL9j_l8PgB9dO8CKGB1iHeMaVAGeV1");
+    }    
+        
 }        
+function displayNextImage() {
+              x = (x === images.length - 1) ? 0 : x + 1;
+              document.getElementById("img").src = images[x];
+          }
+
+          function displayPreviousImage() {
+              x = (x <= 0) ? images.length - 1 : x - 1;
+              document.getElementById("img").src = images[x];
+          }
+
+          function startTimer() {
+              setInterval(displayNextImage, 3000);
+          }
+
+          var images = [], x = -1;
+          images[0] = "images/NAM.jpg";
+          images[1] = "images/NAM2.jpg";
+          images[2] = "images/NAM3.jpg";
+          images[3] = "images/NAM4.jpg";
+          images[4] = "images/NAM5.jpg";

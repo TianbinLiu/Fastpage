@@ -1,7 +1,6 @@
 ---
-title: about
+title: About
 ---
-
 
 <html lang="en">
 <head>
@@ -41,12 +40,12 @@ title: about
     {% include head-custom2.html %}
 </head>
 
-<body onload="checking()"> 
-    <div class="container">
-    <video autoplay loop id="background" class="videoPlayer">
+<body onload="checking()">   
+<div id="video_wrapper">
+  <video autoplay loop id="background">
         <source src="https://drive.google.com/uc?export=view&id=17ygkkkTDZb219cgsmglfod33qP8PGW58" type="video/mp4">
-    </video>
-    </div>
+  </video>
+</div>
     <div id="wrapper">
         {% include nav_frontend.html %}
          <table>
