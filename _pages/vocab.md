@@ -258,7 +258,15 @@ Rounding 3.464 to two decimal places returns 3.46 <br>
   
    <tr>
     <td>Math class, specifically Random usage</td>
-    <td><a href="https://tianbinliu.github.io/Fastpage/jupyter/2022/08/22/Java-notebook.html#:~:text=int%20ranCE2%20%3D%20random.nextInt(100)%3B">Work Link</a><br></td>
+    <td>The java.lang.Math.random() method returns a pseudorandom double type number greater than or equal to 0.0 and less than 1.0.<br>
+      Ex. <br>
+      double rand = Math.random();<br>
+      <br>
+      output: 0.0~1.0<br>
+      <br>
+      random.nextInt(num) - gives a random number inside range 0 to num<br>
+      <br>
+      <a href="https://tianbinliu.github.io/Fastpage/jupyter/2022/08/22/Java-notebook.html#:~:text=int%20ranCE2%20%3D%20random.nextInt(100)%3B">Work Link</a><br></td>
    </tr>
 
   
