@@ -236,6 +236,7 @@ Rounding 3.464 to two decimal places returns 3.46 <br>
       Sometimes you must use wrapper classes, for example when working with Collection objects, such as ArrayList, where primitive types cannot be used (the list can only store objects)<br>
      Ex:<br>
      ArrayList<Integer> myNumbers = new ArrayList<Integer>(); // Valid<br>
+      <a href="https://tianbinliu.github.io/Fastpage/jupyter/2022/08/22/Java-notebook.html#:~:text=ArrayList%3CString%3E%20namePlayer%20%3D%20new%20ArrayList%3CString%3E()%3B%0A%20%20%20%20%20%20%20%20ArrayList%3CInteger%3E%20CEPlayer%20%3D%20new%20ArrayList%3CInteger%3E()%3B">Work Link</a><br>
       <a href="https://www.w3schools.com/java/java_wrapper_classes.asp">Definition Resource Link</a></td>
    </tr>
   
@@ -257,7 +258,7 @@ Rounding 3.464 to two decimal places returns 3.46 <br>
   
    <tr>
     <td>Math class, specifically Random usage</td>
-    <td></td>
+    <td><a href="https://tianbinliu.github.io/Fastpage/jupyter/2022/08/22/Java-notebook.html#:~:text=int%20ranCE2%20%3D%20random.nextInt(100)%3B">Work Link</a><br></td>
    </tr>
 
   
