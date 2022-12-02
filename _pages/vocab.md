@@ -266,7 +266,8 @@ Rounding 3.464 to two decimal places returns 3.46 <br>
       <br>
       random.nextInt(num) - gives a random number inside range 0 to num<br>
       <br>
-      <a href="https://tianbinliu.github.io/Fastpage/jupyter/2022/08/22/Java-notebook.html#:~:text=int%20ranCE2%20%3D%20random.nextInt(100)%3B">Work Link</a><br></td>
+      <a href="https://tianbinliu.github.io/Fastpage/jupyter/2022/08/22/Java-notebook.html#:~:text=int%20ranCE2%20%3D%20random.nextInt(100)%3B">Work Link</a><br>
+      <a href="https://www.geeksforgeeks.org/java-math-random-method-examples/">Definition Resource Link</a></td>
    </tr>
 
   
