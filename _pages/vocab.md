@@ -226,7 +226,9 @@ Truncating 3.8 returns 3<br>
      Rounding 3.465 to two decimal places returns 3.47 <br>
 Rounding 3.464 to two decimal places returns 3.46 <br>
      java code rounding ex:  <br>
-     roundedToTwoDecimals = Math.round(unrounded*100)/100f;<br>
+     roundedToTwoDecimals = Math.round(unrounded*100)/100f;
+     <br>
+     <a href="https://tianbinliu.github.io/Fastpage/jupyter/2022/08/22/Java-notebook.html#FRQ2-APCalendar:~:text=int%20weekday%20%3D%20%20(int)%20Math.round(week)%3B">Work Link</a><br>
      <a href="https://www.ualberta.ca/computing-science/media-library/teaching-resources/java/truncation-rounding.html">Definition Resource Link</a></td>
    </tr>
   
@@ -258,7 +260,16 @@ Rounding 3.464 to two decimal places returns 3.46 <br>
   
    <tr>
     <td>Math class, specifically Random usage</td>
-    <td><a href="https://tianbinliu.github.io/Fastpage/jupyter/2022/08/22/Java-notebook.html#:~:text=int%20ranCE2%20%3D%20random.nextInt(100)%3B">Work Link</a><br></td>
+    <td>The java.lang.Math.random() method returns a pseudorandom double type number greater than or equal to 0.0 and less than 1.0.<br>
+      Ex. <br>
+      double rand = Math.random();<br>
+      <br>
+      output: 0.0~1.0<br>
+      <br>
+      random.nextInt(num) - gives a random number inside range 0 to num<br>
+      <br>
+      <a href="https://tianbinliu.github.io/Fastpage/jupyter/2022/08/22/Java-notebook.html#:~:text=int%20ranCE2%20%3D%20random.nextInt(100)%3B">Work Link</a><br>
+      <a href="https://www.geeksforgeeks.org/java-math-random-method-examples/">Definition Resource Link</a></td>
    </tr>
 
   
