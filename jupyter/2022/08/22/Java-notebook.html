@@ -2796,15 +2796,25 @@ A story of a Monkey and Cthulhus
   
       <span class="n">Random</span> <span class="n">random</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Random</span><span class="p">();</span>
       <span class="kt">int</span> <span class="n">ranNum</span> <span class="o">=</span> <span class="n">random</span><span class="p">.</span><span class="na">nextInt</span><span class="p">(</span><span class="mi">10</span><span class="p">);</span>
+      <span class="kt">boolean</span> <span class="n">greater</span><span class="p">;</span>
+      <span class="kt">boolean</span> <span class="n">less</span><span class="p">;</span>
 
       <span class="k">if</span> <span class="p">(</span><span class="n">num</span> <span class="o">&gt;</span> <span class="n">ranNum</span> <span class="p">){</span>
         <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Your Guess: "</span> <span class="o">+</span> <span class="n">num</span> <span class="o">+</span> <span class="s">" ,is greater than number"</span><span class="p">);</span>
+        <span class="n">greater</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
+        <span class="n">less</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
         <span class="p">}</span>
         <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">num</span> <span class="o">&lt;</span> <span class="n">ranNum</span><span class="p">){</span>
         <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Your Guess: "</span> <span class="o">+</span> <span class="n">num</span> <span class="o">+</span> <span class="s">" ,is less than number"</span><span class="p">);</span>
+        <span class="n">greater</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
+        <span class="n">less</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
         <span class="p">}</span>
         <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">num</span> <span class="o">==</span> <span class="n">ranNum</span><span class="p">){</span>
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"You find the number"</span><span class="p">);</span>
+        <span class="n">greater</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
+        <span class="n">less</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">greater</span> <span class="o">&amp;&amp;</span> <span class="n">less</span><span class="p">){</span>
+          <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"You find the number"</span><span class="p">);</span>
         <span class="p">}</span>
         <span class="k">return</span> <span class="n">ranNum</span><span class="p">;</span>
     <span class="p">}</span>
