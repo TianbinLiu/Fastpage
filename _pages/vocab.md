@@ -188,7 +188,7 @@ search_exclude: true
    </tr>
   
    <tr>
-    <td>-----------------------------------------------------------</td>
+    <td>---------------------------------------------------</td>
     <td>------------------------------------------------------------------------------------</td>
    </tr>
   
@@ -198,7 +198,7 @@ search_exclude: true
    </tr>
   
    <tr>
-    <td>-----------------------------------------------------------</td>
+    <td>---------------------------------------------------</td>
     <td>------------------------------------------------------------------------------------</td>
    </tr>
   
@@ -214,7 +214,7 @@ search_exclude: true
   
    <tr>
     <td>Casting, specifically for Truncating or Rounding</td>
-    <td><a href="https://www.ualberta.ca/computing-science/media-library/teaching-resources/java/truncation-rounding.html">Definition</a><br>
+    <td>
      Rounding a number in the range [2.5, 3.5) returns the number 3<br>
 Truncating a number in the range [3.0, 4.0) returns the number 3<br>
       <br>
@@ -226,7 +226,8 @@ Truncating 3.8 returns 3<br>
      Rounding 3.465 to two decimal places returns 3.47 <br>
 Rounding 3.464 to two decimal places returns 3.46 <br>
      java code rounding ex:  <br>
-     roundedToTwoDecimals = Math.round(unrounded*100)/100f;</td>
+     roundedToTwoDecimals = Math.round(unrounded*100)/100f;<br>
+     <a href="https://www.ualberta.ca/computing-science/media-library/teaching-resources/java/truncation-rounding.html">Definition Resource Link</a></td>
    </tr>
   
    <tr>
@@ -235,7 +236,8 @@ Rounding 3.464 to two decimal places returns 3.46 <br>
       Sometimes you must use wrapper classes, for example when working with Collection objects, such as ArrayList, where primitive types cannot be used (the list can only store objects)<br>
      Ex:<br>
      ArrayList<Integer> myNumbers = new ArrayList<Integer>(); // Valid<br>
-      <a href="https://www.w3schools.com/java/java_wrapper_classes.asp">Link</a></td>
+      <a href="https://tianbinliu.github.io/Fastpage/jupyter/2022/08/22/Java-notebook.html#:~:text=ArrayList%3CString%3E%20namePlayer%20%3D%20new%20ArrayList%3CString%3E()%3B%0A%20%20%20%20%20%20%20%20ArrayList%3CInteger%3E%20CEPlayer%20%3D%20new%20ArrayList%3CInteger%3E()%3B">Work Link</a><br>
+      <a href="https://www.w3schools.com/java/java_wrapper_classes.asp">Definition Resource Link</a></td>
    </tr>
   
    <tr>
@@ -248,14 +250,15 @@ Rounding 3.464 to two decimal places returns 3.46 <br>
      Mixed type Concatenation<br>
       Ex:<br>
       int age = 12;<br>
-      System.out.println("My age is " + age);
-      <a href="https://www.thoughtco.com/concatenation-2034055">Link</a>
+      System.out.println("My age is " + age);<br>
+      <a href="https://tianbinliu.github.io/Fastpage/jupyter/2022/08/22/Java-notebook.html#:~:text=System.out.println(whilei2%20%2B%20%22th%20fibonacci%20number%20is%3A%20%22%20%2B%20forn3)%3B">Work Link</a><br>
+      <a href="https://www.thoughtco.com/concatenation-2034055">Definition Resource Link</a>
      </td>
    </tr>
   
    <tr>
     <td>Math class, specifically Random usage</td>
-    <td></td>
+    <td><a href="https://tianbinliu.github.io/Fastpage/jupyter/2022/08/22/Java-notebook.html#:~:text=int%20ranCE2%20%3D%20random.nextInt(100)%3B">Work Link</a><br></td>
    </tr>
 
   
