@@ -293,16 +293,42 @@ Rounding 3.464 to two decimal places returns 3.46 <br>
   
    <tr>
     <td>De Morgan’s Law</td>
-    <td>     
+    <td>  
+      De Morgan's Law show how the NOT operator (!) can be distributed when it exists outside a set of patenthesis. <br>
+      Ex:<br>
+      !(A && B) is the same as !A || !B<br>
+      !(A || B) is the same as !A && !B<br>
+      !(C > D) is the same as C <= D<br>
+      !(C < D) is the same as C >= D<br>
+      !(C >= D) is the same as C < D<br>
+      !(C <= D) is the same as C > D<br>
+      !(E == F) is the same as E != F<br>
+      !(E != F) is the same as E == F<br>
+      !(A && B && C) is the same as !A||!B||!C<br>
+      <br>
       <a href="https://tianbinliu.github.io/Fastpage/jupyter/2022/08/22/Java-notebook.html#:~:text=if%20(greater%20%26%26%20less)%7B%0A%20%20%20%20%20%20%20%20%20%20System.out.println(%22You%20find%20the%20number%22)%3B%0A%20%20%20%20%20%20%20%20%7D">Work Link</a> <br>
      <a href="https://exlskills.com/learn-en/courses/java-basics-basics_java/control-flow-statements-wbzYVXqrsQeO/logical-operators-IPplvhjNoHJu/de-morgans-law-VvnphQZZtJxK">Definition Resource Link</a></td>
    </tr>
   
    <tr>
     <td>Comparing Numbers</td>
-    <td>     
+    <td>A Double is NEVER equals to an Integer. Moreover, a double is not the same as a Double.<br>
+        To compare two Numbers in Java you can use the compareTo method from BigDecimal.<br>
+      EX:<br>
+      public int compareTo(Number n1, Number n2) {<br>
+    // ignoring null handling<br>
+    BigDecimal b1 = new BigDecimal(n1.doubleValue());<br>
+    BigDecimal b2 = new BigDecimal(n2.doubleValue());<br>
+    return b1.compareTo(b2);<br>
+}<br>
+      <br>
+      Or use if statement:<br>
+       if(num1 > num2){<br>
+ System.out.println(num1 + " is greater than " + num2);<br>
+ }<br>
+      <br>
       <a href="https://tianbinliu.github.io/Fastpage/jupyter/2022/08/22/Java-notebook.html#:~:text=if%20(greater%20%26%26%20less)%7B%0A%20%20%20%20%20%20%20%20%20%20System.out.println(%22You%20find%20the%20number%22)%3B%0A%20%20%20%20%20%20%20%20%7D">Work Link</a> <br>
-     <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_AND">Definition Resource Link</a></td>
+     <a href="https://9to5answer.com/comparing-numbers-in-java">Definition Resource Link</a></td>
    </tr>
   
    <tr>
