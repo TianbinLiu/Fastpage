@@ -275,138 +275,222 @@ Rounding 3.464 to two decimal places returns 3.46 <br>
   
    <tr>
     <td>Compound Boolean Expression</td>
-    <td></td>
+    <td>If two boolean values/expressions are combined with a logical and (&&) and the first expression is false, then the second expression won't be executed <br>
+      The logical AND (&&) (logical conjunction) operator for a set of boolean operands will be true if and only if all the operands are true. Otherwise it will be false.<br>
+      <br>
+     <a href="https://tianbinliu.github.io/Fastpage/jupyter/2022/08/22/Java-notebook.html#:~:text=if%20(greater%20%26%26%20less)%7B%0A%20%20%20%20%20%20%20%20%20%20System.out.println(%22You%20find%20the%20number%22)%3B%0A%20%20%20%20%20%20%20%20%7D">Work Link</a> <br>
+     <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_AND">Definition Resource Link</a></td>
    </tr>
   
    <tr>
     <td>Truth Tables</td>
-    <td></td>
+    <td>A truth table has one column for each variable, one row for each possible combination of variable values, and a column that specifies the value of the function for that combination.<br>
+      <br>
+      A truth table is a breakdown of a logic function by listing all possible values the function can attain. <br>
+      <br>
+      <a href="https://www.techtarget.com/whatis/definition/truth-table">Definition Resource Link</a></td>
    </tr>
   
    <tr>
     <td>De Morgan’s Law</td>
-    <td></td>
+    <td>  
+      De Morgan's Law show how the NOT operator (!) can be distributed when it exists outside a set of patenthesis. <br>
+      Ex:<br>
+      !(A && B) is the same as !A || !B<br>
+      !(A || B) is the same as !A && !B<br>
+      !(C > D) is the same as C <= D<br>
+      !(C < D) is the same as C >= D<br>
+      !(C >= D) is the same as C < D<br>
+      !(C <= D) is the same as C > D<br>
+      !(E == F) is the same as E != F<br>
+      !(E != F) is the same as E == F<br>
+      !(A && B && C) is the same as !A||!B||!C<br>
+      <br>
+      <a href="https://tianbinliu.github.io/Fastpage/jupyter/2022/08/22/Java-notebook.html#:~:text=if%20(greater%20%26%26%20less)%7B%0A%20%20%20%20%20%20%20%20%20%20System.out.println(%22You%20find%20the%20number%22)%3B%0A%20%20%20%20%20%20%20%20%7D">Work Link</a> <br>
+     <a href="https://exlskills.com/learn-en/courses/java-basics-basics_java/control-flow-statements-wbzYVXqrsQeO/logical-operators-IPplvhjNoHJu/de-morgans-law-VvnphQZZtJxK">Definition Resource Link</a></td>
    </tr>
   
    <tr>
     <td>Comparing Numbers</td>
-    <td></td>
+    <td>A Double is NEVER equals to an Integer. Moreover, a double is not the same as a Double.<br>
+        To compare two Numbers in Java you can use the compareTo method from BigDecimal.<br>
+      EX:<br>
+      public int compareTo(Number n1, Number n2) {<br>
+    // ignoring null handling<br>
+    BigDecimal b1 = new BigDecimal(n1.doubleValue());<br>
+    BigDecimal b2 = new BigDecimal(n2.doubleValue());<br>
+    return b1.compareTo(b2);<br>
+}<br>
+      <br>
+      Or use if statement:<br>
+       if(num1 > num2){<br>
+ System.out.println(num1 + " is greater than " + num2);<br>
+ }<br>
+      <br>
+      <a href="https://tianbinliu.github.io/Fastpage/jupyter/2022/08/22/Java-notebook.html#:~:text=if%20(greater%20%26%26%20less)%7B%0A%20%20%20%20%20%20%20%20%20%20System.out.println(%22You%20find%20the%20number%22)%3B%0A%20%20%20%20%20%20%20%20%7D">Work Link</a> <br>
+     <a href="https://9to5answer.com/comparing-numbers-in-java">Definition Resource Link</a></td>
    </tr>
   
    <tr>
     <td>Comparing Strings</td>
-    <td></td>
+    <td>     
+      <a href="https://tianbinliu.github.io/Fastpage/jupyter/2022/08/22/Java-notebook.html#:~:text=if%20(greater%20%26%26%20less)%7B%0A%20%20%20%20%20%20%20%20%20%20System.out.println(%22You%20find%20the%20number%22)%3B%0A%20%20%20%20%20%20%20%20%7D">Work Link</a> <br>
+     <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_AND">Definition Resource Link</a></td>
    </tr>
   
    <tr>
     <td>Comparing Objects</td>
-    <td></td>
+    <td>     
+      <a href="https://tianbinliu.github.io/Fastpage/jupyter/2022/08/22/Java-notebook.html#:~:text=if%20(greater%20%26%26%20less)%7B%0A%20%20%20%20%20%20%20%20%20%20System.out.println(%22You%20find%20the%20number%22)%3B%0A%20%20%20%20%20%20%20%20%7D">Work Link</a> <br>
+     <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_AND">Definition Resource Link</a></td>
    </tr>
   
    <tr>
     <td>for loop, enhanced for loop</td>
-    <td></td>
+    <td>     
+      <a href="https://tianbinliu.github.io/Fastpage/jupyter/2022/08/22/Java-notebook.html#:~:text=if%20(greater%20%26%26%20less)%7B%0A%20%20%20%20%20%20%20%20%20%20System.out.println(%22You%20find%20the%20number%22)%3B%0A%20%20%20%20%20%20%20%20%7D">Work Link</a> <br>
+     <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_AND">Definition Resource Link</a></td>
    </tr>
 
   
    <tr>
     <td>while loop versus do while loop</td>
-    <td></td>
+    <td>     
+      <a href="https://tianbinliu.github.io/Fastpage/jupyter/2022/08/22/Java-notebook.html#:~:text=if%20(greater%20%26%26%20less)%7B%0A%20%20%20%20%20%20%20%20%20%20System.out.println(%22You%20find%20the%20number%22)%3B%0A%20%20%20%20%20%20%20%20%7D">Work Link</a> <br>
+     <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_AND">Definition Resource Link</a></td>
    </tr>
   
    <tr>
     <td>nested loops</td>
-    <td></td>
+    <td>     
+      <a href="https://tianbinliu.github.io/Fastpage/jupyter/2022/08/22/Java-notebook.html#:~:text=if%20(greater%20%26%26%20less)%7B%0A%20%20%20%20%20%20%20%20%20%20System.out.println(%22You%20find%20the%20number%22)%3B%0A%20%20%20%20%20%20%20%20%7D">Work Link</a> <br>
+     <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_AND">Definition Resource Link</a></td>
    </tr>
   
    <tr>
     <td>Creating a Class, describe Naming Conventions</td>
-    <td></td>
+    <td>     
+      <a href="https://tianbinliu.github.io/Fastpage/jupyter/2022/08/22/Java-notebook.html#:~:text=if%20(greater%20%26%26%20less)%7B%0A%20%20%20%20%20%20%20%20%20%20System.out.println(%22You%20find%20the%20number%22)%3B%0A%20%20%20%20%20%20%20%20%7D">Work Link</a> <br>
+     <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_AND">Definition Resource Link</a></td>
    </tr>
   
    <tr>
     <td>Constructor, describe why there is no return</td>
-    <td></td>
+    <td>     
+      <a href="https://tianbinliu.github.io/Fastpage/jupyter/2022/08/22/Java-notebook.html#:~:text=if%20(greater%20%26%26%20less)%7B%0A%20%20%20%20%20%20%20%20%20%20System.out.println(%22You%20find%20the%20number%22)%3B%0A%20%20%20%20%20%20%20%20%7D">Work Link</a> <br>
+     <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_AND">Definition Resource Link</a></td>
    </tr>
   
    <tr>
     <td>Accessor methods, relationship to getter</td>
-    <td></td>
+    <td>     
+      <a href="https://tianbinliu.github.io/Fastpage/jupyter/2022/08/22/Java-notebook.html#:~:text=if%20(greater%20%26%26%20less)%7B%0A%20%20%20%20%20%20%20%20%20%20System.out.println(%22You%20find%20the%20number%22)%3B%0A%20%20%20%20%20%20%20%20%7D">Work Link</a> <br>
+     <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_AND">Definition Resource Link</a></td>
    </tr>
   
    <tr>
     <td>Mutator methods, relationship to setter, describe void return type</td>
-    <td></td>
+    <td>     
+      <a href="https://tianbinliu.github.io/Fastpage/jupyter/2022/08/22/Java-notebook.html#:~:text=if%20(greater%20%26%26%20less)%7B%0A%20%20%20%20%20%20%20%20%20%20System.out.println(%22You%20find%20the%20number%22)%3B%0A%20%20%20%20%20%20%20%20%7D">Work Link</a> <br>
+     <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_AND">Definition Resource Link</a></td>
    </tr>
   
    <tr>
     <td>Static variables, Class variables, show use case in code</td>
-    <td></td>
+    <td>     
+      <a href="https://tianbinliu.github.io/Fastpage/jupyter/2022/08/22/Java-notebook.html#:~:text=if%20(greater%20%26%26%20less)%7B%0A%20%20%20%20%20%20%20%20%20%20System.out.println(%22You%20find%20the%20number%22)%3B%0A%20%20%20%20%20%20%20%20%7D">Work Link</a> <br>
+     <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_AND">Definition Resource Link</a></td>
    </tr>
   
    <tr>
     <td>Show use case of access modifiers: Public, Private, Protected</td>
-    <td></td>
+    <td>     
+      <a href="https://tianbinliu.github.io/Fastpage/jupyter/2022/08/22/Java-notebook.html#:~:text=if%20(greater%20%26%26%20less)%7B%0A%20%20%20%20%20%20%20%20%20%20System.out.println(%22You%20find%20the%20number%22)%3B%0A%20%20%20%20%20%20%20%20%7D">Work Link</a> <br>
+     <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_AND">Definition Resource Link</a></td>
    </tr>
   
    <tr>
     <td>Static methods, Class methods</td>
-    <td></td>
+    <td>     
+      <a href="https://tianbinliu.github.io/Fastpage/jupyter/2022/08/22/Java-notebook.html#:~:text=if%20(greater%20%26%26%20less)%7B%0A%20%20%20%20%20%20%20%20%20%20System.out.println(%22You%20find%20the%20number%22)%3B%0A%20%20%20%20%20%20%20%20%7D">Work Link</a> <br>
+     <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_AND">Definition Resource Link</a></td>
    </tr>
   
    <tr>
     <td>this Keyword</td>
-    <td></td>
+    <td>     
+      <a href="https://tianbinliu.github.io/Fastpage/jupyter/2022/08/22/Java-notebook.html#:~:text=if%20(greater%20%26%26%20less)%7B%0A%20%20%20%20%20%20%20%20%20%20System.out.println(%22You%20find%20the%20number%22)%3B%0A%20%20%20%20%20%20%20%20%7D">Work Link</a> <br>
+     <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_AND">Definition Resource Link</a></td>
    </tr>
   
    <tr>
     <td>main method, tester methods</td>
-    <td></td>
+    <td>    
+      <a href="https://tianbinliu.github.io/Fastpage/jupyter/2022/08/22/Java-notebook.html#:~:text=if%20(greater%20%26%26%20less)%7B%0A%20%20%20%20%20%20%20%20%20%20System.out.println(%22You%20find%20the%20number%22)%3B%0A%20%20%20%20%20%20%20%20%7D">Work Link</a> <br>
+     <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_AND">Definition Resource Link</a></td>
    </tr>
   
    <tr>
     <td>Inheritance, extends</td>
-    <td></td>
+    <td>     
+      <a href="https://tianbinliu.github.io/Fastpage/jupyter/2022/08/22/Java-notebook.html#:~:text=if%20(greater%20%26%26%20less)%7B%0A%20%20%20%20%20%20%20%20%20%20System.out.println(%22You%20find%20the%20number%22)%3B%0A%20%20%20%20%20%20%20%20%7D">Work Link</a> <br>
+     <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_AND">Definition Resource Link</a></td>
    </tr>
   
    <tr>
     <td>Subclass constructor, super Keyword</td>
-    <td></td>
+    <td>     
+      <a href="https://tianbinliu.github.io/Fastpage/jupyter/2022/08/22/Java-notebook.html#:~:text=if%20(greater%20%26%26%20less)%7B%0A%20%20%20%20%20%20%20%20%20%20System.out.println(%22You%20find%20the%20number%22)%3B%0A%20%20%20%20%20%20%20%20%7D">Work Link</a> <br>
+     <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_AND">Definition Resource Link</a></td>
    </tr>
   
    <tr>
     <td>Overloading a method, same name different parameters</td>
-    <td></td>
+    <td>     
+      <a href="https://tianbinliu.github.io/Fastpage/jupyter/2022/08/22/Java-notebook.html#:~:text=if%20(greater%20%26%26%20less)%7B%0A%20%20%20%20%20%20%20%20%20%20System.out.println(%22You%20find%20the%20number%22)%3B%0A%20%20%20%20%20%20%20%20%7D">Work Link</a> <br>
+     <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_AND">Definition Resource Link</a></td>
    </tr>
   
    <tr>
     <td>Overriding a method, same signature of a method</td>
-    <td></td>
+    <td>     
+      <a href="https://tianbinliu.github.io/Fastpage/jupyter/2022/08/22/Java-notebook.html#:~:text=if%20(greater%20%26%26%20less)%7B%0A%20%20%20%20%20%20%20%20%20%20System.out.println(%22You%20find%20the%20number%22)%3B%0A%20%20%20%20%20%20%20%20%7D">Work Link</a> <br>
+     <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_AND">Definition Resource Link</a></td>
    </tr>
   
    <tr>
     <td>Abstract Class, Abstract Method</td>
-    <td></td>
+    <td>     
+      <a href="https://tianbinliu.github.io/Fastpage/jupyter/2022/08/22/Java-notebook.html#:~:text=if%20(greater%20%26%26%20less)%7B%0A%20%20%20%20%20%20%20%20%20%20System.out.println(%22You%20find%20the%20number%22)%3B%0A%20%20%20%20%20%20%20%20%7D">Work Link</a> <br>
+     <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_AND">Definition Resource Link</a></td>
    </tr>
   
    <tr>
     <td>Standard methods: toString(), equals(), hashCode()</td>
-    <td></td>
+    <td>     
+      <a href="https://tianbinliu.github.io/Fastpage/jupyter/2022/08/22/Java-notebook.html#:~:text=if%20(greater%20%26%26%20less)%7B%0A%20%20%20%20%20%20%20%20%20%20System.out.println(%22You%20find%20the%20number%22)%3B%0A%20%20%20%20%20%20%20%20%7D">Work Link</a> <br>
+     <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_AND">Definition Resource Link</a></td>
    </tr>
   
    <tr>
     <td>Late binding of object, referencing superclass object, ie Animal a = new Chicken(); Animal b = new Goat();</td>
-    <td></td>
+    <td>     
+      <a href="https://tianbinliu.github.io/Fastpage/jupyter/2022/08/22/Java-notebook.html#:~:text=if%20(greater%20%26%26%20less)%7B%0A%20%20%20%20%20%20%20%20%20%20System.out.println(%22You%20find%20the%20number%22)%3B%0A%20%20%20%20%20%20%20%20%7D">Work Link</a> <br>
+     <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_AND">Definition Resource Link</a></td>
    </tr>
   
    <tr>
     <td>Polymorphism: any of overloading, overriding, late binding</td>
-    <td></td>
+    <td>     
+      <a href="https://tianbinliu.github.io/Fastpage/jupyter/2022/08/22/Java-notebook.html#:~:text=if%20(greater%20%26%26%20less)%7B%0A%20%20%20%20%20%20%20%20%20%20System.out.println(%22You%20find%20the%20number%22)%3B%0A%20%20%20%20%20%20%20%20%7D">Work Link</a> <br>
+     <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_AND">Definition Resource Link</a></td>
    </tr>
   
    <tr>
     <td>Big O notation for Hash map, Binary Search, Single loop, Nested Loop</td>
-    <td></td>
+    <td>     
+      <a href="https://tianbinliu.github.io/Fastpage/jupyter/2022/08/22/Java-notebook.html#:~:text=if%20(greater%20%26%26%20less)%7B%0A%20%20%20%20%20%20%20%20%20%20System.out.println(%22You%20find%20the%20number%22)%3B%0A%20%20%20%20%20%20%20%20%7D">Work Link</a> <br>
+     <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_AND">Definition Resource Link</a></td>
    </tr>
   
    <tr>
