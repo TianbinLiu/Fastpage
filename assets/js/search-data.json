@@ -3,7 +3,7 @@
     
         "post0": {
             "title": "2D Array",
-            "content": ". Answer: D . . Answer : B . . Answer: . (A.) . (B.) . (C.) . (D.) . . private void fillBlock(String str){ String [][] letterBlock = new String [numRows][numCols]; for (c = 0; c &lt; letterBlock[r].length; c++){ for (r = 0; r &lt; letterBlock.length ; r++){ letterBlock[r][c] = ; } } } .",
+            "content": ". Answer: D . . Answer : B . . Answer: . (A.) . (B.) . (C.) . (D.) . . //part (a.) private void fillBlock(String str){ String [][] letterBlock = new String [numRows][numCols]; for (c = 0; c &lt; letterBlock[r].length; c++){ for (r = 0; r &lt; letterBlock.length ; r++){ letterBlock[r][c] = str.substring(r + (c*numCols), r + (c*numCols) + 1); if (str.substring(r + (c*numCols), r + (c*numCols) + 1) == null;){ letterBlock[r][c] = A; } } } } .",
             "url": "https://tianbinliu.github.io/Fastpage/2022/12/20/APTest.html",
             "relUrl": "/2022/12/20/APTest.html",
             "date": " • Dec 20, 2022"

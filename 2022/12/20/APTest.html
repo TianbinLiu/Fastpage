@@ -209,12 +209,16 @@ window.onload = wrap_img;
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-python"><pre><span></span><span class="n">private</span> <span class="n">void</span> <span class="n">fillBlock</span><span class="p">(</span><span class="n">String</span> <span class="nb">str</span><span class="p">){</span>
+<div class=" highlight hl-python"><pre><span></span><span class="o">//</span><span class="n">part</span> <span class="p">(</span><span class="n">a</span><span class="o">.</span><span class="p">)</span>
+
+<span class="n">private</span> <span class="n">void</span> <span class="n">fillBlock</span><span class="p">(</span><span class="n">String</span> <span class="nb">str</span><span class="p">){</span>
     <span class="n">String</span> <span class="p">[][]</span> <span class="n">letterBlock</span> <span class="o">=</span> <span class="n">new</span> <span class="n">String</span> <span class="p">[</span><span class="n">numRows</span><span class="p">][</span><span class="n">numCols</span><span class="p">];</span>
     <span class="k">for</span> <span class="p">(</span><span class="n">c</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">c</span> <span class="o">&lt;</span> <span class="n">letterBlock</span><span class="p">[</span><span class="n">r</span><span class="p">]</span><span class="o">.</span><span class="n">length</span><span class="p">;</span> <span class="n">c</span><span class="o">++</span><span class="p">){</span>
         <span class="k">for</span> <span class="p">(</span><span class="n">r</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">r</span> <span class="o">&lt;</span> <span class="n">letterBlock</span><span class="o">.</span><span class="n">length</span> <span class="p">;</span> <span class="n">r</span><span class="o">++</span><span class="p">){</span>
-            <span class="n">letterBlock</span><span class="p">[</span><span class="n">r</span><span class="p">][</span><span class="n">c</span><span class="p">]</span> <span class="o">=</span> <span class="p">;</span>
-            
+            <span class="n">letterBlock</span><span class="p">[</span><span class="n">r</span><span class="p">][</span><span class="n">c</span><span class="p">]</span> <span class="o">=</span> <span class="nb">str</span><span class="o">.</span><span class="n">substring</span><span class="p">(</span><span class="n">r</span> <span class="o">+</span> <span class="p">(</span><span class="n">c</span><span class="o">*</span><span class="n">numCols</span><span class="p">),</span> <span class="n">r</span> <span class="o">+</span> <span class="p">(</span><span class="n">c</span><span class="o">*</span><span class="n">numCols</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span><span class="p">);</span>
+            <span class="k">if</span> <span class="p">(</span><span class="nb">str</span><span class="o">.</span><span class="n">substring</span><span class="p">(</span><span class="n">r</span> <span class="o">+</span> <span class="p">(</span><span class="n">c</span><span class="o">*</span><span class="n">numCols</span><span class="p">),</span> <span class="n">r</span> <span class="o">+</span> <span class="p">(</span><span class="n">c</span><span class="o">*</span><span class="n">numCols</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">==</span> <span class="n">null</span><span class="p">;){</span>
+                <span class="n">letterBlock</span><span class="p">[</span><span class="n">r</span><span class="p">][</span><span class="n">c</span><span class="p">]</span> <span class="o">=</span> <span class="n">A</span><span class="p">;</span>
+            <span class="p">}</span>
         <span class="p">}</span>
     <span class="p">}</span>
 <span class="p">}</span>
