@@ -130,21 +130,28 @@ window.onload = wrap_img;
 <ul>
 <li class="toc-entry toc-h2"><a href="#Answer:--D">Answer:  D </a></li>
 <li class="toc-entry toc-h2"><a href="#Answer-:-B">Answer : B </a></li>
-<li class="toc-entry toc-h2"><a href="#Answer:">Answer: </a></li>
-<li class="toc-entry toc-h2"><a href="#(A.)">(A.) </a></li>
-<li class="toc-entry toc-h2"><a href="#(B.)">(B.) </a></li>
-<li class="toc-entry toc-h2"><a href="#(C.)">(C.) </a></li>
-<li class="toc-entry toc-h2"><a href="#(D.)">(D.) </a></li>
+<li class="toc-entry toc-h2"><a href="#Answer:-B">Answer: B </a></li>
 </ul>
 </li>
 <li class="toc-entry toc-h1"><a href="#Unit1-Primitive-Type-/-Unit2-Using-Object">Unit1 Primitive Type / Unit2 Using Object </a>
 <ul>
-<li class="toc-entry toc-h2"><a href="#Answer:-C">Answer: C </a></li>
+<li class="toc-entry toc-h2"><a href="#Answer:-D">Answer: D </a></li>
 <li class="toc-entry toc-h2"><a href="#Answer:-C">Answer: C </a></li>
 <li class="toc-entry toc-h2"><a href="#Answer:-D">Answer: D </a></li>
 <li class="toc-entry toc-h2"><a href="#Answer-:-D">Answer : D </a></li>
 <li class="toc-entry toc-h2"><a href="#Answer:-C">Answer: C </a></li>
 <li class="toc-entry toc-h2"><a href="#Answer:-E">Answer: E </a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h1"><a href="#Unit2-Using-Object">Unit2 Using Object </a>
+<ul>
+<li class="toc-entry toc-h2"><a href="#Answer:-D">Answer: D </a></li>
+<li class="toc-entry toc-h2"><a href="#Answer:-D">Answer: D </a></li>
+<li class="toc-entry toc-h2"><a href="#Answer:-E">Answer: E </a></li>
+<li class="toc-entry toc-h2"><a href="#Answer:-C">Answer: C </a></li>
+<li class="toc-entry toc-h2"><a href="#Answer:-C">Answer: C </a></li>
+<li class="toc-entry toc-h2"><a href="#Answer:-A">Answer: A </a></li>
+<li class="toc-entry toc-h2"><a href="#Answer:-D">Answer: D </a></li>
 </ul>
 </li>
 </ul><!--
@@ -235,20 +242,8 @@ window.onload = wrap_img;
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Answer:">
-<a class="anchor" href="#Answer:" aria-hidden="true"><span class="octicon octicon-link"></span></a>Answer:<a class="anchor-link" href="#Answer:"> </a>
-</h2>
-<h2 id="(A.)">
-<a class="anchor" href="#(A.)" aria-hidden="true"><span class="octicon octicon-link"></span></a>(A.)<a class="anchor-link" href="#(A.)"> </a>
-</h2>
-<h2 id="(B.)">
-<a class="anchor" href="#(B.)" aria-hidden="true"><span class="octicon octicon-link"></span></a>(B.)<a class="anchor-link" href="#(B.)"> </a>
-</h2>
-<h2 id="(C.)">
-<a class="anchor" href="#(C.)" aria-hidden="true"><span class="octicon octicon-link"></span></a>(C.)<a class="anchor-link" href="#(C.)"> </a>
-</h2>
-<h2 id="(D.)">
-<a class="anchor" href="#(D.)" aria-hidden="true"><span class="octicon octicon-link"></span></a>(D.)<a class="anchor-link" href="#(D.)"> </a>
+<h2 id="Answer:-B">
+<a class="anchor" href="#Answer:-B" aria-hidden="true"><span class="octicon octicon-link"></span></a>Answer: B<a class="anchor-link" href="#Answer:-B"> </a>
 </h2>
 </div>
 </div>
@@ -274,16 +269,19 @@ window.onload = wrap_img;
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-python"><pre><span></span><span class="o">//</span><span class="n">part</span> <span class="p">(</span><span class="n">a</span><span class="o">.</span><span class="p">)</span>
-
-<span class="n">private</span> <span class="n">void</span> <span class="n">fillBlock</span><span class="p">(</span><span class="n">String</span> <span class="nb">str</span><span class="p">){</span>
-    <span class="n">String</span> <span class="p">[][]</span> <span class="n">letterBlock</span> <span class="o">=</span> <span class="n">new</span> <span class="n">String</span> <span class="p">[</span><span class="n">numRows</span><span class="p">][</span><span class="n">numCols</span><span class="p">];</span>
-    <span class="k">for</span> <span class="p">(</span><span class="n">c</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">c</span> <span class="o">&lt;</span> <span class="n">letterBlock</span><span class="p">[</span><span class="n">r</span><span class="p">]</span><span class="o">.</span><span class="n">length</span><span class="p">;</span> <span class="n">c</span><span class="o">++</span><span class="p">){</span>
-        <span class="k">for</span> <span class="p">(</span><span class="n">r</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">r</span> <span class="o">&lt;</span> <span class="n">letterBlock</span><span class="o">.</span><span class="n">length</span> <span class="p">;</span> <span class="n">r</span><span class="o">++</span><span class="p">){</span>
-            <span class="n">letterBlock</span><span class="p">[</span><span class="n">r</span><span class="p">][</span><span class="n">c</span><span class="p">]</span> <span class="o">=</span> <span class="nb">str</span><span class="o">.</span><span class="n">substring</span><span class="p">(</span><span class="n">r</span> <span class="o">+</span> <span class="p">(</span><span class="n">c</span><span class="o">*</span><span class="n">numCols</span><span class="p">),</span> <span class="n">r</span> <span class="o">+</span> <span class="p">(</span><span class="n">c</span><span class="o">*</span><span class="n">numCols</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span><span class="p">);</span>
-            <span class="k">if</span> <span class="p">(</span><span class="nb">str</span><span class="o">.</span><span class="n">substring</span><span class="p">(</span><span class="n">r</span> <span class="o">+</span> <span class="p">(</span><span class="n">c</span><span class="o">*</span><span class="n">numCols</span><span class="p">),</span> <span class="n">r</span> <span class="o">+</span> <span class="p">(</span><span class="n">c</span><span class="o">*</span><span class="n">numCols</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">==</span> <span class="n">null</span><span class="p">;){</span>
-                <span class="n">letterBlock</span><span class="p">[</span><span class="n">r</span><span class="p">][</span><span class="n">c</span><span class="p">]</span> <span class="o">=</span> <span class="n">A</span><span class="p">;</span>
+<div class=" highlight hl-java"><pre><span></span><span class="c1">//part (a.)</span>
+<span class="kt">int</span> <span class="n">check</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+<span class="kd">private</span> <span class="kt">void</span> <span class="nf">fillBlock</span><span class="p">(</span><span class="n">String</span> <span class="n">str</span><span class="p">){</span>
+    <span class="n">String</span> <span class="o">[][]</span> <span class="n">letterBlock</span> <span class="o">=</span> <span class="k">new</span> <span class="n">String</span> <span class="o">[</span><span class="n">numRows</span><span class="o">][</span><span class="n">numCols</span><span class="o">]</span><span class="p">;</span>
+    <span class="k">for</span> <span class="p">(</span><span class="n">r</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">r</span> <span class="o">&lt;</span> <span class="n">letterBlock</span><span class="p">.</span><span class="na">length</span> <span class="p">;</span> <span class="n">r</span><span class="o">++</span><span class="p">){</span>
+        <span class="k">for</span> <span class="p">(</span><span class="n">c</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">c</span> <span class="o">&lt;</span> <span class="n">letterBlock</span><span class="o">[</span><span class="n">r</span><span class="o">]</span><span class="p">.</span><span class="na">length</span><span class="p">;</span> <span class="n">c</span><span class="o">++</span><span class="p">){</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">check</span> <span class="o">&gt;</span> <span class="n">str</span><span class="p">.</span><span class="na">length</span><span class="p">()){</span>
+                <span class="n">letterBlock</span><span class="o">[</span><span class="n">r</span><span class="o">][</span><span class="n">c</span><span class="o">]</span> <span class="o">=</span> <span class="s">"A"</span><span class="p">;</span>
             <span class="p">}</span>
+            <span class="k">else</span><span class="p">{</span>
+                <span class="n">letterBlock</span><span class="o">[</span><span class="n">r</span><span class="o">][</span><span class="n">c</span><span class="o">]</span> <span class="o">=</span> <span class="n">str</span><span class="p">.</span><span class="na">substring</span><span class="p">(</span><span class="n">check</span><span class="p">,</span> <span class="n">check</span> <span class="o">+</span> <span class="mi">1</span><span class="p">);</span>
+            <span class="p">}</span>
+            <span class="n">check</span> <span class="o">++</span><span class="p">;</span>
         <span class="p">}</span>
     <span class="p">}</span>
 <span class="p">}</span>
@@ -322,8 +320,8 @@ window.onload = wrap_img;
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Answer:-C">
-<a class="anchor" href="#Answer:-C" aria-hidden="true"><span class="octicon octicon-link"></span></a>Answer: C<a class="anchor-link" href="#Answer:-C"> </a>
+<h2 id="Answer:-D">
+<a class="anchor" href="#Answer:-D" aria-hidden="true"><span class="octicon octicon-link"></span></a>Answer: D<a class="anchor-link" href="#Answer:-D"> </a>
 </h2>
 </div>
 </div>
@@ -443,6 +441,266 @@ window.onload = wrap_img;
 </div>
 </div>
 </div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Unit2-Using-Object">
+<a class="anchor" href="#Unit2-Using-Object" aria-hidden="true"><span class="octicon octicon-link"></span></a>Unit2 Using Object<a class="anchor-link" href="#Unit2-Using-Object"> </a>
+</h1>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><figure>
+  
+    <img class="docimage" src="/Fastpage/images/copied_from_nb/images/Unit1Unit2/Unit2MCQ1.png" alt="Alternative text">
+    
+    
+</figure>
+</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="mi">7</span><span class="o">+</span><span class="mi">8</span><span class="o">+</span><span class="p">(</span><span class="mi">7</span><span class="o">+</span><span class="mi">8</span><span class="p">)</span><span class="o">+</span><span class="s">"Hellow"</span><span class="o">+</span><span class="mi">7</span><span class="o">+</span><span class="mi">8</span><span class="o">+</span><span class="p">(</span><span class="mi">7</span><span class="o">+</span><span class="mi">8</span><span class="p">));</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>30Hellow7815
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Answer:-D">
+<a class="anchor" href="#Answer:-D" aria-hidden="true"><span class="octicon octicon-link"></span></a>Answer: D<a class="anchor-link" href="#Answer:-D"> </a>
+</h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><figure>
+  
+    <img class="docimage" src="/Fastpage/images/copied_from_nb/images/Unit1Unit2/Unit2MCQ2.png" alt="Alternative text">
+    
+    
+</figure>
+</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Answer:-D">
+<a class="anchor" href="#Answer:-D" aria-hidden="true"><span class="octicon octicon-link"></span></a>Answer: D<a class="anchor-link" href="#Answer:-D"> </a>
+</h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><figure>
+  
+    <img class="docimage" src="/Fastpage/images/copied_from_nb/images/Unit1Unit2/Unit2MCQ3.png" alt="Alternative text">
+    
+    
+</figure>
+</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="n">String</span> <span class="n">s</span> <span class="o">=</span> <span class="s">"holy"</span><span class="p">;</span>
+<span class="n">String</span> <span class="n">t</span> <span class="o">=</span> <span class="n">s</span><span class="p">.</span><span class="na">substring</span><span class="p">(</span><span class="mi">4</span><span class="p">);</span>
+<span class="k">if</span> <span class="p">(</span><span class="n">s</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="n">t</span><span class="p">)){</span>
+    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"1"</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Answer:-E">
+<a class="anchor" href="#Answer:-E" aria-hidden="true"><span class="octicon octicon-link"></span></a>Answer: E<a class="anchor-link" href="#Answer:-E"> </a>
+</h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><figure>
+  
+    <img class="docimage" src="/Fastpage/images/copied_from_nb/images/Unit1Unit2/Unit2MCQ4.png" alt="Alternative text">
+    
+    
+</figure>
+</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Answer:-C">
+<a class="anchor" href="#Answer:-C" aria-hidden="true"><span class="octicon octicon-link"></span></a>Answer: C<a class="anchor-link" href="#Answer:-C"> </a>
+</h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><figure>
+  
+    <img class="docimage" src="/Fastpage/images/copied_from_nb/images/Unit1Unit2/Unit2MCQ5.png" alt="Alternative text">
+    
+    
+</figure>
+</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Answer:-C">
+<a class="anchor" href="#Answer:-C" aria-hidden="true"><span class="octicon octicon-link"></span></a>Answer: C<a class="anchor-link" href="#Answer:-C"> </a>
+</h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><figure>
+  
+    <img class="docimage" src="/Fastpage/images/copied_from_nb/images/Unit1Unit2/Unit2MCQ6.png" alt="Alternative text">
+    
+    
+</figure>
+</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Answer:-A">
+<a class="anchor" href="#Answer:-A" aria-hidden="true"><span class="octicon octicon-link"></span></a>Answer: A<a class="anchor-link" href="#Answer:-A"> </a>
+</h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><figure>
+  
+    <img class="docimage" src="/Fastpage/images/copied_from_nb/images/Unit1Unit2/Unit2MCQ7.png" alt="Alternative text">
+    
+    
+</figure>
+</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Answer:-D">
+<a class="anchor" href="#Answer:-D" aria-hidden="true"><span class="octicon octicon-link"></span></a>Answer: D<a class="anchor-link" href="#Answer:-D"> </a>
+</h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><figure>
+  
+    <img class="docimage" src="/Fastpage/images/copied_from_nb/images/Unit1Unit2/Unit2FRQ1.png" alt="Alternative text">
+    
+    
+</figure>
+</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kd">static</span> <span class="n">String</span> <span class="nf">scrambleWord</span><span class="p">(</span><span class="n">String</span> <span class="n">word</span><span class="p">){</span>
+    <span class="k">for</span> <span class="p">(</span><span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">word</span><span class="p">.</span><span class="na">length</span><span class="p">();</span> <span class="n">i</span><span class="o">++</span><span class="p">){</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">word</span><span class="p">.</span><span class="na">substring</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span> <span class="o">==</span> <span class="s">"A"</span> <span class="o">&amp;&amp;</span> <span class="n">word</span><span class="p">.</span><span class="na">substring</span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">i</span><span class="o">+</span><span class="mi">2</span><span class="p">)</span> <span class="o">!=</span> <span class="s">"A"</span><span class="p">){</span>
+            <span class="n">swap</span><span class="p">(</span><span class="n">word</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">);</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="n">word</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
 </div>
 
 
@@ -467,7 +725,7 @@ window.onload = wrap_img;
     <div class="footer-col-wrapper">
       <div class="footer-col">
         <p class="feed-subscribe">
-          <a href="/Fastpage/feed.xml">
+          <a href="https://tianbinliu.github.io/Fastpage/feed.xml">
             <svg class="svg-icon orange">
               <use xlink:href="/Fastpage/assets/minima-social-icons.svg#rss"></use>
             </svg><span>Subscribe</span>
@@ -480,7 +738,7 @@ window.onload = wrap_img;
     </div>
 
     <div class="social-links"><ul class="social-media-list"><li>
-  <a rel="me" href="https://mysite.com/feed.xml" target="_blank" title="rss">
+  <a href="https://mysite.com/feed.xml" target="_blank" title="rss">
     <svg class="svg-icon grey">
       <use xlink:href="/Fastpage/assets/minima-social-icons.svg#rss"></use>
     </svg>
