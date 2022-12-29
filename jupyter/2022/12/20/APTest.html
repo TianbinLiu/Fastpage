@@ -2095,7 +2095,7 @@ window.onload = wrap_img;
     <span class="kd">private</span> <span class="kt">int</span> <span class="nf">hopDistance</span><span class="p">();</span>
     <span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">simulate</span><span class="p">(){</span>
         <span class="kt">boolean</span> <span class="n">reach</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
-        <span class="k">for</span> <span class="p">(</span><span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">i</span><span class="o">&lt;</span><span class="n">maxHops</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">){</span>
+        <span class="k">for</span> <span class="p">(</span><span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="n">maxHops</span> <span class="o">&amp;&amp;</span> <span class="n">reach</span> <span class="o">==</span> <span class="kc">false</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">){</span>
             <span class="n">goalDistance</span> <span class="o">-</span> <span class="n">hopDistance</span><span class="p">();</span>
             <span class="k">if</span> <span class="p">(</span><span class="n">goalDistance</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">){</span>
                 <span class="n">reach</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
