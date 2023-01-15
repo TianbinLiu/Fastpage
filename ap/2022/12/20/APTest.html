@@ -4449,6 +4449,28 @@ window.onload = wrap_img;
 </div>
 </div>
 </div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kt">int</span> <span class="nf">getTotalBoxes</span><span class="p">(){</span>
+    <span class="kt">int</span> <span class="n">total</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">for</span> <span class="p">(</span><span class="n">CookieOrder</span> <span class="n">order</span> <span class="p">:</span> <span class="n">orders</span><span class="p">){</span>
+        <span class="n">total</span> <span class="o">+=</span> <span class="n">order</span><span class="p">.</span><span class="na">getNumBoxes</span><span class="p">();</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -4463,6 +4485,33 @@ window.onload = wrap_img;
 </div>
 </div>
 </div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kt">int</span> <span class="nf">removeVariety</span><span class="p">(</span><span class="n">String</span> <span class="n">cookieVar</span><span class="p">){</span>
+    <span class="kt">int</span> <span class="n">total</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">for</span> <span class="p">(</span><span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">goodies</span><span class="p">.</span><span class="na">size</span><span class="p">();</span> <span class="n">i</span><span class="o">++</span><span class="p">){</span>
+        <span class="k">if</span> <span class="p">(((</span><span class="n">goodies</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">i</span><span class="p">)).</span><span class="na">getVariety</span><span class="p">()).</span><span class="na">equals</span><span class="p">(</span><span class="n">cookieVar</span><span class="p">)</span> <span class="o">&gt;</span> <span class="o">-</span><span class="mi">1</span><span class="p">){</span>
+            <span class="n">total</span> <span class="o">+=</span> <span class="p">(</span><span class="n">goodies</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">i</span><span class="p">)).</span><span class="na">getNumBoxes</span><span class="p">();</span>
+            <span class="n">goodies</span><span class="p">.</span><span class="na">remove</span><span class="p">(</span><span class="n">i</span><span class="p">);</span>
+            <span class="n">i</span><span class="o">--</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="n">total</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
 </div>
 
 
