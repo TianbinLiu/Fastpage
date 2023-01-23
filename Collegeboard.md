@@ -49,7 +49,7 @@ title: Collegeboard
 {% include nav_frontend.html %}
     
 <div id="wrapper">    
-<h1>Screenshot</h1>
+<h1>MCQ2014</h1>
 
 <img style="width: 100%; height: auto;" src="images/2014MCQ.png" alt="MCQ">
 
@@ -182,6 +182,154 @@ Answer B
 Incorrect. This is the value that is passed in the first recursive call to recur.
 ```
 
+<h1>Collegeboard 66 Qs</h1>
+<img style="width: 100%; height: auto;" src="images/CB/Collegeboard66.png" alt="MCQ">
+    
+
+<img style="width: 100%; height: auto;" src="images/CB/Collegeboard66QS1a.png" alt="MCQ">
+<img style="width: 100%; height: auto;" src="images/CB/Collegeboard66QS1b.png" alt="MCQ">
+    
+```
+Answer E
+Incorrect. When choice is greater than 10, code segment A will print "blue" and the else statements are not executed. Code segment B will print "blue" but will then execute the next if statement and print "yellow", thereby giving different output for initial values that are greater than 10. Therefore, there are some initial values for choice that will cause the two code segments to produce different output.
+
+Correct Answer: C
+Reason: When choice is greater than 10, code segment A will print "blue" and the else statements are not executed. Code segment B will print "blue" but will then execute the next if statement and print "yellow", thereby giving different output for initial values that are greater than 10.
+```
+    
+<img style="width: 100%; height: auto;" src="images/CB/Collegeboard66QS2a.png" alt="MCQ">
+<img style="width: 100%; height: auto;" src="images/CB/Collegeboard66QS2b.png" alt="MCQ">
+    
+```
+Answer A
+Incorrect. Line 5 is intended to iterate over all columns of arr and correctly assigns to col all values from 0 to the number of columns in arr, inclusive.
+    
+Correct Answer: C
+Reason: Two-dimensional arrays are stored as arrays of one-dimensional arrays. Line 8
+ is intended to assign to row, a one-dimensional array of int values, a single row of the two-dimensional array arr. The original version of line 8
+ attempts to assign a row of col, but col is not a two-dimensional array.
+```
+    
+<img style="width: 100%; height: auto;" src="images/CB/Collegeboard66QS3a.png" alt="MCQ">
+<img style="width: 100%; height: auto;" src="images/CB/Collegeboard66QS3b.png" alt="MCQ">
+    
+```
+Answer A
+Incorrect. This would result from incrementing counter when "a" is followed by "b". This occurs one time.
+    
+Correct Answer: D
+Reason: The expression str.substring(i, i + 1).equals("a") will evaluate to true if str contains the string "a" at position i. The expression !str.substring(i + 1, i + 2) will evaluate to true if str does not contain the string "b" at position i + 1. The variable counter is incremented when both of those expressions evaluate to true or, in other words, whenever "a" is not immediately followed by "b". This occurs five times in the given string: "a ", "ac", "at", "at", and "a ".
+```
+    
+<img style="width: 100%; height: auto;" src="images/CB/Collegeboard66QS4.png" alt="MCQ">
+    
+```
+Answer A
+Incorrect. The variable b1 has the value false but b2 is assigned the value true since 17 % 3 == 2 evaluates to true.
+
+Correct Answer: B
+Reason: The expression 17 % 3 == 1 evaluates to false, and true && false evaluates to false, so b1 is assigned the value false. The expression on the right-hand side of the assignment statement for b2 evaluates to false by short circuit evaluation.
+```
+    
+<img style="width: 100%; height: auto;" src="images/CB/Collegeboard66QS5a.png" alt="MCQ">
+<img style="width: 100%; height: auto;" src="images/CB/Collegeboard66QS5b.png" alt="MCQ">
+    
+```
+Answer A
+Incorrect.
+    
+Correct Answer: D
+Reason: Still don't understand.
+```
+    
+<img style="width: 100%; height: auto;" src="images/CB/Collegeboard66QS6a.png" alt="MCQ">
+<img style="width: 100%; height: auto;" src="images/CB/Collegeboard66QS6b.png" alt="MCQ">
+    
+```
+Answer E
+Incorrect. 
+    
+Correct Answer: C
+Reason: Still don't understand, maybe because line 4 "r" has not been called in the method getDirection
+```
+    
+<img style="width: 100%; height: auto;" src="images/CB/Collegeboard66QS7a.png" alt="MCQ">
+<img style="width: 100%; height: auto;" src="images/CB/Collegeboard66QS7b.png" alt="MCQ">
+    
+```
+Answer D
+Incorrect.
+    
+Correct Answer: B
+Reason: Still don't understand
+```
+    
+<img style="width: 100%; height: auto;" src="images/CB/Collegeboard66QS8a.png" alt="MCQ">
+<img style="width: 100%; height: auto;" src="images/CB/Collegeboard66QS8b.png" alt="MCQ">
+
+```
+Answer C
+Incorrect. This change would print "OneTwoThree" on the first line and "Four" on the second line.
+    
+Correct Answer: B
+Reason: As is, the code segment prints all four strings on the same line. Changing print to println in line 2 will move the cursor to the next line after "Two" is printed.
+```
+    
+<img style="width: 100%; height: auto;" src="images/CB/Collegeboard66QS9a.png" alt="MCQ">
+<img style="width: 100%; height: auto;" src="images/CB/Collegeboard66QS9b.png" alt="MCQ">
+    
+```
+Answer B
+Incorrect. This method call returns false because the first character is lexicographically less than the second character of the string.
+    
+Correct Answer: D
+Reason: If the first character of str is lexicographically greater than the second character of str, the method returns the result of the recursive call with a parameter that contains all but the first character of str. If the first character of str is lexicographically less than or equal to the second character of str, the method returns false. If no such character pair (where the first character of str is lexicographically less than or equal to the second character of str) is found, the base case is reached and the value true is returned.
+```
+    
+<img style="width: 100%; height: auto;" src="images/CB/Collegeboard66QS10a.png" alt="MCQ">
+<img style="width: 100%; height: auto;" src="images/CB/Collegeboard66QS10b.png" alt="MCQ">
+    
+```
+Answer D
+Incorrect. 
+    
+Correct Answer: E
+Reason: that makes sense, only k++ when it doesn't remove the element.
+```
+    
+<img style="width: 100%; height: auto;" src="images/CB/Collegeboard66QS11a.png" alt="MCQ">
+<img style="width: 100%; height: auto;" src="images/CB/Collegeboard66QS11b.png" alt="MCQ">
+    
+```
+Answer E
+Incorrect. Choice I will return the correct value if the element in the array with one element was target. In this case, with the first call to seqSearchRecHelper the value of data[0] would be target and 0 would be returned. Choice III will correctly return the index of the element closest to the end of the array with the value target, since data[last] == target will be true at some valid index value of last.
+    
+Correct Answer: B
+Reason: Choice I will return the correct value if the element in the array with one element was target. In this case, with the first call to seqSearchRecHelper the value of data[0] would be target and 0 would be returned. Choice II will eventually cause an ArrayIndexOutOfBoundsException to be thrown when the recursive call is made with target and -1. This will happen after every valid index in data has been examined. During this call, data[-1] is out of bounds. Choice III will correctly return the index of the element closest to the end of the array with the value target, since data[last] == target will be true at some valid index value of last.
+```
+    
+<img style="width: 100%; height: auto;" src="images/CB/Collegeboard66QS12a.png" alt="MCQ">
+<img style="width: 100%; height: auto;" src="images/CB/Collegeboard66QS12b.png" alt="MCQ">
+    
+```
+Answer C
+Incorrect. A variable of a superclass type can reference an object of the subclass. In this case, TennisPlayer is a subclass of Athlete. A variable of type Athlete can reference an object of type TennisPlayer. Please note that interface is no longer a part of the AP CSA exam.
+    
+Correct Answer: D
+Reason: Variables of type Student need to reference objects of types that implement Student. The Athlete class does not implement the Student interface. Please note that interface is no longer a part of the AP CSA exam.
+```
+    
+<img style="width: 100%; height: auto;" src="images/CB/Collegeboard66QS13a.png" alt="MCQ">
+<img style="width: 100%; height: auto;" src="images/CB/Collegeboard66QS13b.png" alt="MCQ">
+    
+```
+Answer E
+Incorrect. The code segment is intended to leave arr1 unchanged and store the smaller of two values in minArray. If lines 7–10 are removed, the code segment will store the smaller of each pair of values in arr1.
+    
+Correct Answer: C
+Reason: Line 5 modifies an element of arr1 if that element is smaller than the corresponding element of minArray, which is NOT what is intended, since arr1 should remain unchanged.
+```
+    
 
 
 </div>
