@@ -330,8 +330,55 @@ Correct Answer: C<br>
 Reason: Line 5 modifies an element of arr1 if that element is smaller than the corresponding element of minArray, which is NOT what is intended, since arr1 should remain unchanged.
 ```
     
+<h1>Collegeboard 52 Qs</h1>
+<img style="width: 100%; height: auto;" src="images/CB/52/CB1.png" alt="MCQ">
+    
 
+<img style="width: 100%; height: auto;" src="images/CB/52/CB7a.png" alt="MCQ">
+<img style="width: 100%; height: auto;" src="images/CB/52/CB7b.png" alt="MCQ">
+    
+```
+Answer C<br>
+Incorrect. This would be the result for the method call combine("10111", "01101"), for example.
+<br>
+Correct Answer: B<br>
+Reason: The combine method compares corresponding substrings of length 1 from input strings one and two. If the substrings are the same, the substring is appended to res; otherwise, "0" is appended to res. The first and second characters of res are "0" because the characters in position 0 and the characters in position 1 of one and two differ. The third character of res is "1" because the characters in position 2 of one and two are both "1". The fourth character in res is "0" because the characters in position 3 of one and two differ. The fifth character in res is "0" because the last characters of one and two are both "0". The value "00100" is returned.
+```
+    
+<img style="width: 100%; height: auto;" src="images/CB/52/CB25a.png" alt="MCQ">
+<img style="width: 100%; height: auto;" src="images/CB/52/CB25b.png" alt="MCQ">
+    
+```
+Answer D<br>
+Incorrect. List is an interface, which an ArrayList implements. Please note that List is no longer tested as part of the AP CSA exam and ArrayList will be used instead. This would be the case if the loop condition was k > 1 rather than k > 0.
+<br>
+Correct Answer: B<br>
+Reason: List is an interface, which an ArrayList implements. Please note that List is no longer tested as part of the AP CSA exam and ArrayList will be used instead. The manipulate method contains a for loop with a loop control variable k that starts at the right most index of animals, decrements by 1 each time, until k is equal to 0. In the first iteration, when k is 5, if the element of animals at 5 (“baboon”) starts with a “b”, which it does, then this value is removed from the list and inserted at index 1. The list would then be {“bear”, “baboon”, “zebra”, “bass”, “cat”, “koala”}. In the second iteration, when k is 4, the element of animals at 4 (“cat”) does not start with a “b” and no changes are made to the list. In the third iteration, when k is 3, the element of animals at 3 (“bass”) starts with a “b”. This value is removed from the list and inserted at index 3. Since it was already at index 3, the list would not change. In the fourth iteration, when k is 2, the element of animals at 2 (“zebra”) does not start with a “b” and no changes are made to the list.  In the fifth iteration, when k is 1, the element of animals at 1 (“baboon”) starts with a “b”. It is removed from the list and inserted at index 5. The list would then be {“bear”, “zebra”, “bass”, “cat”, “koala”, “baboon”}.  Finally, k decrements to 0 which is not greater than 0 so the loop terminates.
+```
 
+<img style="width: 100%; height: auto;" src="images/CB/52/CB37a.png" alt="MCQ">
+<img style="width: 100%; height: auto;" src="images/CB/52/CB37b.png" alt="MCQ">
+    
+```
+Answer D<br>
+Incorrect. 
+<br>
+Correct Answer: A<br>
+Reason: System.out.println(result.indexOf(str2)); is what it call. So it will print the index of str2 which is always 0.
+```
+    
+<img style="width: 100%; height: auto;" src="images/CB/52/CB49a.png" alt="MCQ">
+<img style="width: 100%; height: auto;" src="images/CB/52/CB49b.png" alt="MCQ">
+    
+```
+Answer E<br>
+Incorrect. 
+<br>
+Correct Answer: B<br>
+Reason: y < x.length - 1; not y < x.length[0] - 1;  So it will not goes through all the columns in each row.
+```
+    
+    
 </div>
 <script src="{{ '/assets/js/videojava.js' | relative_url }}" type="text/javascript"></script>
 </body>
