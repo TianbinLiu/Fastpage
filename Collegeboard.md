@@ -378,6 +378,8 @@ Correct Answer: B<br>
 Reason: y < x.length - 1; not y < x.length[0] - 1;  So it will not goes through all the columns in each row.
 ```
     
+
+    
     
 </div>
 <script src="{{ '/assets/js/videojava.js' | relative_url }}" type="text/javascript"></script>
