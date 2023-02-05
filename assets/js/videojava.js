@@ -38,7 +38,7 @@ function checking(){
         video.setAttribute("src","https://drive.google.com/uc?export=view&id=17hdDN7OMAjIOdvmcExqszG_cEx192fHU");
     }
     else if((l>=6)&&(l<=9)){
-        video.setAttribute("src","https://drive.google.com/uc?export=view&id=1wvPtaJIBhsVcGFhxMqMgv0q2VQAPQV5E");
+        video.setAttribute("src","https://drive.google.com/uc?export=view&id=1tPgpal5a4kTlvOkKJUoL3kSLKuNo8scz");
     }
     else if((l>=9)&&(l<=12)){
         video.setAttribute("src","https://drive.google.com/uc?export=view&id=1ErQhgcgSJRRRzB4O7UEOfJAvixrqfHcN");
@@ -47,7 +47,7 @@ function checking(){
         video.setAttribute("src","https://drive.google.com/uc?export=view&id=19veO0JJ-8YPf7148y2ZnCRKUBY97ap5S");
     }
     else if((l>=18)&&(l<=20)){
-        video.setAttribute("src","https://drive.google.com/uc?export=view&id=10qZhLCMqm_RDj89Jjp8edLKLurSjQmh-");
+        video.setAttribute("src","https://drive.google.com/uc?export=view&id=1qvkR_as-ezuzwqX-2jriJRlJjcrr5zUz");
     }
     else if((l>=21)&&(l<=23)){
         video.setAttribute("src","https://drive.google.com/uc?export=view&id=1TCkL9j_l8PgB9dO8CKGB1iHeMaVAGeV1");
