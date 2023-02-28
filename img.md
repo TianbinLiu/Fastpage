@@ -56,12 +56,14 @@ title: Image
             </tr>
         </table>
   <table style="width: 25%; margin-top: 3%; position: absolute;">
-      <h1>
-      Tri 1 Night of Museum capture
-      </h1>
       <tr>
-        <th><img id="img" style="width: auto; height: 800px; border-radius: 5px;
-    box-shadow: 7px 7px 7px #666666;" src="images/NAM.jpg" alt="NAM"></th>
+        <th>
+            <h1>
+            Tri 1 Night of Museum capture
+            </h1>
+            <img id="img" style="width: auto; height: 800px; border-radius: 5px;
+    box-shadow: 7px 7px 7px #666666;" src="images/NAM.jpg" alt="NAM">
+          </th>
       </tr>
       <tr>
         <th><button type="button" onclick="displayPreviousImage()">Previous</button>
