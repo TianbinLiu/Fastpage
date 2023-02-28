@@ -60,8 +60,8 @@ function displayNextImage() {
           }
 
 function displayNextImage2() {
-              x = (x === images2.length - 1) ? 0 : x + 1;
-              document.getElementById("img2").src = images2[x];
+              y = (y === images2.length - 1) ? 0 : y + 1;
+              document.getElementById("img2").src = images2[y];
           }
 
 function displayPreviousImage() {
@@ -70,8 +70,8 @@ function displayPreviousImage() {
           }
 
 function displayPreviousImage2() {
-              x = (x <= 0) ? images2.length - 1 : x - 1;
-              document.getElementById("img2").src = images2[x];
+              y = (y <= 0) ? images2.length - 1 : y - 1;
+              document.getElementById("img2").src = images2[y];
           }
 
 function startTimer() {
