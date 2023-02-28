@@ -55,7 +55,7 @@ title: Image
                 <td><a href="https://github.com/CanCodeDevelopment/cancode-frontend/commits/main">See commits for the project tri 2</a></td>
             </tr>
         </table>
-  <table style="width: 25%; margin-top: 3%; position: absolute;">
+  <table style="width: 25%; margin-top: 3%; position: fixed;">
       <h1>
       Tri 1 Night of Museum capture
       </h1>
@@ -69,7 +69,7 @@ title: Image
       </tr>
   </table>
         
-  <table style="width: 25%; margin-top: 3%; position: absolute;">
+  <table style="width: 25%; margin-top: 3%; position: fixed;">
       <h1>
       Tri 2 Night of Museum capture
       </h1>
