@@ -51,7 +51,8 @@ title: Image
          <table>
             <tr>
                 <td><div id="digital-clock"></div></td>
-                <td><a href="https://github.com/aaditgupta21/football-pages/graphs/contributors">See commits for the project</a></td>
+                <td><a href="https://github.com/aaditgupta21/football-pages/graphs/contributors">See commits for the project tri 1</a></td>
+                <td><a href="https://github.com/CanCodeDevelopment/cancode-frontend/commits/main">See commits for the project tri 2</a></td>
             </tr>
         </table>
   <table style="width: 25%; margin-top: 3%; position: absolute;">
@@ -64,6 +65,18 @@ title: Image
        <button type="button" onclick="displayNextImage()">Next</button></th>
       </tr>
   </table>
+        
+  <table style="width: 25%; margin-top: 3%; position: absolute;">
+      <tr>
+        <th><img id="img" style="width: auto; height: 800px; border-radius: 5px;
+    box-shadow: 7px 7px 7px #666666;" src="images/NAM.jpg" alt="NAM"></th>
+      </tr>
+      <tr>
+        <th><button type="button" onclick="displayPreviousImage()">Previous</button>
+       <button type="button" onclick="displayNextImage()">Next</button></th>
+      </tr>
+  </table>
+       
      </div>   
 <script src="{{ '/assets/js/videojava.js' | relative_url }}" type="text/javascript"></script>
     
