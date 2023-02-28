@@ -84,7 +84,10 @@ title: Image
   </table>
        
      </div>   
+    
+
 <script src="{{ '/assets/js/videojava.js' | relative_url }}" type="text/javascript"></script>
+
     
 </body>
-    </html>
+</html>
