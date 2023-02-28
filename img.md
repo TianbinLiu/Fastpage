@@ -82,10 +82,9 @@ title: Image
        <button type="button" onclick="displayNextImage2()">Next</button></th>
       </tr>
   </table>
-       
-     </div>   
-    
+</div>   
 
+    
 <script src="{{ '/assets/js/videojava.js' | relative_url }}" type="text/javascript"></script>
 
     
