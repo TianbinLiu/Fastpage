@@ -76,6 +76,7 @@ function displayPreviousImage2() {
 
 function startTimer() {
               setInterval(displayNextImage, 3000);
+              setInterval(displayNextImage2, 3000);
           }
 
 var images = [], x = -1;
