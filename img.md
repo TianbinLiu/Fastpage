@@ -56,6 +56,9 @@ title: Image
             </tr>
         </table>
   <table style="width: 25%; margin-top: 3%; position: absolute;">
+      <h1>
+      Tri 1 Night of Museum capture
+      </h1>
       <tr>
         <th><img id="img" style="width: auto; height: 800px; border-radius: 5px;
     box-shadow: 7px 7px 7px #666666;" src="images/NAM.jpg" alt="NAM"></th>
@@ -67,6 +70,9 @@ title: Image
   </table>
         
   <table style="width: 25%; margin-top: 3%; position: absolute;">
+      <h1>
+      Tri 2 Night of Museum capture
+      </h1>
       <tr>
         <th><img id="img2" style="width: auto; height: 800px; border-radius: 5px;
     box-shadow: 7px 7px 7px #666666;" src="images/NofM/NightofMuseum1.jpg" alt="NAM"></th>
