@@ -55,7 +55,7 @@ title: Image
                 <td><a href="https://github.com/CanCodeDevelopment/cancode-frontend/commits/main">See commits for the project tri 2</a></td>
             </tr>
         </table>
-  <table style="width: 25%; margin-top: 3%; position: fixed;">
+  <table style="width: 25%; margin-top: 3%; position: absolute;">
       <h1>
       Tri 1 Night of Museum capture
       </h1>
@@ -67,14 +67,12 @@ title: Image
         <th><button type="button" onclick="displayPreviousImage()">Previous</button>
        <button type="button" onclick="displayNextImage()">Next</button></th>
       </tr>
-  </table>
-        
-  <table style="width: 25%; margin-top: 3%; position: fixed;">
+      <tr>
+      <th>
       <h1>
       Tri 2 Night of Museum capture
       </h1>
-      <tr>
-        <th><img id="img2" style="width: auto; height: 800px; border-radius: 5px;
+      <img id="img2" style="width: auto; height: 800px; border-radius: 5px;
     box-shadow: 7px 7px 7px #666666;" src="images/NofM/NightofMuseum1.jpg" alt="NAM"></th>
       </tr>
       <tr>
