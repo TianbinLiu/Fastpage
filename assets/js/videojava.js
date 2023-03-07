@@ -59,18 +59,35 @@ function displayNextImage() {
               document.getElementById("img").src = images[x];
           }
 
-          function displayPreviousImage() {
+function displayNextImage2() {
+              y = (y === images2.length - 1) ? 0 : y + 1;
+              document.getElementById("img2").src = images2[y];
+          }
+
+function displayPreviousImage() {
               x = (x <= 0) ? images.length - 1 : x - 1;
               document.getElementById("img").src = images[x];
           }
 
-          function startTimer() {
-              setInterval(displayNextImage, 3000);
+function displayPreviousImage2() {
+              y = (y <= 0) ? images2.length - 1 : y - 1;
+              document.getElementById("img2").src = images2[y];
           }
 
-          var images = [], x = -1;
+function startTimer() {
+              setInterval(displayNextImage, 3000);
+              setInterval(displayNextImage2, 3000);
+          }
+
+var images = [], x = -1;
           images[0] = "images/NAM.jpg";
           images[1] = "images/NAM2.jpg";
           images[2] = "images/NAM3.jpg";
           images[3] = "images/NAM4.jpg";
           images[4] = "images/NAM5.jpg";
+
+var images2 = [], x = -1;
+          images2[0] = "images/NofM/NightofMuseum1.jpg";
+          images2[1] = "images/NofM/NightofMuseum2.jpg";
+          images2[2] = "images/NofM/NightofMuseum3.jpg";
+          images2[3] = "images/NofM/NightofMuseum4.jpg";
