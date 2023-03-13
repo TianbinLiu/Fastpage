@@ -378,6 +378,64 @@ Correct Answer: B<br>
 Reason: y < x.length - 1; not y < x.length[0] - 1;  So it will not goes through all the columns in each row.
 ```
     
+    
+<h1>2015 Practice Exam MCQ</h1>
+<img style="width: 100%; height: auto;" src="images/2015MCQ/CBQ0.png" alt="MCQ">
+    
+
+<img style="width: 100%; height: auto;" src="images/2015MCQ/CBQ9.png" alt="MCQ">
+    
+```
+Answer C<br>
+Incorrect. This would result in an integer between 0 and 10 inclusive, since (int)(Math.random() *6) generates an integer between 0 and 5 inclusive. While it does represent two independent random numbers being generated, to simulate the rolling of two number cubes, the value of each number should be between 1 and 6 inclusive to produce a sum in the range of 2 to 12.
+<br>
+Correct Answer: E<br>
+Reason: The call Math.random() will produce a double between 0 and 1, not including 1. To generate a random number in the range of 1 to 6, the call Math.random() needs to be multiplied by the number of integers you want to generate, in this case 6, giving us Math.random() * 6. This will result in a double between 0 and 6, not including 6. If we type cast this to an int, as in (int)(Math.random() * 6), the result will be an integer between 0 and 5 inclusive. Adding 1 will adjust the range to 1 to 6 inclusive, as in (int)(Math.random() * 6) + 1. This expression will simulate the rolling of one number cube. Since each roll is independent, to simulate rolling two number cubes, we need to use this expression twice which simplifies to 2 + (int)(Math.random() * 6) + (int)(Math.random() * 6).
+```
+    
+<img style="width: 100%; height: auto;" src="images/2015MCQ/CBQ26.png" alt="MCQ">
+    
+```
+Answer A<br>
+Incorrect. This would be the result if the first line in changeIt (arr = new int[5];) was removed. Parameters are passed using call by value. Call by value initializes the formal parameters (arr, val, word) with copies of the actual parameters (nums, value, name). When the parameter is a reference variable, the method receives a reference and can mutate the object being referenced but cannot alter the reference itself. Changing the reference stored in arr in changeIt does not affect the reference stored in nums in start so subsequent changes to the elements in arr are made in the new array not in nums. Updating val to 0 will not affect value. Since String objects are immutable, the substring call would need to be made in method start if we wanted name to be “black” instead of “blackboard”. Assigning a new value to word in changeIt does not affect name in start.
+<br>
+Correct Answer: E<br>
+Reason: Parameters are passed using call by value. Call by value initializes the formal parameters (arr, val, word) with copies of the actual parameters (nums, value, name). When the parameter is a reference variable, the method receives a reference and can mutate the object being referenced but cannot alter the reference itself. Passing an object reference as a parameter will result in the formal parameter and the actual parameter being aliases. They both refer to the same object.  When we call changeIt and pass the objects num and name, the formal parameters arr and word will reference these same objects. A copy of the object is not made. However, the first part of the method assigns new objects to arr and word, which means that any changes made to arr and word do not affect the actual parameters num and name. They remain unchanged. Updating val to 0 will not affect value. Therefore, the original values for num, value and name are printed.
+```
+
+<img style="width: 100%; height: auto;" src="images/2015MCQ/CBQ31a.png" alt="MCQ">
+<img style="width: 100%; height: auto;" src="images/2015MCQ/CBQ31b.png" alt="MCQ">
+    
+```
+Answer B<br>
+Incorrect. This image would require loops across the entire board with alternating checks for when rows and columns were even or odd.
+<br>
+Correct Answer: E<br>
+Reason: The first set of nested for loops sets each element in board to “O”. The next for loop starts val at 0 and increments by 1 until val is 4, when val is 5 the loop terminates. When val is even, board is not updated, so nothing happens when val is 0. When val is 1, row is assigned 1 and col is assigned 0. The boolean condition in the while loop is true, so board[1][0] is assigned “X”. Then col is incremented to 1 and row is decremented to 0 and board[0][1] is assigned “X”. Then col is incremented to 2 and row is decremented to -1 and the while loop terminates. When val is 2, nothing changes about board. When val is 3, row is assigned 3 and col is assigned 0. The boolean condition in the while loop is true, so board[3][0] is assigned “X”. Then col is incremented to 1 and row is decremented to 2 and board[2][1] is assigned “X”. Then col is incremented to 2 and row is decremented to 1 and board[1][2] is assigned “X”. Then col is incremented to 3 and row is decremented to 0 and board[0][3] is assigned “X”. Finally, col is incremented to 4 and row is decremented to -1 and the while loop terminates. When val is 4, nothing changes about board.
+```
+    
+<img style="width: 100%; height: auto;" src="images/2015MCQ/CBQ33a.png" alt="MCQ">
+<img style="width: 100%; height: auto;" src="images/2015MCQ/CBQ33b.png" alt="MCQ">
+    
+```
+Answer C<br>
+Incorrect. Choice I sets max to Integer.MIN_VALUE, which is the smallest possible integer value. Then it accesses each element in arr and assigns them value. If value is greater than max, max is assigned value since it is now the largest value so far. Choice II uses an if statement inside the for loop to check and see if value is the first element in arr or not. Once the first element is identified, max is initialized to the first element and first is set to false. For all subsequent elements in arr, if value is greater than max, max is assigned value since it is now the largest value so far.
+<br>
+Correct Answer: E<br>
+Reason: Choice I sets max to Integer.MIN_VALUE, which is the smallest possible integer value. Then it accesses each element in arr and assigns them value. If value is greater than max, max is assigned value since it is now the largest value so far. Choice II uses an if statement inside the for loop to check and see if value is the first element in arr or not. Once the first element is identified, max is initialized to the first element and first is set to false. For all subsequent elements in arr, if value is greater than max, max is assigned value since it is now the largest value so far. Choice III sets max to the first value in arr. Then it accesses each subsequent value in arr checking to see if the value is greater than max, if it is max is assigned this element since it is now the largest value so far. 
+```
+    
+<img style="width: 100%; height: auto;" src="images/2015MCQ/CBQ37a.png" alt="MCQ">
+<img style="width: 100%; height: auto;" src="images/2015MCQ/CBQ37b.png" alt="MCQ">
+    
+```
+Answer B<br>
+Incorrect. Choice III starts by adding the elements of words to temp in reverse order. The second loop starts at the beginning of temp (which was the end of words) and adds each subsequent element to result until it reaches the element that was at startIndex and is now at temp.length – startIndex resulting in result containing the required elements in reverse order.
+<br>
+Correct Answer: E<br>
+Reason: Choice I iterates from startIndex to the end of the array words as expected, but when it adds elements to result it adds the current word followed by a second word starting at the end of the array words. This will result in duplicate words being added to result.  Choice II starts at the end of the array words and adds each word to result working right to left until it reaches the startIndex. By starting at the end of the array, the elements are concatenated in reverse order. Choice III starts by adding the elements of words to temp in reverse order. The second loop starts at the beginning of temp (which was the end of words) and adds each subsequent element to result until it reaches the element that was at startIndex and is now at temp.length – startIndex resulting in result containing the required elements in reverse order.
+```
+    
 
     
     
