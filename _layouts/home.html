@@ -2,6 +2,8 @@
 layout: base
 ---
 
+{% include head-custom2.html %}
+<body onload="checking();"> 
 <div class="home">
 <script src="{{ '/assets/js/live2d.js' | relative_url }}" type="text/javascript"></script>
 <script>
@@ -27,13 +29,19 @@ layout: base
     }
   });
 </script>
+  
   {%- if page.title -%}
     <h1 class="page-heading">{{ page.title }}</h1>
-  {%- endif -%}
-
-  {{ content | markdownify }}
+  {%- endif -%}  
 
 
+<div id="video_wrapper">
+  <video autoplay loop id="background">
+    <source src="https://drive.google.com/uc?export=view&id=17ygkkkTDZb219cgsmglfod33qP8PGW58" type="video/mp4">
+  </video>
+    {{ content | markdownify }}
+</div>
+  
   {% if site.paginate %}
     {% assign rawposts = paginator.posts %}
   {% else %}
@@ -104,5 +112,5 @@ layout: base
   {%- endif -%}
 
 </div>
-
+</body>
 
