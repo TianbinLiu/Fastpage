@@ -127,7 +127,7 @@ var Paul_Pio = function (prop) {
         // 触摸
         touch: function () {
             current.canvas.onclick = function () {
-                modules.render(prop.content.touch || ["What are you doing? ૮₍ > ⤙ > ₎ა","Why do you touch me? (՞• •՞)","HENTAI! ૮ . ̫ . ა"]);
+                modules.render(prop.content.touch || ["What are you doing? ૮₍ > ⤙ > ₎ა","Why do you touch me? (՞• •՞)","HENTAI! ૮ . ̫ . ა","STOP! ჴ˘ര‸രჴ"]);
             };
         },
         // 右侧按钮
