@@ -71,8 +71,47 @@ window.onload = wrap_img;
 </header>
 <main class="page-content" aria-label="Content">
       <div class="wrapper">
-        <div class="home">
-  <div class="pio-container left" style="position: absolute; z-index: 99;">
+        <style>
+#video_wrapper {
+    margin:0px;
+    padding:0px;
+}
+#video_wrapper video {
+    position: fixed;
+    top: 50%; left: 50%;
+    z-index: -99; important!
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    transform: translate(-50%, -50%);
+} 
+    
+table { 
+    background: rgba(0,0,0,0.2); 
+    width: auto;
+    color: white;
+}
+tr { background: rgba(0,0,0,0.2); }
+td { background: rgba(0,0,0,0.2); }
+th {
+    text-align: center;
+}
+table, th, td {
+    border: 1px solid #000;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 10px;
+}
+    
+    
+</style>
+
+<body onload="checking();"> 
+<div class="home"><div id="video_wrapper">
+    <div class="pio-container left" style="position: absolute; z-index: 99;">
     <div class="pio-action"></div>
     <canvas id="pio" width="200" height="250"></canvas>
 </div>
@@ -102,7 +141,11 @@ window.onload = wrap_img;
     "banniang/live2d-widget-models/live2d-widget-model-blanc_normal/blanc_normal/blanc_normal.model.json",
     ]
 });
-</script><p>This is my first Fastpage</p>
+</script>
+    <video autoplay loop id="background">
+      <source src="https://drive.google.com/uc?export=view&id=17ygkkkTDZb219cgsmglfod33qP8PGW58" type="video/mp4">
+    </video>
+  <p>This is my first Fastpage</p>
 
 <table>
     <tr>
@@ -230,6 +273,7 @@ window.onload = wrap_img;
 
 </table>
 
+  </div>
 
 
   
@@ -296,6 +340,7 @@ window.onload = wrap_img;
 </li></ul>
 
     </div>
+</body>
 
       </div>
     </main><footer class="site-footer h-card">
