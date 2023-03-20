@@ -3,6 +3,7 @@ layout: base
 ---
 {% include head-custom2.html %}
 <body onload="checking();"> 
+{% include live2d.html %}
 <div class="home">
 
   {%- if page.title -%}
@@ -10,7 +11,6 @@ layout: base
   {%- endif -%}
   
   <div id="video_wrapper">
-    {% include live2d.html %}
     <video autoplay loop id="background">
       <source src="https://drive.google.com/uc?export=view&id=17ygkkkTDZb219cgsmglfod33qP8PGW58" type="video/mp4">
     </video>
