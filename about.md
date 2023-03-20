@@ -42,6 +42,7 @@ title: About
 </head>
 
 <body onload="checking()">   
+{% include live2d.html %}
 <div id="video_wrapper">
   <video autoplay loop id="background">
         <source src="https://drive.google.com/uc?export=view&id=17ygkkkTDZb219cgsmglfod33qP8PGW58" type="video/mp4">
