@@ -122,11 +122,11 @@ title: About
         
     </div>
 <script src="{{ '/assets/js/videojava.js' | relative_url }}" type="text/javascript"></script>
-<script src="{{ '/assets/js/live2d.js' | relative_url }}" type="text/javascript"></script>
+<script src="https://eqcn.ajz.miesnfu.com/wp-content/plugins/wp-3d-pony/live2dw/lib/L2Dwidget.min.js"></script>
 <script>
   L2Dwidget.int({
     "model": {
-      jsonPath: "https://github.com/TianbinLiu/Fastpage/blob/master/live2d_models/koharu/assets/koharu.model.json",   //live2dPath
+      jsonPath: "https://unpkg.com/live2d-widget-model-koharu@1.0.5/assets/koharu.model.json",   //live2dPath
       "scale": 1
     },
     "display" {
