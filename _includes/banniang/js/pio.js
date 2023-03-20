@@ -92,42 +92,42 @@ var Paul_Pio = function (prop) {
                 var text, hour = new Date().getHours();
 
                 if (hour > 22 || hour <= 5) {
-                    text = '你是夜猫子呀？这么晚还不睡觉，明天起的来嘛';
+                    text = 'Are you a late sleeper? Will you get up tomorrow if you stay up so late? (⑉･̆-･̆⑉)';
                 }
                 else if (hour > 5 && hour <= 8) {
-                    text = '早上好！';
+                    text = 'Good morning！';
                 }
                 else if (hour > 8 && hour <= 11) {
-                    text = '上午好！工作顺利嘛，不要久坐，多起来走动走动哦！';
+                    text = 'Good morning! Do not sit too long, more up and walk around! ヾ(´ε`ヾ)';
                 }
                 else if (hour > 11 && hour <= 14) {
-                    text = '中午了，工作了一个上午，现在是午餐时间！';
+                    text = 'Its noon, you have worked all morning, and now it is lunch time! (ˊᗜˋ*)';
                 }
                 else if (hour > 14 && hour <= 17) {
-                    text = '午后很容易犯困呢，今天的运动目标完成了吗？';
+                    text = 'It is easy to fall asleep in the afternoon. Have you accomplished your exercise goals? ( ´◔︎ ‸◔︎`)';
                 }
                 else if (hour > 17 && hour <= 19) {
-                    text = '傍晚了！窗外夕阳的景色很美丽呢，最美不过夕阳红~';
+                    text = 'It is evening! The view of sunset outside the window is beautiful! (ᕑᗢᓫ∗)˒';
                 }
                 else if (hour > 19 && hour <= 21) {
-                    text = '晚上好，今天过得怎么样？';
+                    text = 'Good evening. How are you today? ◕‿◕';
                 }
                 else if (hour > 21 && hour <= 23) {
-                    text = '已经这么晚了呀，早点休息吧，晚安~';
+                    text = 'It is already so late. Go to bed early. Good night~ ૮꒰ ˶• ༝ •˶꒱ა';
                 }
                 else{
-                    text = "奇趣保罗说：这个是无法被触发的吧，哈哈";
+                    text = "XD";
                 }
                 modules.render(text);
             }
             else{
-                modules.render(prop.content.welcome || "欢迎来到本站！");
+                modules.render(prop.content.welcome || "Welcome to my Blog! ૮(˶ᵔ ᵕ ᵔ˶)ა");
             }
         },
         // 触摸
         touch: function () {
             current.canvas.onclick = function () {
-                modules.render(prop.content.touch || ["你在干什么？","干嘛动我呀！小心我咬你！","非礼呀！救命！","再摸的话我可要报警了⌇●﹏●⌇","是···是不小心碰到了吧~~~","110 吗，这里有个变态一直在摸我(ó﹏ò)", "HENTAI!", "不可以这样欺负我啦！","萝莉控是什么呀？", "你看到我的小熊了吗？"]);
+                modules.render(prop.content.touch || ["What are you doing? ૮₍ > ⤙ > ₎ა","Why do you touch me? (՞• •՞)","HENTAI! ૮ . ̫ . ა"]);
             };
         },
         // 右侧按钮
@@ -137,26 +137,26 @@ var Paul_Pio = function (prop) {
                  location.href = current.root;
              };
              elements.home.onmouseover = function () {
-                 modules.render(prop.content.home || "点击这里回到首页！");
+                 modules.render(prop.content.home || "Click here to return to the home page!");
              };
              current.menu.appendChild(elements.home);
 
              // 更换模型
              elements.skin.onclick = function () {
                  loadlive2d("pio", prop.model[modules.idol()]);
-                 prop.content.skin && prop.content.skin[1] ? modules.render(prop.content.skin[1]) : modules.render("新衣服真漂亮~");
+                 prop.content.skin && prop.content.skin[1] ? modules.render(prop.content.skin[1]) : modules.render("The new dress is so beautiful!");
              };
              elements.skin.onmouseover = function () {
-                 prop.content.skin && prop.content.skin[0] ? modules.render(prop.content.skin[0]) : modules.render("想看看我的新衣服吗？");
+                 prop.content.skin && prop.content.skin[0] ? modules.render(prop.content.skin[0]) : modules.render("Would you like to see my new dress?");
              };
              if(prop.model.length > 1) current.menu.appendChild(elements.skin);
 
              // 关于我
              elements.info.onclick = function () {
-                 window.open("https://blog.csdn.net/qq_57421630?type=blog");
+                 window.open("https://tianbinliu.github.io/Fastpage/about.html");
              };
              elements.info.onmouseover = function () {
-                 modules.render("想了解更多关于我的信息吗？");
+                 modules.render("Wants to know more information about me?");
              };
              current.menu.appendChild(elements.info);
 
@@ -171,19 +171,19 @@ var Paul_Pio = function (prop) {
                                      .catch(console.error) )
                   };
                  elements.sentence.onmouseover = function () {
-                     modules.render("我从青蛙王子那里听到了不少人生经验。");
+                     modules.render("I heard a lot of life lessons from the Frog Prince.");
                  };
                  current.menu.appendChild(elements.sentence);
 
 
              // 关闭看板娘
-//             elements.close.onclick = function () {
-//                 modules.destroy();
-//             };
-//             elements.close.onmouseover = function () {
-//                 modules.render(prop.content.close || "QWQ 下次再见吧~");
-//             };
-//             current.menu.appendChild(elements.close);
+             elements.close.onclick = function () {
+                 modules.destroy();
+             };
+             elements.close.onmouseover = function () {
+                 modules.render(prop.content.close || "QWQ See you next time~");
+             };
+             current.menu.appendChild(elements.close);
          },
         custom: function () {
             prop.content.custom.forEach(function (t) {
@@ -194,12 +194,12 @@ var Paul_Pio = function (prop) {
                     for(var j = 0; j < e.length; j++){
                         if(t.type === "read"){
                             e[j].onmouseover = function () {
-                                modules.render("想阅读 %t 吗？".replace(/%t/, "“" + this.innerText + "”"));
+                                modules.render("Wants to read %t ?".replace(/%t/, "“" + this.innerText + "”"));
                             }
                         }
                         else if(t.type === "link"){
                             e[j].onmouseover = function () {
-                                modules.render("想了解一下 %t 吗？".replace(/%t/, "“" + this.innerText + "”"));
+                                modules.render("Wants to know about %t ?".replace(/%t/, "“" + this.innerText + "”"));
                             }
                         }
                         else if(t.text){
