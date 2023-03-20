@@ -1,14 +1,21 @@
 ---
 layout: base
 ---
-
+{% include head-custom2.html %}
+<body onload="checking();"> 
 <div class="home">
-  {% include live2d.html %}
+
   {%- if page.title -%}
     <h1 class="page-heading">{{ page.title }}</h1>
   {%- endif -%}
-
+  
+  <div id="video_wrapper">
+    {% include live2d.html %}
+    <video autoplay loop id="background">
+      <source src="https://drive.google.com/uc?export=view&id=17ygkkkTDZb219cgsmglfod33qP8PGW58" type="video/mp4">
+    </video>
   {{ content | markdownify }}
+  </div>
 
 
   {% if site.paginate %}
@@ -81,3 +88,4 @@ layout: base
   {%- endif -%}
 
 </div>
+</body>
