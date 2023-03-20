@@ -122,6 +122,29 @@ title: About
         
     </div>
 <script src="{{ '/assets/js/videojava.js' | relative_url }}" type="text/javascript"></script>
-    
+<script src="{{ '/assets/js/live2d.js' | relative_url }}" type="text/javascript"></script>
+<script>
+  L2Dwidget.int({
+    "model": {
+      jsonPath: "https://github.com/TianbinLiu/Fastpage/blob/master/live2d_models/koharu/assets/koharu.model.json",   //live2dPath
+      "scale": 1
+    },
+    "display" {
+      "position": "right",
+      "width": 150,
+      "height": 300,
+      "hOffset": 0,
+      "vOffset": -20
+    },
+    "mobile": {
+      "show": true,
+      "scale": 0.5
+    },
+    "react": {
+      "opacityDefault": 0.7,
+      "opacityOnHover": 0.2
+    }
+  });
+</script>
 </body>
-    </html>
+</html>
