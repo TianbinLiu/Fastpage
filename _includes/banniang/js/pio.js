@@ -85,7 +85,7 @@ var Paul_Pio = function (prop) {
             if(document.referrer !== "" && document.referrer.indexOf(current.root) === -1){
                 var referrer = document.createElement('a');
                 referrer.href = document.referrer;
-                prop.content.referer ? modules.render(prop.content.referer.replace(/%t/, "“" + referrer.hostname + "”")) : modules.render("欢迎来自 “" + referrer.hostname + "” 的朋友！");
+                prop.content.referer ? modules.render(prop.content.referer.replace(/%t/, "“" + referrer.hostname + "”")) : modules.render("Welcome friend “" + referrer.hostname + "”！〃•ω‹〃");
             }
 
             else if(prop.tips){
@@ -95,7 +95,7 @@ var Paul_Pio = function (prop) {
                     text = 'Are you a late sleeper? Will you get up tomorrow if you stay up so late? (⑉･̆-･̆⑉)';
                 }
                 else if (hour > 5 && hour <= 8) {
-                    text = 'Good morning！';
+                    text = 'Good morning!';
                 }
                 else if (hour > 8 && hour <= 11) {
                     text = 'Good morning! Do not sit too long, more up and walk around! ヾ(´ε`ヾ)';
@@ -171,7 +171,7 @@ var Paul_Pio = function (prop) {
                                      .catch(console.error) )
                   };
                  elements.sentence.onmouseover = function () {
-                     modules.render("I heard a lot of life lessons from the Frog Prince.");
+                     modules.render("I heard a lot of life lessons from a Chinese friend. | ᐕ)⁾⁾");
                  };
                  current.menu.appendChild(elements.sentence);
 
