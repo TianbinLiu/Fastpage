@@ -38,6 +38,7 @@ title: About
     }
 </style>
     {% include head-custom2.html %}
+    {% include live2d.html %}
 </head>
 
 <body onload="checking()">   
