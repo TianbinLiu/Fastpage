@@ -91,3 +91,7 @@ table td{
 li .post-meta-description {
     color: $med-emph !important;
 }
+
+canvas {
+    filter: invert(100%);
+}
