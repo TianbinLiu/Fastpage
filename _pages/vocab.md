@@ -6,7 +6,7 @@ search_exclude: true
 ---
 
 {% include head-custom2.html %}
-
+{% include live2d.html %}
   <table>
   
    <tr>
