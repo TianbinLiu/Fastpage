@@ -130,7 +130,7 @@ title: About
       "scale": 1
     },
     "display" {
-      "position": "right",
+      "position": "center",
       "width": 150,
       "height": 300,
       "hOffset": 0,
