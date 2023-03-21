@@ -423,15 +423,15 @@ pre code { font-size: 15px !important; }
 
 /*-----------------------------------*/
 /*----- ADD YOUR STYLES BELOW -------*/
-html, input, textarea, select { color: rgba(255, 255, 255, 0.87) !important; background-color: #121212 !important; }
+html, input, textarea, select { color: rgba(255, 255, 255, 0.75) !important; background-color: #121212 !important; }
 
-body { color: rgba(255, 255, 255, 0.87) !important; background-color: rgba(0, 0, 0, 0.85) !important; }
+body { color: rgba(255, 255, 255, 0.75) !important; background-color: rgba(0, 0, 0, 0.85) !important; }
 
 a { color: #4bbaff !important; }
 
-a:hover { color: rgba(255, 255, 255, 0.87) !important; }
+a:hover { color: rgba(255, 255, 255, 0.75) !important; }
 
-.site-title, .site-title:visited, .site-nav, .page-link { color: rgba(255, 255, 255, 0.87) !important; }
+.site-title, .site-title:visited, .site-nav, .page-link { color: rgba(255, 255, 255, 0.75) !important; }
 
 .site-nav { background-color: #121212; border-color: #333333; }
 
@@ -445,11 +445,11 @@ pre, code { border-color: #333333; background-color: #1e1e1e; }
 
 .post-content p, .post-content li { color: rgba(255, 255, 255, 0.69); }
 
-.btn { background-color: #1e1e1e !important; color: rgba(255, 255, 255, 0.87) !important; border-color: #333333 !important; }
+.btn { background-color: #1e1e1e !important; color: rgba(255, 255, 255, 0.75) !important; border-color: #333333 !important; }
 
 .btn:hover { background-color: #121212 !important; }
 
-table th { background-color: #121212; border-color: #333333; color: rgba(255, 255, 255, 0.87); }
+table th { background-color: #121212; border-color: #333333; color: rgba(255, 255, 255, 0.75); }
 
 table td { background-color: #121212; border-color: #333333; color: rgba(255, 255, 255, 0.69); }
 
