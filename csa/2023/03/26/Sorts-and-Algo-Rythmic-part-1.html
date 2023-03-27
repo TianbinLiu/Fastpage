@@ -238,7 +238,7 @@ canvas {
        • <span class="read-time" title="Estimated read time">
     
     
-      3 min read
+      4 min read
     
 </span></p>
 
@@ -286,6 +286,12 @@ canvas {
 <li class="toc-entry toc-h1"><a href="#Hacks">Hacks </a>
 <ul>
 <li class="toc-entry toc-h4"><a href="#CB-wants-you-to-work-with-Bubble-Sort,-Selection-Sort,-Insertion-Sort-and-Merge-Sort.-The-material-on-these-sorts-is-prevelant-on-the-Internet-and-ChatGPT.">CB wants you to work with Bubble Sort, Selection Sort, Insertion Sort and Merge Sort. The material on these sorts is prevelant on the Internet and ChatGPT. </a></li>
+<li class="toc-entry toc-h2"><a href="#Methods-we-used:">Methods we used: </a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#Print-array---.toString()">Print array - .toString() </a></li>
+<li class="toc-entry toc-h3"><a href="#compareTo()">compareTo() </a></li>
+</ul>
+</li>
 <li class="toc-entry toc-h2"><a href="#Build-into-this-Jupyter-Notebook(s)-for-Bubble-Sort,-Selection-Sort,-Insertion-Sort-and-Merge-Sort.">Build into this Jupyter Notebook(s) for Bubble Sort, Selection Sort, Insertion Sort and Merge Sort. </a>
 <ul>
 <li class="toc-entry toc-h4"><a href="#Bubble-Sort">Bubble Sort </a></li>
@@ -326,6 +332,64 @@ canvas {
 </li>
 <li>
 <p>Note, build your sorts into Generic T Queue using toString and compareTo to compare keys.</p>
+</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Methods-we-used:">
+<a class="anchor" href="#Methods-we-used:" aria-hidden="true"><span class="octicon octicon-link"></span></a>Methods we used:<a class="anchor-link" href="#Methods-we-used:"> </a>
+</h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Print-array---.toString()">
+<a class="anchor" href="#Print-array---.toString()" aria-hidden="true"><span class="octicon octicon-link"></span></a>Print array - .toString()<a class="anchor-link" href="#Print-array---.toString()"> </a>
+</h3>
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="kt">int</span><span class="o">[]</span> <span class="n">myArray</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">};</span>
+
+<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">myArray</span><span class="p">.</span><span class="na">length</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">){</span>
+    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="n">Arrays</span><span class="p">.</span><span class="na">toString</span><span class="p">(</span><span class="n">myArray</span><span class="p">));</span>
+<span class="p">}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="compareTo()">
+<a class="anchor" href="#compareTo()" aria-hidden="true"><span class="octicon octicon-link"></span></a>compareTo()<a class="anchor-link" href="#compareTo()"> </a>
+</h3>
+<ul>
+<li>
+<p>The compareTo() method is a method provided by the Java programming language that is used to compare two objects(wrapper class, include Integer, String, etc...).</p>
+</li>
+<li>
+<p>if it is a String object - compare alphabetically, return 0 if String is equal to its String input and return a value greater 0 if String is greater than the String it compare to, and return a value less than 0 if String is less than the String it compare to.<br>
+ex. guess1.compareTo(guess2)&gt;0,  if String guess1 is greater than guess2<br></p>
 </li>
 </ul>
 
