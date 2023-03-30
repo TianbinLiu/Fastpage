@@ -137,7 +137,7 @@ var Paul_Pio = function (prop) {
                  location.href = current.root;
              };
              elements.home.onmouseover = function () {
-                 modules.render(prop.content.home || "Click here to return to the home page!");
+                 modules.render(prop.content.home || "Click here to old blog!");
              };
              current.menu.appendChild(elements.home);
 
