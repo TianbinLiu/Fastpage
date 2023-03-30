@@ -134,7 +134,7 @@ var Paul_Pio = function (prop) {
          buttons: function () {
              // 返回首页
              elements.home.onclick = function () {
-                 location.href = current.root;
+                 location.href = current.root + "/Fastpage/";
              };
              elements.home.onmouseover = function () {
                  modules.render(prop.content.home || "Click here to return to the home page!");
