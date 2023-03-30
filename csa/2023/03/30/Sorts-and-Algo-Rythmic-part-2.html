@@ -4,22 +4,23 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>fastpages | An easy to use blogging platform with support for Jupyter Notebooks.</title>
+<title>Sorts and Algo Rythmic part 2 | fastpages</title>
 <meta name="generator" content="Jekyll v4.1.1" />
-<meta property="og:title" content="fastpages" />
+<meta property="og:title" content="Sorts and Algo Rythmic part 2" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="An easy to use blogging platform with support for Jupyter Notebooks." />
-<meta property="og:description" content="An easy to use blogging platform with support for Jupyter Notebooks." />
-<link rel="canonical" href="https://tianbinliu.github.io/Fastpage/" />
-<meta property="og:url" content="https://tianbinliu.github.io/Fastpage/" />
+<meta name="description" content="Sorts and Algo Rythmic part 2 Hacks" />
+<meta property="og:description" content="Sorts and Algo Rythmic part 2 Hacks" />
+<link rel="canonical" href="https://tianbinliu.github.io/Fastpage/csa/2023/03/30/Sorts-and-Algo-Rythmic-part-2.html" />
+<meta property="og:url" content="https://tianbinliu.github.io/Fastpage/csa/2023/03/30/Sorts-and-Algo-Rythmic-part-2.html" />
 <meta property="og:site_name" content="fastpages" />
-<meta property="og:image" content="https://tianbinliu.github.io/Fastpage/images/logo.png" />
-<meta property="og:type" content="website" />
+<meta property="og:image" content="https://tianbinliu.github.io/Fastpage/images/chart-preview.png" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2023-03-30T00:00:00-05:00" />
 <meta name="twitter:card" content="summary_large_image" />
-<meta property="twitter:image" content="https://tianbinliu.github.io/Fastpage/images/logo.png" />
-<meta property="twitter:title" content="fastpages" />
+<meta property="twitter:image" content="https://tianbinliu.github.io/Fastpage/images/chart-preview.png" />
+<meta property="twitter:title" content="Sorts and Algo Rythmic part 2" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebSite","description":"An easy to use blogging platform with support for Jupyter Notebooks.","headline":"fastpages","image":"https://tianbinliu.github.io/Fastpage/images/logo.png","name":"fastpages","url":"https://tianbinliu.github.io/Fastpage/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2023-03-30T00:00:00-05:00","datePublished":"2023-03-30T00:00:00-05:00","description":"Sorts and Algo Rythmic part 2 Hacks","headline":"Sorts and Algo Rythmic part 2","image":"https://tianbinliu.github.io/Fastpage/images/chart-preview.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://tianbinliu.github.io/Fastpage/csa/2023/03/30/Sorts-and-Algo-Rythmic-part-2.html"},"url":"https://tianbinliu.github.io/Fastpage/csa/2023/03/30/Sorts-and-Algo-Rythmic-part-2.html"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/Fastpage/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://tianbinliu.github.io/Fastpage/feed.xml" title="fastpages" /><link rel="shortcut icon" type="image/x-icon" href="/Fastpage/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
@@ -72,60 +73,6 @@ window.onload = wrap_img;
 <main class="page-content" aria-label="Content">
       <div class="wrapper">
         <style>
-#video_wrapper {
-    margin:0px;
-    padding:0px;
-}
-#video_wrapper video {
-    position: fixed;
-    top: 50%; left: 50%;
-    z-index: -99; important!
-    min-width: 100%;
-    min-height: 100%;
-    width: auto;
-    height: auto;
-    transform: translate(-50%, -50%);
-} 
-    
-table { 
-    background: rgba(0,0,0,0.2); 
-    width: auto;
-    color: white;
-}
-tr { background: rgba(0,0,0,0.2); }
-td { background: rgba(0,0,0,0.2); }
-th {
-    text-align: center;
-}
-table, th, td {
-    border: 1px solid #000;
-    border-collapse: collapse;
-}
-
-th, td {
-    padding: 10px;
-}
-    
-    
-</style>
-
-<body onload="checking();"> 
-<div class="home"><div id="video_wrapper">
-    <video autoplay loop id="background">
-      <source src="https://drive.google.com/uc?export=view&id=17ygkkkTDZb219cgsmglfod33qP8PGW58" type="video/mp4">
-    </video>
-  <p>This is my first Fastpage</p>
-
-<table>
-    <tr>
-        <td><a href="/Fastpage/">home</a></td>
-        <td><a href="about">about me</a></td>
-        <td><a href="img">Neight at Museum images</a></td>
-        <td><a href="Collegeboard">Collegeboard</a></td>
-    </tr>
-</table>
-
-<style>
 /* ----
 # Pio Plugin
 # By: Dreamer-Paul
@@ -256,9 +203,7 @@ canvas {
     <canvas id="pio" width="200" height="250"></canvas>
 </div>
 <script src="/Fastpage/assets/js/pio.js" type="text/javascript"></script>
-
 <script src="/Fastpage/assets/js/l2d.js" type="text/javascript"></script>
-
 <script type="text/javascript">
     var pio = new Paul_Pio({
     "mode": "fixed",
@@ -284,207 +229,106 @@ canvas {
 });
 </script>
 
-<table>
-   <tr>
-    <th>Week</th>
-    <th><a href="https://github.com/TianbinLiu/Fastpage/issues">Review Ticket</a></th>
+<article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
-   </tr>
-   
-   <tr>
-    <td>0</td>
-    <td><a href="https://github.com/TianbinLiu/Fastpage/issues/2">Tool Setup</a></td>
-   </tr>
-  
-   <tr>
-    <td>1</td>
-    <td><a href="https://github.com/TianbinLiu/Fastpage/issues/3">Innovation - Primitives</a></td>
-   </tr>
-  
-   <tr>
-    <td>2</td>
-    <td><a href="https://github.com/TianbinLiu/Fastpage/issues/4">Innovation - Using Objects</a></td>
-   </tr>
-  
-   <tr>
-    <td>3</td>
-    <td><a href="https://github.com/TianbinLiu/Fastpage/issues/5">Backend Development</a></td>
-   </tr>
-  
-   <tr>
-    <td>4</td>
-    <td><a href="https://github.com/TianbinLiu/Fastpage/issues/6">Free Response Question No. 1</a></td>
-   </tr>
-   
-   <tr>
-    <td>5</td>
-    <td><a href="https://github.com/TianbinLiu/Fastpage/issues/7">Class running Fibonacci</a></td>
-   </tr>
-   
-   <tr>
-    <td>6</td>
-    <td><a href="https://github.com/TianbinLiu/Fastpage/issues/8">Project Approval</a></td>
-   </tr>
-   
-   <tr>
-    <td>7</td>
-    <td><a href="https://github.com/TianbinLiu/Fastpage/issues/9">Last CB Topic - ArrayList</a></td>
-   </tr>
-   
-   <tr>
-    <td>8</td>
-    <td><a href=""></a></td>
-   </tr>
-   
-   <tr>
-    <td>9</td>
-    <td><a href=""></a></td>
-   </tr>
-   
-   <tr>
-    <td>10</td>
-    <td><a href=""></a></td>
-   </tr>
-   
-   <tr>
-    <td>11</td>
-    <td><a href=""></a></td>
-   </tr>
-   
-   <tr>
-    <td>Final Week</td>
-    <td><a href=""></a></td>
-   </tr>
-   
-   
-   <tr>
-    <td>Tri2 - 13</td>
-    <td><a href="https://github.com/TianbinLiu/Fastpage/issues/10">FRQ1 - Methods and Control Structures</a></td>
-   </tr>
-   
-    <tr>
-    <td>Tri2 - 13</td>
-    <td><a href="https://github.com/TianbinLiu/Fastpage/issues/11">FRQ2 - Classes</a></td>
-   </tr>
-   
-    <tr>
-    <td>Tri2 - 14</td>
-    <td><a href="https://github.com/TianbinLiu/Fastpage/issues/12">Units 1 to 5 Blogs Review Ticket 5.6/6</a></td>
-   </tr>
-   
-    <tr>
-    <td>Tri2 - 14</td>
-    <td><a href="https://github.com/TianbinLiu/Fastpage/issues/13">FRQ3 - Array/ArrayList</a></td>
-   </tr>
-   
-    <tr>
-    <td>Tri2 - 15</td>
-    <td><a href="https://github.com/TianbinLiu/Fastpage/issues/14">FRQ4 - 2D Arrays</a></td>
-   </tr>
-   
-   <tr>
-    <td>Tri2 - 15</td>
-    <td><a href="https://github.com/TianbinLiu/Fastpage/issues/16">Units 6 to 10 Blogs</a></td>
-   </tr>
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Sorts and Algo Rythmic part 2</h1><p class="page-description">Sorts and Algo Rythmic part 2 Hacks</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2023-03-30T00:00:00-05:00" itemprop="datePublished">
+        Mar 30, 2023
+      </time>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      1 min read
+    
+</span></p>
 
-   <tr>
-    <td>Tri2</td>
-    <td><a href="https://github.com/TianbinLiu/Fastpage/issues/17">Pair Grade</a></td>
-   </tr>
-   
-   <tr>
-    <td>Tri2 Final</td>
-    <td><a href="https://github.com/TianbinLiu/Fastpage/issues/18">Full Stack Individual and Final</a></td>
-   </tr>
-&lt;/div&gt;
+    
+      <p class="category-tags"><i class="fas fa-tags category-tags-icon"></i></i> 
+      
+        <a class="category-tags-link" href="/Fastpage/categories/#CSA">CSA</a>
+        
+      
+      </p>
+    
+
+    
+      
+        <div class="pb-5 d-flex flex-justify-center">
+          <div class="px-2">
+
+    <a href="https://github.com/TianbinLiu/Fastpage/tree/master/_notebooks/2023-03-30-Sorts-and-Algo-Rythmic-part-2.ipynb" role="button" target="_blank">
+<img class="notebook-badge-image" src="/Fastpage/assets/badges/github.svg" alt="View On GitHub">
+    </a>
+</div>
+
+          <div class="px-2">
+    <a href="https://mybinder.org/v2/gh/TianbinLiu/Fastpage/master?filepath=_notebooks%2F2023-03-30-Sorts-and-Algo-Rythmic-part-2.ipynb" target="_blank">
+        <img class="notebook-badge-image" src="/Fastpage/assets/badges/binder.svg" alt="Open In Binder"/>
+    </a>
+</div>
+
+          <div class="px-2">
+    <a href="https://colab.research.google.com/github/TianbinLiu/Fastpage/blob/master/_notebooks/2023-03-30-Sorts-and-Algo-Rythmic-part-2.ipynb" target="_blank">
+        <img class="notebook-badge-image" src="/Fastpage/assets/badges/colab.svg" alt="Open In Colab"/>
+    </a>
+</div>
+          <div class="px-2">
+  <a href="https://deepnote.com/launch?url=https%3A%2F%2Fgithub.com%2FTianbinLiu%2FFastpage%2Fblob%2Fmaster%2F_notebooks%2F2023-03-30-Sorts-and-Algo-Rythmic-part-2.ipynb" target="_blank">
+      <img class="notebook-badge-image" src="/Fastpage/assets/badges/deepnote.svg" alt="Launch in Deepnote"/>
+  </a>
+</div>
+
+        </div>
+      </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <ul id="toc" class="section-nav">
+<li class="toc-entry toc-h1"><a href="#Hacks">Hacks </a></li>
+</ul><!--
+#################################################
+### THIS FILE WAS AUTOGENERATED! DO NOT EDIT! ###
+#################################################
+# file to edit: _notebooks/2023-03-30-Sorts-and-Algo-Rythmic-part-2.ipynb
+-->
+
+<div class="container" id="notebook-container">
+        
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Hacks">
+<a class="anchor" href="#Hacks" aria-hidden="true"><span class="octicon octicon-link"></span></a>Hacks<a class="anchor-link" href="#Hacks"> </a>
+</h1>
+<p>Build your favorite sort into your custom built collection, aka LinkedList</p>
+<ul>
+<li>
+<p>Implement a Sort into your LL in Jupyter Notebook ... Here is concept.- Utilize Capabilities of Object overrides with toString and compareTo to Sort using Object overrides (these are built in by extending Collectable, formerly Generics). Build toString to return JSON for LinkedList, Queue and/or Stack so they could be utilized with API.</p>
+</li>
+<li>
+<p>Demostrate changing Sort keys with Tester Methods</p>
+</li>
+<li>
+<p>Look at this for FrontEnd ideas using these new Data Ops</p>
+</li>
+</ul>
+
+</div>
+</div>
+</div>
+</div>
 
 
-</table>
 
-  </div>
-
-
-  
-
-  <!-- Hide posts if front matter flag hide:true -->
-  
-  
-
-  <!-- Sort posts by rank, then date -->
-  
-  
-  
-
- 
-  
-
-   <!-- Assemble final sorted posts array -->
-  
-  <ul class="post-list"><li><h3>
-    <a class="post-link" href="/Fastpage/csa/2023/03/30/Sorts-and-Algo-Rythmic-part-2.html">
-    Sorts and Algo Rythmic part 2
-    </a>
-</h3><p class="post-meta-description">Sorts and Algo Rythmic part 2 Hacks</p><p class="post-meta">Mar 30, 2023</p>
-</li><li><h3>
-    <a class="post-link" href="/Fastpage/csa/2023/03/26/Sorts-and-Algo-Rythmic-part-1.html">
-    Sorts and Algo Rythmic part 1
-    </a>
-</h3><p class="post-meta-description">Sorts and Algo Rythmic part 1 Hacks</p><p class="post-meta">Mar 26, 2023</p>
-</li><li><h3>
-    <a class="post-link" href="/Fastpage/csa/2023/03/19/Generics-Types-and-Collections-Hacks.html">
-    Generics Types and Collections
-    </a>
-</h3><p class="post-meta-description">Generics Types and Collections Hacks</p><p class="post-meta">Mar 19, 2023</p>
-</li><li><h3>
-    <a class="post-link" href="/Fastpage/csa/2023/03/12/Data-Type.html">
-    Data Type
-    </a>
-</h3><p class="post-meta-description">Data Types Hacks</p><p class="post-meta">Mar 12, 2023</p>
-</li><li><h3>
-    <a class="post-link" href="/Fastpage/ap/2022/12/20/APTest.html">
-    AP CSA HW
-    </a>
-</h3><p class="post-meta">Dec 20, 2022</p>
-</li><li><h3>
-    <a class="post-link" href="/Fastpage/jupyter/2022/09/25/JS.html">
-    JavaScript Tutorial
-    </a>
-</h3><p class="post-meta">Sep 25, 2022</p>
-</li><li><h3>
-    <a class="post-link" href="/Fastpage/jupyter/2022/09/19/frq1.html">
-    FRQ Methods and control structures
-    </a>
-</h3><p class="post-meta">Sep 19, 2022</p>
-</li><li><h3>
-    <a class="post-link" href="/Fastpage/jupyter/2022/09/11/lession-ifs.html">
-    Jupyter Notebook lesson on ifs
-    </a>
-</h3><p class="post-meta">Sep 11, 2022</p>
-</li><li><h3>
-    <a class="post-link" href="/Fastpage/jupyter/2022/09/06/Codeweb.html">
-    Fastpages Code.org blog with key learnings
-    </a>
-</h3><p class="post-meta">Sep 6, 2022</p>
-</li><li><h3>
-    <a class="post-link" href="/Fastpage/jupyter/2022/08/28/Primitives.html">
-    Key learning on Primitives
-    </a>
-</h3><p class="post-meta">Aug 28, 2022</p>
-</li><li><h3>
-    <a class="post-link" href="/Fastpage/jupyter/2022/08/26/verify-tools.html">
-    A Jupyter Notebook using Bash to show that I have all the key tools installed.
-    </a>
-</h3><p class="post-meta">Aug 26, 2022</p>
-</li><li><h3>
-    <a class="post-link" href="/Fastpage/jupyter/2022/08/22/Java-notebook.html">
-    Fastpages Java Notebook Blog Post
-    </a>
-</h3><p class="post-meta-description">First try of creating a Java Jupyter notebook</p><p class="post-meta">Aug 22, 2022</p>
-</li></ul>
-
-    </div>
-<script src="/Fastpage/assets/js/videojava.js" type="text/javascript"></script>
-</body>
+  </div><!-- from https://github.com/utterance/utterances -->
+<script src="https://utteranc.es/client.js"
+        repo="TianbinLiu/Fastpage"
+        issue-term="title"
+        label="blogpost-comment"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script><a class="u-url" href="/Fastpage/csa/2023/03/30/Sorts-and-Algo-Rythmic-part-2.html" hidden></a>
+</article>
 
       </div>
     </main><footer class="site-footer h-card">
