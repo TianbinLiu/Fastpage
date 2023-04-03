@@ -438,6 +438,12 @@ canvas {
 <span class="n">test</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="k">new</span> <span class="n">Animal</span><span class="p">(</span><span class="s">"Landroval"</span><span class="p">,</span> <span class="mi">1</span><span class="p">));</span>
 <span class="n">test</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="k">new</span> <span class="n">Bird</span><span class="p">(</span><span class="s">"Landroval"</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="s">"sparrow"</span><span class="p">));</span>
 <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">test</span><span class="p">);</span>
+
+<span class="n">LinkedList</span><span class="o">&lt;</span><span class="n">Bird</span><span class="o">&gt;</span> <span class="n">test2</span> <span class="o">=</span> <span class="k">new</span> <span class="n">LinkedList</span><span class="o">&lt;</span><span class="n">Bird</span><span class="o">&gt;</span><span class="p">();</span>
+<span class="n">test2</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="k">new</span> <span class="n">Bird</span><span class="p">(</span><span class="s">"Landroval"</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="s">"sparrow"</span><span class="p">));</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">test2</span><span class="p">);</span>
+
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">test</span><span class="p">.</span><span class="na">toString</span><span class="p">().</span><span class="na">compareTo</span><span class="p">(</span><span class="n">test2</span><span class="p">.</span><span class="na">toString</span><span class="p">()))</span>
 </pre></div>
 
     </div>
@@ -451,6 +457,8 @@ canvas {
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>[Animal name: Landroval, age: 1, Bird name: Landroval, type: sparrow, age: 1]
+[Bird name: Landroval, type: sparrow, age: 1]
+-1
 </pre>
 </div>
 </div>
