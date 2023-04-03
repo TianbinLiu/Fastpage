@@ -327,40 +327,6 @@ canvas {
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-java"><pre><span></span><span class="c1">//it doesn't work...So I might need to use normal List to fit the concept</span>
-<span class="kn">package</span> <span class="nn">com.nighthawk.csa.utility.LinkedLists</span><span class="p">;</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-<div class="output_subarea output_text output_error">
-<pre>
-<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">package com.nighthawk.csa.utility.LinkedLists;</span>
-<span class="ansi-red-intense-fg ansi-bold">illegal start of expression</span>
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-    
-
-    
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
 <div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Animal</span><span class="p">{</span> 
     <span class="kd">private</span> <span class="n">String</span> <span class="n">name</span><span class="p">;</span> <span class="c1">//ignore from here to </span>
     <span class="kd">private</span> <span class="kt">int</span> <span class="n">age</span><span class="p">;</span>
@@ -430,6 +396,7 @@ canvas {
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Bird name: Landroval, type: sparrow, age: 1
+[Animal name: Landroval, age: 1, Bird name: Landroval, type: sparrow, age: 1]
 </pre>
 </div>
 </div>
@@ -454,12 +421,46 @@ canvas {
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <ul>
-<li>Object override : When a method in a subclass has the same name, same parameters or signature, and same return type(or sub-type) as a method in its super-class, then the method in the subclass is said to override the method in the super-class.</li>
+<li>Method override : When a method in a subclass has the same name, same parameters or signature, and same return type(or sub-type) as a method in its super-class, then the method in the subclass is said to override the method in the super-class.</li>
 </ul>
 
 </div>
 </div>
 </div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="n">LinkedList</span><span class="o">&lt;</span><span class="n">Animal</span><span class="o">&gt;</span> <span class="n">test</span> <span class="o">=</span> <span class="k">new</span> <span class="n">LinkedList</span><span class="o">&lt;</span><span class="n">Animal</span><span class="o">&gt;</span><span class="p">();</span>
+<span class="n">test</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="k">new</span> <span class="n">Animal</span><span class="p">(</span><span class="s">"Landroval"</span><span class="p">,</span> <span class="mi">1</span><span class="p">));</span>
+<span class="n">test</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="k">new</span> <span class="n">Bird</span><span class="p">(</span><span class="s">"Landroval"</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="s">"sparrow"</span><span class="p">));</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">test</span><span class="p">);</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[Animal name: Landroval, age: 1, Bird name: Landroval, type: sparrow, age: 1]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -479,30 +480,8 @@ canvas {
 <div class=" highlight hl-java"><pre><span></span><span class="nd">@GetMapping</span><span class="p">(</span><span class="s">"/{a}/{b}/{c}"</span><span class="p">)</span>
 <span class="kd">public</span> <span class="n">ResponseEntity</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="nf">Bird</span><span class="p">(</span><span class="nd">@PathVariable</span><span class="p">(</span><span class="s">"a"</span><span class="p">)</span> <span class="n">String</span> <span class="n">a</span><span class="p">,</span> <span class="nd">@PathVariable</span><span class="p">(</span><span class="s">"b"</span><span class="p">)</span> <span class="kt">int</span> <span class="n">b</span><span class="p">,</span> <span class="nd">@PathVariable</span><span class="p">(</span><span class="s">"c"</span><span class="p">)</span> <span class="n">String</span> <span class="n">c</span><span class="p">)</span> <span class="kd">throws</span> <span class="n">JsonMappingException</span><span class="p">,</span> <span class="n">JsonProcessingException</span> <span class="p">{</span>
 
-  <span class="n">Animal</span> <span class="n">test</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Bird</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">);</span>
-
-  <span class="k">return</span> <span class="n">ResponseEntity</span><span class="p">.</span><span class="na">ok</span><span class="p">(</span><span class="n">test</span><span class="p">.</span><span class="na">toString</span><span class="p">());</span>  <span class="c1">// JSON response, see ExceptionHandlerAdvice for throws</span>
-<span class="p">}</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-    
-
-    
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-java"><pre><span></span><span class="nd">@GetMapping</span><span class="p">(</span><span class="s">"/{a}/{b}"</span><span class="p">)</span>
-<span class="kd">public</span> <span class="n">ResponseEntity</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="nf">Animal</span><span class="p">(</span><span class="nd">@PathVariable</span><span class="p">(</span><span class="s">"a"</span><span class="p">)</span> <span class="n">String</span> <span class="n">a</span><span class="p">,</span> <span class="nd">@PathVariable</span><span class="p">(</span><span class="s">"b"</span><span class="p">)</span> <span class="kt">int</span> <span class="n">b</span><span class="p">)</span> <span class="kd">throws</span> <span class="n">JsonMappingException</span><span class="p">,</span> <span class="n">JsonProcessingException</span> <span class="p">{</span>
-
-  <span class="n">Animal</span> <span class="n">test</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Animal</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">);</span>
+  <span class="n">LinkedList</span><span class="o">&lt;</span><span class="n">Animal</span><span class="o">&gt;</span> <span class="n">test</span> <span class="o">=</span> <span class="k">new</span> <span class="n">LinkedList</span><span class="o">&lt;</span><span class="n">Animal</span><span class="o">&gt;</span><span class="p">();</span>
+  <span class="n">test</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="k">new</span> <span class="n">Bird</span><span class="p">(</span><span class="s">"Landroval"</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="s">"sparrow"</span><span class="p">));</span>
 
   <span class="k">return</span> <span class="n">ResponseEntity</span><span class="p">.</span><span class="na">ok</span><span class="p">(</span><span class="n">test</span><span class="p">.</span><span class="na">toString</span><span class="p">());</span>  <span class="c1">// JSON response, see ExceptionHandlerAdvice for throws</span>
 <span class="p">}</span>
@@ -534,33 +513,8 @@ canvas {
 <div class=" highlight hl-java"><pre><span></span><span class="nd">@GetMapping</span><span class="p">(</span><span class="s">"/{a}/{b}/{c}"</span><span class="p">)</span>
 <span class="kd">public</span> <span class="n">ResponseEntity</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="nf">Bird</span><span class="p">(</span><span class="nd">@PathVariable</span><span class="p">(</span><span class="s">"a"</span><span class="p">)</span> <span class="n">String</span> <span class="n">a</span><span class="p">,</span> <span class="nd">@PathVariable</span><span class="p">(</span><span class="s">"b"</span><span class="p">)</span> <span class="kt">int</span> <span class="n">b</span><span class="p">,</span> <span class="nd">@PathVariable</span><span class="p">(</span><span class="s">"c"</span><span class="p">)</span> <span class="n">String</span> <span class="n">c</span><span class="p">)</span> <span class="kd">throws</span> <span class="n">JsonMappingException</span><span class="p">,</span> <span class="n">JsonProcessingException</span> <span class="p">{</span>
 
-  <span class="n">Animal</span> <span class="n">test</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Bird</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">);</span>
-
-  <span class="n">ObjectMapper</span> <span class="n">mapper</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ObjectMapper</span><span class="p">();</span> 
-  <span class="n">JsonNode</span> <span class="n">json</span> <span class="o">=</span> <span class="n">mapper</span><span class="p">.</span><span class="na">readTree</span><span class="p">(</span><span class="n">test</span><span class="p">.</span><span class="na">toString</span><span class="p">());</span> 
-
-  <span class="k">return</span> <span class="n">ResponseEntity</span><span class="p">.</span><span class="na">ok</span><span class="p">(</span><span class="n">json</span><span class="p">);</span>  <span class="c1">// JSON response, see ExceptionHandlerAdvice for throws</span>
-<span class="p">}</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-    
-
-    
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-java"><pre><span></span><span class="nd">@GetMapping</span><span class="p">(</span><span class="s">"/{a}/{b}"</span><span class="p">)</span>
-<span class="kd">public</span> <span class="n">ResponseEntity</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="nf">Animal</span><span class="p">(</span><span class="nd">@PathVariable</span><span class="p">(</span><span class="s">"a"</span><span class="p">)</span> <span class="n">String</span> <span class="n">a</span><span class="p">,</span> <span class="nd">@PathVariable</span><span class="p">(</span><span class="s">"b"</span><span class="p">)</span> <span class="kt">int</span> <span class="n">b</span><span class="p">)</span> <span class="kd">throws</span> <span class="n">JsonMappingException</span><span class="p">,</span> <span class="n">JsonProcessingException</span> <span class="p">{</span>
-
-  <span class="n">Animal</span> <span class="n">test</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Animal</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">);</span>
+  <span class="n">LinkedList</span><span class="o">&lt;</span><span class="n">Animal</span><span class="o">&gt;</span> <span class="n">test</span> <span class="o">=</span> <span class="k">new</span> <span class="n">LinkedList</span><span class="o">&lt;</span><span class="n">Animal</span><span class="o">&gt;</span><span class="p">();</span>
+  <span class="n">test</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="k">new</span> <span class="n">Bird</span><span class="p">(</span><span class="s">"Landroval"</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="s">"sparrow"</span><span class="p">));</span>
 
   <span class="n">ObjectMapper</span> <span class="n">mapper</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ObjectMapper</span><span class="p">();</span> 
   <span class="n">JsonNode</span> <span class="n">json</span> <span class="o">=</span> <span class="n">mapper</span><span class="p">.</span><span class="na">readTree</span><span class="p">(</span><span class="n">test</span><span class="p">.</span><span class="na">toString</span><span class="p">());</span> 
