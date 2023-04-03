@@ -315,6 +315,136 @@ canvas {
 </div>
 </div>
 </div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="c1">//it doesn't work...So I might need to use normal List to fit the concept</span>
+<span class="kn">package</span> <span class="nn">com.nighthawk.csa.utility.LinkedLists</span><span class="p">;</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">package com.nighthawk.csa.utility.LinkedLists;</span>
+<span class="ansi-red-intense-fg ansi-bold">illegal start of expression</span>
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Animal</span><span class="p">{</span> 
+    <span class="kd">private</span> <span class="n">String</span> <span class="n">name</span><span class="p">;</span> <span class="c1">//ignore from here to </span>
+    <span class="kd">private</span> <span class="kt">int</span> <span class="n">age</span><span class="p">;</span>
+
+    <span class="kd">public</span> <span class="nf">Animal</span><span class="p">(){</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">name</span> <span class="o">=</span> <span class="s">"default"</span><span class="p">;</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">age</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="p">};</span>
+
+    <span class="kd">public</span> <span class="nf">Animal</span><span class="p">(</span><span class="n">String</span> <span class="n">a</span><span class="p">,</span> <span class="kt">int</span> <span class="n">b</span><span class="p">){</span>
+        <span class="n">name</span> <span class="o">=</span> <span class="n">a</span><span class="p">;</span>
+        <span class="n">age</span> <span class="o">=</span> <span class="n">b</span><span class="p">;</span>
+    <span class="p">};</span>
+
+    <span class="kd">public</span> <span class="n">String</span> <span class="nf">getName</span><span class="p">(){</span>
+        <span class="k">return</span> <span class="n">name</span><span class="p">;</span>
+    <span class="p">};</span>  
+
+    <span class="kd">public</span> <span class="kt">int</span> <span class="nf">getAge</span><span class="p">(){</span>
+        <span class="k">return</span> <span class="n">age</span><span class="p">;</span>
+    <span class="p">};</span>                              <span class="c1">//here</span>
+
+    <span class="c1">//focus on this toString method, later below we will how does the object override works</span>
+    <span class="kd">public</span> <span class="n">String</span> <span class="nf">toString</span><span class="p">(){</span>
+        <span class="k">return</span> <span class="s">"Animal name: "</span> <span class="o">+</span> <span class="n">name</span>  <span class="o">+</span> <span class="s">", age: "</span> <span class="o">+</span> <span class="n">age</span><span class="p">;</span>
+    <span class="p">}</span>
+
+<span class="p">}</span>
+
+<span class="c1">//Inheritance, class Bird is a subclass to class Animal</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Bird</span> <span class="kd">extends</span> <span class="n">Animal</span><span class="p">{</span>     
+    <span class="kd">private</span> <span class="n">String</span> <span class="n">type</span><span class="p">;</span>
+
+    <span class="kd">public</span> <span class="nf">Bird</span><span class="p">(){</span>          <span class="c1">//Skip here to </span>
+        <span class="kd">super</span><span class="p">();</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">type</span> <span class="o">=</span> <span class="s">"default"</span><span class="p">;</span>
+    <span class="p">};</span>
+
+    <span class="kd">public</span> <span class="nf">Bird</span><span class="p">(</span><span class="n">String</span> <span class="n">a</span><span class="p">,</span> <span class="kt">int</span> <span class="n">b</span><span class="p">,</span> <span class="n">String</span> <span class="n">Birdtype</span><span class="p">){</span>
+        <span class="kd">super</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">);</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">type</span> <span class="o">=</span> <span class="n">Birdtype</span><span class="p">;</span>
+    <span class="p">};</span>
+
+    <span class="kd">public</span> <span class="n">String</span> <span class="nf">getType</span><span class="p">(){</span>
+        <span class="k">return</span> <span class="n">type</span><span class="p">;</span>
+    <span class="p">};</span>                      <span class="c1">//here</span>
+                                
+
+    <span class="c1">//Remember this toString method, we will use it later.</span>
+    <span class="kd">public</span> <span class="n">String</span> <span class="nf">toString</span><span class="p">(){</span>
+        <span class="k">return</span> <span class="s">"Bird name: "</span> <span class="o">+</span> <span class="n">getName</span><span class="p">()</span> <span class="o">+</span> <span class="s">", type: "</span> <span class="o">+</span> <span class="n">type</span> <span class="o">+</span> <span class="s">", age: "</span> <span class="o">+</span> <span class="n">getAge</span><span class="p">();</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="n">Animal</span> <span class="n">list</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Bird</span><span class="p">(</span><span class="s">"Landroval"</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="s">"sparrow"</span><span class="p">);</span> <span class="c1">//Animal type reference refers to a Bird object </span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">list</span><span class="p">);</span> <span class="c1">//Bird's toString is called. This is called RUN TIME POLYMORPHISM.</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Bird name: Landroval, type: sparrow, age: 1
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>Object override : When a method in a subclass has the same name, same parameters or signature, and same return type(or sub-type) as a method in its super-class, then the method in the subclass is said to override the method in the super-class.</li>
+</ul>
+
+</div>
+</div>
+</div>
 </div>
 
 
