@@ -238,7 +238,7 @@ canvas {
        • <span class="read-time" title="Estimated read time">
     
     
-      7 min read
+      10 min read
     
 </span></p>
 
@@ -293,7 +293,9 @@ canvas {
 <li class="toc-entry toc-h4"><a href="#Analyze-the-Big-O-complexity-on-Sorts.(Selection-Sort)">Analyze the Big O complexity on Sorts.(Selection Sort) </a></li>
 <li class="toc-entry toc-h4"><a href="#Analyze-the-Big-O-complexity-on-Sorts.(Insertion-Sort)">Analyze the Big O complexity on Sorts.(Insertion Sort) </a></li>
 <li class="toc-entry toc-h4"><a href="#Analyze-the-Big-O-complexity-on-Sorts.(Merge-Sort)">Analyze the Big O complexity on Sorts.(Merge Sort) </a></li>
-<li class="toc-entry toc-h4"><a href="#Hashmap(Binary-sort)">Hashmap(Binary sort) </a></li>
+<li class="toc-entry toc-h4"><a href="#Hashmap(Binary-Search-vs.-HashMap-Lookup)">Hashmap(Binary Search vs. HashMap Lookup) </a></li>
+<li class="toc-entry toc-h4"><a href="#HashMap-Random-Lookup">HashMap Random Lookup </a></li>
+<li class="toc-entry toc-h4"><a href="#Random-Binary-Search">Random Binary Search </a></li>
 </ul>
 </li>
 </ul>
@@ -1112,9 +1114,310 @@ number of Swaps: 61808
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="Hashmap(Binary-sort)">
-<a class="anchor" href="#Hashmap(Binary-sort)" aria-hidden="true"><span class="octicon octicon-link"></span></a>Hashmap(Binary sort)<a class="anchor-link" href="#Hashmap(Binary-sort)"> </a>
+<h4 id="Hashmap(Binary-Search-vs.-HashMap-Lookup)">
+<a class="anchor" href="#Hashmap(Binary-Search-vs.-HashMap-Lookup)" aria-hidden="true"><span class="octicon octicon-link"></span></a>Hashmap(Binary Search vs. HashMap Lookup)<a class="anchor-link" href="#Hashmap(Binary-Search-vs.-HashMap-Lookup)"> </a>
 </h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="HashMap-Random-Lookup">
+<a class="anchor" href="#HashMap-Random-Lookup" aria-hidden="true"><span class="octicon octicon-link"></span></a>HashMap Random Lookup<a class="anchor-link" href="#HashMap-Random-Lookup"> </a>
+</h4>
+<ul>
+<li>Results:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>time to search 100 random keys ( Nanoseconds )</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>21147409</td>
+</tr>
+<tr>
+<td>17971487</td>
+</tr>
+<tr>
+<td>14196609</td>
+</tr>
+<tr>
+<td>23624916</td>
+</tr>
+<tr>
+<td>11359610</td>
+</tr>
+<tr>
+<td>12544533</td>
+</tr>
+<tr>
+<td>14472982</td>
+</tr>
+<tr>
+<td>14071210</td>
+</tr>
+<tr>
+<td>11588485</td>
+</tr>
+<tr>
+<td>14515871</td>
+</tr>
+<tr>
+<td>11867038</td>
+</tr>
+<tr>
+<td>10295192</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Average Result ( throw out High and Low ) :</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>time to search</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>14373523.4 ( 0.01437352 sec )</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="kn">import</span> <span class="nn">java.util.HashMap</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">java.util.Map</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">java.util.Random</span><span class="p">;</span>
+
+<span class="n">Random</span> <span class="n">num</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Random</span><span class="p">();</span>
+<span class="n">Map</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span> <span class="n">Integer</span><span class="o">&gt;</span> <span class="n">myHashMap</span> <span class="o">=</span> <span class="k">new</span> <span class="n">HashMap</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">5000</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">myHashMap</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="s">"apple"</span> <span class="o">+</span> <span class="n">i</span><span class="p">,</span> <span class="n">num</span><span class="p">.</span><span class="na">nextInt</span><span class="p">());</span> <span class="c1">// storing random integers</span>
+<span class="p">}</span>
+<span class="kt">long</span> <span class="n">start</span> <span class="o">=</span> <span class="n">System</span><span class="p">.</span><span class="na">nanoTime</span><span class="p">();</span>
+
+<span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="mi">100</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">){</span>   
+    <span class="kt">int</span> <span class="n">random</span> <span class="o">=</span> <span class="p">(</span><span class="kt">int</span><span class="p">)(</span><span class="n">Math</span><span class="p">.</span><span class="na">random</span><span class="p">()</span><span class="o">*</span><span class="mi">5000</span><span class="p">);</span>          <span class="c1">//random search by 100 keys</span>
+    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="n">myHashMap</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="s">"apple"</span> <span class="o">+</span> <span class="n">random</span><span class="p">)</span> <span class="o">+</span> <span class="s">" "</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kt">long</span> <span class="n">finish</span> <span class="o">=</span> <span class="n">System</span><span class="p">.</span><span class="na">nanoTime</span><span class="p">();</span>
+<span class="kt">long</span> <span class="n">timeElapsed</span> <span class="o">=</span> <span class="n">finish</span> <span class="o">-</span> <span class="n">start</span><span class="p">;</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">();</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Nanoseconds: "</span> <span class="o">+</span> <span class="n">timeElapsed</span><span class="p">);</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>-1807590958 -2022798256 -265889577 -1284133417 -1865923133 -1499463285 -1453802482 -988082258 -1698817405 778147834 -394236743 -1079096090 -221649971 561792724 -855262580 1750775252 -2101523736 -1360335804 -1038841541 -361839305 721622123 750616224 -2037365889 -394824207 1149997312 -189846171 868359064 -249171623 1489800719 1670148897 438741829 -783775279 -1675428194 -2095325306 -1225406038 -354902172 171683063 -1569320304 930291783 1293822786 -1151432786 -873508315 1531127508 1848599485 1404713989 569221106 -2118526719 -1631275559 -1384121399 -1836948568 -947738434 -760631961 657253524 724656068 1944379065 -230118707 -1345757187 1663479151 1577629748 -2143869268 -854710992 -899334937 -1247063951 1601541118 -52885294 153078620 -2088737819 -1254006374 135224691 -1939190201 -77243665 98313747 1482970184 -15059824 -1793050088 26918344 -40886393 -620594971 211095118 1795421435 1997265781 149262331 123703442 309585153 1167314106 956946075 2029342129 -1394478569 -37262916 -1263449873 -1145821007 2126656753 -664035681 1945636786 279373443 -409301321 -591609622 -748432348 2118909879 -1643864658 
+Nanoseconds: 11071151
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Random-Binary-Search">
+<a class="anchor" href="#Random-Binary-Search" aria-hidden="true"><span class="octicon octicon-link"></span></a>Random Binary Search<a class="anchor-link" href="#Random-Binary-Search"> </a>
+</h4>
+<ul>
+<li>Results:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>time to search 100 random keys ( Nanoseconds )</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1096481</td>
+</tr>
+<tr>
+<td>762543</td>
+</tr>
+<tr>
+<td>756480</td>
+</tr>
+<tr>
+<td>737596</td>
+</tr>
+<tr>
+<td>769618</td>
+</tr>
+<tr>
+<td>812615</td>
+</tr>
+<tr>
+<td>757250</td>
+</tr>
+<tr>
+<td>693996</td>
+</tr>
+<tr>
+<td>782765</td>
+</tr>
+<tr>
+<td>752727</td>
+</tr>
+<tr>
+<td>873094</td>
+</tr>
+<tr>
+<td>690335</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Average Result ( throw out High and Low ) :</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>time to search</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>769868.4 ( 0.0007698684 sec )</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>The time complexity of binary search is O(log n)</li>
+</ul>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="kn">import</span> <span class="nn">java.util.Random</span><span class="p">;</span>
+
+<span class="kd">class</span> <span class="nc">BinarySearchExample</span><span class="p">{</span>  
+   <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">binarySearch</span><span class="p">(</span><span class="kt">int</span> <span class="n">arr</span><span class="o">[]</span><span class="p">,</span> <span class="kt">int</span> <span class="n">key</span><span class="p">){</span>  
+   <span class="kt">int</span> <span class="n">first</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+   <span class="kt">int</span> <span class="n">last</span><span class="o">=</span><span class="n">arr</span><span class="p">.</span><span class="na">length</span><span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+   <span class="kt">int</span> <span class="n">mid</span> <span class="o">=</span> <span class="p">(</span><span class="n">first</span> <span class="o">+</span> <span class="n">last</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span><span class="p">;</span>  
+      <span class="k">while</span><span class="p">(</span> <span class="n">first</span> <span class="o">&lt;=</span> <span class="n">last</span> <span class="p">){</span>  
+         <span class="k">if</span> <span class="p">(</span> <span class="n">arr</span><span class="o">[</span><span class="n">mid</span><span class="o">]</span> <span class="o">&lt;</span> <span class="n">key</span> <span class="p">){</span>  
+           <span class="n">first</span> <span class="o">=</span> <span class="n">mid</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span>     
+         <span class="p">}</span>
+         <span class="k">else</span> <span class="k">if</span> <span class="p">(</span> <span class="n">arr</span><span class="o">[</span><span class="n">mid</span><span class="o">]</span> <span class="o">==</span> <span class="n">key</span> <span class="p">){</span>  
+           <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="n">mid</span> <span class="o">+</span> <span class="s">" "</span><span class="p">);</span>  
+           <span class="k">break</span><span class="p">;</span>  
+         <span class="p">}</span>
+         <span class="k">else</span><span class="p">{</span>  
+            <span class="n">last</span> <span class="o">=</span> <span class="n">mid</span> <span class="o">-</span> <span class="mi">1</span><span class="p">;</span>  
+         <span class="p">}</span>  
+         <span class="n">mid</span> <span class="o">=</span> <span class="p">(</span><span class="n">first</span> <span class="o">+</span> <span class="n">last</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span><span class="p">;</span>  
+      <span class="p">}</span>  
+      <span class="k">if</span> <span class="p">(</span> <span class="n">first</span> <span class="o">&gt;</span> <span class="n">last</span> <span class="p">){</span>  
+         <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Element is not found!"</span><span class="p">);</span>  
+      <span class="p">}</span>  
+   <span class="p">}</span>  
+   
+   <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span> <span class="n">args</span><span class="o">[]</span><span class="p">){</span>  
+      <span class="n">Random</span> <span class="n">num</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Random</span><span class="p">();</span>
+
+      <span class="kt">int</span> <span class="n">arr</span><span class="o">[]</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">int</span><span class="o">[</span><span class="mi">5000</span><span class="o">]</span><span class="p">;</span>
+      <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">arr</span><span class="p">.</span><span class="na">length</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+         <span class="n">arr</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">=</span> <span class="n">i</span><span class="p">;</span> <span class="c1">// storing random integers in an array</span>
+      <span class="p">}</span>
+      
+      <span class="kt">long</span> <span class="n">start</span> <span class="o">=</span> <span class="n">System</span><span class="p">.</span><span class="na">nanoTime</span><span class="p">();</span>
+      <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="mi">100</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">){</span> 
+         <span class="kt">int</span> <span class="n">random</span> <span class="o">=</span> <span class="p">(</span><span class="kt">int</span><span class="p">)(</span><span class="n">Math</span><span class="p">.</span><span class="na">random</span><span class="p">()</span><span class="o">*</span><span class="mi">5000</span><span class="p">);</span>   <span class="c1">//random search by 100 keys</span>
+         <span class="n">binarySearch</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span> <span class="n">arr</span><span class="o">[</span><span class="n">random</span><span class="o">]</span><span class="p">);</span>
+      <span class="p">}</span>
+      <span class="kt">long</span> <span class="n">finish</span> <span class="o">=</span> <span class="n">System</span><span class="p">.</span><span class="na">nanoTime</span><span class="p">();</span>
+      <span class="kt">long</span> <span class="n">timeElapsed</span> <span class="o">=</span> <span class="n">finish</span> <span class="o">-</span> <span class="n">start</span><span class="p">;</span>
+      <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">();</span>
+      <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Nanoseconds: "</span> <span class="o">+</span> <span class="n">timeElapsed</span><span class="p">);</span>  
+   <span class="p">}</span>  
+<span class="p">}</span>  
+<span class="n">BinarySearchExample</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>908 4462 456 896 2577 3675 4318 1131 4396 4512 3376 4798 1218 662 3906 1309 3940 3253 2303 4935 2924 1463 3360 492 4177 450 1066 410 864 4894 247 2829 2523 2790 1871 2111 4850 2489 2642 4426 4239 1444 593 1864 3392 2520 2732 3892 2123 3231 3470 4811 1213 4772 3429 290 1555 1248 2496 4966 1067 69 3420 1586 2869 2110 3045 129 4964 4815 2315 2895 4267 3168 3509 3600 1142 2050 3783 86 4747 4340 2984 1395 4390 1773 865 590 2784 433 4303 4894 3571 4543 3846 4436 2715 1077 923 113 
+Nanoseconds: 996107
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<table>
+<thead>
+<tr>
+<th>Binary Search vs HashMap Lookup</th>
+<th>Time to Search</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>HashMap Lookup</td>
+<td>14373523.4 ( 0.01437352 sec )</td>
+</tr>
+<tr>
+<td>Binary Search</td>
+<td>769868.4 ( 0.0007698684 sec )</td>
+</tr>
+</tbody>
+</table>
+
 </div>
 </div>
 </div>
