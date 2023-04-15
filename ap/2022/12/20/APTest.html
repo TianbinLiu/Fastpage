@@ -502,6 +502,11 @@ canvas {
 <li class="toc-entry toc-h4"><a href="#1b.">1b. </a></li>
 <li class="toc-entry toc-h4"><a href="#1c.">1c. </a></li>
 <li class="toc-entry toc-h4"><a href="#2.">2. </a></li>
+<li class="toc-entry toc-h4"><a href="#3a.">3a. </a></li>
+<li class="toc-entry toc-h4"><a href="#3b.">3b. </a></li>
+<li class="toc-entry toc-h4"><a href="#4a.">4a. </a></li>
+<li class="toc-entry toc-h4"><a href="#4b.">4b. </a></li>
+<li class="toc-entry toc-h4"><a href="#4c.">4c. </a></li>
 </ul>
 </li>
 </ul>
@@ -5764,6 +5769,190 @@ canvas {
 </div>
 </div>
 
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="3a.">
+<a class="anchor" href="#3a." aria-hidden="true"><span class="octicon octicon-link"></span></a>3a.<a class="anchor-link" href="#3a."> </a>
+</h4>
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kt">int</span> <span class="nf">getValueAt</span><span class="p">(</span><span class="kt">int</span> <span class="n">row</span><span class="p">,</span> <span class="kt">int</span> <span class="n">col</span><span class="p">){</span>
+    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">entries</span><span class="p">.</span><span class="na">size</span><span class="p">();</span> <span class="n">i</span><span class="o">++</span><span class="p">){</span>
+        <span class="k">if</span><span class="p">(</span><span class="n">entries</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">i</span><span class="p">).</span><span class="na">getRow</span><span class="p">()</span> <span class="o">==</span> <span class="n">row</span> <span class="o">&amp;&amp;</span> <span class="n">entries</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">i</span><span class="p">).</span><span class="na">getCol</span><span class="p">()</span> <span class="o">==</span> <span class="n">col</span><span class="p">){</span>
+            <span class="k">return</span> <span class="n">entries</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">i</span><span class="p">).</span><span class="na">getValue</span><span class="p">();</span>
+        <span class="p">}</span>
+        <span class="k">else</span><span class="p">{</span>
+            <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="3b.">
+<a class="anchor" href="#3b." aria-hidden="true"><span class="octicon octicon-link"></span></a>3b.<a class="anchor-link" href="#3b."> </a>
+</h4>
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kt">void</span> <span class="nf">removeColumn</span><span class="p">(</span><span class="kt">int</span> <span class="n">col</span><span class="p">){</span>
+    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">entries</span><span class="p">.</span><span class="na">size</span><span class="p">();</span> <span class="n">i</span><span class="o">++</span><span class="p">){</span>
+        <span class="k">if</span><span class="p">(</span><span class="n">entries</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">i</span><span class="p">).</span><span class="na">getCol</span><span class="p">()</span> <span class="o">==</span> <span class="n">col</span><span class="p">){</span>
+            <span class="n">entries</span><span class="p">.</span><span class="na">remove</span><span class="p">(</span><span class="n">i</span><span class="p">);</span>
+        <span class="p">}</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">entries</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">i</span><span class="p">).</span><span class="na">getCol</span><span class="p">()</span> <span class="o">&gt;</span> <span class="n">col</span><span class="p">){</span>
+            <span class="kt">int</span> <span class="n">newRow</span> <span class="o">=</span> <span class="n">entries</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">i</span><span class="p">).</span><span class="na">getRow</span><span class="p">();</span>
+            <span class="kt">int</span> <span class="n">newCol</span> <span class="o">=</span> <span class="n">entries</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">i</span><span class="p">).</span><span class="na">getCol</span><span class="p">()</span><span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+            <span class="kt">int</span> <span class="n">newValue</span> <span class="o">=</span> <span class="n">entries</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">i</span><span class="p">).</span><span class="na">getValue</span><span class="p">();</span>
+            <span class="n">entries</span><span class="p">.</span><span class="na">set</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="k">new</span> <span class="n">SparseArrayEntry</span><span class="p">(</span><span class="n">newRow</span><span class="p">,</span> <span class="n">newCol</span><span class="p">,</span> <span class="n">newValue</span><span class="p">));</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="4a.">
+<a class="anchor" href="#4a." aria-hidden="true"><span class="octicon octicon-link"></span></a>4a.<a class="anchor-link" href="#4a."> </a>
+</h4>
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">NumberGroup</span><span class="p">{</span>
+    <span class="kt">int</span><span class="o">[]</span><span class="n">num</span><span class="p">;</span>
+
+    <span class="kd">public</span> <span class="nf">NumberGroup</span><span class="p">(){</span>
+        <span class="n">num</span> <span class="o">=</span> <span class="p">{</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">};</span>
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="nf">NumberGroup</span><span class="p">(</span><span class="kt">int</span><span class="o">[]</span> <span class="n">Array</span><span class="p">){</span>
+        <span class="n">num</span> <span class="o">=</span> <span class="n">Array</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">contains</span><span class="p">(</span><span class="kt">int</span> <span class="n">value</span><span class="p">){</span>
+        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">element</span> <span class="p">:</span> <span class="n">num</span><span class="p">){</span>
+            <span class="k">if</span><span class="p">(</span><span class="n">element</span> <span class="o">==</span> <span class="n">value</span><span class="p">){</span>
+                <span class="k">return</span> <span class="kc">true</span><span class="p">;</span>
+            <span class="p">}</span>
+            <span class="k">else</span><span class="p">{</span>
+                <span class="k">return</span> <span class="kc">false</span><span class="p">;</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="4b.">
+<a class="anchor" href="#4b." aria-hidden="true"><span class="octicon octicon-link"></span></a>4b.<a class="anchor-link" href="#4b."> </a>
+</h4>
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Range</span> <span class="kd">extends</span> <span class="n">NumberGroup</span><span class="p">{</span>
+    <span class="kd">public</span> <span class="nf">Range</span><span class="p">(</span><span class="kt">int</span> <span class="n">min</span><span class="p">,</span> <span class="kt">int</span> <span class="n">max</span><span class="p">){</span>
+        <span class="kt">int</span><span class="o">[]</span><span class="n">num</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">int</span><span class="o">[</span><span class="p">(</span><span class="n">max</span><span class="o">-</span><span class="n">min</span><span class="p">)</span><span class="o">]</span><span class="p">;</span>
+        <span class="k">for</span><span class="p">(</span><span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="p">(</span><span class="n">max</span><span class="o">-</span><span class="n">min</span><span class="p">);</span> <span class="n">i</span><span class="o">++</span><span class="p">){</span>
+            <span class="n">num</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">min</span><span class="o">+</span><span class="n">i</span><span class="p">);</span>
+        <span class="p">}</span>
+        <span class="kd">super</span><span class="p">(</span><span class="n">num</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="4c.">
+<a class="anchor" href="#4c." aria-hidden="true"><span class="octicon octicon-link"></span></a>4c.<a class="anchor-link" href="#4c."> </a>
+</h4>
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">contains</span><span class="p">(</span><span class="kt">int</span> <span class="n">num</span><span class="p">){</span>
+    <span class="k">for</span> <span class="p">(</span><span class="n">NumberGroup</span> <span class="n">group</span> <span class="p">:</span> <span class="n">groupList</span><span class="p">){</span>
+        <span class="k">return</span> <span class="n">group</span><span class="p">.</span><span class="na">contains</span><span class="p">(</span><span class="n">num</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+    </div>
 </div>
 </div>
 
