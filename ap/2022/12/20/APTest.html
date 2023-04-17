@@ -238,7 +238,7 @@ canvas {
        • <span class="read-time" title="Estimated read time">
     
     
-      8 min read
+      9 min read
     
 </span></p>
 
@@ -507,6 +507,7 @@ canvas {
 <li class="toc-entry toc-h4"><a href="#4a.">4a. </a></li>
 <li class="toc-entry toc-h4"><a href="#4b.">4b. </a></li>
 <li class="toc-entry toc-h4"><a href="#4c.">4c. </a></li>
+<li class="toc-entry toc-h4"><a href="#FRQ-stepTracker">FRQ stepTracker </a></li>
 </ul>
 </li>
 </ul>
@@ -5953,6 +5954,90 @@ canvas {
 </pre></div>
 
     </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="FRQ-stepTracker">
+<a class="anchor" href="#FRQ-stepTracker" aria-hidden="true"><span class="octicon octicon-link"></span></a>FRQ stepTracker<a class="anchor-link" href="#FRQ-stepTracker"> </a>
+</h4>
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">StepTracker</span><span class="p">{</span>
+    <span class="kd">private</span> <span class="kt">int</span> <span class="n">minimumstep</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="kd">private</span> <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span> <span class="n">days</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span><span class="p">();</span>
+
+    <span class="kd">public</span> <span class="nf">StepTracker</span><span class="p">(</span><span class="kt">int</span> <span class="n">num</span><span class="p">){</span>
+        <span class="n">minimumstep</span> <span class="o">=</span> <span class="n">num</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">addDailySteps</span><span class="p">(</span><span class="kt">int</span> <span class="n">num</span><span class="p">){</span>
+        <span class="n">days</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="n">num</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="kt">int</span> <span class="nf">activeDays</span><span class="p">(){</span>
+        <span class="kt">int</span> <span class="n">active</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">days</span><span class="p">.</span><span class="na">size</span><span class="p">()</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">){</span>
+        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">days</span><span class="p">.</span><span class="na">size</span><span class="p">();</span> <span class="n">i</span><span class="o">++</span><span class="p">){</span>
+            <span class="k">if</span><span class="p">(</span><span class="n">days</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="n">minimumstep</span><span class="p">){</span>
+                <span class="n">active</span><span class="o">++</span><span class="p">;</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+        <span class="p">}</span>
+        <span class="k">return</span> <span class="n">active</span><span class="p">;</span>
+        
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="kt">double</span> <span class="nf">averageSteps</span><span class="p">(){</span>
+        <span class="kt">double</span> <span class="n">num</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+        <span class="k">if</span><span class="p">(</span><span class="n">days</span><span class="p">.</span><span class="na">size</span><span class="p">()</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">){</span>
+        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">days</span><span class="p">.</span><span class="na">size</span><span class="p">();</span> <span class="n">i</span><span class="o">++</span><span class="p">){</span>
+            <span class="n">num</span> <span class="o">+=</span> <span class="n">days</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">i</span><span class="p">);</span>
+        <span class="p">}</span>
+        <span class="n">num</span> <span class="o">=</span> <span class="p">(</span><span class="kt">double</span><span class="p">)</span><span class="n">num</span><span class="o">/</span><span class="n">days</span><span class="p">.</span><span class="na">size</span><span class="p">();</span>
+        <span class="p">}</span>
+        <span class="k">return</span> <span class="n">num</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="n">StepTracker</span> <span class="n">tr</span> <span class="o">=</span> <span class="k">new</span> <span class="n">StepTracker</span><span class="p">(</span><span class="mi">10000</span><span class="p">);</span>
+<span class="n">tr</span><span class="p">.</span><span class="na">activeDays</span><span class="p">();</span>
+<span class="n">tr</span><span class="p">.</span><span class="na">averageSteps</span><span class="p">();</span>
+<span class="n">tr</span><span class="p">.</span><span class="na">addDailySteps</span><span class="p">(</span><span class="mi">9000</span><span class="p">);</span>
+<span class="n">tr</span><span class="p">.</span><span class="na">addDailySteps</span><span class="p">(</span><span class="mi">5000</span><span class="p">);</span>
+<span class="n">tr</span><span class="p">.</span><span class="na">activeDays</span><span class="p">();</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>0</pre>
+</div>
+
+</div>
+
 </div>
 </div>
 
