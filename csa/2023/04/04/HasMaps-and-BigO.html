@@ -376,6 +376,7 @@ canvas {
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<hr>
 <h4 id="Analyze-the-Big-O-complexity-on-Sorts.(Bubble-sort)">
 <a class="anchor" href="#Analyze-the-Big-O-complexity-on-Sorts.(Bubble-sort)" aria-hidden="true"><span class="octicon octicon-link"></span></a>Analyze the Big O complexity on Sorts.(Bubble sort)<a class="anchor-link" href="#Analyze-the-Big-O-complexity-on-Sorts.(Bubble-sort)"> </a>
 </h4>
@@ -392,64 +393,64 @@ canvas {
 </thead>
 <tbody>
 <tr>
-<td>26641738</td>
-<td>12497500</td>
-<td>12497500</td>
+<td>40948868</td>
+<td>24995000</td>
+<td>18711184</td>
 </tr>
 <tr>
-<td>22989394</td>
-<td>12497500</td>
-<td>12497500</td>
+<td>33597371</td>
+<td>24995000</td>
+<td>18711184</td>
 </tr>
 <tr>
-<td>24629513</td>
-<td>12497500</td>
-<td>12497500</td>
+<td>35568813</td>
+<td>24995000</td>
+<td>18711184</td>
 </tr>
 <tr>
-<td>23784578</td>
-<td>12497500</td>
-<td>12497500</td>
+<td>41071490</td>
+<td>24995000</td>
+<td>18711184</td>
 </tr>
 <tr>
-<td>23190479</td>
-<td>12497500</td>
-<td>12497500</td>
+<td>32054804</td>
+<td>24995000</td>
+<td>18711184</td>
 </tr>
 <tr>
-<td>24101190</td>
-<td>12497500</td>
-<td>12497500</td>
+<td>53361763</td>
+<td>24995000</td>
+<td>18711184</td>
 </tr>
 <tr>
-<td>23984547</td>
-<td>12497500</td>
-<td>12497500</td>
+<td>30094006</td>
+<td>24995000</td>
+<td>18711184</td>
 </tr>
 <tr>
-<td>23472651</td>
-<td>12497500</td>
-<td>12497500</td>
+<td>65122703</td>
+<td>24995000</td>
+<td>18711184</td>
 </tr>
 <tr>
-<td>24114865</td>
-<td>12497500</td>
-<td>12497500</td>
+<td>30226742</td>
+<td>24995000</td>
+<td>18711184</td>
 </tr>
 <tr>
-<td>23939402</td>
-<td>12497500</td>
-<td>12497500</td>
+<td>37281759</td>
+<td>24995000</td>
+<td>18711184</td>
 </tr>
 <tr>
-<td>24058073</td>
-<td>12497500</td>
-<td>12497500</td>
+<td>39752651</td>
+<td>24995000</td>
+<td>18711184</td>
 </tr>
 <tr>
-<td>22854606</td>
-<td>12497500</td>
-<td>12497500</td>
+<td>47037993</td>
+<td>24995000</td>
+<td>18711184</td>
 </tr>
 </tbody>
 </table>
@@ -466,15 +467,19 @@ canvas {
 </thead>
 <tbody>
 <tr>
-<td>23826469.2 ( 0.02382647 sec )</td>
-<td>12497500</td>
-<td>12497500</td>
+<td>39090225.4 ( 0.03909023 sec )</td>
+<td>24995000</td>
+<td>18711184</td>
 </tr>
 </tbody>
 </table>
 <ul>
-<li>Big O complexity: $O(2n)$</li>
+<li>Big O complexity: </li>
 </ul>
+<ol>
+<li>Worst case: O(n²).</li>
+<li>Best case: O(n). if array is already sorted.</li>
+</ol>
 
 </div>
 </div>
@@ -491,21 +496,19 @@ canvas {
 
 <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">bubbleSort</span> <span class="p">(</span><span class="kt">int</span><span class="o">[]</span> <span class="n">data</span><span class="p">)</span>
 <span class="p">{</span>
-    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="n">data</span><span class="p">.</span><span class="na">length</span> <span class="o">-</span> <span class="mi">1</span><span class="p">;</span> <span class="n">i</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">--</span><span class="p">)</span>
-    <span class="p">{</span>
-        <span class="c1">// bubble up</span>
-        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;=</span> <span class="n">i</span> <span class="o">-</span> <span class="mi">1</span><span class="p">;</span> <span class="n">j</span><span class="o">++</span><span class="p">)</span>
-        <span class="p">{</span>
-            <span class="n">numOfComparisons</span><span class="o">++</span><span class="p">;</span>
-            <span class="k">if</span> <span class="p">(</span><span class="n">data</span><span class="o">[</span><span class="n">j</span><span class="o">]</span> <span class="o">&gt;</span> <span class="n">data</span><span class="o">[</span><span class="n">j</span> <span class="o">+</span> <span class="mi">1</span><span class="o">]</span><span class="p">)</span>
-                <span class="n">swap</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">j</span><span class="p">,</span> <span class="n">j</span> <span class="o">+</span> <span class="mi">1</span><span class="p">);</span>
+    <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span><span class="n">i</span> <span class="o">&lt;</span> <span class="n">data</span><span class="p">.</span><span class="na">length</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">){</span>
+        <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">j</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">j</span> <span class="o">&lt;</span> <span class="n">data</span><span class="p">.</span><span class="na">length</span> <span class="o">-</span> <span class="mi">1</span><span class="p">;</span> <span class="n">j</span><span class="o">++</span><span class="p">){</span>
+            <span class="k">if</span><span class="p">(</span><span class="n">data</span><span class="o">[</span><span class="n">j</span><span class="o">]</span> <span class="o">&gt;</span> <span class="n">data</span><span class="o">[</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="o">]</span><span class="p">){</span>
+                <span class="kt">int</span> <span class="n">temp</span> <span class="o">=</span> <span class="n">arr</span><span class="o">[</span><span class="n">j</span><span class="o">]</span><span class="p">;</span>
+                <span class="n">data</span><span class="o">[</span><span class="n">j</span><span class="o">]</span> <span class="o">=</span> <span class="n">data</span><span class="o">[</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="o">]</span><span class="p">;</span>
+                <span class="n">data</span><span class="o">[</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="o">]</span> <span class="o">=</span> <span class="n">temp</span><span class="p">;</span>
                 <span class="n">numberOfSwaps</span><span class="o">++</span><span class="p">;</span>
+           <span class="p">}</span>
+           <span class="n">numOfComparisons</span><span class="o">++</span><span class="p">;</span>
         <span class="p">}</span>
     <span class="p">}</span>
 <span class="p">}</span>
-
 <span class="c1">//----------------------------------------------------------------------</span>
-
 <span class="kt">int</span> <span class="n">bubbleSortTester</span><span class="o">[]</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">int</span><span class="o">[</span><span class="mi">5000</span><span class="o">]</span><span class="p">;</span>
 <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">bubbleSortTester</span><span class="p">.</span><span class="na">length</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
     <span class="kt">int</span> <span class="n">num</span> <span class="o">=</span> <span class="n">arr</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">;</span>
@@ -530,9 +533,9 @@ canvas {
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Nanoseconds: 22854606
-number of comparisons: 12497500
-number of Swaps: 12497500
+<pre>Nanoseconds: 47037993
+number of comparisons: 24995000
+number of Swaps: 11459686
 </pre>
 </div>
 </div>
@@ -546,6 +549,7 @@ number of Swaps: 12497500
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<hr>
 <h4 id="Analyze-the-Big-O-complexity-on-Sorts.(Selection-Sort)">
 <a class="anchor" href="#Analyze-the-Big-O-complexity-on-Sorts.(Selection-Sort)" aria-hidden="true"><span class="octicon octicon-link"></span></a>Analyze the Big O complexity on Sorts.(Selection Sort)<a class="anchor-link" href="#Analyze-the-Big-O-complexity-on-Sorts.(Selection-Sort)"> </a>
 </h4>
@@ -562,64 +566,64 @@ number of Swaps: 12497500
 </thead>
 <tbody>
 <tr>
-<td>14953057</td>
+<td>25184109</td>
 <td>12497500</td>
-<td>4999</td>
+<td>5000</td>
 </tr>
 <tr>
-<td>14753661</td>
+<td>36724410</td>
 <td>12497500</td>
-<td>4999</td>
+<td>5000</td>
 </tr>
 <tr>
-<td>14856043</td>
+<td>19282268</td>
 <td>12497500</td>
-<td>4999</td>
+<td>5000</td>
 </tr>
 <tr>
-<td>15024082</td>
+<td>27323052</td>
 <td>12497500</td>
-<td>4999</td>
+<td>5000</td>
 </tr>
 <tr>
-<td>16858249</td>
+<td>32623821</td>
 <td>12497500</td>
-<td>4999</td>
+<td>5000</td>
 </tr>
 <tr>
-<td>21781008</td>
+<td>24525162</td>
 <td>12497500</td>
-<td>4999</td>
+<td>5000</td>
 </tr>
 <tr>
-<td>16929160</td>
+<td>21620519</td>
 <td>12497500</td>
-<td>4999</td>
+<td>5000</td>
 </tr>
 <tr>
-<td>16625350</td>
+<td>21299771</td>
 <td>12497500</td>
-<td>4999</td>
+<td>5000</td>
 </tr>
 <tr>
-<td>16179476</td>
+<td>20977239</td>
 <td>12497500</td>
-<td>4999</td>
+<td>5000</td>
 </tr>
 <tr>
-<td>15455716</td>
+<td>22184216</td>
 <td>12497500</td>
-<td>4999</td>
+<td>5000</td>
 </tr>
 <tr>
-<td>16264344</td>
+<td>25525767</td>
 <td>12497500</td>
-<td>4999</td>
+<td>5000</td>
 </tr>
 <tr>
-<td>25699738</td>
+<td>38868922</td>
 <td>12497500</td>
-<td>4999</td>
+<td>5000</td>
 </tr>
 </tbody>
 </table>
@@ -636,15 +640,19 @@ number of Swaps: 12497500
 </thead>
 <tbody>
 <tr>
-<td>16492648.5  ( 0.01649265 sec )</td>
+<td>25798806.6  ( 0.02579881 sec )</td>
 <td>12497500</td>
-<td>4999</td>
+<td>5000</td>
 </tr>
 </tbody>
 </table>
 <ul>
-<li>Big O complexity: $O(n^2)$</li>
+<li>Big O complexity: </li>
 </ul>
+<ol>
+<li>Worst case: O(n²). Since we traverse through the remaining array to find the minimum for each element, the time complexity will become O(n²).</li>
+<li>Best case: O(n²). Even if the array has already been sorted, our algorithm looks for the minimum in the rest of the array. As a result, the best-case time complexity is the same as the worst-case.</li>
+</ol>
 
 </div>
 </div>
@@ -659,36 +667,23 @@ number of Swaps: 12497500
 <div class=" highlight hl-java"><pre><span></span><span class="kt">int</span> <span class="n">numOfComparisons</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
 <span class="kt">int</span> <span class="n">numberOfSwaps</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
 
-<span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">selectionSort</span><span class="p">(</span><span class="kt">int</span><span class="o">[]</span> <span class="n">arr</span><span class="p">)</span>
+<span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">selectionSort</span><span class="p">(</span><span class="kt">int</span><span class="o">[]</span> <span class="n">data</span><span class="p">)</span>
 <span class="p">{</span>
-    <span class="c1">// find the smallest element starting from position i</span>
-    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">arr</span><span class="p">.</span><span class="na">length</span> <span class="o">-</span> <span class="mi">1</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
-    <span class="p">{</span>
-        <span class="kt">int</span> <span class="n">min</span> <span class="o">=</span> <span class="n">i</span><span class="p">;</span>  <span class="c1">// record the position of the smallest</span>
-        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">arr</span><span class="p">.</span><span class="na">length</span><span class="p">;</span> <span class="n">j</span><span class="o">++</span><span class="p">)</span>
-        <span class="p">{</span>
-            <span class="n">numOfComparisons</span><span class="o">++</span><span class="p">;</span>
-            <span class="c1">// update min when finding a smaller element</span>
-            <span class="k">if</span> <span class="p">(</span><span class="n">arr</span><span class="o">[</span><span class="n">j</span><span class="o">]</span> <span class="o">&lt;</span> <span class="n">arr</span><span class="o">[</span><span class="n">min</span><span class="o">]</span><span class="p">){</span>
-                <span class="n">min</span> <span class="o">=</span> <span class="n">j</span><span class="p">;</span>
-            <span class="p">}</span>
-            
+    <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">arr</span><span class="p">.</span><span class="na">length</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kt">int</span> <span class="n">minIndex</span> <span class="o">=</span> <span class="n">i</span><span class="p">;</span>  
+        <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">j</span><span class="o">=</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">;</span><span class="n">j</span><span class="o">&lt;</span><span class="n">arr</span><span class="p">.</span><span class="na">length</span><span class="p">;</span> <span class="n">j</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+           <span class="k">if</span><span class="p">(</span><span class="n">data</span><span class="o">[</span><span class="n">j</span><span class="o">]&lt;</span><span class="n">data</span><span class="o">[</span><span class="n">minIndex</span><span class="o">]</span><span class="p">)</span> <span class="p">{</span>
+             <span class="n">minIndex</span> <span class="o">=</span> <span class="n">j</span><span class="p">;</span>
+          <span class="p">}</span>
+          <span class="n">numOfComparisons</span><span class="o">++</span><span class="p">;</span>
         <span class="p">}</span>
- 
-        <span class="c1">// put the smallest element at position i</span>
-        <span class="n">swap</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">min</span><span class="p">);</span>
-        <span class="n">numberOfSwaps</span><span class="o">++</span><span class="p">;</span>
+      <span class="kt">int</span> <span class="n">temp</span> <span class="o">=</span> <span class="n">data</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">;</span>
+      <span class="n">data</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">=</span> <span class="n">data</span><span class="o">[</span><span class="n">minIndex</span><span class="o">]</span><span class="p">;</span>
+      <span class="n">data</span><span class="o">[</span><span class="n">minIndex</span><span class="o">]</span> <span class="o">=</span> <span class="n">temp</span><span class="p">;</span>
+      <span class="n">numberOfSwaps</span><span class="o">++</span><span class="p">;</span>
     <span class="p">}</span>
 <span class="p">}</span>
-<span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">swap</span> <span class="p">(</span><span class="kt">int</span><span class="o">[]</span> <span class="n">arr</span><span class="p">,</span> <span class="kt">int</span> <span class="n">i</span><span class="p">,</span> <span class="kt">int</span> <span class="n">j</span><span class="p">)</span>
-<span class="p">{</span>
-    <span class="kt">int</span> <span class="n">temp</span> <span class="o">=</span> <span class="n">arr</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">;</span>
-    <span class="n">arr</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">=</span> <span class="n">arr</span><span class="o">[</span><span class="n">j</span><span class="o">]</span><span class="p">;</span>
-    <span class="n">arr</span><span class="o">[</span><span class="n">j</span><span class="o">]</span> <span class="o">=</span> <span class="n">temp</span><span class="p">;</span>
-<span class="p">}</span>
-
 <span class="c1">//---------------------------------------------------------------------------</span>
-
 <span class="kt">int</span> <span class="n">selectionSortTester</span><span class="o">[]</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">int</span><span class="o">[</span><span class="mi">5000</span><span class="o">]</span><span class="p">;</span>
 <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">selectionSortTester</span><span class="p">.</span><span class="na">length</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
     <span class="kt">int</span> <span class="n">num</span> <span class="o">=</span> <span class="n">arr</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">;</span>
@@ -713,9 +708,9 @@ number of Swaps: 12497500
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Nanoseconds: 25699738
+<pre>Nanoseconds: 38868922
 number of comparisons: 12497500
-number of Swaps: 4999
+number of Swaps: 5000
 </pre>
 </div>
 </div>
@@ -729,6 +724,7 @@ number of Swaps: 4999
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<hr>
 <h4 id="Analyze-the-Big-O-complexity-on-Sorts.(Insertion-Sort)">
 <a class="anchor" href="#Analyze-the-Big-O-complexity-on-Sorts.(Insertion-Sort)" aria-hidden="true"><span class="octicon octicon-link"></span></a>Analyze the Big O complexity on Sorts.(Insertion Sort)<a class="anchor-link" href="#Analyze-the-Big-O-complexity-on-Sorts.(Insertion-Sort)"> </a>
 </h4>
@@ -745,64 +741,64 @@ number of Swaps: 4999
 </thead>
 <tbody>
 <tr>
-<td>8665871</td>
-<td>4999</td>
-<td>4999</td>
+<td>12123437</td>
+<td>6150953</td>
+<td>6150953</td>
 </tr>
 <tr>
-<td>8831168</td>
-<td>4999</td>
-<td>4999</td>
+<td>13525997</td>
+<td>6150953</td>
+<td>6150953</td>
 </tr>
 <tr>
-<td>9119073</td>
-<td>4999</td>
-<td>4999</td>
+<td>17174613</td>
+<td>6150953</td>
+<td>6150953</td>
 </tr>
 <tr>
-<td>8441980</td>
-<td>4999</td>
-<td>4999</td>
+<td>19307095</td>
+<td>6150953</td>
+<td>6150953</td>
 </tr>
 <tr>
-<td>9254969</td>
-<td>4999</td>
-<td>4999</td>
+<td>16558676</td>
+<td>6150953</td>
+<td>6150953</td>
 </tr>
 <tr>
-<td>9769606</td>
-<td>4999</td>
-<td>4999</td>
+<td>15294102</td>
+<td>6150953</td>
+<td>6150953</td>
 </tr>
 <tr>
-<td>9101528</td>
-<td>4999</td>
-<td>4999</td>
+<td>12936251</td>
+<td>6150953</td>
+<td>6150953</td>
 </tr>
 <tr>
-<td>8674045</td>
-<td>4999</td>
-<td>4999</td>
+<td>28740336</td>
+<td>6150953</td>
+<td>6150953</td>
 </tr>
 <tr>
-<td>9118447</td>
-<td>4999</td>
-<td>4999</td>
+<td>14485925</td>
+<td>6150953</td>
+<td>6150953</td>
 </tr>
 <tr>
-<td>8405332</td>
-<td>4999</td>
-<td>4999</td>
+<td>15376347</td>
+<td>6150953</td>
+<td>6150953</td>
 </tr>
 <tr>
-<td>9427538</td>
-<td>4999</td>
-<td>4999</td>
+<td>15016661</td>
+<td>6150953</td>
+<td>6150953</td>
 </tr>
 <tr>
-<td>8202175</td>
-<td>4999</td>
-<td>4999</td>
+<td>17482556</td>
+<td>6150953</td>
+<td>6150953</td>
 </tr>
 </tbody>
 </table>
@@ -819,17 +815,20 @@ number of Swaps: 4999
 </thead>
 <tbody>
 <tr>
-<td>8903995.1 ( 0.008903995 sec )</td>
-<td>4999</td>
-<td>4999</td>
+<td>15715822.3 ( 0.01571582 sec )</td>
+<td>6150953</td>
+<td>6150953</td>
 </tr>
 </tbody>
 </table>
 <ul>
 <li>Big O complexity: <br>
-The worst-case (and average-case) complexity of the insertion sort algorithm is $O(n²)$ <br>
-The best-case time complexity of insertion sort algorithm is $O(n)$ time complexity</li>
+</li>
 </ul>
+<ol>
+<li>Worst case: O(n²). In a worst case situation, our array is sorted in descending order. So, for each element, we have to keep traversing and swapping elements to the left.</li>
+<li>Best case: O(n). In the best case, our array is already sorted. So for each element, we compare our current element to the element at the left only once. Since the order is correct, we don’t swap and move on to the next element. Hence the time complexity will be O(n).1. </li>
+</ol>
 
 </div>
 </div>
@@ -844,40 +843,29 @@ The best-case time complexity of insertion sort algorithm is $O(n)$ time complex
 <div class=" highlight hl-java"><pre><span></span><span class="kt">int</span> <span class="n">numOfComparisons</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
 <span class="kt">int</span> <span class="n">numberOfSwaps</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
 
-<span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">insertionSort</span><span class="p">(</span><span class="kt">int</span><span class="o">[]</span> <span class="n">arr</span><span class="p">)</span>
+<span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">insertionSort</span><span class="p">(</span><span class="kt">int</span><span class="o">[]</span> <span class="n">data</span><span class="p">)</span>
 <span class="p">{</span>
-    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">arr</span><span class="p">.</span><span class="na">length</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
-    <span class="p">{</span>
-        <span class="c1">// a temporary copy of the current element</span>
-        <span class="kt">int</span> <span class="n">tmp</span> <span class="o">=</span> <span class="n">arr</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">;</span>
-        <span class="kt">int</span> <span class="n">j</span><span class="p">;</span>
- 
-        <span class="c1">// find the position for insertion</span>
-        <span class="k">for</span> <span class="p">(</span><span class="n">j</span> <span class="o">=</span> <span class="n">i</span><span class="p">;</span> <span class="n">j</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">;</span> <span class="n">j</span><span class="o">--</span><span class="p">)</span>
-        <span class="p">{</span>
+    <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span><span class="n">i</span> <span class="o">&lt;</span> <span class="n">data</span><span class="p">.</span><span class="na">length</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="n">i</span><span class="p">;</span>
+        <span class="k">while</span><span class="p">(</span><span class="n">j</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="o">&amp;&amp;</span> <span class="n">data</span><span class="o">[</span><span class="n">j</span><span class="o">]</span> <span class="o">&lt;</span> <span class="n">data</span><span class="o">[</span><span class="n">j</span><span class="o">-</span><span class="mi">1</span><span class="o">]</span><span class="p">)</span> <span class="p">{</span>
             <span class="n">numOfComparisons</span><span class="o">++</span><span class="p">;</span>
-            <span class="k">if</span> <span class="p">(</span><span class="n">arr</span><span class="o">[</span><span class="n">j</span> <span class="o">-</span> <span class="mi">1</span><span class="o">]</span> <span class="o">&lt;</span> <span class="n">tmp</span><span class="p">)</span>
-                <span class="k">break</span><span class="p">;</span>
-            <span class="c1">// shift the sorted part to right</span>
-            <span class="n">arr</span><span class="o">[</span><span class="n">j</span><span class="o">]</span> <span class="o">=</span> <span class="n">arr</span><span class="o">[</span><span class="n">j</span> <span class="o">-</span> <span class="mi">1</span><span class="o">]</span><span class="p">;</span>
+            <span class="kt">int</span> <span class="n">temp</span> <span class="o">=</span> <span class="n">data</span><span class="o">[</span><span class="n">j</span><span class="o">]</span><span class="p">;</span>
+            <span class="n">data</span><span class="o">[</span><span class="n">j</span><span class="o">]</span> <span class="o">=</span> <span class="n">data</span><span class="o">[</span><span class="n">j</span><span class="o">-</span><span class="mi">1</span><span class="o">]</span><span class="p">;</span>
+            <span class="n">data</span><span class="o">[</span><span class="n">j</span><span class="o">-</span><span class="mi">1</span><span class="o">]</span> <span class="o">=</span> <span class="n">temp</span><span class="p">;</span>
+            <span class="n">j</span><span class="o">--</span><span class="p">;</span>
             <span class="n">numberOfSwaps</span><span class="o">++</span><span class="p">;</span>
         <span class="p">}</span>
- 
-        <span class="c1">// insert the current element</span>
-        <span class="n">arr</span><span class="o">[</span><span class="n">j</span><span class="o">]</span> <span class="o">=</span> <span class="n">tmp</span><span class="p">;</span>
-        <span class="n">numberOfSwaps</span><span class="o">++</span><span class="p">;</span>
     <span class="p">}</span>
 <span class="p">}</span>
 
 <span class="c1">//---------------------------------------------------------------------------</span>
-
 <span class="kt">int</span> <span class="n">InsertionSortTester</span><span class="o">[]</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">int</span><span class="o">[</span><span class="mi">5000</span><span class="o">]</span><span class="p">;</span>
 <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">InsertionSortTester</span><span class="p">.</span><span class="na">length</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
     <span class="kt">int</span> <span class="n">num</span> <span class="o">=</span> <span class="n">arr</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">;</span>
     <span class="n">InsertionSortTester</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">=</span> <span class="n">num</span><span class="p">;</span> <span class="c1">// storing random integers in an array</span>
 <span class="p">}</span>
 <span class="kt">long</span> <span class="n">start</span> <span class="o">=</span> <span class="n">System</span><span class="p">.</span><span class="na">nanoTime</span><span class="p">();</span>
-<span class="n">insertionSort</span><span class="p">(</span><span class="n">tester</span><span class="p">);</span> 
+<span class="n">insertionSort</span><span class="p">(</span><span class="n">InsertionSortTester</span><span class="p">);</span> 
 <span class="kt">long</span> <span class="n">finish</span> <span class="o">=</span> <span class="n">System</span><span class="p">.</span><span class="na">nanoTime</span><span class="p">();</span>
 <span class="kt">long</span> <span class="n">timeElapsed</span> <span class="o">=</span> <span class="n">finish</span> <span class="o">-</span> <span class="n">start</span><span class="p">;</span>
 
@@ -896,9 +884,9 @@ The best-case time complexity of insertion sort algorithm is $O(n)$ time complex
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Nanoseconds: 8202175
-number of comparisons: 4999
-number of Swaps: 4999
+<pre>Nanoseconds: 18049781
+number of comparisons: 6150953
+number of Swaps: 6150953
 </pre>
 </div>
 </div>
@@ -912,6 +900,7 @@ number of Swaps: 4999
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<hr>
 <h4 id="Analyze-the-Big-O-complexity-on-Sorts.(Merge-Sort)">
 <a class="anchor" href="#Analyze-the-Big-O-complexity-on-Sorts.(Merge-Sort)" aria-hidden="true"><span class="octicon octicon-link"></span></a>Analyze the Big O complexity on Sorts.(Merge Sort)<a class="anchor-link" href="#Analyze-the-Big-O-complexity-on-Sorts.(Merge-Sort)"> </a>
 </h4>
@@ -928,63 +917,63 @@ number of Swaps: 4999
 </thead>
 <tbody>
 <tr>
-<td>10215714</td>
-<td>55195</td>
+<td>9317561</td>
+<td>55175</td>
 <td>61808</td>
 </tr>
 <tr>
-<td>8790276</td>
-<td>55255</td>
+<td>12992589</td>
+<td>55175</td>
 <td>61808</td>
 </tr>
 <tr>
-<td>8235763</td>
-<td>55197</td>
+<td>19746831</td>
+<td>55175</td>
 <td>61808</td>
 </tr>
 <tr>
-<td>7962740</td>
-<td>55316</td>
+<td>12912218</td>
+<td>55175</td>
 <td>61808</td>
 </tr>
 <tr>
-<td>9345303</td>
-<td>55268</td>
+<td>12534219</td>
+<td>55175</td>
 <td>61808</td>
 </tr>
 <tr>
-<td>10223829</td>
-<td>55233</td>
+<td>16034847</td>
+<td>55175</td>
 <td>61808</td>
 </tr>
 <tr>
-<td>12360116</td>
-<td>55236</td>
+<td>17103831</td>
+<td>55175</td>
 <td>61808</td>
 </tr>
 <tr>
-<td>8212420</td>
-<td>55225</td>
+<td>18385908</td>
+<td>55175</td>
 <td>61808</td>
 </tr>
 <tr>
-<td>10812344</td>
-<td>55252</td>
+<td>19866444</td>
+<td>55175</td>
 <td>61808</td>
 </tr>
 <tr>
-<td>9678818</td>
-<td>55254</td>
+<td>10257987</td>
+<td>55175</td>
 <td>61808</td>
 </tr>
 <tr>
-<td>7790542</td>
-<td>55249</td>
+<td>16992695</td>
+<td>55175</td>
 <td>61808</td>
 </tr>
 <tr>
-<td>9994474</td>
-<td>55204</td>
+<td>11263257</td>
+<td>55175</td>
 <td>61808</td>
 </tr>
 </tbody>
@@ -1002,17 +991,20 @@ number of Swaps: 4999
 </thead>
 <tbody>
 <tr>
-<td>9347168.1 ( 0.009347168 sec )</td>
-<td>55237.3</td>
+<td>14822438.2 ( 0.01482244 sec )</td>
+<td>55175</td>
 <td>61808</td>
 </tr>
 </tbody>
 </table>
 <ul>
 <li>Big O complexity: <br>
-Overall time complexity of Merge sort is $O(nLogn)$. It is more efficient as it is in worst case also the runtime is $O(nlogn)$ <br>
-The space complexity of Merge sort is $O(n)$. This means that this algorithm takes a lot of space and may slower down operations for the last data sets</li>
+</li>
 </ul>
+<ol>
+<li>Worst case: O(nlogn). The worst-case time complexity is the same as the best case.</li>
+<li>Best case: O(nlogn). We are dividing the array into two sub-arrays recursively, which will cost a time complexity of O(logn). For each function call, we are calling the partition function, which costs O(n) time complexity. Hence the total time complexity is O(nlogn).</li>
+</ol>
 
 </div>
 </div>
@@ -1026,56 +1018,57 @@ The space complexity of Merge sort is $O(n)$. This means that this algorithm tak
     <div class="input_area">
 <div class=" highlight hl-java"><pre><span></span><span class="kt">int</span> <span class="n">numOfComparisons</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
 <span class="kt">int</span> <span class="n">numberOfSwaps</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-<span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">merge</span><span class="p">(</span><span class="kt">int</span><span class="o">[]</span> <span class="n">a</span><span class="p">,</span> <span class="kt">int</span><span class="o">[]</span> <span class="n">l</span><span class="p">,</span> <span class="kt">int</span><span class="o">[]</span> <span class="n">r</span><span class="p">,</span> <span class="kt">int</span> <span class="n">left</span><span class="p">,</span> <span class="kt">int</span> <span class="n">right</span><span class="p">)</span> <span class="p">{</span>
-    <span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">k</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-    <span class="k">while</span> <span class="p">(</span><span class="n">i</span> <span class="o">&lt;</span> <span class="n">left</span> <span class="o">&amp;&amp;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">right</span><span class="p">)</span> <span class="p">{</span>
-        <span class="k">if</span> <span class="p">(</span><span class="n">l</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">&lt;=</span> <span class="n">r</span><span class="o">[</span><span class="n">j</span><span class="o">]</span><span class="p">)</span> <span class="p">{</span>
+
+<span class="kd">public</span> <span class="kt">void</span> <span class="nf">merge</span><span class="p">(</span><span class="kt">int</span> <span class="n">data</span><span class="o">[]</span><span class="p">,</span> <span class="kt">int</span> <span class="n">l</span><span class="p">,</span> <span class="kt">int</span> <span class="n">m</span><span class="p">,</span> <span class="kt">int</span> <span class="n">r</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kt">int</span> <span class="n">n1</span> <span class="o">=</span> <span class="n">m</span><span class="o">-</span><span class="n">l</span><span class="o">+</span><span class="mi">1</span><span class="p">;</span>
+    <span class="kt">int</span> <span class="n">n2</span> <span class="o">=</span> <span class="n">r</span><span class="o">-</span><span class="n">m</span><span class="p">;</span>
+    <span class="kt">int</span><span class="o">[]</span> <span class="n">L</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">int</span><span class="o">[</span><span class="n">n1</span><span class="o">]</span><span class="p">;</span>
+    <span class="kt">int</span><span class="o">[]</span> <span class="n">R</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">int</span><span class="o">[</span><span class="n">n2</span><span class="o">]</span><span class="p">;</span>
+    <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span><span class="n">i</span> <span class="o">&lt;</span> <span class="n">n1</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">L</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">=</span> <span class="n">data</span><span class="o">[</span><span class="n">l</span><span class="o">+</span><span class="n">i</span><span class="o">]</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span><span class="n">i</span> <span class="o">&lt;</span> <span class="n">n2</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">R</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">=</span> <span class="n">data</span><span class="o">[</span><span class="n">m</span><span class="o">+</span><span class="mi">1</span><span class="o">+</span><span class="n">i</span><span class="o">]</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">k</span> <span class="o">=</span><span class="n">l</span><span class="p">;</span>
+    <span class="k">while</span><span class="p">(</span><span class="n">i</span> <span class="o">&lt;</span> <span class="n">n1</span> <span class="o">&amp;&amp;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">n2</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">if</span><span class="p">(</span><span class="n">L</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">&lt;=</span> <span class="n">R</span><span class="o">[</span><span class="n">j</span><span class="o">]</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">data</span><span class="o">[</span><span class="n">k</span><span class="o">++]</span> <span class="o">=</span> <span class="n">L</span><span class="o">[</span><span class="n">i</span><span class="o">++]</span><span class="p">;</span>
             <span class="n">numOfComparisons</span><span class="o">++</span><span class="p">;</span>
-            <span class="n">a</span><span class="o">[</span><span class="n">k</span><span class="o">++]</span> <span class="o">=</span> <span class="n">l</span><span class="o">[</span><span class="n">i</span><span class="o">++]</span><span class="p">;</span>
             <span class="n">numberOfSwaps</span><span class="o">++</span><span class="p">;</span>
         <span class="p">}</span>
         <span class="k">else</span> <span class="p">{</span>
+            <span class="n">data</span><span class="o">[</span><span class="n">k</span><span class="o">++]</span> <span class="o">=</span> <span class="n">R</span><span class="o">[</span><span class="n">j</span><span class="o">++]</span><span class="p">;</span>
             <span class="n">numOfComparisons</span><span class="o">++</span><span class="p">;</span>
-            <span class="n">a</span><span class="o">[</span><span class="n">k</span><span class="o">++]</span> <span class="o">=</span> <span class="n">r</span><span class="o">[</span><span class="n">j</span><span class="o">++]</span><span class="p">;</span>
             <span class="n">numberOfSwaps</span><span class="o">++</span><span class="p">;</span>
         <span class="p">}</span>
     <span class="p">}</span>
-    <span class="k">while</span> <span class="p">(</span><span class="n">i</span> <span class="o">&lt;</span> <span class="n">left</span><span class="p">)</span> <span class="p">{</span>
-        <span class="n">a</span><span class="o">[</span><span class="n">k</span><span class="o">++]</span> <span class="o">=</span> <span class="n">l</span><span class="o">[</span><span class="n">i</span><span class="o">++]</span><span class="p">;</span>
+    <span class="k">while</span><span class="p">(</span><span class="n">i</span> <span class="o">&lt;</span> <span class="n">n1</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">data</span><span class="o">[</span><span class="n">k</span><span class="o">++]</span> <span class="o">=</span> <span class="n">L</span><span class="o">[</span><span class="n">i</span><span class="o">++]</span><span class="p">;</span>
         <span class="n">numberOfSwaps</span><span class="o">++</span><span class="p">;</span>
     <span class="p">}</span>
-    <span class="k">while</span> <span class="p">(</span><span class="n">j</span> <span class="o">&lt;</span> <span class="n">right</span><span class="p">)</span> <span class="p">{</span>
-        <span class="n">a</span><span class="o">[</span><span class="n">k</span><span class="o">++]</span> <span class="o">=</span> <span class="n">r</span><span class="o">[</span><span class="n">j</span><span class="o">++]</span><span class="p">;</span>
+    <span class="k">while</span><span class="p">(</span><span class="n">j</span> <span class="o">&lt;</span> <span class="n">n2</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">data</span><span class="o">[</span><span class="n">k</span><span class="o">++]</span> <span class="o">=</span> <span class="n">R</span><span class="o">[</span><span class="n">j</span><span class="o">++]</span><span class="p">;</span>
         <span class="n">numberOfSwaps</span><span class="o">++</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+<span class="kd">public</span> <span class="kt">void</span> <span class="nf">mergeSort</span><span class="p">(</span><span class="kt">int</span> <span class="n">data</span><span class="o">[]</span><span class="p">,</span> <span class="kt">int</span> <span class="n">l</span><span class="p">,</span> <span class="kt">int</span> <span class="n">r</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">l</span> <span class="o">&lt;</span> <span class="n">r</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kt">int</span> <span class="n">m</span> <span class="o">=</span> <span class="n">l</span> <span class="o">+</span> <span class="p">(</span><span class="n">r</span><span class="o">-</span><span class="n">l</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span><span class="p">;</span>
+        <span class="n">mergeSort</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">l</span><span class="p">,</span> <span class="n">m</span><span class="p">);</span>
+        <span class="n">mergeSort</span><span class="p">(</span><span class="n">data</span> <span class="p">,</span> <span class="n">m</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">r</span><span class="p">);</span>
+        <span class="n">merge</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">l</span><span class="p">,</span> <span class="n">m</span><span class="p">,</span> <span class="n">r</span><span class="p">);</span>
     <span class="p">}</span>
 <span class="p">}</span>
 
-<span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">mergeSort</span><span class="p">(</span><span class="kt">int</span><span class="o">[]</span><span class="n">myArray</span><span class="p">,</span> <span class="kt">int</span> <span class="n">index</span><span class="p">){</span>
-        <span class="k">if</span> <span class="p">(</span><span class="n">index</span> <span class="o">&lt;</span> <span class="mi">2</span><span class="p">){</span>
-            <span class="k">return</span><span class="p">;</span>
-        <span class="p">}</span>
-    
-        <span class="kt">int</span> <span class="n">middle</span> <span class="o">=</span> <span class="p">(</span><span class="n">index</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span><span class="p">;</span>
-        <span class="kt">int</span><span class="o">[]</span> <span class="n">leftArray</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">int</span><span class="o">[</span><span class="n">middle</span><span class="o">]</span><span class="p">;</span>
-        <span class="kt">int</span><span class="o">[]</span> <span class="n">rightArray</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">int</span><span class="o">[</span><span class="n">index</span> <span class="o">-</span> <span class="n">middle</span><span class="o">]</span><span class="p">;</span>
-    
-        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">middle</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
-            <span class="n">leftArray</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">=</span> <span class="n">myArray</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">;</span>
-        <span class="p">}</span>
-        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="n">middle</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">index</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
-            <span class="n">rightArray</span><span class="o">[</span><span class="n">i</span> <span class="o">-</span> <span class="n">middle</span><span class="o">]</span> <span class="o">=</span> <span class="n">myArray</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">;</span>
-        <span class="p">}</span>
-        <span class="n">mergeSort</span><span class="p">(</span><span class="n">leftArray</span><span class="p">,</span> <span class="n">middle</span><span class="p">);</span>
-        <span class="n">mergeSort</span><span class="p">(</span><span class="n">rightArray</span><span class="p">,</span> <span class="n">index</span> <span class="o">-</span> <span class="n">middle</span><span class="p">);</span>
-        <span class="n">merge</span><span class="p">(</span><span class="n">myArray</span><span class="p">,</span> <span class="n">leftArray</span><span class="p">,</span> <span class="n">rightArray</span><span class="p">,</span> <span class="n">middle</span><span class="p">,</span> <span class="n">index</span><span class="o">-</span><span class="n">middle</span><span class="p">);</span>
-<span class="p">}</span>
-<span class="n">Random</span> <span class="n">num</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Random</span><span class="p">();</span>
-<span class="kt">int</span><span class="o">[]</span> <span class="n">tester</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">int</span><span class="o">[</span><span class="mi">5000</span><span class="o">]</span><span class="p">;</span>
-<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">tester</span><span class="p">.</span><span class="na">length</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
-    <span class="n">tester</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">=</span> <span class="n">num</span><span class="p">.</span><span class="na">nextInt</span><span class="p">();</span> <span class="c1">// storing random integers in an ArrayList</span>
+<span class="c1">//---------------------------------------------------------------------------</span>
+<span class="kt">int</span><span class="o">[]</span> <span class="n">MergeSortTester</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">int</span><span class="o">[</span><span class="mi">5000</span><span class="o">]</span><span class="p">;</span>
+<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">MergeSortTester</span><span class="p">.</span><span class="na">length</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kt">int</span> <span class="n">num</span> <span class="o">=</span> <span class="n">arr</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">;</span>
+    <span class="n">MergeSortTester</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">=</span> <span class="n">num</span><span class="p">;</span>
 <span class="p">}</span>
 <span class="kt">long</span> <span class="n">start</span> <span class="o">=</span> <span class="n">System</span><span class="p">.</span><span class="na">nanoTime</span><span class="p">();</span>
-<span class="n">mergeSort</span><span class="p">(</span><span class="n">tester</span><span class="p">,</span> <span class="n">tester</span><span class="p">.</span><span class="na">length</span><span class="p">);</span>
+<span class="n">mergeSort</span><span class="p">(</span><span class="n">MergeSortTester</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">MergeSortTester</span><span class="p">.</span><span class="na">length</span><span class="o">-</span><span class="mi">1</span><span class="p">);</span>
 <span class="kt">long</span> <span class="n">finish</span> <span class="o">=</span> <span class="n">System</span><span class="p">.</span><span class="na">nanoTime</span><span class="p">();</span>
 <span class="kt">long</span> <span class="n">timeElapsed</span> <span class="o">=</span> <span class="n">finish</span> <span class="o">-</span> <span class="n">start</span><span class="p">;</span>
 <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Nanoseconds: "</span> <span class="o">+</span> <span class="n">timeElapsed</span><span class="p">);</span>
@@ -1093,8 +1086,8 @@ The space complexity of Merge sort is $O(n)$. This means that this algorithm tak
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Nanoseconds: 47001506
-number of comparisons: 55322
+<pre>Nanoseconds: 11263257
+number of comparisons: 55264
 number of Swaps: 61808
 </pre>
 </div>
@@ -1106,6 +1099,14 @@ number of Swaps: 61808
 </div>
     
 
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<hr>
+
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -1121,26 +1122,26 @@ number of Swaps: 61808
 <tbody>
 <tr>
 <td>Bubble</td>
-<td>11583780.4 ( 0.01158378 sec )</td>
-<td>12497500</td>
-<td>6234170</td>
+<td>39090225.4 ( 0.03909023 sec )</td>
+<td>24995000</td>
+<td>18711184</td>
 </tr>
 <tr>
 <td>Selection</td>
-<td>46640201.2 ( 0.0466402 sec )</td>
+<td>25798806.6  ( 0.02579881 sec )</td>
 <td>12497500</td>
-<td>4991.1</td>
+<td>5000</td>
 </tr>
 <tr>
 <td>Insertion</td>
-<td>55552911.6 ( 0.05555291 sec )</td>
-<td>6240466.1</td>
-<td>4999</td>
+<td>15715822.3 ( 0.01571582 sec )</td>
+<td>6150953</td>
+<td>6150953</td>
 </tr>
 <tr>
 <td>Merge</td>
-<td>9347168.1 ( 0.009347168 sec )</td>
-<td>55237.3</td>
+<td>14822438.2 ( 0.01482244 sec )</td>
+<td>55175</td>
 <td>61808</td>
 </tr>
 </tbody>
