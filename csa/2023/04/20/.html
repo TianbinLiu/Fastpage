@@ -238,7 +238,7 @@ canvas {
        • <span class="read-time" title="Estimated read time">
     
     
-      1 min read
+      2 min read
     
 </span></p>
 
@@ -299,19 +299,35 @@ canvas {
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Book</span><span class="p">{</span>
+<div class=" highlight hl-java"><pre><span></span><span class="kn">import</span> <span class="nn">java.time.LocalDateTime</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">java.util.Calendar</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">java.util.GregorianCalendar</span><span class="p">;</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Book</span><span class="p">{</span>
     <span class="kd">private</span> <span class="n">String</span> <span class="n">bookTitle</span><span class="p">;</span>
     <span class="kd">private</span> <span class="kt">int</span> <span class="n">bookID</span><span class="p">;</span>
+    <span class="kd">private</span> <span class="kt">int</span> <span class="n">timeYearEnter</span><span class="p">;</span>
+    <span class="kd">private</span> <span class="kt">int</span> <span class="n">timeMonthEnter</span><span class="p">;</span>
+    <span class="kd">private</span> <span class="kt">int</span> <span class="n">timeDayEnter</span><span class="p">;</span>
+    <span class="kd">private</span> <span class="n">LocalDateTime</span>  <span class="n">time</span> <span class="o">=</span> <span class="n">LocalDateTime</span><span class="p">.</span><span class="na">now</span><span class="p">();</span>
+    <span class="kd">private</span> <span class="kd">static</span> <span class="kt">int</span> <span class="n">shelfLife</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
     <span class="kd">private</span> <span class="kd">static</span> <span class="kt">int</span> <span class="n">Counter</span><span class="p">;</span>
 
-    <span class="kd">public</span> <span class="nf">Book</span><span class="p">(</span><span class="n">String</span> <span class="n">Title</span><span class="p">,</span> <span class="kt">int</span> <span class="n">ID</span><span class="p">){</span>
+    <span class="kd">public</span> <span class="nf">Book</span><span class="p">(</span><span class="n">String</span> <span class="n">Title</span><span class="p">){</span>
         <span class="k">this</span><span class="p">.</span><span class="na">bookTitle</span> <span class="o">=</span> <span class="n">Title</span><span class="p">;</span>
-        <span class="k">this</span><span class="p">.</span><span class="na">bookID</span> <span class="o">=</span> <span class="n">ID</span><span class="p">;</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">bookID</span> <span class="o">=</span> <span class="n">Counter</span><span class="p">;</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">timeYearEnter</span> <span class="o">=</span> <span class="n">time</span><span class="p">.</span><span class="na">getYear</span><span class="p">();</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">timeMonthEnter</span> <span class="o">=</span> <span class="n">time</span><span class="p">.</span><span class="na">getMonthValue</span><span class="p">();</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">timeDayEnter</span> <span class="o">=</span> <span class="n">time</span><span class="p">.</span><span class="na">getDayOfMonth</span><span class="p">();</span>
         <span class="n">Counter</span><span class="o">++</span><span class="p">;</span> <span class="c1">//there is a static int instance called counter under the class Book. Each time the class object is created, counter plus 1;</span>
     <span class="p">};</span>
 
     <span class="kd">public</span> <span class="n">String</span> <span class="nf">getTitle</span><span class="p">(){</span>
         <span class="k">return</span> <span class="n">bookTitle</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setTitle</span><span class="p">(</span><span class="n">String</span> <span class="n">newTitle</span><span class="p">){</span>
+        <span class="n">bookTitle</span> <span class="o">=</span> <span class="n">newTitle</span><span class="p">;</span>
     <span class="p">}</span>
 
     <span class="kd">public</span> <span class="kt">int</span> <span class="nf">getID</span><span class="p">(){</span>
@@ -321,16 +337,47 @@ canvas {
         <span class="k">return</span> <span class="n">Counter</span><span class="p">;</span> <span class="c1">//return the book count</span>
     <span class="p">}</span>
 
+    <span class="kd">public</span> <span class="kt">int</span> <span class="nf">gettimeYearEnter</span><span class="p">(){</span>
+        <span class="k">return</span> <span class="n">timeYearEnter</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="kt">int</span> <span class="nf">gettimeMonthEnter</span><span class="p">(){</span>
+        <span class="k">return</span> <span class="n">timeMonthEnter</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="kt">int</span> <span class="nf">gettimeDayEnter</span><span class="p">(){</span>
+        <span class="k">return</span> <span class="n">timeDayEnter</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">int</span> <span class="nf">dayPass</span><span class="p">(</span><span class="n">Book</span> <span class="n">check</span><span class="p">){</span>
+        <span class="n">LocalDateTime</span> <span class="n">now</span> <span class="o">=</span> <span class="n">LocalDateTime</span><span class="p">.</span><span class="na">now</span><span class="p">();</span>
+        <span class="n">Calendar</span> <span class="n">calOne</span> <span class="o">=</span> <span class="k">new</span> <span class="n">GregorianCalendar</span><span class="p">(</span><span class="n">check</span><span class="p">.</span><span class="na">gettimeYearEnter</span><span class="p">(),</span> <span class="n">check</span><span class="p">.</span><span class="na">gettimeMonthEnter</span><span class="p">(),</span> <span class="n">check</span><span class="p">.</span><span class="na">gettimeDayEnter</span><span class="p">());</span>
+        <span class="kt">int</span> <span class="n">day1</span> <span class="o">=</span> <span class="n">calOne</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">Calendar</span><span class="p">.</span><span class="na">DAY_OF_YEAR</span><span class="p">);</span>
+        <span class="n">Calendar</span> <span class="n">calTwo</span> <span class="o">=</span> <span class="k">new</span> <span class="n">GregorianCalendar</span><span class="p">(</span><span class="n">now</span><span class="p">.</span><span class="na">getYear</span><span class="p">(),</span> <span class="n">now</span><span class="p">.</span><span class="na">getMonthValue</span><span class="p">(),</span> <span class="n">now</span><span class="p">.</span><span class="na">getDayOfMonth</span><span class="p">());</span>
+        <span class="kt">int</span> <span class="n">day2</span> <span class="o">=</span> <span class="n">calTwo</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">Calendar</span><span class="p">.</span><span class="na">DAY_OF_YEAR</span><span class="p">);</span>
+
+        <span class="k">return</span> <span class="n">day2</span><span class="o">-</span><span class="n">day1</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">int</span> <span class="nf">getCurrentShelfLife</span><span class="p">(</span><span class="n">Book</span> <span class="n">check</span><span class="p">){</span>
+        <span class="k">return</span> <span class="n">shelfLife</span> <span class="o">-</span> <span class="n">check</span><span class="p">.</span><span class="na">dayPass</span><span class="p">(</span><span class="n">check</span><span class="p">);</span>
+    <span class="p">}</span>
+
     <span class="kd">public</span> <span class="n">String</span> <span class="nf">toString</span><span class="p">(){</span>
-        <span class="k">return</span> <span class="s">"Book name: "</span> <span class="o">+</span> <span class="n">getTitle</span><span class="p">()</span> <span class="o">+</span> <span class="s">" ID: "</span> <span class="o">+</span> <span class="n">getID</span><span class="p">();</span>
+        <span class="k">return</span> <span class="s">"Book name: "</span> <span class="o">+</span> <span class="n">getTitle</span><span class="p">()</span> <span class="o">+</span> <span class="s">", ID: "</span> <span class="o">+</span> <span class="n">getID</span><span class="p">()</span> <span class="o">+</span> <span class="s">", Time the book entered the library: "</span> <span class="o">+</span> <span class="n">gettimeYearEnter</span><span class="p">()</span> <span class="o">+</span> <span class="s">"/"</span> <span class="o">+</span> <span class="n">gettimeMonthEnter</span><span class="p">()</span> <span class="o">+</span> <span class="s">"/"</span> <span class="o">+</span> <span class="n">gettimeDayEnter</span><span class="p">();</span>
     <span class="p">};</span>
 
+    
+
     <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
-        <span class="n">Book</span><span class="o">[]</span> <span class="n">a</span> <span class="o">=</span> <span class="p">{</span><span class="k">new</span> <span class="n">Book</span><span class="p">(</span><span class="s">"bookname1"</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="k">new</span> <span class="n">Book</span><span class="p">(</span><span class="s">"bookname2"</span><span class="p">,</span> <span class="mi">2</span><span class="p">)};</span>
-        <span class="k">for</span><span class="p">(</span><span class="n">Book</span> <span class="n">num</span> <span class="p">:</span> <span class="n">a</span><span class="p">){</span>
+        
+        <span class="n">Book</span><span class="o">[]</span> <span class="n">book</span> <span class="o">=</span> <span class="p">{</span><span class="k">new</span> <span class="n">Book</span><span class="p">(</span><span class="s">"bookname1"</span><span class="p">),</span> <span class="k">new</span> <span class="n">Book</span><span class="p">(</span><span class="s">"bookname2"</span><span class="p">)};</span>
+        <span class="k">for</span><span class="p">(</span><span class="n">Book</span> <span class="n">num</span> <span class="p">:</span> <span class="n">book</span><span class="p">){</span>
             <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">num</span><span class="p">);</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Current shelfLife: "</span> <span class="o">+</span> <span class="n">getCurrentShelfLife</span><span class="p">(</span><span class="n">num</span><span class="p">)</span> <span class="o">+</span> <span class="s">" days"</span><span class="p">);</span>
         <span class="p">}</span>
         <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">getBookCount</span><span class="p">());</span>
+        
      <span class="p">}</span>
 
 <span class="p">}</span>
@@ -348,9 +395,11 @@ canvas {
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Book name: bookname1 ID: 1
-Book name: bookname2 ID: 2
-2
+<pre>Book name: bookname1, ID: 13, Time the book entered the library: 2023/4/21
+Current shelfLife: 10 days
+Book name: bookname2, ID: 14, Time the book entered the library: 2023/4/21
+Current shelfLife: 10 days
+15
 </pre>
 </div>
 </div>
@@ -371,8 +420,8 @@ Book name: bookname2 ID: 2
 <div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Novel</span> <span class="kd">extends</span> <span class="n">Book</span><span class="p">{</span>
     <span class="kd">private</span> <span class="n">String</span> <span class="n">bookAuthor</span><span class="p">;</span>
     
-    <span class="kd">public</span> <span class="nf">Novel</span><span class="p">(</span><span class="n">String</span> <span class="n">author</span><span class="p">,</span> <span class="n">String</span> <span class="n">Title</span><span class="p">,</span> <span class="kt">int</span> <span class="n">ID</span><span class="p">){</span>
-        <span class="kd">super</span><span class="p">(</span><span class="n">Title</span><span class="p">,</span> <span class="n">ID</span><span class="p">);</span>
+    <span class="kd">public</span> <span class="nf">Novel</span><span class="p">(</span><span class="n">String</span> <span class="n">author</span><span class="p">,</span> <span class="n">String</span> <span class="n">Title</span><span class="p">){</span>
+        <span class="kd">super</span><span class="p">(</span><span class="n">Title</span><span class="p">);</span>
         <span class="k">this</span><span class="p">.</span><span class="na">bookAuthor</span> <span class="o">=</span> <span class="n">author</span><span class="p">;</span>
     <span class="p">}</span>
 
@@ -380,14 +429,19 @@ Book name: bookname2 ID: 2
         <span class="k">return</span> <span class="n">bookAuthor</span><span class="p">;</span>
     <span class="p">}</span>
 
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setAuthor</span><span class="p">(</span><span class="n">String</span> <span class="n">newAuthor</span><span class="p">){</span>
+        <span class="n">bookAuthor</span> <span class="o">=</span> <span class="n">newAuthor</span><span class="p">;</span>
+    <span class="p">}</span>
+
     <span class="kd">public</span> <span class="n">String</span> <span class="nf">toString</span><span class="p">(){</span>
-        <span class="k">return</span> <span class="s">"Book name: "</span> <span class="o">+</span> <span class="n">getTitle</span><span class="p">()</span> <span class="o">+</span> <span class="s">" ID: "</span> <span class="o">+</span> <span class="n">getID</span><span class="p">()</span> <span class="o">+</span> <span class="s">" Author: "</span> <span class="o">+</span> <span class="n">getAuthor</span><span class="p">();</span>
+        <span class="k">return</span> <span class="kd">super</span><span class="p">.</span><span class="na">toString</span><span class="p">()</span> <span class="o">+</span> <span class="s">", Author: "</span> <span class="o">+</span> <span class="n">getAuthor</span><span class="p">();</span>
     <span class="p">};</span>
 
     <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
-        <span class="n">Book</span><span class="o">[]</span> <span class="n">a</span> <span class="o">=</span> <span class="p">{</span><span class="k">new</span> <span class="n">Novel</span><span class="p">(</span><span class="s">"author1"</span><span class="p">,</span> <span class="s">"titlename1"</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="k">new</span> <span class="n">Novel</span><span class="p">(</span><span class="s">"author2"</span><span class="p">,</span><span class="s">"titlename2"</span><span class="p">,</span> <span class="mi">2</span><span class="p">)};</span>
-        <span class="k">for</span><span class="p">(</span><span class="n">Book</span> <span class="n">num</span> <span class="p">:</span> <span class="n">a</span><span class="p">){</span>
+        <span class="n">Book</span><span class="o">[]</span> <span class="n">novel</span> <span class="o">=</span> <span class="p">{</span><span class="k">new</span> <span class="n">Novel</span><span class="p">(</span><span class="s">"author1"</span><span class="p">,</span> <span class="s">"titlename1"</span><span class="p">),</span> <span class="k">new</span> <span class="n">Novel</span><span class="p">(</span><span class="s">"author2"</span><span class="p">,</span><span class="s">"titlename2"</span><span class="p">)};</span>
+        <span class="k">for</span><span class="p">(</span><span class="n">Book</span> <span class="n">num</span> <span class="p">:</span> <span class="n">novel</span><span class="p">){</span>
             <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">num</span><span class="p">);</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Current shelfLife: "</span> <span class="o">+</span> <span class="n">getCurrentShelfLife</span><span class="p">(</span><span class="n">num</span><span class="p">)</span> <span class="o">+</span> <span class="s">" days"</span><span class="p">);</span>
         <span class="p">}</span>
         <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">getBookCount</span><span class="p">());</span>
     <span class="p">}</span>
@@ -406,9 +460,11 @@ Book name: bookname2 ID: 2
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Book name: titlename1 ID: 1 author: author1
-Book name: titlename2 ID: 2 author: author2
-4
+<pre>Book name: titlename1, ID: 15, Time the book entered the library: 2023/4/21, Author: author1
+Current shelfLife: 10 days
+Book name: titlename2, ID: 16, Time the book entered the library: 2023/4/21, Author: author2
+Current shelfLife: 10 days
+17
 </pre>
 </div>
 </div>
@@ -429,8 +485,8 @@ Book name: titlename2 ID: 2 author: author2
 <div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Textbook</span> <span class="kd">extends</span> <span class="n">Book</span><span class="p">{</span>
     <span class="kd">private</span> <span class="n">String</span> <span class="n">bookCompany</span><span class="p">;</span>
 
-    <span class="kd">public</span> <span class="nf">Textbook</span><span class="p">(</span><span class="n">String</span> <span class="n">company</span><span class="p">,</span> <span class="n">String</span> <span class="n">Title</span><span class="p">,</span> <span class="kt">int</span> <span class="n">ID</span><span class="p">){</span>
-        <span class="kd">super</span><span class="p">(</span><span class="n">Title</span><span class="p">,</span> <span class="n">ID</span><span class="p">);</span>
+    <span class="kd">public</span> <span class="nf">Textbook</span><span class="p">(</span><span class="n">String</span> <span class="n">company</span><span class="p">,</span> <span class="n">String</span> <span class="n">Title</span><span class="p">){</span>
+        <span class="kd">super</span><span class="p">(</span><span class="n">Title</span><span class="p">);</span>
         <span class="k">this</span><span class="p">.</span><span class="na">bookCompany</span> <span class="o">=</span> <span class="n">company</span><span class="p">;</span>
     <span class="p">}</span>
 
@@ -438,20 +494,26 @@ Book name: titlename2 ID: 2 author: author2
         <span class="k">return</span> <span class="n">bookCompany</span><span class="p">;</span>
     <span class="p">}</span>
 
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setbookCompany</span><span class="p">(</span><span class="n">String</span> <span class="n">newBookCompany</span><span class="p">){</span>
+        <span class="n">bookCompany</span> <span class="o">=</span> <span class="n">newBookCompany</span><span class="p">;</span>
+    <span class="p">}</span>
+
     <span class="kd">public</span> <span class="n">String</span> <span class="nf">toString</span><span class="p">(){</span>
-        <span class="k">return</span> <span class="s">"Book name: "</span> <span class="o">+</span> <span class="n">getTitle</span><span class="p">()</span> <span class="o">+</span> <span class="s">" ID: "</span> <span class="o">+</span> <span class="n">getID</span><span class="p">()</span> <span class="o">+</span> <span class="s">" Company: "</span> <span class="o">+</span> <span class="n">getbookCompany</span><span class="p">();</span>
+        <span class="k">return</span> <span class="kd">super</span><span class="p">.</span><span class="na">toString</span><span class="p">()</span> <span class="o">+</span> <span class="s">", Company: "</span> <span class="o">+</span> <span class="n">getbookCompany</span><span class="p">();</span>
     <span class="p">};</span>
 
     <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
-        <span class="n">Book</span><span class="o">[]</span> <span class="n">a</span> <span class="o">=</span> <span class="p">{</span><span class="k">new</span> <span class="n">Textbook</span><span class="p">(</span><span class="s">"company1"</span><span class="p">,</span> <span class="s">"titlename1"</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="k">new</span> <span class="n">Textbook</span>
-        <span class="p">(</span><span class="s">"company2"</span><span class="p">,</span><span class="s">"titlename2"</span><span class="p">,</span> <span class="mi">2</span><span class="p">)};</span>
-        <span class="k">for</span><span class="p">(</span><span class="n">Book</span> <span class="n">num</span> <span class="p">:</span> <span class="n">a</span><span class="p">){</span>
+        <span class="n">Book</span><span class="o">[]</span> <span class="n">textbook</span> <span class="o">=</span> <span class="p">{</span><span class="k">new</span> <span class="n">Textbook</span><span class="p">(</span><span class="s">"company1"</span><span class="p">,</span> <span class="s">"titlename1"</span><span class="p">),</span> <span class="k">new</span> <span class="n">Textbook</span><span class="p">(</span><span class="s">"company2"</span><span class="p">,</span><span class="s">"titlename2"</span><span class="p">)};</span>
+        <span class="k">for</span><span class="p">(</span><span class="n">Book</span> <span class="n">num</span> <span class="p">:</span> <span class="n">textbook</span><span class="p">){</span>
             <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">num</span><span class="p">);</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Current shelfLife: "</span> <span class="o">+</span> <span class="n">getCurrentShelfLife</span><span class="p">(</span><span class="n">num</span><span class="p">)</span> <span class="o">+</span> <span class="s">" days"</span><span class="p">);</span>
         <span class="p">}</span>
         <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">getBookCount</span><span class="p">());</span>
     <span class="p">}</span>
 <span class="p">}</span>
 <span class="n">Textbook</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
+
+<span class="c1">// Thred.sleep();</span>
 </pre></div>
 
     </div>
@@ -464,13 +526,32 @@ Book name: titlename2 ID: 2 author: author2
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Book name: titlename1 ID: 1 Company: company1
-Book name: titlename2 ID: 2 Company: company2
-8
+<pre>Book name: titlename1, ID: 17, Time the book entered the library: 2023/4/21, Company: company1
+Current shelfLife: 10 days
+Book name: titlename2, ID: 18, Time the book entered the library: 2023/4/21, Company: company2
+Current shelfLife: 10 days
+19
 </pre>
 </div>
 </div>
 
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="n">Book</span><span class="o">[]</span> <span class="n">book</span> <span class="o">=</span> <span class="p">{</span><span class="k">new</span> <span class="n">Book</span><span class="p">(</span><span class="s">"bookname1"</span><span class="p">),</span> <span class="k">new</span> <span class="n">Novel</span><span class="p">(</span><span class="s">"author1"</span><span class="p">,</span> <span class="s">"bookname2"</span><span class="p">),</span> <span class="k">new</span> <span class="n">Textbook</span><span class="p">(</span><span class="s">"company1"</span><span class="p">,</span><span class="s">"bookname3"</span><span class="p">)};</span>
+</pre></div>
+
+    </div>
 </div>
 </div>
 
