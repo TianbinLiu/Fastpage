@@ -238,7 +238,7 @@ canvas {
        • <span class="read-time" title="Estimated read time">
     
     
-      2 min read
+      5 min read
     
 </span></p>
 
@@ -304,22 +304,22 @@ canvas {
 <span class="kn">import</span> <span class="nn">java.util.GregorianCalendar</span><span class="p">;</span>
 
 <span class="kd">public</span> <span class="kd">class</span> <span class="nc">Book</span><span class="p">{</span>
+    <span class="kd">private</span> <span class="kd">static</span> <span class="n">HashMap</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span> <span class="n">Book</span><span class="o">&gt;</span> <span class="n">library</span> <span class="o">=</span> <span class="k">new</span> <span class="n">HashMap</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span> <span class="n">Book</span><span class="o">&gt;</span><span class="p">();</span>
+
     <span class="kd">private</span> <span class="n">String</span> <span class="n">bookTitle</span><span class="p">;</span>
     <span class="kd">private</span> <span class="kt">int</span> <span class="n">bookID</span><span class="p">;</span>
-    <span class="kd">private</span> <span class="kt">int</span> <span class="n">timeYearEnter</span><span class="p">;</span>
-    <span class="kd">private</span> <span class="kt">int</span> <span class="n">timeMonthEnter</span><span class="p">;</span>
-    <span class="kd">private</span> <span class="kt">int</span> <span class="n">timeDayEnter</span><span class="p">;</span>
-    <span class="kd">private</span> <span class="n">LocalDateTime</span>  <span class="n">time</span> <span class="o">=</span> <span class="n">LocalDateTime</span><span class="p">.</span><span class="na">now</span><span class="p">();</span>
-    <span class="kd">private</span> <span class="kd">static</span> <span class="kt">int</span> <span class="n">shelfLife</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
+    <span class="kd">private</span> <span class="kt">long</span> <span class="n">shelfLife</span> <span class="o">=</span> <span class="mi">100000</span><span class="p">;</span>
     <span class="kd">private</span> <span class="kd">static</span> <span class="kt">int</span> <span class="n">Counter</span><span class="p">;</span>
 
+    <span class="kd">private</span> <span class="kt">long</span> <span class="n">start</span><span class="p">;</span>
+    <span class="kd">private</span> <span class="kd">static</span> <span class="kt">long</span> <span class="n">finish</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="kd">private</span> <span class="kd">static</span> <span class="kt">long</span> <span class="n">totalTimePass</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
     <span class="kd">public</span> <span class="nf">Book</span><span class="p">(</span><span class="n">String</span> <span class="n">Title</span><span class="p">){</span>
+        <span class="n">library</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="n">Title</span><span class="p">,</span> <span class="k">this</span><span class="p">);</span>
         <span class="k">this</span><span class="p">.</span><span class="na">bookTitle</span> <span class="o">=</span> <span class="n">Title</span><span class="p">;</span>
-        <span class="k">this</span><span class="p">.</span><span class="na">bookID</span> <span class="o">=</span> <span class="n">Counter</span><span class="p">;</span>
-        <span class="k">this</span><span class="p">.</span><span class="na">timeYearEnter</span> <span class="o">=</span> <span class="n">time</span><span class="p">.</span><span class="na">getYear</span><span class="p">();</span>
-        <span class="k">this</span><span class="p">.</span><span class="na">timeMonthEnter</span> <span class="o">=</span> <span class="n">time</span><span class="p">.</span><span class="na">getMonthValue</span><span class="p">();</span>
-        <span class="k">this</span><span class="p">.</span><span class="na">timeDayEnter</span> <span class="o">=</span> <span class="n">time</span><span class="p">.</span><span class="na">getDayOfMonth</span><span class="p">();</span>
-        <span class="n">Counter</span><span class="o">++</span><span class="p">;</span> <span class="c1">//there is a static int instance called counter under the class Book. Each time the class object is created, counter plus 1;</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">start</span> <span class="o">=</span> <span class="n">finish</span><span class="p">;</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">bookID</span> <span class="o">=</span> <span class="o">++</span><span class="n">Counter</span><span class="p">;</span> <span class="c1">//there is a static int instance called counter under the class Book. Each time the class object is created, counter plus 1;</span>
     <span class="p">};</span>
 
     <span class="kd">public</span> <span class="n">String</span> <span class="nf">getTitle</span><span class="p">(){</span>
@@ -333,52 +333,124 @@ canvas {
     <span class="kd">public</span> <span class="kt">int</span> <span class="nf">getID</span><span class="p">(){</span>
         <span class="k">return</span> <span class="n">bookID</span><span class="p">;</span>
     <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="kt">long</span> <span class="nf">getShelfLife</span><span class="p">(){</span>
+        <span class="k">return</span> <span class="n">shelfLife</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="kt">long</span> <span class="nf">getBookEnter</span><span class="p">(){</span>
+        <span class="k">return</span> <span class="n">start</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="kt">long</span> <span class="nf">getBookExit</span><span class="p">(){</span>
+        <span class="k">return</span> <span class="n">finish</span><span class="p">;</span>
+    <span class="p">}</span>
+
     <span class="kd">public</span> <span class="kd">static</span> <span class="kt">int</span> <span class="nf">getBookCount</span><span class="p">(){</span>
         <span class="k">return</span> <span class="n">Counter</span><span class="p">;</span> <span class="c1">//return the book count</span>
     <span class="p">}</span>
 
-    <span class="kd">public</span> <span class="kt">int</span> <span class="nf">gettimeYearEnter</span><span class="p">(){</span>
-        <span class="k">return</span> <span class="n">timeYearEnter</span><span class="p">;</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">long</span> <span class="nf">getCurrentShelfLife</span><span class="p">(</span><span class="n">Book</span> <span class="n">check</span><span class="p">){</span>
+        <span class="k">return</span> <span class="n">check</span><span class="p">.</span><span class="na">getShelfLife</span><span class="p">()</span> <span class="o">-</span> <span class="p">(</span><span class="n">check</span><span class="p">.</span><span class="na">getBookExit</span><span class="p">()</span> <span class="o">-</span> <span class="n">check</span><span class="p">.</span><span class="na">getBookEnter</span><span class="p">());</span>
     <span class="p">}</span>
 
-    <span class="kd">public</span> <span class="kt">int</span> <span class="nf">gettimeMonthEnter</span><span class="p">(){</span>
-        <span class="k">return</span> <span class="n">timeMonthEnter</span><span class="p">;</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">boolean</span> <span class="nf">isInShelfLife</span><span class="p">(</span><span class="n">Book</span> <span class="n">check</span><span class="p">){</span>
+        <span class="k">return</span> <span class="p">((</span><span class="n">check</span><span class="p">.</span><span class="na">getShelfLife</span><span class="p">()</span> <span class="o">-</span> <span class="p">(</span><span class="n">check</span><span class="p">.</span><span class="na">getBookExit</span><span class="p">()</span> <span class="o">-</span> <span class="n">check</span><span class="p">.</span><span class="na">getBookEnter</span><span class="p">()))</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">);</span>
     <span class="p">}</span>
 
-    <span class="kd">public</span> <span class="kt">int</span> <span class="nf">gettimeDayEnter</span><span class="p">(){</span>
-        <span class="k">return</span> <span class="n">timeDayEnter</span><span class="p">;</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">borrowBook</span><span class="p">(</span><span class="n">String</span> <span class="n">bookTitle</span><span class="p">){</span>
+        <span class="n">library</span><span class="p">.</span><span class="na">remove</span><span class="p">(</span><span class="n">bookTitle</span><span class="p">);</span>
     <span class="p">}</span>
 
-    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">int</span> <span class="nf">dayPass</span><span class="p">(</span><span class="n">Book</span> <span class="n">check</span><span class="p">){</span>
-        <span class="n">LocalDateTime</span> <span class="n">now</span> <span class="o">=</span> <span class="n">LocalDateTime</span><span class="p">.</span><span class="na">now</span><span class="p">();</span>
-        <span class="n">Calendar</span> <span class="n">calOne</span> <span class="o">=</span> <span class="k">new</span> <span class="n">GregorianCalendar</span><span class="p">(</span><span class="n">check</span><span class="p">.</span><span class="na">gettimeYearEnter</span><span class="p">(),</span> <span class="n">check</span><span class="p">.</span><span class="na">gettimeMonthEnter</span><span class="p">(),</span> <span class="n">check</span><span class="p">.</span><span class="na">gettimeDayEnter</span><span class="p">());</span>
-        <span class="kt">int</span> <span class="n">day1</span> <span class="o">=</span> <span class="n">calOne</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">Calendar</span><span class="p">.</span><span class="na">DAY_OF_YEAR</span><span class="p">);</span>
-        <span class="n">Calendar</span> <span class="n">calTwo</span> <span class="o">=</span> <span class="k">new</span> <span class="n">GregorianCalendar</span><span class="p">(</span><span class="n">now</span><span class="p">.</span><span class="na">getYear</span><span class="p">(),</span> <span class="n">now</span><span class="p">.</span><span class="na">getMonthValue</span><span class="p">(),</span> <span class="n">now</span><span class="p">.</span><span class="na">getDayOfMonth</span><span class="p">());</span>
-        <span class="kt">int</span> <span class="n">day2</span> <span class="o">=</span> <span class="n">calTwo</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">Calendar</span><span class="p">.</span><span class="na">DAY_OF_YEAR</span><span class="p">);</span>
-
-        <span class="k">return</span> <span class="n">day2</span><span class="o">-</span><span class="n">day1</span><span class="p">;</span>
-    <span class="p">}</span>
-
-    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">int</span> <span class="nf">getCurrentShelfLife</span><span class="p">(</span><span class="n">Book</span> <span class="n">check</span><span class="p">){</span>
-        <span class="k">return</span> <span class="n">shelfLife</span> <span class="o">-</span> <span class="n">check</span><span class="p">.</span><span class="na">dayPass</span><span class="p">(</span><span class="n">check</span><span class="p">);</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">timePass</span><span class="p">(</span><span class="kt">long</span> <span class="n">timePass</span><span class="p">){</span>
+        <span class="n">totalTimePass</span> <span class="o">+=</span> <span class="n">timePass</span><span class="p">;</span>
+        <span class="n">finish</span> <span class="o">=</span> <span class="n">totalTimePass</span><span class="p">;</span>
     <span class="p">}</span>
 
     <span class="kd">public</span> <span class="n">String</span> <span class="nf">toString</span><span class="p">(){</span>
-        <span class="k">return</span> <span class="s">"Book name: "</span> <span class="o">+</span> <span class="n">getTitle</span><span class="p">()</span> <span class="o">+</span> <span class="s">", ID: "</span> <span class="o">+</span> <span class="n">getID</span><span class="p">()</span> <span class="o">+</span> <span class="s">", Time the book entered the library: "</span> <span class="o">+</span> <span class="n">gettimeYearEnter</span><span class="p">()</span> <span class="o">+</span> <span class="s">"/"</span> <span class="o">+</span> <span class="n">gettimeMonthEnter</span><span class="p">()</span> <span class="o">+</span> <span class="s">"/"</span> <span class="o">+</span> <span class="n">gettimeDayEnter</span><span class="p">();</span>
+        <span class="k">return</span> <span class="s">"Book name: "</span> <span class="o">+</span> <span class="n">getTitle</span><span class="p">()</span> <span class="o">+</span> <span class="s">", ID: "</span> <span class="o">+</span> <span class="n">getID</span><span class="p">()</span> <span class="o">+</span> <span class="s">", current ShelfLife: "</span> <span class="o">+</span> <span class="n">getCurrentShelfLife</span><span class="p">(</span><span class="k">this</span><span class="p">);</span>
     <span class="p">};</span>
 
-    
 
     <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
-        
-        <span class="n">Book</span><span class="o">[]</span> <span class="n">book</span> <span class="o">=</span> <span class="p">{</span><span class="k">new</span> <span class="n">Book</span><span class="p">(</span><span class="s">"bookname1"</span><span class="p">),</span> <span class="k">new</span> <span class="n">Book</span><span class="p">(</span><span class="s">"bookname2"</span><span class="p">)};</span>
-        <span class="k">for</span><span class="p">(</span><span class="n">Book</span> <span class="n">num</span> <span class="p">:</span> <span class="n">book</span><span class="p">){</span>
-            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">num</span><span class="p">);</span>
-            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Current shelfLife: "</span> <span class="o">+</span> <span class="n">getCurrentShelfLife</span><span class="p">(</span><span class="n">num</span><span class="p">)</span> <span class="o">+</span> <span class="s">" days"</span><span class="p">);</span>
+        <span class="kt">boolean</span> <span class="n">checkUser</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
+        <span class="k">while</span><span class="p">(</span><span class="kc">true</span><span class="p">){</span>
+            <span class="k">while</span> <span class="p">(</span><span class="n">checkUser</span><span class="p">){</span>
+                <span class="n">Scanner</span> <span class="n">scanner</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span>
+                <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Enter your book into our school library, your book name: "</span><span class="p">);</span>
+                <span class="n">String</span> <span class="n">bookName</span> <span class="o">=</span> <span class="n">scanner</span><span class="p">.</span><span class="na">nextLine</span><span class="p">();</span>
+                <span class="n">Book</span> <span class="n">book</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Book</span><span class="p">(</span><span class="n">bookName</span><span class="p">);</span>
+                <span class="n">Scanner</span> <span class="n">scanner2</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span>
+                <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Want to enter more book? Enter yes or no: "</span><span class="p">);</span>
+                <span class="n">String</span> <span class="n">userChose</span> <span class="o">=</span> <span class="n">scanner2</span><span class="p">.</span><span class="na">nextLine</span><span class="p">();</span>
+                <span class="k">if</span> <span class="p">(</span><span class="n">userChose</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="s">"yes"</span><span class="p">)){</span>
+                    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Ok, let's enter more books"</span><span class="p">);</span>
+                    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">();</span>
+                <span class="p">}</span>
+                <span class="k">else</span><span class="p">{</span>
+                    <span class="n">checkUser</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
+                <span class="p">}</span>
+            <span class="p">}</span>
+            <span class="n">Scanner</span> <span class="n">timeMachine</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"This is a time machine, how many days do you want to skip ahead? Enter: "</span><span class="p">);</span>
+            <span class="kt">long</span> <span class="n">timePass</span> <span class="o">=</span> <span class="n">timeMachine</span><span class="p">.</span><span class="na">nextLong</span><span class="p">();</span>
+            <span class="n">timePass</span><span class="p">(</span><span class="n">timePass</span><span class="p">);</span>
+
+            <span class="n">Scanner</span> <span class="n">borrowBook</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Ok, now the time has passed, do you want to borrow any books from the library? If yes, enter the book name, if no, type no: "</span><span class="p">);</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">();</span>
+            <span class="n">String</span> <span class="n">userChose2</span> <span class="o">=</span> <span class="n">borrowBook</span><span class="p">.</span><span class="na">nextLine</span><span class="p">();</span>
+
+            <span class="k">if</span><span class="p">(</span><span class="n">userChose2</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="s">"no"</span><span class="p">)</span> <span class="o">!=</span><span class="kc">true</span><span class="p">){</span>
+                <span class="n">library</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">userChose2</span><span class="p">);</span>
+                <span class="k">if</span><span class="p">(</span><span class="n">isInShelfLife</span><span class="p">(</span><span class="n">library</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">userChose2</span><span class="p">))){</span>
+                    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"The book you chose is: "</span> <span class="o">+</span> <span class="n">userChose2</span> <span class="o">+</span> <span class="s">", the remaining shelfLife is :"</span> <span class="o">+</span> <span class="n">getCurrentShelfLife</span><span class="p">(</span><span class="n">library</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">userChose2</span><span class="p">)));</span>
+                    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">();</span>
+                    <span class="n">borrowBook</span><span class="p">(</span><span class="n">userChose2</span><span class="p">);</span>
+                <span class="p">}</span>
+                <span class="k">else</span> <span class="p">{</span>
+                    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"The book you chose is already out of shelfLife, and was remove from the library"</span><span class="p">);</span>
+                    <span class="n">library</span><span class="p">.</span><span class="na">remove</span><span class="p">(</span><span class="n">userChose2</span><span class="p">);</span>
+                    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"The number of books left in the library:"</span> <span class="o">+</span> <span class="n">getBookCount</span><span class="p">());</span>
+                    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">();</span>
+                <span class="p">}</span>
+            <span class="p">}</span>
+
+
+            <span class="n">Scanner</span> <span class="n">bookList</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Want to check the books in the library? Type yes or no: "</span><span class="p">);</span>
+            <span class="n">String</span> <span class="n">userChose3</span> <span class="o">=</span> <span class="n">bookList</span><span class="p">.</span><span class="na">nextLine</span><span class="p">();</span>
+
+            <span class="k">if</span><span class="p">(</span><span class="n">userChose3</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="s">"yes"</span><span class="p">)){</span>
+                <span class="k">if</span><span class="p">(</span><span class="n">library</span><span class="p">.</span><span class="na">size</span><span class="p">()</span> <span class="o">==</span> <span class="mi">0</span><span class="p">){</span>
+                    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"There is no book store in the library!"</span><span class="p">);</span>
+                    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">();</span>
+                <span class="p">}</span>
+                <span class="k">else</span><span class="p">{</span>
+                    <span class="k">for</span> <span class="p">(</span><span class="n">Map</span><span class="p">.</span><span class="na">Entry</span> <span class="n">entry</span> <span class="p">:</span> <span class="n">library</span><span class="p">.</span><span class="na">entrySet</span><span class="p">())</span> <span class="p">{</span>
+                        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">entry</span><span class="p">.</span><span class="na">getValue</span><span class="p">());</span>
+                    <span class="p">}</span>
+                    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">();</span>
+                <span class="p">}</span>
+
+            <span class="p">}</span>
+
+            <span class="n">Scanner</span> <span class="n">backToTop</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Want to add more books into the library? Type yes or no: "</span><span class="p">);</span>
+            <span class="n">String</span> <span class="n">userChose4</span> <span class="o">=</span> <span class="n">backToTop</span><span class="p">.</span><span class="na">nextLine</span><span class="p">();</span>
+
+            <span class="k">if</span> <span class="p">(</span><span class="n">userChose4</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="s">"yes"</span><span class="p">)){</span>
+                <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Ok, let's enter more books"</span><span class="p">);</span>
+                <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">();</span>
+                <span class="n">checkUser</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
+            <span class="p">}</span>
+            <span class="k">else</span><span class="p">{</span>
+                <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">();</span>
+            <span class="p">}</span>
+
         <span class="p">}</span>
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">getBookCount</span><span class="p">());</span>
-        
-     <span class="p">}</span>
+
+    <span class="p">}</span>
 
 <span class="p">}</span>
 
@@ -395,12 +467,59 @@ canvas {
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Book name: bookname1, ID: 13, Time the book entered the library: 2023/4/21
-Current shelfLife: 10 days
-Book name: bookname2, ID: 14, Time the book entered the library: 2023/4/21
-Current shelfLife: 10 days
-15
+<pre>Enter your book into our school library, your book name: 
+Want to enter more book? Enter yes or no: 
+Ok, let's enter more books
+
+Enter your book into our school library, your book name: 
+Want to enter more book? Enter yes or no: 
+This is a time machine, how many days do you want to skip ahead? Enter: 
+Ok, now the time has passed, do you want to borrow any books from the library? If yes, enter the book name, if no, type no: 
+
+The book you chose is: your, the remaining shelfLife is :99995
+
+Want to check the books in the library? Type yes or no: 
+Book name: your2, ID: 2, current ShelfLife: 99995
+
+Want to add more books into the library? Type yes or no: 
+
+This is a time machine, how many days do you want to skip ahead? Enter: 
+Ok, now the time has passed, do you want to borrow any books from the library? If yes, enter the book name, if no, type no: 
+
+Want to check the books in the library? Type yes or no: 
+Book name: your2, ID: 2, current ShelfLife: 99990
+
+Want to add more books into the library? Type yes or no: 
+Ok, let's enter more books
+
+Enter your book into our school library, your book name: 
+Want to enter more book? Enter yes or no: 
+This is a time machine, how many days do you want to skip ahead? Enter: 
+Ok, now the time has passed, do you want to borrow any books from the library? If yes, enter the book name, if no, type no: 
+
+Want to check the books in the library? Type yes or no: 
+Book name: your2, ID: 2, current ShelfLife: 99985
+Book name: your4, ID: 3, current ShelfLife: 99995
+
+Want to add more books into the library? Type yes or no: 
+
+This is a time machine, how many days do you want to skip ahead? Enter: 
 </pre>
+</div>
+</div>
+
+<div class="output_area">
+
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-red-intense-fg ansi-bold">---------------------------------------------------------------------------</span>
+<span class="ansi-red-intense-fg ansi-bold">java.util.InputMismatchException: null</span>
+<span class="ansi-red-intense-fg ansi-bold">	at java.base/java.util.Scanner.throwFor(Scanner.java:939)</span>
+<span class="ansi-red-intense-fg ansi-bold">	at java.base/java.util.Scanner.next(Scanner.java:1594)</span>
+<span class="ansi-red-intense-fg ansi-bold">	at java.base/java.util.Scanner.nextLong(Scanner.java:2373)</span>
+<span class="ansi-red-intense-fg ansi-bold">	at java.base/java.util.Scanner.nextLong(Scanner.java:2328)</span>
+<span class="ansi-red-intense-fg ansi-bold">	at Book.main(#15:1)</span>
+<span class="ansi-red-intense-fg ansi-bold">	at .(#19:1)</span></pre>
 </div>
 </div>
 
@@ -513,7 +632,7 @@ Current shelfLife: 10 days
 <span class="p">}</span>
 <span class="n">Textbook</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
 
-<span class="c1">// Thred.sleep();</span>
+<span class="c1">// Thread.sleep(4000);</span>
 </pre></div>
 
     </div>
