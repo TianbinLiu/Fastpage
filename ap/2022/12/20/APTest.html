@@ -6339,14 +6339,14 @@ canvas {
 <div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kt">int</span> <span class="nf">countIncreasingCols</span><span class="p">(){</span>
     <span class="kt">int</span> <span class="n">counter</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
     <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">c</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">c</span> <span class="o">&lt;</span> <span class="n">grid</span><span class="p">.</span><span class="na">length</span><span class="p">;</span> <span class="n">c</span><span class="o">++</span><span class="p">){</span>
+        <span class="kt">boolean</span> <span class="n">isIncreasing</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
         <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">r</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">r</span> <span class="o">&lt;</span> <span class="n">grid</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span><span class="p">.</span><span class="na">length</span><span class="o">-</span><span class="mi">1</span><span class="p">;</span> <span class="n">r</span><span class="o">++</span><span class="p">){</span>
-            <span class="kt">boolean</span> <span class="n">isIncreasing</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
             <span class="k">if</span><span class="p">(</span><span class="n">grid</span><span class="o">[</span><span class="n">r</span><span class="o">][</span><span class="n">c</span><span class="o">]</span> <span class="o">&gt;</span> <span class="n">grid</span><span class="o">[</span><span class="n">r</span><span class="o">+</span><span class="mi">1</span><span class="o">][</span><span class="n">c</span><span class="o">]</span><span class="p">){</span>
                 <span class="n">isIncreasing</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
             <span class="p">}</span>
-            <span class="k">if</span><span class="p">(</span><span class="n">isIncreasing</span><span class="p">){</span>
-                <span class="n">counter</span><span class="o">++</span><span class="p">;</span>
-            <span class="p">}</span>
+        <span class="p">}</span>
+        <span class="k">if</span><span class="p">(</span><span class="n">isIncreasing</span><span class="p">){</span>
+            <span class="n">counter</span><span class="o">++</span><span class="p">;</span>
         <span class="p">}</span>
     <span class="p">}</span>
     <span class="k">return</span> <span class="n">counter</span><span class="p">;</span>
