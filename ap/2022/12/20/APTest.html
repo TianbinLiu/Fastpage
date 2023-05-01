@@ -238,7 +238,7 @@ canvas {
        • <span class="read-time" title="Estimated read time">
     
     
-      11 min read
+      13 min read
     
 </span></p>
 
@@ -510,13 +510,10 @@ canvas {
 <li class="toc-entry toc-h4"><a href="#FRQ-stepTracker">FRQ stepTracker </a></li>
 <li class="toc-entry toc-h3"><a href="#2022-FRQ">2022 FRQ </a>
 <ul>
-<li class="toc-entry toc-h4"><a href="#1.a">1.a </a></li>
-<li class="toc-entry toc-h4"><a href="#1.b">1.b </a></li>
+<li class="toc-entry toc-h4"><a href="#1">1 </a></li>
 <li class="toc-entry toc-h4"><a href="#2">2 </a></li>
-<li class="toc-entry toc-h4"><a href="#3.a">3.a </a></li>
-<li class="toc-entry toc-h4"><a href="#3.b">3.b </a></li>
-<li class="toc-entry toc-h4"><a href="#4.a">4.a </a></li>
-<li class="toc-entry toc-h4"><a href="#4.b">4.b </a></li>
+<li class="toc-entry toc-h4"><a href="#3">3 </a></li>
+<li class="toc-entry toc-h4"><a href="#4">4 </a></li>
 </ul>
 </li>
 </ul>
@@ -6067,8 +6064,8 @@ canvas {
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="1.a">
-<a class="anchor" href="#1.a" aria-hidden="true"><span class="octicon octicon-link"></span></a>1.a<a class="anchor-link" href="#1.a"> </a>
+<h4 id="1">
+<a class="anchor" href="#1" aria-hidden="true"><span class="octicon octicon-link"></span></a>1<a class="anchor-link" href="#1"> </a>
 </h4>
 </div>
 </div>
@@ -6080,60 +6077,137 @@ canvas {
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kt">int</span> <span class="nf">getScore</span><span class="p">(){</span>
-    <span class="kt">int</span> <span class="n">sum</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-    <span class="k">if</span> <span class="p">(</span><span class="n">levelOne</span><span class="p">.</span><span class="na">goalReached</span><span class="p">()){</span>
-        <span class="k">if</span><span class="p">(</span><span class="n">levelTwo</span><span class="p">.</span><span class="na">goalReached</span><span class="p">()){</span>
-            <span class="k">if</span><span class="p">(</span><span class="n">levelThree</span><span class="p">.</span><span class="na">goalReached</span><span class="p">()){</span>
-                <span class="n">sum</span> <span class="o">=</span> <span class="n">levelOne</span><span class="p">.</span><span class="na">getPoints</span><span class="p">()</span> <span class="o">+</span> <span class="n">levelTwo</span><span class="p">.</span><span class="na">getPoints</span><span class="p">()</span> <span class="o">+</span> <span class="n">levelThree</span><span class="p">.</span><span class="na">getPoints</span><span class="p">();</span>
+<div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Level</span><span class="p">{</span>
+    <span class="kd">private</span> <span class="kd">static</span> <span class="kt">int</span> <span class="n">count</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="kd">private</span> <span class="kt">int</span> <span class="n">id</span><span class="p">;</span>
+    <span class="kd">private</span> <span class="kt">boolean</span> <span class="n">isGoalReached</span><span class="p">;</span>
+
+    <span class="kd">public</span> <span class="nf">Level</span><span class="p">(){</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">id</span> <span class="o">=</span> <span class="o">++</span><span class="n">count</span><span class="p">;</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">isGoalReached</span> <span class="o">=</span> <span class="p">((</span><span class="kt">int</span><span class="p">)(</span><span class="n">Math</span><span class="p">.</span><span class="na">random</span><span class="p">()</span> <span class="o">*</span><span class="mi">10</span><span class="p">)</span> <span class="o">&gt;</span><span class="mi">4</span><span class="p">);</span> <span class="c1">//equal possibility to return true or not</span>
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">goalReached</span><span class="p">(){</span>
+        <span class="k">return</span> <span class="n">isGoalReached</span><span class="p">;</span> 
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="kt">int</span> <span class="nf">getID</span><span class="p">(){</span>
+        <span class="k">return</span> <span class="n">id</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="kt">int</span> <span class="nf">getPoints</span><span class="p">(){</span>
+        <span class="k">if</span> <span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="na">id</span> <span class="o">==</span> <span class="mi">1</span><span class="p">){</span>
+            <span class="k">return</span> <span class="mi">200</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="na">id</span> <span class="o">==</span> <span class="mi">2</span><span class="p">){</span>
+            <span class="k">return</span> <span class="mi">100</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="na">id</span> <span class="o">==</span> <span class="mi">3</span><span class="p">){</span>
+            <span class="k">return</span> <span class="mi">500</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="k">else</span><span class="p">{</span>
+            <span class="k">return</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">reSet</span><span class="p">(){</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">isGoalReached</span> <span class="o">=</span> <span class="p">((</span><span class="kt">int</span><span class="p">)(</span><span class="n">Math</span><span class="p">.</span><span class="na">random</span><span class="p">()</span> <span class="o">*</span><span class="mi">10</span><span class="p">)</span> <span class="o">&gt;</span><span class="mi">4</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">gameReSet</span><span class="p">(){</span>
+        <span class="n">count</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Game</span><span class="p">{</span>
+    <span class="kd">private</span> <span class="n">Level</span> <span class="n">levelOne</span><span class="p">;</span>
+    <span class="kd">private</span> <span class="n">Level</span> <span class="n">levelTwo</span><span class="p">;</span>
+    <span class="kd">private</span> <span class="n">Level</span> <span class="n">levelThree</span><span class="p">;</span>
+
+    <span class="kd">public</span> <span class="nf">Game</span><span class="p">(){</span>
+        <span class="n">Level</span><span class="p">.</span><span class="na">gameReSet</span><span class="p">();</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">levelOne</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Level</span><span class="p">();</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">levelTwo</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Level</span><span class="p">();</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">levelThree</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Level</span><span class="p">();</span>
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">isBonus</span><span class="p">(){</span>
+        <span class="k">return</span> <span class="p">(</span><span class="n">levelOne</span><span class="p">.</span><span class="na">goalReached</span><span class="p">()</span> <span class="o">&amp;&amp;</span> <span class="n">levelTwo</span><span class="p">.</span><span class="na">goalReached</span><span class="p">()</span> <span class="o">&amp;&amp;</span> <span class="n">levelThree</span><span class="p">.</span><span class="na">goalReached</span><span class="p">());</span>
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">play</span><span class="p">(){</span>
+        <span class="n">levelOne</span><span class="p">.</span><span class="na">reSet</span><span class="p">();</span>
+        <span class="n">levelTwo</span><span class="p">.</span><span class="na">reSet</span><span class="p">();</span>
+        <span class="n">levelThree</span><span class="p">.</span><span class="na">reSet</span><span class="p">();</span>
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="kt">int</span> <span class="nf">getScore</span><span class="p">(){</span> <span class="c1">//part a</span>
+        <span class="kt">int</span> <span class="n">sum</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">levelOne</span><span class="p">.</span><span class="na">goalReached</span><span class="p">()){</span>
+            <span class="n">sum</span> <span class="o">=</span> <span class="n">levelOne</span><span class="p">.</span><span class="na">getPoints</span><span class="p">();</span>
+            <span class="k">if</span><span class="p">(</span><span class="n">levelTwo</span><span class="p">.</span><span class="na">goalReached</span><span class="p">()){</span>
+                <span class="n">sum</span> <span class="o">=</span> <span class="n">levelOne</span><span class="p">.</span><span class="na">getPoints</span><span class="p">()</span> <span class="o">+</span> <span class="n">levelTwo</span><span class="p">.</span><span class="na">getPoints</span><span class="p">();</span>
+                <span class="k">if</span><span class="p">(</span><span class="n">levelThree</span><span class="p">.</span><span class="na">goalReached</span><span class="p">()){</span>
+                    <span class="n">sum</span> <span class="o">=</span> <span class="n">levelOne</span><span class="p">.</span><span class="na">getPoints</span><span class="p">()</span> <span class="o">+</span> <span class="n">levelTwo</span><span class="p">.</span><span class="na">getPoints</span><span class="p">()</span> <span class="o">+</span> <span class="n">levelThree</span><span class="p">.</span><span class="na">getPoints</span><span class="p">();</span>
+                <span class="p">}</span>
             <span class="p">}</span>
-            <span class="n">sum</span> <span class="o">=</span> <span class="n">levelOne</span><span class="p">.</span><span class="na">getPoints</span><span class="p">()</span> <span class="o">+</span> <span class="n">levelTwo</span><span class="p">.</span><span class="na">getPoints</span><span class="p">();</span>
         <span class="p">}</span>
-        <span class="n">sum</span> <span class="o">=</span> <span class="n">levelOne</span><span class="p">.</span><span class="na">getPoints</span><span class="p">();</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">isBonus</span><span class="p">()){</span>
+            <span class="k">return</span> <span class="p">(</span><span class="n">sum</span> <span class="o">*=</span> <span class="mi">3</span><span class="p">);</span>
+        <span class="p">}</span>
+        <span class="k">return</span> <span class="n">sum</span><span class="p">;</span>
     <span class="p">}</span>
-    <span class="k">if</span> <span class="p">(</span><span class="n">isBonus</span><span class="p">()){</span>
-        <span class="k">return</span> <span class="p">(</span><span class="n">sum</span> <span class="o">*=</span> <span class="mi">3</span><span class="p">);</span>
+
+    <span class="kd">public</span> <span class="kt">int</span> <span class="nf">playManyTimes</span><span class="p">(</span><span class="kt">int</span> <span class="n">num</span><span class="p">){</span> <span class="c1">//part b</span>
+        <span class="kt">int</span> <span class="n">highestScore</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">num</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">){</span>
+            <span class="n">play</span><span class="p">();</span>
+            <span class="k">if</span><span class="p">(</span><span class="n">getScore</span><span class="p">()</span> <span class="o">&gt;</span> <span class="n">highestScore</span><span class="p">){</span>
+                <span class="n">highestScore</span> <span class="o">=</span> <span class="n">getScore</span><span class="p">();</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+        <span class="k">return</span> <span class="n">highestScore</span><span class="p">;</span>
     <span class="p">}</span>
-    <span class="k">return</span> <span class="n">sum</span><span class="p">;</span>
+
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">str</span><span class="p">){</span>
+        <span class="n">Game</span> <span class="n">tester</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Game</span><span class="p">();</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">tester</span><span class="p">.</span><span class="na">getScore</span><span class="p">());</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">tester</span><span class="p">.</span><span class="na">playManyTimes</span><span class="p">(</span><span class="mi">4</span><span class="p">));</span>
+    <span class="p">}</span>
 <span class="p">}</span>
+<span class="n">Game</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
 </pre></div>
 
     </div>
 </div>
 </div>
 
-</div>
-    
+<div class="output_wrapper">
+<div class="output">
 
-<div class="cell border-box-sizing text_cell rendered">
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="1.b">
-<a class="anchor" href="#1.b" aria-hidden="true"><span class="octicon octicon-link"></span></a>1.b<a class="anchor-link" href="#1.b"> </a>
-</h4>
-</div>
-</div>
-</div>
-    
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
+<div class="output_area">
 
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kt">int</span> <span class="nf">playManyTimes</span><span class="p">(</span><span class="kt">int</span> <span class="n">num</span><span class="p">){</span>
-    <span class="kt">int</span> <span class="n">highestScore</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-    <span class="k">for</span> <span class="p">(</span><span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">num</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">){</span>
-        <span class="n">play</span><span class="p">();</span>
-        <span class="k">if</span><span class="p">(</span><span class="n">getScore</span><span class="p">()</span> <span class="o">&gt;</span> <span class="n">highestScore</span><span class="p">){</span>
-            <span class="n">highestScore</span> <span class="o">=</span> <span class="n">getScore</span><span class="p">();</span>
-        <span class="p">}</span>
-    <span class="p">}</span>
-    <span class="k">return</span> <span class="n">highestScore</span><span class="p">;</span>
-<span class="p">}</span>
-</pre></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>0
+2400
+</pre>
+</div>
+</div>
 
-    </div>
 </div>
 </div>
 
@@ -6158,22 +6232,25 @@ canvas {
     <div class="input_area">
 <div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Book</span>
 <span class="p">{</span>
-    <span class="cm">/** The title of the book */</span>
+
     <span class="kd">private</span> <span class="n">String</span> <span class="n">title</span><span class="p">;</span>
-    <span class="cm">/** The price of the book */</span>
+
     <span class="kd">private</span> <span class="kt">double</span> <span class="n">price</span><span class="p">;</span>
-    <span class="cm">/** Creates a new Book with given title and price */</span>
-    <span class="kd">public</span> <span class="nf">Book</span><span class="p">(</span><span class="n">String</span> <span class="n">bookTitle</span><span class="p">,</span> <span class="kt">double</span> <span class="n">bookPrice</span><span class="p">){</span> <span class="cm">/* implementation not shown */</span> <span class="p">}</span>
-    <span class="cm">/** Returns the title of the book */</span>
+
+    <span class="kd">public</span> <span class="nf">Book</span><span class="p">(</span><span class="n">String</span> <span class="n">bookTitle</span><span class="p">,</span> <span class="kt">double</span> <span class="n">bookPrice</span><span class="p">){</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">title</span> <span class="o">=</span> <span class="n">bookTitle</span><span class="p">;</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">price</span> <span class="o">=</span> <span class="n">bookPrice</span><span class="p">;</span>
+    <span class="p">}</span>
+   
     <span class="kd">public</span> <span class="n">String</span> <span class="nf">getTitle</span><span class="p">(){</span> 
         <span class="k">return</span> <span class="n">title</span><span class="p">;</span> 
     <span class="p">}</span>
-    <span class="cm">/** Returns a string containing the title and price of the Book */</span>
+    
     <span class="kd">public</span> <span class="n">String</span> <span class="nf">getBookInfo</span><span class="p">()</span>
     <span class="p">{</span>
         <span class="k">return</span> <span class="n">title</span> <span class="o">+</span> <span class="s">"-"</span> <span class="o">+</span> <span class="n">price</span><span class="p">;</span>
     <span class="p">}</span>
-    <span class="c1">// There may be instance variables, constructors, and methods that are not shown.</span>
+    
 <span class="p">}</span> 
 
 <span class="kd">public</span> <span class="kd">class</span> <span class="nc">Textbook</span> <span class="kd">extends</span> <span class="n">Book</span><span class="p">{</span>
@@ -6197,10 +6274,40 @@ canvas {
         <span class="k">return</span> <span class="p">(</span><span class="kd">super</span><span class="p">.</span><span class="na">getTitle</span><span class="p">().</span><span class="na">equals</span><span class="p">(</span><span class="n">book</span><span class="p">.</span><span class="na">getTitle</span><span class="p">())</span> <span class="o">&amp;&amp;</span> <span class="p">(</span><span class="n">getEdition</span><span class="p">()</span> <span class="o">&gt;=</span> <span class="n">book</span><span class="p">.</span><span class="na">getEdition</span><span class="p">()));</span>
     <span class="p">}</span>
 
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">str</span><span class="p">){</span>
+        <span class="n">Textbook</span> <span class="n">bio2015</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Textbook</span><span class="p">(</span><span class="s">"Biology"</span><span class="p">,</span> <span class="mf">49.75</span><span class="p">,</span> <span class="mi">2</span><span class="p">);</span>
+        <span class="n">Textbook</span> <span class="n">bio2019</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Textbook</span><span class="p">(</span><span class="s">"Biology"</span><span class="p">,</span> <span class="mf">39.75</span><span class="p">,</span> <span class="mi">3</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">bio2019</span><span class="p">.</span><span class="na">getEdition</span><span class="p">());</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">bio2019</span><span class="p">.</span><span class="na">getBookInfo</span><span class="p">());</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">bio2019</span><span class="p">.</span><span class="na">canSubstituteFor</span><span class="p">(</span><span class="n">bio2015</span><span class="p">));</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">bio2015</span><span class="p">.</span><span class="na">canSubstituteFor</span><span class="p">(</span><span class="n">bio2019</span><span class="p">));</span>
+        <span class="n">Textbook</span> <span class="n">math</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Textbook</span><span class="p">(</span><span class="s">"Calculus"</span><span class="p">,</span>  <span class="mf">45.25</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">bio2015</span><span class="p">.</span><span class="na">canSubstituteFor</span><span class="p">(</span><span class="n">math</span><span class="p">));</span>
+    <span class="p">}</span>
+
 <span class="p">}</span>
+<span class="n">Textbook</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>3
+Biology-39.75-3
+true
+false
+false
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -6210,8 +6317,8 @@ canvas {
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="3.a">
-<a class="anchor" href="#3.a" aria-hidden="true"><span class="octicon octicon-link"></span></a>3.a<a class="anchor-link" href="#3.a"> </a>
+<h4 id="3">
+<a class="anchor" href="#3" aria-hidden="true"><span class="octicon octicon-link"></span></a>3<a class="anchor-link" href="#3"> </a>
 </h4>
 </div>
 </div>
@@ -6223,16 +6330,80 @@ canvas {
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kt">double</span> <span class="nf">getAverageRating</span><span class="p">(){</span>
-    <span class="kt">double</span> <span class="n">sum</span> <span class="o">=</span> <span class="mf">0.0</span><span class="p">;</span> 
-    <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">allReviews</span><span class="p">.</span><span class="na">length</span><span class="p">();</span> <span class="n">i</span><span class="o">++</span><span class="p">){</span>
-        <span class="n">sum</span> <span class="o">+=</span> <span class="n">allReviews</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">.</span><span class="na">getRating</span><span class="p">();</span>
+<div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Review</span><span class="p">{</span>
+    <span class="kd">private</span> <span class="kt">int</span> <span class="n">rating</span><span class="p">;</span>
+    <span class="kd">private</span> <span class="n">String</span> <span class="n">comment</span><span class="p">;</span>
+
+    <span class="kd">public</span> <span class="nf">Review</span><span class="p">(</span><span class="kt">int</span> <span class="n">r</span><span class="p">,</span> <span class="n">String</span> <span class="n">c</span><span class="p">){</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">rating</span> <span class="o">=</span> <span class="n">r</span><span class="p">;</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">comment</span> <span class="o">=</span> <span class="n">c</span><span class="p">;</span>
     <span class="p">}</span>
-    <span class="k">return</span> <span class="p">(</span><span class="n">sum</span><span class="o">/</span><span class="n">allReviews</span><span class="p">.</span><span class="na">length</span><span class="p">());</span>
+
+    <span class="kd">public</span> <span class="kt">int</span> <span class="nf">getRating</span><span class="p">(){</span>
+        <span class="k">return</span> <span class="n">rating</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="n">String</span> <span class="nf">getComment</span><span class="p">(){</span>
+        <span class="k">return</span> <span class="n">comment</span><span class="p">;</span>
+    <span class="p">}</span>
 <span class="p">}</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">ReviewAnalysis</span><span class="p">{</span>
+    <span class="kd">private</span> <span class="n">Review</span><span class="o">[]</span> <span class="n">allReviews</span> <span class="o">=</span> <span class="p">{</span><span class="k">new</span> <span class="n">Review</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="s">"Good! Thx"</span><span class="p">),</span> <span class="k">new</span> <span class="n">Review</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="s">"OK site"</span><span class="p">),</span><span class="k">new</span> <span class="n">Review</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="s">"Great!"</span><span class="p">),</span><span class="k">new</span> <span class="n">Review</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="s">"Poor! Bad."</span><span class="p">),</span><span class="k">new</span> <span class="n">Review</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="s">""</span><span class="p">)};</span>
+
+    <span class="kd">public</span> <span class="nf">ReviewAnalysis</span><span class="p">(){</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">allReviews</span> <span class="o">=</span> <span class="n">allReviews</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="kt">double</span> <span class="nf">getAverageRating</span><span class="p">(){</span>
+        <span class="kt">double</span> <span class="n">sum</span> <span class="o">=</span> <span class="mf">0.0</span><span class="p">;</span> 
+        <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">allReviews</span><span class="p">.</span><span class="na">length</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">){</span>
+            <span class="n">sum</span> <span class="o">+=</span> <span class="n">allReviews</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">.</span><span class="na">getRating</span><span class="p">();</span>
+        <span class="p">}</span>
+        <span class="k">return</span> <span class="p">(</span><span class="n">sum</span><span class="o">/</span><span class="n">allReviews</span><span class="p">.</span><span class="na">length</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="nf">collectComments</span><span class="p">(){</span>
+        <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">comments</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="p">();</span>
+        <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">allReviews</span><span class="p">.</span><span class="na">length</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">){</span>
+            <span class="n">String</span> <span class="n">userCommend</span> <span class="o">=</span> <span class="n">allReviews</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">.</span><span class="na">getComment</span><span class="p">();</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">userCommend</span><span class="p">.</span><span class="na">indexOf</span><span class="p">(</span><span class="s">"!"</span><span class="p">)</span> <span class="o">!=</span> <span class="o">-</span><span class="mi">1</span><span class="p">){</span>
+                <span class="k">if</span><span class="p">(</span><span class="n">userCommend</span><span class="p">.</span><span class="na">substring</span><span class="p">(</span><span class="n">userCommend</span><span class="p">.</span><span class="na">length</span><span class="p">()</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">userCommend</span><span class="p">.</span><span class="na">length</span><span class="p">()).</span><span class="na">equals</span><span class="p">(</span><span class="s">"!"</span><span class="p">)</span> <span class="o">||</span> <span class="n">userCommend</span><span class="p">.</span><span class="na">substring</span><span class="p">(</span><span class="n">userCommend</span><span class="p">.</span><span class="na">length</span><span class="p">()</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">userCommend</span><span class="p">.</span><span class="na">length</span><span class="p">()).</span><span class="na">equals</span><span class="p">(</span><span class="s">"."</span><span class="p">)){</span>
+                    <span class="n">comments</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="n">i</span> <span class="o">+</span> <span class="s">"-"</span> <span class="o">+</span> <span class="n">userCommend</span><span class="p">);</span>
+                <span class="p">}</span>
+                <span class="k">else</span> <span class="p">{</span>
+                    <span class="n">comments</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="n">i</span> <span class="o">+</span> <span class="s">"-"</span> <span class="o">+</span> <span class="n">userCommend</span> <span class="o">+</span> <span class="s">"."</span><span class="p">);</span>
+                <span class="p">}</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+        <span class="k">return</span> <span class="n">comments</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">str</span><span class="p">){</span>
+        <span class="n">ReviewAnalysis</span> <span class="n">tester</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ReviewAnalysis</span><span class="p">();</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">tester</span><span class="p">.</span><span class="na">getAverageRating</span><span class="p">());</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">tester</span><span class="p">.</span><span class="na">collectComments</span><span class="p">());</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+<span class="n">ReviewAnalysis</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>3.4
+[0-Good! Thx., 2-Great!, 3-Poor! Bad.]
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -6242,8 +6413,8 @@ canvas {
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="3.b">
-<a class="anchor" href="#3.b" aria-hidden="true"><span class="octicon octicon-link"></span></a>3.b<a class="anchor-link" href="#3.b"> </a>
+<h4 id="4">
+<a class="anchor" href="#4" aria-hidden="true"><span class="octicon octicon-link"></span></a>4<a class="anchor-link" href="#4"> </a>
 </h4>
 </div>
 </div>
@@ -6255,105 +6426,86 @@ canvas {
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="nf">collectComments</span><span class="p">(){</span>
-    <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">comments</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="p">();</span>
-    <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">allReviews</span><span class="p">.</span><span class="na">length</span><span class="p">();</span> <span class="n">i</span><span class="o">++</span><span class="p">){</span>
-        <span class="n">String</span> <span class="n">userCommend</span> <span class="o">=</span> <span class="n">allReviewsp</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">.</span><span class="na">getComment</span><span class="p">();</span>
-        <span class="k">if</span> <span class="p">(</span><span class="n">userCommend</span><span class="p">.</span><span class="na">indexOf</span><span class="p">(</span><span class="s">"!"</span><span class="p">)</span> <span class="o">!=</span> <span class="o">-</span><span class="mi">1</span><span class="p">){</span>
-            <span class="k">if</span><span class="p">(</span><span class="n">userCommend</span><span class="p">.</span><span class="na">subString</span><span class="p">(</span><span class="n">userCommend</span><span class="p">.</span><span class="na">length</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">userCommend</span><span class="p">.</span><span class="na">length</span><span class="p">).</span><span class="na">equals</span><span class="p">(</span><span class="s">"!"</span><span class="p">)){</span>
-                <span class="n">comments</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="n">i</span> <span class="o">+</span> <span class="s">"-"</span> <span class="o">+</span> <span class="n">userCommend</span><span class="p">);</span>
-            <span class="p">}</span>
-            <span class="k">else</span> <span class="p">{</span>
-                <span class="n">comments</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="n">i</span> <span class="o">+</span> <span class="s">"-"</span> <span class="o">+</span> <span class="n">userCommend</span> <span class="o">+</span> <span class="s">"."</span><span class="p">);</span>
+<div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Data</span><span class="p">{</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kd">final</span> <span class="kt">int</span> <span class="n">MAX</span> <span class="o">=</span> <span class="p">(</span><span class="kt">int</span><span class="p">)(</span><span class="n">Math</span><span class="p">.</span><span class="na">random</span><span class="p">()</span> <span class="o">*</span> <span class="p">(</span><span class="n">Integer</span><span class="p">.</span><span class="na">MAX_VALUE</span><span class="o">+</span><span class="mi">1</span><span class="p">));;</span>
+    <span class="kd">private</span> <span class="kt">int</span><span class="o">[][]</span> <span class="n">grid</span><span class="p">;</span>
+
+    <span class="kd">public</span> <span class="nf">Data</span><span class="p">(){</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">grid</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">int</span><span class="o">[</span><span class="mi">5</span><span class="o">][</span><span class="mi">5</span><span class="o">]</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">repopulate</span><span class="p">(){</span>
+        <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">r</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">r</span> <span class="o">&lt;</span> <span class="n">grid</span><span class="p">.</span><span class="na">length</span><span class="p">;</span> <span class="n">r</span><span class="o">++</span><span class="p">){</span>
+            <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">c</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">c</span> <span class="o">&lt;</span> <span class="n">grid</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span><span class="p">.</span><span class="na">length</span><span class="p">;</span> <span class="n">c</span><span class="o">++</span><span class="p">){</span>
+                <span class="kt">int</span> <span class="n">random</span> <span class="o">=</span> <span class="p">(</span><span class="kt">int</span><span class="p">)(</span><span class="n">Math</span><span class="p">.</span><span class="na">random</span><span class="p">()</span> <span class="o">*</span> <span class="p">(</span><span class="n">MAX</span><span class="o">+</span><span class="mi">1</span><span class="p">));</span>
+                <span class="k">while</span><span class="p">((</span><span class="n">random</span> <span class="o">%</span> <span class="mi">100</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">){</span>
+                    <span class="n">random</span> <span class="o">=</span> <span class="p">(</span><span class="kt">int</span><span class="p">)(</span><span class="n">Math</span><span class="p">.</span><span class="na">random</span><span class="p">()</span> <span class="o">*</span> <span class="p">(</span><span class="n">MAX</span><span class="o">+</span><span class="mi">1</span><span class="p">));</span>
+                <span class="p">}</span>
+                <span class="k">if</span><span class="p">(</span><span class="n">random</span> <span class="o">%</span> <span class="mi">10</span> <span class="o">!=</span><span class="mi">0</span><span class="p">){</span>
+                    <span class="n">random</span> <span class="o">=</span> <span class="p">(</span><span class="n">random</span><span class="o">/</span><span class="mi">10</span><span class="p">)</span> <span class="o">*</span><span class="mi">10</span><span class="p">;</span>
+                <span class="p">}</span>
+    
+                <span class="n">grid</span><span class="o">[</span><span class="n">r</span><span class="o">][</span><span class="n">c</span><span class="o">]</span> <span class="o">=</span> <span class="n">random</span><span class="p">;</span>
+    
             <span class="p">}</span>
         <span class="p">}</span>
     <span class="p">}</span>
-    <span class="k">return</span> <span class="n">comments</span><span class="p">;</span>
+
+    <span class="kd">public</span> <span class="kt">int</span> <span class="nf">countIncreasingCols</span><span class="p">(){</span>
+        <span class="kt">int</span> <span class="n">counter</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+        <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">c</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">c</span> <span class="o">&lt;</span> <span class="n">grid</span><span class="p">.</span><span class="na">length</span><span class="p">;</span> <span class="n">c</span><span class="o">++</span><span class="p">){</span>
+            <span class="kt">boolean</span> <span class="n">isIncreasing</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
+            <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">r</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">r</span> <span class="o">&lt;</span> <span class="n">grid</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span><span class="p">.</span><span class="na">length</span><span class="o">-</span><span class="mi">1</span><span class="p">;</span> <span class="n">r</span><span class="o">++</span><span class="p">){</span>
+                <span class="k">if</span><span class="p">(</span><span class="n">grid</span><span class="o">[</span><span class="n">r</span><span class="o">][</span><span class="n">c</span><span class="o">]</span> <span class="o">&gt;</span> <span class="n">grid</span><span class="o">[</span><span class="n">r</span><span class="o">+</span><span class="mi">1</span><span class="o">][</span><span class="n">c</span><span class="o">]</span><span class="p">){</span>
+                    <span class="n">isIncreasing</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
+                <span class="p">}</span>
+            <span class="p">}</span>
+            <span class="k">if</span><span class="p">(</span><span class="n">isIncreasing</span><span class="p">){</span>
+                <span class="n">counter</span><span class="o">++</span><span class="p">;</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+        <span class="k">return</span> <span class="n">counter</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">printGrid</span><span class="p">(){</span>
+        <span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="o">[]</span> <span class="n">list</span> <span class="p">:</span> <span class="n">grid</span><span class="p">){</span>
+            <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">num</span> <span class="p">:</span> <span class="n">list</span><span class="p">){</span>
+                <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="n">num</span><span class="p">);</span>
+            <span class="p">}</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">();</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">str</span><span class="p">){</span>
+        <span class="n">Data</span> <span class="n">tester</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Data</span><span class="p">();</span>
+        <span class="n">tester</span><span class="p">.</span><span class="na">repopulate</span><span class="p">();</span>
+        <span class="n">tester</span><span class="p">.</span><span class="na">printGrid</span><span class="p">();</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">tester</span><span class="p">.</span><span class="na">countIncreasingCols</span><span class="p">());</span>
+    <span class="p">}</span>
 <span class="p">}</span>
+<span class="n">Data</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
 </pre></div>
 
     </div>
 </div>
 </div>
 
-</div>
-    
+<div class="output_wrapper">
+<div class="output">
 
-<div class="cell border-box-sizing text_cell rendered">
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="4.a">
-<a class="anchor" href="#4.a" aria-hidden="true"><span class="octicon octicon-link"></span></a>4.a<a class="anchor-link" href="#4.a"> </a>
-</h4>
-</div>
-</div>
-</div>
-    
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
+<div class="output_area">
 
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kt">void</span> <span class="nf">repopulate</span><span class="p">(){</span>
-    <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">r</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">r</span> <span class="o">&lt;</span> <span class="n">grid</span><span class="p">.</span><span class="na">length</span><span class="p">;</span> <span class="n">r</span><span class="o">++</span><span class="p">){</span>
-        <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">c</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">c</span> <span class="o">&lt;</span> <span class="n">grid</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span><span class="p">.</span><span class="na">length</span><span class="p">;</span> <span class="n">c</span><span class="o">++</span><span class="p">){</span>
-            <span class="kt">int</span> <span class="n">random</span> <span class="o">=</span> <span class="p">(</span><span class="kt">int</span><span class="p">)(</span><span class="n">Math</span><span class="p">.</span><span class="na">random</span><span class="p">()</span> <span class="o">*</span> <span class="p">(</span><span class="n">Integer</span><span class="p">.</span><span class="na">MAX_VALUE</span><span class="o">+</span><span class="mi">1</span><span class="p">));</span>
-            <span class="k">while</span><span class="p">((</span><span class="n">random</span> <span class="o">%</span> <span class="mi">100</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">){</span>
-                <span class="n">random</span> <span class="o">=</span> <span class="p">(</span><span class="kt">int</span><span class="p">)(</span><span class="n">Math</span><span class="p">.</span><span class="na">random</span><span class="p">()</span> <span class="o">*</span> <span class="p">(</span><span class="n">Integer</span><span class="p">.</span><span class="na">MAX_VALUE</span><span class="o">+</span><span class="mi">1</span><span class="p">));</span>
-            <span class="p">}</span>
-            <span class="k">if</span><span class="p">(</span><span class="n">random</span> <span class="o">%</span> <span class="mi">10</span> <span class="o">!=</span><span class="mi">0</span><span class="p">){</span>
-                <span class="n">random</span> <span class="o">=</span> <span class="p">(</span><span class="n">random</span><span class="o">/</span><span class="mi">10</span><span class="p">)</span> <span class="o">*</span><span class="mi">10</span><span class="p">;</span>
-            <span class="p">}</span>
-
-            <span class="n">grid</span><span class="o">[</span><span class="n">r</span><span class="o">][</span><span class="n">c</span><span class="o">]</span> <span class="o">=</span> <span class="n">random</span><span class="p">;</span>
-
-        <span class="p">}</span>
-    <span class="p">}</span>
-<span class="p">}</span>
-</pre></div>
-
-    </div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>-120234630-19874520-935662300-728469120-247190580
+-1273015550-1570983440-270454390-1060843580-1447316820
+-1131061440-690108460-129569090-920363050-1200996200
+-366280500-1229520690-578885860-1502591860-166252960
+-1080605080-1074359150-712632720-976210850-771524100
+0
+</pre>
 </div>
 </div>
 
-</div>
-    
-
-<div class="cell border-box-sizing text_cell rendered">
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="4.b">
-<a class="anchor" href="#4.b" aria-hidden="true"><span class="octicon octicon-link"></span></a>4.b<a class="anchor-link" href="#4.b"> </a>
-</h4>
-</div>
-</div>
-</div>
-    
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kt">int</span> <span class="nf">countIncreasingCols</span><span class="p">(){</span>
-    <span class="kt">int</span> <span class="n">counter</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-    <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">c</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">c</span> <span class="o">&lt;</span> <span class="n">grid</span><span class="p">.</span><span class="na">length</span><span class="p">;</span> <span class="n">c</span><span class="o">++</span><span class="p">){</span>
-        <span class="kt">boolean</span> <span class="n">isIncreasing</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
-        <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">r</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">r</span> <span class="o">&lt;</span> <span class="n">grid</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span><span class="p">.</span><span class="na">length</span><span class="o">-</span><span class="mi">1</span><span class="p">;</span> <span class="n">r</span><span class="o">++</span><span class="p">){</span>
-            <span class="k">if</span><span class="p">(</span><span class="n">grid</span><span class="o">[</span><span class="n">r</span><span class="o">][</span><span class="n">c</span><span class="o">]</span> <span class="o">&gt;</span> <span class="n">grid</span><span class="o">[</span><span class="n">r</span><span class="o">+</span><span class="mi">1</span><span class="o">][</span><span class="n">c</span><span class="o">]</span><span class="p">){</span>
-                <span class="n">isIncreasing</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
-            <span class="p">}</span>
-        <span class="p">}</span>
-        <span class="k">if</span><span class="p">(</span><span class="n">isIncreasing</span><span class="p">){</span>
-            <span class="n">counter</span><span class="o">++</span><span class="p">;</span>
-        <span class="p">}</span>
-    <span class="p">}</span>
-    <span class="k">return</span> <span class="n">counter</span><span class="p">;</span>
-<span class="p">}</span>
-</pre></div>
-
-    </div>
 </div>
 </div>
 
